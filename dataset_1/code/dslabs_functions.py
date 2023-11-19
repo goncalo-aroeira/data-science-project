@@ -163,18 +163,23 @@ def plot_multi_scatters_chart(data: DataFrame, var1: str, var2: str, var3: str=N
     ax = set_chart_labels(ax=ax, title=title, xlabel=var1, ylabel=var2)
     return ax
 
-def plot_horizontal_bar_chart(elements: list, values: list, error: list=None, ax: Axes=None, title: str = '', 
-                              xlabel: str = '', ylabel: str = '', percentage: bool=False):
+def plot_horizontal_bar_chart(elements: list, values: list, error: list=None, ax=None, title: str='', 
+                              xlabel: str='', ylabel: str='', percentage: bool=False):
     if ax is None:
         ax = gca()
     if percentage:
-        ax.set_xlim((0,1))
+        ax.set_xlim((0, 1))
     ax = set_chart_labels(ax=ax, title=title, xlabel=xlabel, ylabel=ylabel)
     y_pos = arange(len(elements))
 
-    ax.barh(y_pos, values, xerr=error, align='center', error_kw={'lw': 0.5, 'ecolor': 'r'})
+    bars = ax.barh(y_pos, values, xerr=error, align='center', error_kw={'lw': 0.5, 'ecolor': 'r'})
     ax.set_yticks(y_pos, labels=elements)
     ax.invert_yaxis()  # labels read top-to-bottom
+
+    # Adicionar os números correspondentes a cada barra
+    for bar, value in zip(bars, values):
+        ax.text(value, bar.get_y() + bar.get_height()/2, f'{value:.0f}', ha='left', va='center', fontsize = FONT_SIZE)
+
     return ax
 
 # ---------------------------------------
