@@ -3,7 +3,7 @@ from pandas import read_csv, DataFrame, Series
 from dslabs_functions import plot_bar_chart
 
 filename = "class_pos_covid.csv"
-file_tag = "class_dist"
+file_tag = "CovidPos"
 data: DataFrame = read_csv(filename)
 target = "CovidPos"
 

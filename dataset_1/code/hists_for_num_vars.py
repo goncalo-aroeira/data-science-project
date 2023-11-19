@@ -5,7 +5,7 @@ from dslabs_functions import define_grid, HEIGHT
 from dslabs_functions import set_chart_labels
 
 filename = "class_pos_covid.csv"
-file_tag = "num_vars"
+file_tag = "CovidPos"
 data: DataFrame = read_csv(filename)
 
 variables_types: dict[str, list] = get_variable_types(data)

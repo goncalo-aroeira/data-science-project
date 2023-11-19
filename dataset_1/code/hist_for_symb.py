@@ -4,7 +4,7 @@ from pandas import read_csv, DataFrame, Series
 
 
 filename = "class_pos_covid.csv"
-file_tag = "symb_vars"
+file_tag = "CovidPos"
 data: DataFrame = read_csv(filename)
 
 variables_types: dict[str, list] = get_variable_types(data)

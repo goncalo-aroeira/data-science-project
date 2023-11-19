@@ -3,7 +3,7 @@ from dslabs_functions import get_variable_types
 from pandas import read_csv, DataFrame
 
 filename = "class_pos_covid.csv"
-file_tag = "num_vars"
+file_tag = "CovidPos"
 data: DataFrame = read_csv(filename)
 
 variables_types: dict[str, list] = get_variable_types(data)
