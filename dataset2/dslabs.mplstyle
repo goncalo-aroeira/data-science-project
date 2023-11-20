@@ -15,7 +15,7 @@ axes.spines.right : False
 axes.spines.bottom : True
 axes.spines.left : True
 axes.axisbelow: True
-axes.grid.axis: y
+axes.grid.axis: x
 
 
 # GRID
