@@ -6,7 +6,7 @@ data: DataFrame = read_csv(filename, na_values="", index_col="ID")
 
 print(data.shape)
 print(data.head)
-# data['Age'] = data['Age'].astype(str).str.
+data['Age'] = data['Age'].astype(str).str.replace('_', '', regex=False)
 
 #***********************************************************************************
 #*                                   EX 1                                          *
