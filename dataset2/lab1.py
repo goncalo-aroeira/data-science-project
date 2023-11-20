@@ -1,13 +1,5 @@
 from pandas import read_csv, DataFrame
 
-filename = "data/class_credit_score.csv"
-file_tag = "Credit_Score"
-data: DataFrame = read_csv(filename, na_values="", index_col="ID")
-
-print(data.shape)
-print(data.head)
-data['Age'] = data['Age'].astype(str).str.replace('_', '', regex=False)
-
 #***********************************************************************************
 #*                                   EX 1                                          *
 #*                         Nr records x Nr variables                               *
@@ -152,3 +144,73 @@ from dslabs_functions import get_variable_types
 # tight_layout()
 # savefig(f"images/{file_tag}_correlation_analysis.png")
 # show()
+
+#***********************************************************************************
+#*                                   EX 2
+#*                                Granularity                                      *
+#*                           4 - Symbolic Variables                                *
+#***********************************************************************************
+
+from pandas import DataFrame, read_csv, Series
+from matplotlib.pyplot import show, subplots, savefig
+from matplotlib.figure import Figure
+from numpy import ndarray
+from dslabs_functions import plot_bar_chart, HEIGHT, get_variable_types, define_grid
+
+def analyse_property_granularity(data: DataFrame, property: str, vars: list[str]) -> ndarray:
+    rows: int
+    cols: int
+    rows, cols = define_grid(len(vars))
+    fig: Figure
+    axs: ndarray
+    fig, axs = subplots(1, cols, figsize=(cols * HEIGHT, HEIGHT), squeeze=False)
+    fig.suptitle(f"Granularity study for {property}")
+    for i in range(cols):
+        counts: Series[int] = data[vars[i]].value_counts()
+        plot_bar_chart(
+            counts.index.to_list(),
+            counts.to_list(),
+            ax=axs[0, i],
+            title=vars[i],
+            xlabel=vars[i],
+            ylabel="number of records",
+            percentage=False,
+        )
+    return axs
+
+
+def get_symbolic_nonBinary_variables(data: DataFrame) -> list:
+    symbolic: list = get_variable_types(data)["symbolic"]
+    remove_list: list = ["ID", "Customer_ID", "Name", "SSN", "Age"]  
+    res = []
+    for el in symbolic:
+        if el not in remove_list:
+            res += [el]
+    return res
+
+
+def symbolic_variables_granularity(data: DataFrame, file_tag: str):
+    analyse_property_granularity(data, "Symbolic Variables", get_symbolic_nonBinary_variables(data))
+    savefig(f"images/{file_tag}_granularity.png")
+    show()
+
+#***********************************************************************************
+
+
+
+
+
+
+
+
+if __name__ == "__main__":
+    filename = "data/class_credit_score.csv"
+    file_tag = "Credit_Score"
+    data: DataFrame = read_csv(filename, na_values="", index_col="ID")
+
+    print(data.shape)
+    print(data.head)
+    data['Age'] = data['Age'].astype(str).str.replace('_', '', regex=False)
+
+    # granularity
+    symbolic_variables_granularity(data, file_tag)
