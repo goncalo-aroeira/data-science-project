@@ -4,7 +4,7 @@ from pandas import read_csv, DataFrame
 from dslabs_functions import define_grid, HEIGHT
 from dslabs_functions import set_chart_labels
 
-filename = "class_pos_covid.csv"
+filename = "../../class_pos_covid.csv"
 file_tag = "CovidPos"
 data: DataFrame = read_csv(filename)
 
@@ -31,7 +31,7 @@ if [] != numeric:
         )
         axs[i, j].hist(data[numeric[n]].dropna().values, "auto")
         i, j = (i + 1, 0) if (n + 1) % cols == 0 else (i, j + 1)
-    savefig(f"images/{file_tag}_single_histograms_numeric.png")
+    savefig(f"../images/{file_tag}_single_histograms_numeric.png")
     show()
 else:
     print("There are no numeric variables.")

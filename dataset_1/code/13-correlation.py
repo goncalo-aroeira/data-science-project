@@ -3,7 +3,7 @@ from pandas import DataFrame
 from dslabs_functions import get_variable_types
 from pandas import read_csv
 
-filename = "class_pos_covid.csv"
+filename = "../../class_pos_covid.csv"
 file_tag = "CovidPos"
 data: DataFrame = read_csv(filename)
 
@@ -18,5 +18,5 @@ plt.xticks(range(len(numeric)), numeric, rotation=45, ha='left')
 plt.yticks(range(len(numeric)), numeric)
 plt.colorbar(cax)
 
-plt.savefig(f"images/{file_tag}_correlation_analysis.png")
+plt.savefig(f"../images/{file_tag}_correlation_analysis.png")
 plt.show()

@@ -4,7 +4,7 @@ from matplotlib.pyplot import savefig, show, subplots
 from dslabs_functions import define_grid, HEIGHT, get_variable_types
 from pandas import read_csv, DataFrame
 
-filename = "class_pos_covid.csv"
+filename = "../../class_pos_covid.csv"
 file_tag = "CovidPos"
 data: DataFrame = read_csv(filename)
 
@@ -25,7 +25,7 @@ if [] != numeric:
         axs[i, j].set_title("Boxplot for %s" % numeric[n])
         axs[i, j].boxplot(data[numeric[n]].dropna().values)
         i, j = (i + 1, 0) if (n + 1) % cols == 0 else (i, j + 1)
-    savefig(f"images/{file_tag}_single_boxplots.png")
+    savefig(f"../images/{file_tag}_single_boxplots.png")
     show()
 else:
     print("There are no numeric variables.")

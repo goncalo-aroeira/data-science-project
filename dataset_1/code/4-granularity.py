@@ -25,5 +25,5 @@ def analyse_property_granularity(
 file_tag: str = "gdindex"
 data: DataFrame = read_csv("data/gdindex.csv", index_col="ISO3")
 analyse_property_granularity(data, "location", ["Hemisphere", "Continent", "Country"])
-savefig(f"images/{file_tag}_granularity_{property}.png")
+savefig(f"../images/{file_tag}_granularity_{property}.png")
 show()

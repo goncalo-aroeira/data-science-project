@@ -2,7 +2,7 @@ from matplotlib.pyplot import figure, savefig, show
 from dslabs_functions import get_variable_types, plot_bar_chart
 from pandas import read_csv, DataFrame
 
-filename = "class_pos_covid.csv"
+filename = "../../class_pos_covid.csv"
 file_tag = "CovidPos"
 data: DataFrame = read_csv(filename)
 
@@ -16,5 +16,5 @@ figure(figsize=(5, 5))
 plot_bar_chart(
     list(counts.keys()), list(counts.values()), title="Nr of variables per type"
 )
-savefig(f"images/{file_tag}_variable_types.png")
+savefig(f"../images/{file_tag}_variable_types.png")
 show()
