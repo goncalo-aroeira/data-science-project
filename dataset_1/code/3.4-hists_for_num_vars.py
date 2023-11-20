@@ -82,7 +82,7 @@ if [] != numeric:
     for n in range(len(numeric)):
         histogram_with_distributions(axs[i, j], data[numeric[n]].dropna(), numeric[n])
         i, j = (i + 1, 0) if (n + 1) % cols == 0 else (i, j + 1)
-    savefig(f"images/{file_tag}_histogram_numeric_distribution.png")
+    savefig(f"../images/{file_tag}_histogram_numeric_distribution.png")
     show()
 else:
     print("There are no numeric variables.")

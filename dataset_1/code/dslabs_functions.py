@@ -71,7 +71,7 @@ def set_chart_xticks(xvalues: list, ax: Axes, percentage: bool=False):
             ax.set_xlim((xvalues[0], xvalues[-1]))
             ax.set_xticks(xvalues, labels=xvalues)
         else:
-            rotation = 45
+            rotation = 0
 
         ax.tick_params(axis='x', labelrotation=rotation, labelsize='xx-small')
         
@@ -175,6 +175,10 @@ def plot_horizontal_bar_chart(elements: list, values: list, error: list=None, ax
     bars = ax.barh(y_pos, values, xerr=error, align='center', error_kw={'lw': 0.5, 'ecolor': 'r'})
     ax.set_yticks(y_pos, labels=elements)
     ax.invert_yaxis()  # labels read top-to-bottom
+
+    # Enable only the vertical grid lines for the y-axis
+    ax.yaxis.grid(False)
+    ax.xaxis.grid(True)
 
     # Adicionar os números correspondentes a cada barra
     for bar, value in zip(bars, values):
