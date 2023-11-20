@@ -11,6 +11,7 @@ from matplotlib.font_manager import FontProperties
 from matplotlib.axes import Axes
 from matplotlib.pyplot import gca, gcf, savefig, subplots
 from matplotlib.dates import AutoDateLocator, AutoDateFormatter
+from matplotlib.ticker import MaxNLocator
 #from matplotlib.dates import _reset_epoch_test_example, set_epoch
 from pandas import DataFrame, read_csv, concat, unique, to_numeric, to_datetime
 from pandas.api.types import is_numeric_dtype
@@ -60,21 +61,23 @@ def set_chart_xticks(xvalues: list, ax: Axes, percentage: bool=False):
     if len(xvalues) > 0:    
         if percentage:
             ax.set_ylim(0.0, 1.0)
-        
+       
         if isinstance(xvalues[0], datetime):
             locator = AutoDateLocator()
             ax.xaxis.set_major_locator(locator)
             ax.xaxis.set_major_formatter(AutoDateFormatter(locator, defaultfmt='%Y-%m-%d'))
-        
+       
         rotation = 0
         if isinstance(xvalues[0], Number):
             ax.set_xlim((xvalues[0], xvalues[-1]))
-            ax.set_xticks(xvalues, labels=xvalues)
+    # Automatically choose a suitable number of ticks
+            ax.xaxis.set_major_locator(MaxNLocator(nbins=10))
+        elif len(xvalues) > 10:
+            rotation = 45
         else:
             rotation = 0
-
         ax.tick_params(axis='x', labelrotation=rotation, labelsize='xx-small')
-        
+       
     return ax
 
 def plot_line_chart(xvalues: list, yvalues: list, ax: Axes=None, title: str='', xlabel: str='', 
