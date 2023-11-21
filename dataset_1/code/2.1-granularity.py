@@ -21,8 +21,8 @@ value_counts = data[column_to_plot].value_counts()
 # Chamar a função de plotagem de gráfico de barras
 plt.figure(figsize=(10, 6))
 plot_bar_chart(value_counts.index, value_counts.values, title='Granularity Study for variable LastCheckupTime', xlabel='Value', ylabel='Number of records')
-
-plt.savefig(f"../images/{file_tag}_study_for_granularity.png")
+plt.xticks(rotation=45, ha='right')  # Ajuste de rotação
+plt.savefig(f"../images/{file_tag}_study_for_granularity.png", bbox_inches='tight')
 
 # Mostrar o gráfico
 plt.show()
