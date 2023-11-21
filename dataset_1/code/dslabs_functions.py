@@ -72,8 +72,10 @@ def set_chart_xticks(xvalues: list, ax: Axes, percentage: bool=False):
             ax.set_xlim((xvalues[0], xvalues[-1]))
     # Automatically choose a suitable number of ticks
             ax.xaxis.set_major_locator(MaxNLocator(nbins=10))
-        else:
+        elif len(xvalues) > 10:
             rotation = 45
+        else:
+            rotation = 0
         ax.tick_params(axis='x', labelrotation=rotation, labelsize='xx-small')
        
     return ax
