@@ -1,14 +1,99 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import textwrap
+from dslabs_functions import plot_bar_chart
 
 # Supondo que 'data' seja o DataFrame carregado do seu arquivo CSV
 # Certifique-se de substituir o caminho do arquivo e o nome do arquivo pelo seu caso
 data = pd.read_csv("../../class_pos_covid.csv")
 
+##################################################################################################################
+################################################ LastCheckupTime ######################################################
+####################################################################################################################
+
+file_tag = "CovidPos_LastCheckupTime"
+
+column_to_plot = 'LastCheckupTime'
+
+# Calcular contagem de valores
+value_counts = data[column_to_plot].value_counts()
+
+# Chamar a função de plotagem de gráfico de barras
+plt.figure(figsize=(10, 6))
+plot_bar_chart(value_counts.index, value_counts.values, title='Granularity Study for variable LastCheckupTime', xlabel='Value', ylabel='Number of records')
+
+plt.savefig(f"../images/{file_tag}_study_for_granularity.png")
+
+# Mostrar o gráfico
+plt.show()
+'''
+'''
+##################################################################################################################
+################################################ SmokerStatus ######################################################
+####################################################################################################################
+
+file_tag = "CovidPos_SmokerStatus"
+
+column_to_plot = 'SmokerStatus'
+
+# Calcular contagem de valores
+value_counts = data[column_to_plot].value_counts()
+
+# Chamar a função de plotagem de gráfico de barras
+plt.figure(figsize=(10, 6))
+plot_bar_chart(value_counts.index, value_counts.values, title='Granularity Study for variable SmokerStatus', xlabel='Value', ylabel='Number of records')
+
+plt.savefig(f"../images/{file_tag}_study_for_granularity.png")
+
+# Mostrar o gráfico
+plt.show()
+
 
 ##################################################################################################################
-################################################ AgeCategory ################################################
+################################################ ECigaretteUsage ######################################################
+####################################################################################################################
+
+file_tag = "CovidPos_ECigaretteUsage"
+
+column_to_plot = 'ECigaretteUsage'
+
+# Calcular contagem de valores
+value_counts = data[column_to_plot].value_counts()
+
+# Chamar a função de plotagem de gráfico de barras
+plt.figure(figsize=(10, 6))
+plot_bar_chart(value_counts.index, value_counts.values, title='Granularity Study for variable ECigaretteUsage', xlabel='Value', ylabel='Number of records')
+
+plt.savefig(f"../images/{file_tag}_study_for_granularity.png")
+
+# Mostrar o gráfico
+plt.show()
+
+
+##################################################################################################################
+################################################ RaceEthnicityCategory ######################################################
+####################################################################################################################
+
+file_tag = "CovidPos_RaceEthnicityCategory"
+
+column_to_plot = 'RaceEthnicityCategory'
+
+# Calcular contagem de valores
+value_counts = data[column_to_plot].value_counts()
+
+# Chamar a função de plotagem de gráfico de barras
+plt.figure(figsize=(10, 6))
+plot_bar_chart(value_counts.index, value_counts.values, title='Granularity Study for variable RaceEthnicityCategory', xlabel='Value', ylabel='Number of records')
+
+plt.savefig(f"../images/{file_tag}_study_for_granularity.png")
+
+# Mostrar o gráfico
+plt.show()
+
+
+
+##################################################################################################################
+################################################ AgeCategory ######################################################
 ####################################################################################################################
 
 file_tag = "CovidPos_AgeCategory"
@@ -26,9 +111,9 @@ plt.figure(figsize=(15, 6))
 # Adicionar o primeiro subplot (o histograma para categorias específicas de idade)
 plt.subplot(1, 2, 1)
 data['AgeCategory'].dropna().loc[data['AgeCategory'].isin(ordered_categories)].value_counts().loc[ordered_categories].plot(kind='bar', color='skyblue')
-plt.title('Histograma para Categorias Específicas de Idade')
-plt.xlabel('Faixa Etária')
-plt.ylabel('Contagem')
+plt.title('5 years interval')
+plt.xlabel('Age Group')
+plt.ylabel('Number of records')
 plt.xticks(rotation=45, ha='right')  # Ajuste de rotação
 
 # Adicionar o segundo subplot (o histograma para intervalos de idade)
@@ -55,9 +140,9 @@ data['AgeInterval'] = data['AgeCategory'].map(interval_mapping)
 # Filtrar e ordenar as categorias específicas
 ordered_intervals = ['Age 18 to 29', 'Age 30 to 39', 'Age 40 to 49', 'Age 50 to 59', 'Age 60 to 69', 'Age 70 to 79', 'Age 80 or older']
 data['AgeInterval'].dropna().loc[data['AgeInterval'].isin(ordered_intervals)].value_counts().loc[ordered_intervals].plot(kind='bar', color='skyblue')
-plt.title('Histograma para Intervalos de Idade')
-plt.xlabel('Faixa Etária')
-plt.ylabel('Contagem')
+plt.title('10 years interval')
+plt.xlabel('Age Group')
+plt.ylabel('Number of records')
 plt.xticks(rotation=45, ha='right')  # Ajuste de rotação
 
 # Ajustar o layout para evitar sobreposição
@@ -86,7 +171,7 @@ counts_all_values = data['TetanusLast10Tdap'].value_counts()
 bars = axes[1].bar(counts_all_values.index, counts_all_values, color='skyblue')
 axes[1].set_title('Histograma para os 4 Valores')
 axes[1].set_xlabel('Tetanus Last 10 Tdap')
-axes[1].set_ylabel('Contagem')
+axes[1].set_ylabel('Number of records')
 axes[1].tick_params(axis='x', rotation=90)  # Ajuste de rotação
 
 # Dividir o texto em várias linhas usando textwrap
@@ -105,7 +190,7 @@ counts_yes_no = data['TetanusLast10Tdap'].value_counts()
 axes[0].bar(counts_yes_no.index, counts_yes_no, color='skyblue')
 axes[0].set_title('Histograma para "Yes" e "No"')
 axes[0].set_xlabel('Tetanus Last 10 Tdap')
-axes[0].set_ylabel('Contagem')
+axes[0].set_ylabel('Number of records')
 axes[0].tick_params(axis='x', rotation=0)  # Ajuste de rotação
 
 
