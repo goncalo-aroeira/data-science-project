@@ -11,6 +11,7 @@ from matplotlib.font_manager import FontProperties
 from matplotlib.axes import Axes
 from matplotlib.pyplot import gca, gcf, savefig, subplots
 from matplotlib.dates import AutoDateLocator, AutoDateFormatter
+from matplotlib.ticker import MaxNLocator
 #from matplotlib.dates import _reset_epoch_test_example, set_epoch
 from pandas import DataFrame, read_csv, concat, unique, to_numeric, to_datetime
 from pandas.api.types import is_numeric_dtype
@@ -60,21 +61,23 @@ def set_chart_xticks(xvalues: list, ax: Axes, percentage: bool=False):
     if len(xvalues) > 0:    
         if percentage:
             ax.set_ylim(0.0, 1.0)
-        
+       
         if isinstance(xvalues[0], datetime):
             locator = AutoDateLocator()
             ax.xaxis.set_major_locator(locator)
             ax.xaxis.set_major_formatter(AutoDateFormatter(locator, defaultfmt='%Y-%m-%d'))
-        
+       
         rotation = 0
         if isinstance(xvalues[0], Number):
             ax.set_xlim((xvalues[0], xvalues[-1]))
-            ax.set_xticks(xvalues, labels=xvalues)
-        else:
+    # Automatically choose a suitable number of ticks
+            ax.xaxis.set_major_locator(MaxNLocator(nbins=10))
+        elif len(xvalues) > 10:
             rotation = 45
-
+        else:
+            rotation = 0
         ax.tick_params(axis='x', labelrotation=rotation, labelsize='xx-small')
-        
+       
     return ax
 
 def plot_line_chart(xvalues: list, yvalues: list, ax: Axes=None, title: str='', xlabel: str='', 
@@ -163,18 +166,27 @@ def plot_multi_scatters_chart(data: DataFrame, var1: str, var2: str, var3: str=N
     ax = set_chart_labels(ax=ax, title=title, xlabel=var1, ylabel=var2)
     return ax
 
-def plot_horizontal_bar_chart(elements: list, values: list, error: list=None, ax: Axes=None, title: str = '', 
-                              xlabel: str = '', ylabel: str = '', percentage: bool=False):
+def plot_horizontal_bar_chart(elements: list, values: list, error: list=None, ax=None, title: str='', 
+                              xlabel: str='', ylabel: str='', percentage: bool=False):
     if ax is None:
         ax = gca()
     if percentage:
-        ax.set_xlim((0,1))
+        ax.set_xlim((0, 1))
     ax = set_chart_labels(ax=ax, title=title, xlabel=xlabel, ylabel=ylabel)
     y_pos = arange(len(elements))
 
-    ax.barh(y_pos, values, xerr=error, align='center', error_kw={'lw': 0.5, 'ecolor': 'r'})
+    bars = ax.barh(y_pos, values, xerr=error, align='center', error_kw={'lw': 0.5, 'ecolor': 'r'})
     ax.set_yticks(y_pos, labels=elements)
     ax.invert_yaxis()  # labels read top-to-bottom
+
+    # Enable only the vertical grid lines for the y-axis
+    ax.yaxis.grid(False)
+    ax.xaxis.grid(True)
+
+    # Adicionar os números correspondentes a cada barra
+    for bar, value in zip(bars, values):
+        ax.text(value, bar.get_y() + bar.get_height()/2, f'{value:.0f}', ha='left', va='center', fontsize = FONT_SIZE)
+
     return ax
 
 # ---------------------------------------

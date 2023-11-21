@@ -7,14 +7,13 @@ file_tag = "CovidPos"
 data: DataFrame = read_csv(filename)
 
 variable_types: dict[str, list] = get_variable_types(data)
-print(variable_types)
 counts: dict[str, int] = {}
 for tp in variable_types.keys():
     counts[tp] = len(variable_types[tp])
 
 figure(figsize=(5, 5))
 plot_bar_chart(
-    list(counts.keys()), list(counts.values()), title="Nr of variables per type"
+    list(counts.keys()), list(counts.values()), title="Number of Variables per Type"
 )
 savefig(f"../images/{file_tag}_variable_types.png")
 show()
