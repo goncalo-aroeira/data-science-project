@@ -63,9 +63,9 @@ if [] != numeric:
     plot_multibar_chart(
         numeric,
         outliers,
-        title="Nr of standard outliers per variable",
-        xlabel="variables",
-        ylabel="nr outliers",
+        title="Number of Standard Outliers per Variable",
+        xlabel="Variables",
+        ylabel="No. of Outliers",
         percentage=False,
     )
     savefig(f"../images/{file_tag}_outliers_standard.png")
