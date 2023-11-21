@@ -146,6 +146,8 @@ from dslabs_functions import plot_bar_chart, HEIGHT, get_variable_types, define_
 def analyse_property_granularity(data: DataFrame, axs: ndarray, j: int, vars: list[str]) -> ndarray:
     for i in range(len(vars)):
         counts: Series[int] = data[vars[i]].value_counts()
+        if vars[i] == "Type_of_Loan":
+                counts.index = list(map(abreviate_type_of_loan, counts.index.to_list()))
         plot_bar_chart(
             counts.index.to_list(),
             counts.to_list(),
@@ -160,7 +162,7 @@ def analyse_property_granularity(data: DataFrame, axs: ndarray, j: int, vars: li
 def get_symbolic_nonBinary_variables(data: DataFrame) -> list:
     symbolic: list = get_variable_types(data)["symbolic"]
     remove_list: list = (["ID", "Customer_ID", "Name", "SSN", "Age"] + 
-                         ["Month", "CreditMix", "Payment_of_Min_Amount", "Type_of_Loan"])
+                         ["Month", "CreditMix", "Payment_of_Min_Amount"])
     res = []
     for el in symbolic:
         if el not in remove_list:
@@ -207,23 +209,27 @@ def pb_size_payments_gran_data(pb: str) -> str:
     else:
         return nan
     
-#def type_of_loan_gran_data(data: DataFrame):
-#    res = []
-#    for entry in data["Type_of_Loan"].values:
-#        lst = entry.split(", ")
-#        for el in lst:
+def type_of_loan_gran_data(tl: str) -> str:
+    if type(tl) == str:
+        if "," in tl:
+            return "multiple_loan"
+        else:
+            return "single_loan"
+    else:
+        return nan
             
 
 def symbolic_variables_granularity(data: DataFrame, file_tag: str):
+    variables = get_symbolic_nonBinary_variables(data)
     cols: int = 3
-    rows: int = 3
+    rows: int = len(variables)
     fig: Figure
     axs: ndarray
     fig, axs = subplots(rows, cols, figsize=(cols * HEIGHT, rows * HEIGHT), squeeze=False)
     fig.suptitle(f"Granularity study for Occupation, Credit_History_Age and Payment_Behaviour")
     varia: list[str]
     i: int = 0
-    for var in get_symbolic_nonBinary_variables(data):
+    for var in variables:
         match var:
             case "Occupation":
                 data["Area_of_Occupation"] = list(map(occupation_gran_data, data["Occupation"].values))
@@ -235,9 +241,9 @@ def symbolic_variables_granularity(data: DataFrame, file_tag: str):
                 data["PB_amount_spent"] = list(map(pb_amount_spent_gran_data, data["Payment_Behaviour"].values))
                 data["PB_size_payments"] = list(map(pb_size_payments_gran_data, data["Payment_Behaviour"].values))
                 varia = ["Payment_Behaviour", "PB_amount_spent", "PB_size_payments"]
-            #case "Type_of_Loan":
-            #    type_of_loan_gran_data(data)
-            #    varia = ["Type_of_Loan", "Loan_individual"]
+            case "Type_of_Loan":
+                data["Loan_grouped"] = list(map(type_of_loan_gran_data, data["Type_of_Loan"].values))
+                varia = ["Type_of_Loan", "Loan_grouped"]
         analyse_property_granularity(data, axs, i, varia)
         i += 1
     # MAYBE CLEANUP ????? 
@@ -250,6 +256,12 @@ def symbolic_variables_granularity(data: DataFrame, file_tag: str):
 #*                                   EX 3
 #*                               Distribution                                      *
 #***********************************************************************************
+
+from dslabs_functions import set_chart_labels, plot_multiline_chart
+from matplotlib.pyplot import xticks
+from numpy import log
+from scipy.stats import norm, expon, lognorm
+from matplotlib.axes import Axes
 
 #****************************  3.1-Global boxplot  *********************************
 
@@ -377,13 +389,126 @@ def outliers(data: DataFrame, file_tag: str):
 #***********************************************************************************
 
 #**************************  3.4-Histograms for numeric  ***************************
+
+def histograms_numeric_vars(data: DataFrame, file_tag: str):
+    variables_types: dict[str, list] = get_variable_types(data)
+    numeric: list[str] = variables_types["numeric"]
+
+    if [] != numeric:
+        rows: int
+        cols: int
+        rows, cols = define_grid(len(numeric))
+        fig, axs = subplots(
+            rows, cols, figsize=(cols * HEIGHT, rows * HEIGHT), squeeze=False
+        )
+        i: int
+        j: int
+        i, j = 0, 0
+        for n in range(len(numeric)):
+            set_chart_labels(
+                axs[i, j],
+                title=f"Histogram for {numeric[n]}",
+                xlabel=numeric[n],
+                ylabel="nr records",
+            )
+            axs[i, j].hist(data[numeric[n]].dropna().values, 60)
+            i, j = (i + 1, 0) if (n + 1) % cols == 0 else (i, j + 1)
+        savefig(f"images/{file_tag}_single_histograms_numeric.png")
+        show()
+    else:
+        print("There are no numeric variables.")
+
 #***********************************************************************************
 
 #************************  3.5-Distributions for numeric  **************************
+
+def compute_known_distributions(x_values: list) -> dict:
+    distributions = dict()
+    # Gaussian
+    mean, sigma = norm.fit(x_values)
+    distributions["Normal(%.1f,%.2f)" % (mean, sigma)] = norm.pdf(x_values, mean, sigma)
+    # Exponential
+    loc, scale = expon.fit(x_values)
+    distributions["Exp(%.2f)" % (1 / scale)] = expon.pdf(x_values, loc, scale)
+    # LogNorm
+    sigma, loc, scale = lognorm.fit(x_values)
+    distributions["LogNor(%.1f,%.2f)" % (log(scale), sigma)] = lognorm.pdf(
+        x_values, sigma, loc, scale
+    )
+    return distributions
+
+
+def histogram_with_distributions(ax: Axes, series: Series, var: str):
+    values: list = series.sort_values().to_list()
+    ax.hist(values, 20, density=True)
+    distributions: dict = compute_known_distributions(values)
+    plot_multiline_chart(
+        values,
+        distributions,
+        ax=ax,
+        title="Best fit for %s" % var,
+        xlabel=var,
+        ylabel="",
+    )
+
+
+def distributions_numeric_vars(data: DataFrame, file_tag: str):
+    variables_types: dict[str, list] = get_variable_types(data)
+    numeric: list[str] = variables_types["numeric"]
+    if [] != numeric:
+        rows, cols = define_grid(len(numeric))
+        fig, axs = subplots(
+            rows, cols, figsize=(cols * HEIGHT, rows * HEIGHT), squeeze=False
+        )
+        i, j = 0, 0
+        for n in range(len(numeric)):
+            histogram_with_distributions(axs[i, j], data[numeric[n]].dropna(), numeric[n])
+            i, j = (i + 1, 0) if (n + 1) % cols == 0 else (i, j + 1)
+        savefig(f"images/{file_tag}_numeric_distribution.png")
+        show()
+    else:
+        print("There are no numeric variables.")
+
 #***********************************************************************************
 
-
 #*************************  3.6-Histograms for symbolic  ***************************
+
+def abreviate_type_of_loan(tl: str) -> str:
+    res = ""
+    for letter in tl:
+        if letter.isupper() or letter == ",":
+            res += letter
+    return res
+
+def histograms_symbolic_vars(data: DataFrame, file_tag: str):
+    variables_types: dict[str, list] = get_variable_types(data)
+    symbolic: list[str] = variables_types["symbolic"] + variables_types["binary"]
+    if [] != symbolic:
+        rows, cols = define_grid(len(symbolic))
+        fig, axs = subplots(
+            rows, cols, figsize=(cols * HEIGHT*1.5, rows * HEIGHT*1.5), squeeze=False
+        )
+        i, j = 0, 0
+        for n in range(len(symbolic)):
+            counts: Series = data[symbolic[n]].value_counts()
+            if symbolic[n] == "Type_of_Loan":
+                counts.index = list(map(abreviate_type_of_loan, counts.index.to_list()))
+            plot_bar_chart(
+                counts.index.to_list(),
+                counts.to_list(),
+                ax=axs[i, j],
+                title="Histogram for %s" % symbolic[n],
+                xlabel=symbolic[n],
+                ylabel="nr records",
+                percentage=False,
+            )
+            
+            i, j = (i + 1, 0) if (n + 1) % cols == 0 else (i, j + 1)
+        savefig(f"images/{file_tag}_histograms_symbolic.png")
+        show()
+    else:
+        print("There are no symbolic variables.")
+
 #***********************************************************************************
 
 #***************************  3.7-Class distribution  ******************************
@@ -424,6 +549,9 @@ if __name__ == "__main__":
     #boxplots_individual_num_vars(data, file_tag)
     #outliers(data, file_tag)
     #class_distribution(data, file_tag, target)
+    #histograms_numeric_vars(data, file_tag)
+    distributions_numeric_vars(data, file_tag)
+    #histograms_symbolic_vars(data, file_tag)
     
     #print(get_symbolic_nonBinary_variables(data))
     #print(data['Type_of_Loan'].unique())
