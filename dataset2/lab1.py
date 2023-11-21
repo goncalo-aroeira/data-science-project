@@ -52,17 +52,19 @@ def missingVals(data: DataFrame, file_tag: str):
         print(var + '-' + str(nr))
         if nr > 0:
             mv[var] = nr
-
+    sorted_mv = dict(sorted(mv.items(), key=lambda item: item[1], reverse=True))
     print(mv)
+    print(sorted_mv)
     print(data.columns)
     figure(figsize=(5, 3))
     plot_horizontal_bar_chart(
-        list(mv.keys()),
-        list(mv.values()),
+        list(sorted_mv.keys()),
+        list(sorted_mv.values()),
         title="Nr of missing values per variable",
         xlabel="nr missing values",
         ylabel="variables",
     )
+
     tight_layout()
     savefig(f"images/{file_tag}_mv.png")
     show()
@@ -77,30 +79,70 @@ from numpy import ndarray
 from pandas import read_csv, DataFrame
 from matplotlib.figure import Figure
 from matplotlib.pyplot import figure, subplots, savefig, show
-from dslabs_functions import HEIGHT, plot_multi_scatters_chart
+from dslabs_functions import HEIGHT, plot_multi_scatters_chart, plot_scatter_chart
 
 def scatterPlots(data: DataFrame, file_tag: str):
     data = data.dropna()
-    vars = pd.DataFrame()
-    for col in data.select_dtypes(include="number").columns:
-        vars[col] = pd.to_numeric(data[col], errors='coerce')
-    symbolic_vars = data.select_dtypes(include="object").columns
-    vars_symbolic = pd.DataFrame()
 
-    for col in symbolic_vars:
-        vars_symbolic[col], _ = pd.factorize(data[col])
-
-    # Combine numeric and factorized symbolic variables
-    vars_combined = pd.concat([vars, vars_symbolic], axis=1)
-
-    n = len(vars_combined.columns)
-    fig, axs = subplots(n, n, figsize=(n * HEIGHT, n * HEIGHT), squeeze=False)
-
-    for i in range(len(vars_combined.columns)):
-        var1 = vars_combined.columns[i]
-        for j in range(i + 1, len(vars_combined.columns)):
-            var2 = vars_combined.columns[j]
-            plot_multi_scatters_chart(vars_combined, var1, var2, ax=axs[i, j - 1])
+    vars: list = data.columns.to_list()
+    print("all vars",vars)
+    allPlots, allAxis = [], []
+    
+    if [] != vars:
+        target = "Credit_Score"
+        out = ["Customer_ID","ID","SSN"]
+        n: int = len(vars) - 1
+        fig, axs = subplots(n, n, figsize=(n * HEIGHT, n * HEIGHT), squeeze=False)
+        for i in range(len(vars)):
+            var1: str = vars[i]
+            if var1 in out:
+                continue
+            for j in range(i + 1, len(vars)):
+                var2: str = vars[j]
+                if var2 in out:
+                    continue
+                allPlots += [[var1,var2]]
+                allAxis += [[i, j - 1]]
+                # plot_multi_scatters_chart(data, var1, var2, target, ax=axs[i, j - 1])
+        # savefig(f"images/{file_tag}_sparsity_per_class_study.png")
+        # show()
+        print(allPlots, len(allPlots))
+        for i in range(len(allPlots)):
+            var1, var2 = allPlots[i][0], allPlots[i][1]
+            plot_multi_scatters_chart(data, var1, var2, target, ax=axs[allAxis[i][0], allAxis[i][1]])
+        savefig(f"images/{file_tag}_ll_sparsity_per_class_study.png")
+        show()
+        # for i in range(3,39):
+        #     var1, var2 = allPlots[i][0], allPlots[i][1]
+        #     plot_multi_scatters_chart(data, var1, var2, target, ax=axs[allAxis[i][0], allAxis[i][1]])
+        # print("loop01 done")
+        # savefig(f"images/{file_tag}01_sparsity_per_class_study.png")
+        # print("loop1 start")
+        
+        # for i in range(39,117):
+        #     var1, var2 = allPlots[i][0], allPlots[i][1]
+        #     plot_multi_scatters_chart(data, var1, var2, target, ax=axs[allAxis[i][0], allAxis[i][1]])
+        # print("loop1 done")
+        
+        # savefig(f"images/{file_tag}1_sparsity_per_class_study.png")
+        # print("starting loop2")
+        # for i in range(117, 234):
+        #     var1, var2 = allPlots[i][0], allPlots[i][1]
+        #     plot_multi_scatters_chart(data, var1, var2, target, ax=axs[allAxis[i][0], allAxis[i][1]])
+        # print("loop2 done")
+        # savefig(f"images/{file_tag}2_sparsity_per_class_study.png")
+        # print("starting loop3")
+        # for i in range(234, 351):
+        #     var1, var2 = allPlots[i][0], allPlots[i][1]
+        #     plot_multi_scatters_chart(data, var1, var2, target, ax=axs[allAxis[i][0], allAxis[i][1]])
+        # print("loop3 done")
+        # savefig(f"images/{file_tag}3_sparsity_per_class_study.png")
+        # print("loop3 saved")
+    
+    else:
+        print("Sparsity per class: there are no variables.")
+    
+    print("Sparsity done")
 
 #***********************************************************************************
 #*                                   EX 2                                          *
@@ -193,4 +235,4 @@ if __name__ == "__main__":
     data['Age'] = data['Age'].astype(str).str.replace('_', '', regex=False)
 
     # granularity
-    symbolic_variables_granularity(data, file_tag)
+    scatterPlots(data, file_tag)

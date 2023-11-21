@@ -71,7 +71,7 @@ def set_chart_xticks(xvalues: list, ax: Axes, percentage: bool=False):
             ax.set_xlim((xvalues[0], xvalues[-1]))
             ax.set_xticks(xvalues, labels=xvalues)
         else:
-            rotation = 0
+            rotation = 45
 
         ax.tick_params(axis='x', labelrotation=rotation, labelsize='xx-small')
         
@@ -98,15 +98,22 @@ def plot_bar_chart(xvalues: list, yvalues: list, ax: Axes=None, title: str='', x
 
     return ax
 
-def plot_horizontal_bar_chart(xvalues: list, yvalues: list, ax: Axes = None, title: str = '', xlabel: str = '',
-                              ylabel: str = '', percentage: bool = False):
+def plot_horizontal_bar_chart(elements: list, values: list, error: list=None, ax=None, title: str='', 
+                              xlabel: str='', ylabel: str='', percentage: bool=False):
     if ax is None:
         ax = gca()
+    if percentage:
+        ax.set_xlim((0, 1))
     ax = set_chart_labels(ax=ax, title=title, xlabel=xlabel, ylabel=ylabel)
-    ax = set_chart_xticks(xvalues, ax=ax, percentage=percentage)
-    values = ax.barh(yvalues, xvalues, label=xvalues, edgecolor=LINE_COLOR, color=FILL_COLOR, tick_label=yvalues)
-    format = '%.2f' if percentage else '%.0f'
-    ax.bar_label(values, fmt=format, fontproperties=FONT_TEXT)
+    y_pos = arange(len(elements))
+
+    bars = ax.barh(y_pos, values, xerr=error, align='center', error_kw={'lw': 0.5, 'ecolor': 'r'})
+    ax.set_yticks(y_pos, labels=elements)
+    ax.invert_yaxis()  # labels read top-to-bottom
+
+    # Adicionar os números correspondentes a cada barra
+    for bar, value in zip(bars, values):
+        ax.text(value, bar.get_y() + bar.get_height()/2, f'{value:.2f}', ha='left', va='center', fontsize = FONT_SIZE)
 
     return ax
 
@@ -461,4 +468,3 @@ def knn_study(trnX, trnY, tstX, tstY, k_max=19, lag=2, metric='accuracy', file_t
     savefig(f'images/{file_tag}_knn_{metric}_study.png')
 
     return best_model, best_params
-
