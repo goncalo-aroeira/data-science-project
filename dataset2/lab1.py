@@ -140,23 +140,16 @@ def correlationAll(data: DataFrame, file_tag: str):
 from pandas import DataFrame, read_csv, Series
 from matplotlib.pyplot import show, subplots, savefig
 from matplotlib.figure import Figure
-from numpy import ndarray
+from numpy import ndarray, nan
 from dslabs_functions import plot_bar_chart, HEIGHT, get_variable_types, define_grid
 
-def analyse_property_granularity(data: DataFrame, property: str, vars: list[str]) -> ndarray:
-    rows: int
-    cols: int
-    rows, cols = define_grid(len(vars))
-    fig: Figure
-    axs: ndarray
-    fig, axs = subplots(1, cols, figsize=(cols * HEIGHT, HEIGHT), squeeze=False)
-    fig.suptitle(f"Granularity study for {property}")
-    for i in range(cols):
+def analyse_property_granularity(data: DataFrame, axs: ndarray, j: int, vars: list[str]) -> ndarray:
+    for i in range(len(vars)):
         counts: Series[int] = data[vars[i]].value_counts()
         plot_bar_chart(
             counts.index.to_list(),
             counts.to_list(),
-            ax=axs[0, i],
+            ax=axs[j, i],
             title=vars[i],
             xlabel=vars[i],
             ylabel="number of records",
@@ -164,19 +157,90 @@ def analyse_property_granularity(data: DataFrame, property: str, vars: list[str]
         )
     return axs
 
-
 def get_symbolic_nonBinary_variables(data: DataFrame) -> list:
     symbolic: list = get_variable_types(data)["symbolic"]
-    remove_list: list = ["ID", "Customer_ID", "Name", "SSN", "Age"]  
+    remove_list: list = (["ID", "Customer_ID", "Name", "SSN", "Age"] + 
+                         ["Month", "CreditMix", "Payment_of_Min_Amount", "Type_of_Loan"])
     res = []
     for el in symbolic:
         if el not in remove_list:
             res += [el]
     return res
 
+def occupation_gran_data(occupation: str) -> str:
+    STEM: list[str] = ["Scientist", "Engineer", "Developer", "Doctor", "Architect", "Mechanic"]
+    Business: list[str] = ["Entrepreneur", "Manager"]
+    Media: list[str] = ["Media_Manager", "Journalist"]
+    Services: list[str] = ["Teacher", "Lawyer", "Accountant"]
+    Creative: list[str] = ["Musician", "Writer"]
+    if occupation in STEM:
+        return "STEM"
+    elif occupation in Business:
+        return "Business"
+    elif occupation in Media:
+        return "Media"
+    elif occupation in Services:
+        return "Services"
+    elif occupation in Creative:
+        return "Creative"
+    else:
+        return nan
+    
+def credit_History_Age_gran_data(credit_history_age: str) -> str:
+    if type(credit_history_age) == str:
+        year = credit_history_age.split(" ")[:2]
+        return " ".join(year)
+    else:
+        return nan
+
+def pb_amount_spent_gran_data(pb: str) -> str:
+    if type(pb) == str:
+        amount_spent = pb.split("_")[:2]
+        return "_".join(amount_spent)
+    else:
+        return nan
+    
+def pb_size_payments_gran_data(pb: str) -> str:
+    if type(pb) == str:
+        size_payments = pb.split("_")[2:]
+        return "_".join(size_payments)
+    else:
+        return nan
+    
+#def type_of_loan_gran_data(data: DataFrame):
+#    res = []
+#    for entry in data["Type_of_Loan"].values:
+#        lst = entry.split(", ")
+#        for el in lst:
+            
 
 def symbolic_variables_granularity(data: DataFrame, file_tag: str):
-    analyse_property_granularity(data, "Symbolic Variables", get_symbolic_nonBinary_variables(data))
+    cols: int = 3
+    rows: int = 3
+    fig: Figure
+    axs: ndarray
+    fig, axs = subplots(rows, cols, figsize=(cols * HEIGHT, rows * HEIGHT), squeeze=False)
+    fig.suptitle(f"Granularity study for Occupation, Credit_History_Age and Payment_Behaviour")
+    varia: list[str]
+    i: int = 0
+    for var in get_symbolic_nonBinary_variables(data):
+        match var:
+            case "Occupation":
+                data["Area_of_Occupation"] = list(map(occupation_gran_data, data["Occupation"].values))
+                varia = ["Occupation", "Area_of_Occupation"]
+            case "Credit_History_Age":
+                data["CHA_year"] = list(map(credit_History_Age_gran_data, data["Credit_History_Age"].values))
+                varia = ["Credit_History_Age", "CHA_year"]
+            case "Payment_Behaviour":
+                data["PB_amount_spent"] = list(map(pb_amount_spent_gran_data, data["Payment_Behaviour"].values))
+                data["PB_size_payments"] = list(map(pb_size_payments_gran_data, data["Payment_Behaviour"].values))
+                varia = ["Payment_Behaviour", "PB_amount_spent", "PB_size_payments"]
+            #case "Type_of_Loan":
+            #    type_of_loan_gran_data(data)
+            #    varia = ["Type_of_Loan", "Loan_individual"]
+        analyse_property_granularity(data, axs, i, varia)
+        i += 1
+    # MAYBE CLEANUP ????? 
     savefig(f"images/{file_tag}_granularity.png")
     show()
 
@@ -187,10 +251,14 @@ if __name__ == "__main__":
     filename = "data/class_credit_score.csv"
     file_tag = "Credit_Score"
     data: DataFrame = read_csv(filename, na_values="", index_col="ID")
+    stroke: DataFrame = read_csv("data/stroke.csv", na_values="")
 
-    print(data.shape)
-    print(data.head)
+    #print(data.shape)
+    #print(data.head)
     data['Age'] = data['Age'].astype(str).str.replace('_', '', regex=False)
 
     # granularity
     symbolic_variables_granularity(data, file_tag)
+    
+    #print(get_symbolic_nonBinary_variables(data))
+    #print(data['Type_of_Loan'].unique())
