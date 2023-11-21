@@ -134,7 +134,7 @@ def correlationAll(data: DataFrame, file_tag: str):
 #***********************************************************************************
 #*                                   EX 2
 #*                                Granularity                                      *
-#*                           4 - Symbolic Variables                                *
+#*                          2.1 - Symbolic Variables                               *
 #***********************************************************************************
 
 from pandas import DataFrame, read_csv, Series
@@ -241,24 +241,189 @@ def symbolic_variables_granularity(data: DataFrame, file_tag: str):
         analyse_property_granularity(data, axs, i, varia)
         i += 1
     # MAYBE CLEANUP ????? 
-    savefig(f"images/{file_tag}_granularity.png")
+    savefig(f"images/{file_tag}_granularity.png", bbox_inches='tight')
+    show()
+
+#***********************************************************************************
+
+#***********************************************************************************
+#*                                   EX 3
+#*                               Distribution                                      *
+#***********************************************************************************
+
+#****************************  3.1-Global boxplot  *********************************
+
+def global_box_plot(data: DataFrame, file_tag: str):
+    variables_types: dict[str, list] = get_variable_types(data)
+    numeric: list[str] = variables_types["numeric"]
+    if [] != numeric:
+        data.boxplot(rot=45)
+        savefig(f"images/{file_tag}_global_boxplot.png", bbox_inches='tight')
+        show()
+    else:
+        print("There are no numeric variables.")
+
+def global_box_plot_modified_data(data: DataFrame, file_tag: str):
+    variables_types: dict[str, list] = get_variable_types(data)
+    numeric: list[str] = variables_types["numeric"]
+    if [] != numeric:
+        data = data[data['MonthlyBalance'] >= -3e26]
+        print(data.shape)
+        data.boxplot(rot=45)
+        savefig(f"images/{file_tag}_global_boxplot_modified.png", bbox_inches='tight')
+        show()
+    else:
+        print("There are no numeric variables.")
+
+#*******************  3.2-Boxplots for individual numeric vars  ********************
+
+def boxplots_individual_num_vars(data: DataFrame, file_tag: str):
+    variables_types: dict[str, list] = get_variable_types(data)
+    numeric: list[str] = variables_types["numeric"]
+
+    if [] != numeric:
+        rows: int
+        cols: int
+        rows, cols = define_grid(len(numeric))
+        fig: Figure
+        axs: ndarray
+        fig, axs = subplots(
+            rows, cols, figsize=(cols * HEIGHT, rows * HEIGHT), squeeze=False
+        )
+        i, j = 0, 0
+        for n in range(len(numeric)):
+            axs[i, j].set_title("Boxplot for %s" % numeric[n])
+            axs[i, j].boxplot(data[numeric[n]].dropna().values)
+            i, j = (i + 1, 0) if (n + 1) % cols == 0 else (i, j + 1)
+        savefig(f"images/{file_tag}_single_boxplots.png")
+        show()
+    else:
+        print("There are no numeric variables.")
+
+#***********************************************************************************
+
+#********************************  3.3-Outliers  ***********************************
+
+from dslabs_functions import plot_multibar_chart
+
+NR_STDEV: int = 2
+IQR_FACTOR: float = 1.5
+
+def determine_outlier_thresholds_for_var(
+    summary5: Series, std_based: bool = True, threshold: float = NR_STDEV
+) -> tuple[float, float]:
+    top: float = 0
+    bottom: float = 0
+    if std_based:
+        std: float = threshold * summary5["std"]
+        top = summary5["mean"] + std
+        bottom = summary5["mean"] - std
+    else:
+        iqr: float = threshold * (summary5["75%"] - summary5["25%"])
+        top = summary5["75%"] + iqr
+        bottom = summary5["25%"] - iqr
+
+    return top, bottom
+
+def count_outliers(
+    data: DataFrame,
+    numeric: list[str],
+    nrstdev: int = NR_STDEV,
+    iqrfactor: float = IQR_FACTOR,
+) -> dict:
+    outliers_iqr: list = []
+    outliers_stdev: list = []
+    summary5: DataFrame = data[numeric].describe()
+
+    for var in numeric:
+        top: float
+        bottom: float
+        top, bottom = determine_outlier_thresholds_for_var(
+            summary5[var], std_based=True, threshold=nrstdev
+        )
+        outliers_stdev += [
+            data[data[var] > top].count()[var] + data[data[var] < bottom].count()[var]
+        ]
+
+        top, bottom = determine_outlier_thresholds_for_var(
+            summary5[var], std_based=False, threshold=iqrfactor
+        )
+        outliers_iqr += [
+            data[data[var] > top].count()[var] + data[data[var] < bottom].count()[var]
+        ]
+
+    return {"iqr": outliers_iqr, "stdev": outliers_stdev}
+
+def outliers(data: DataFrame, file_tag: str):
+    variables_types: dict[str, list] = get_variable_types(data)
+    numeric: list[str] = variables_types["numeric"]
+
+    if [] != numeric:
+        outliers: dict[str, int] = count_outliers(data, numeric)
+        figure(figsize=(20, HEIGHT))
+        plot_multibar_chart(
+            numeric,
+            outliers,
+            title="Nr of standard outliers per variable",
+            xlabel="variables",
+            ylabel="nr outliers",
+            percentage=False,
+        )
+        savefig(f"images/{file_tag}_outliers_standard.png")
+        show()
+    else:
+        print("There are no numeric variables.")
+
+#***********************************************************************************
+
+#**************************  3.4-Histograms for numeric  ***************************
+#***********************************************************************************
+
+#************************  3.5-Distributions for numeric  **************************
+#***********************************************************************************
+
+
+#*************************  3.6-Histograms for symbolic  ***************************
+#***********************************************************************************
+
+#***************************  3.7-Class distribution  ******************************
+
+def class_distribution(data: DataFrame, file_tag: str, target: str):
+    values: Series = data[target].value_counts()
+    figure(figsize=(4, 2))
+    plot_bar_chart(
+        values.index.to_list(),
+        values.to_list(),
+        title=f"Target distribution (target={target})",
+    )
+    savefig(f"images/{file_tag}_class_distribution.png", bbox_inches='tight')
     show()
 
 #***********************************************************************************
 
 
+
 if __name__ == "__main__":
     filename = "data/class_credit_score.csv"
     file_tag = "Credit_Score"
+    target = "Credit_Score"
     data: DataFrame = read_csv(filename, na_values="", index_col="ID")
+    
     stroke: DataFrame = read_csv("data/stroke.csv", na_values="")
 
     #print(data.shape)
     #print(data.head)
-    data['Age'] = data['Age'].astype(str).str.replace('_', '', regex=False)
+    #data['Age'] = data['Age'].astype(str).str.replace('_', '', regex=False)
 
     # granularity
-    symbolic_variables_granularity(data, file_tag)
+    #symbolic_variables_granularity(data, file_tag)
+
+    # distribution
+    #global_box_plot(data, file_tag)
+    #global_box_plot_modified_data(data, file_tag)
+    #boxplots_individual_num_vars(data, file_tag)
+    #outliers(data, file_tag)
+    #class_distribution(data, file_tag, target)
     
     #print(get_symbolic_nonBinary_variables(data))
     #print(data['Type_of_Loan'].unique())
