@@ -1,6 +1,6 @@
 from pandas import Series, read_csv, DataFrame
 from matplotlib.pyplot import figure, savefig, show
-from dslabs_functions import plot_multibar_chart, get_variable_types, HEIGHT
+from dataset_1.dslabs_functions import plot_multibar_chart, get_variable_types, HEIGHT
 
 NR_STDEV: int = 2           #REVER VALORES
 IQR_FACTOR: float = 1.5

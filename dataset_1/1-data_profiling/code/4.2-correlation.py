@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 from pandas import DataFrame
-from dslabs_functions import get_variable_types
+from dataset_1.dslabs_functions import get_variable_types
 from pandas import read_csv
 
 filename = "../../class_pos_covid.csv"

@@ -2,7 +2,7 @@ from numpy import ndarray
 from pandas import read_csv, DataFrame
 from matplotlib.figure import Figure
 from matplotlib.pyplot import subplots, savefig
-from dslabs_functions import HEIGHT, plot_multi_scatters_chart
+from dataset_1.dslabs_functions import HEIGHT, plot_multi_scatters_chart
 
 filename = "../../class_pos_covid.csv"
 file_tag = "CovidPos"

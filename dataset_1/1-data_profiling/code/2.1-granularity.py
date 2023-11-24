@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import textwrap
-from dslabs_functions import plot_bar_chart
+from dataset_1.dslabs_functions import plot_bar_chart
 
 # Supondo que 'data' seja o DataFrame carregado do seu arquivo CSV
 # Certifique-se de substituir o caminho do arquivo e o nome do arquivo pelo seu caso
@@ -21,8 +21,8 @@ value_counts = data[column_to_plot].value_counts()
 # Chamar a função de plotagem de gráfico de barras
 plt.figure(figsize=(10, 6))
 plot_bar_chart(value_counts.index, value_counts.values, title='Granularity Study for variable LastCheckupTime', xlabel='Value', ylabel='Number of records')
-
-plt.savefig(f"../images/{file_tag}_study_for_granularity.png")
+plt.xticks(rotation=45, ha='right')  # Ajuste de rotação
+plt.savefig(f"../images/{file_tag}_study_for_granularity.png", bbox_inches='tight')
 
 # Mostrar o gráfico
 plt.show()

@@ -4,7 +4,7 @@ from pandas import Series, read_csv, DataFrame
 from scipy.stats import norm, expon, lognorm
 from matplotlib.axes import Axes
 from matplotlib.pyplot import savefig, show, subplots
-from dslabs_functions import define_grid, HEIGHT, plot_multiline_chart, get_variable_types
+from dataset_1.dslabs_functions import define_grid, HEIGHT, plot_multiline_chart, get_variable_types
 
 filename = "../../class_pos_covid.csv"
 file_tag = "CovidPos"

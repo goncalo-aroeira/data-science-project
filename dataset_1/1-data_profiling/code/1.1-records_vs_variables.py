@@ -1,5 +1,5 @@
 from matplotlib.pyplot import figure, savefig, show
-from dslabs_functions import plot_bar_chart
+from dataset_1.dslabs_functions import plot_bar_chart
 from pandas import read_csv, DataFrame
 
 filename = "../../class_pos_covid.csv"

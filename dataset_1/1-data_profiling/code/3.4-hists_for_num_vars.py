@@ -2,7 +2,7 @@ from numpy import ndarray
 from pandas import DataFrame, read_csv
 from matplotlib.figure import Figure
 from matplotlib.pyplot import savefig, show, subplots
-from dslabs_functions import define_grid,  get_variable_types, HEIGHT, set_chart_labels
+from dataset_1.dslabs_functions import define_grid,  get_variable_types, HEIGHT, set_chart_labels
 
 filename = "../../class_pos_covid.csv"
 file_tag = "CovidPos"
