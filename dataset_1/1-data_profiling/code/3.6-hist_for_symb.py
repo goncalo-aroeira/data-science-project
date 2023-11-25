@@ -1,4 +1,4 @@
-from dslabs_functions import plot_bar_chart, get_variable_types, define_grid, HEIGHT
+from dataset_1.dslabs_functions import plot_bar_chart, get_variable_types, define_grid, HEIGHT
 from matplotlib.pyplot import savefig, show, subplots
 from pandas import read_csv, DataFrame, Series
 

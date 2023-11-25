@@ -241,7 +241,7 @@ def symbolic_variables_granularity(data: DataFrame, file_tag: str):
     fig: Figure
     axs: ndarray
     fig, axs = subplots(rows, cols, figsize=(cols * HEIGHT, rows * HEIGHT), squeeze=False)
-    fig.suptitle(f"Granularity study for Occupation, Credit_History_Age and Payment_Behaviour")
+    fig.suptitle(f"Granularity study for Occupation, Credit_History_Age, Payment_Behaviour and Type_of_Loan")
     varia: list[str]
     i: int = 0
     for var in variables:
@@ -261,7 +261,8 @@ def symbolic_variables_granularity(data: DataFrame, file_tag: str):
                 varia = ["Type_of_Loan", "Loan_grouped"]
         analyse_property_granularity(data, axs, i, varia)
         i += 1
-    # MAYBE CLEANUP ????? 
+    # MAYBE CLEANUP ?????
+    data.drop(["Area_of_Occupation", "CHA_year", "PB_amount_spent", "PB_size_payments", "Loan_grouped"], axis = 1)
     savefig(f"images/{file_tag}_granularity.png", bbox_inches='tight')
     show()
 
@@ -556,9 +557,8 @@ if __name__ == "__main__":
     data['Age'] = data['Age'].astype(str).str.replace('_', '', regex=False).astype(int)
 
     # granularity
-    variableTypes(data,file_tag)
-    # scatterPlots(data, file_tag)
-    #symbolic_variables_granularity(data, file_tag)
+    #scatterPlots(data, file_tag)
+    symbolic_variables_granularity(data, file_tag)
 
     # distribution
     #global_box_plot(data, file_tag)
@@ -567,7 +567,7 @@ if __name__ == "__main__":
     #outliers(data, file_tag)
     #class_distribution(data, file_tag, target)
     #histograms_numeric_vars(data, file_tag)
-    # distributions_numeric_vars(data, file_tag)
+    #distributions_numeric_vars(data, file_tag)
     #histograms_symbolic_vars(data, file_tag)
     
     #print(get_symbolic_nonBinary_variables(data))

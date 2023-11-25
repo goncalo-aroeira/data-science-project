@@ -1,6 +1,6 @@
 from matplotlib.pyplot import figure, savefig, show, tight_layout
 from pandas import read_csv, DataFrame
-from dslabs_functions import plot_horizontal_bar_chart
+from dataset_1.dslabs_functions import plot_horizontal_bar_chart
 
 filename = "../../class_pos_covid.csv"
 file_tag = "CovidPos"

@@ -1,7 +1,7 @@
 from numpy import ndarray
 from matplotlib.figure import Figure
 from matplotlib.pyplot import savefig, show, subplots
-from dslabs_functions import define_grid, HEIGHT, get_variable_types
+from dataset_1.dslabs_functions import define_grid, HEIGHT, get_variable_types
 from pandas import read_csv, DataFrame
 
 filename = "../../class_pos_covid.csv"
