@@ -47,7 +47,7 @@ removed_teeth_values: dict[str, int] = {
     '''
 }
 had_diabetes_values: dict[str, int] = {
-    # divir em yes e no???
+    # dividir em yes e no??? implica perda de detalhe
     '''
     "Yes"
     "No"
@@ -84,7 +84,7 @@ age_category_values: dict[str, int] = {
  '''
 }
 tetanus_last_10_tdap_values: dict[str, int] = {
-    # diviir em yes e no???
+    # dividir em yes e no??? implica perda de detalhe
     '''
     "Yes, received tetanus shot but not sure what type"
     "No, did not receive any tetanus shot in the past 10 years"
