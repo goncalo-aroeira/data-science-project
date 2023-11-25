@@ -29,15 +29,15 @@ def encoding(data: DataFrame, file_tag: str):
 
     # answer
     print('IDs')	                				
-    print('Binary variables        ordinal linear encoding, 1-0?')   					
-    print('Month	                ordinal linear encoding, 1-8?')					
+    print('Binary variables - Ordinal linear encoding, 1-0?')   					
+    print('Month - Ordinal linear encoding, 1-8?')					
     print('Name')						
     print('SSN')						
-    print('Occupation				Ordinal encoding based on taxonomy')
-    print('Type_of_Loan			????????? boa questão')			
-    print('CreditMix				Ordinal linear encoding [Good, Stantard, Bad] -> [0,1,2]')	
-    print('Credit_History_Age		Discretization? só para years')				
-    print('Payment_Behaviour       Ordinal encoding based on taxonomy')	
+    print('Occupation - Ordinal encoding based on taxonomy')
+    print('Type_of_Loan - ????????? boa questão')			
+    print('CreditMix - Ordinal linear encoding [Good, Stantard, Bad] -> [0,1,2]')	
+    print('Credit_History_Age - Discretization? só para years')				
+    print('Payment_Behaviour - Ordinal encoding based on taxonomy')	
 
     
 
