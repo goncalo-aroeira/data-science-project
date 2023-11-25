@@ -235,6 +235,14 @@ def type_of_loan_gran_data(tl: str) -> str:
             
 
 def symbolic_variables_granularity(data: DataFrame, file_tag: str):
+    #res = []
+    #for loan in data["Type_of_Loan"].dropna().unique().tolist():
+    #    for individual_loan in list(map(lambda x: x.strip(), loan.split(','))):
+    #        if "and " in individual_loan:
+    #            individual_loan = individual_loan.replace("and ", "", 1)
+    #        if individual_loan not in res:
+    #            res += [individual_loan]
+    #print(len(res), res)
     variables = get_symbolic_nonBinary_variables(data)
     cols: int = 3
     rows: int = len(variables)
