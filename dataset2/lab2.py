@@ -34,7 +34,11 @@ def encoding(data: DataFrame, file_tag: str):
     print('Name')						
     print('SSN')						
     print('Occupation - Ordinal encoding based on taxonomy')
-    print('Type_of_Loan - ????????? boa questão')			
+    print('Type_of_Loan - ????????? boa questão, dummification?')
+    # The issue about the Type_of_Loan variable is that it stores more than one value for the variable. Indeed it keeps a list of loan types.
+    # There are two solutions to loose the minimum of information:
+    # - either you choose to unfold the variable in several columns;
+    # - or you choose to create several records with all the variables constant.
     print('CreditMix - Ordinal linear encoding [Good, Stantard, Bad] -> [0,1,2]')	
     print('Credit_History_Age - Discretization? só para years')				
     print('Payment_Behaviour - Ordinal encoding based on taxonomy')	
