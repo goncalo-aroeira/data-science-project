@@ -27,6 +27,18 @@ def encoding(data: DataFrame, file_tag: str):
     print('percentage of missing vals in CreditMix',data["CreditMix"].isna().sum()/data["CreditMix"].count())
     #  25% missing values not enough to drop Column
 
+    # answer
+    print('IDs')	                				
+    print('Binary variables        ordinal linear encoding, 1-0?')   					
+    print('Month	                ordinal linear encoding, 1-8?')					
+    print('Name')						
+    print('SSN')						
+    print('Occupation				Ordinal encoding based on taxonomy')
+    print('Type_of_Loan			????????? boa questão')			
+    print('CreditMix				Ordinal linear encoding [Good, Stantard, Bad] -> [0,1,2]')	
+    print('Credit_History_Age		Discretization? só para years')				
+    print('Payment_Behaviour       Ordinal encoding based on taxonomy')	
+
     
 
 if __name__ == "__main__":
