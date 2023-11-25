@@ -82,62 +82,35 @@ from matplotlib.pyplot import figure, subplots, savefig, show
 from dslabs_functions import HEIGHT, plot_multi_scatters_chart, plot_scatter_chart
 
 def scatterPlots(data: DataFrame, file_tag: str):
+    out = ["Customer_ID","ID","SSN"]
     data = data.dropna()
 
     vars: list = data.columns.to_list()
+    for i in vars:
+        if i in out:
+            vars.remove(i)
     print("all vars",vars)
     allPlots, allAxis = [], []
     
     if [] != vars:
         target = "Credit_Score"
-        out = ["Customer_ID","ID","SSN"]
         n: int = len(vars) - 1
         fig, axs = subplots(n, n, figsize=(n * HEIGHT, n * HEIGHT), squeeze=False)
         for i in range(len(vars)):
             var1: str = vars[i]
-            if var1 in out:
-                continue
             for j in range(i + 1, len(vars)):
                 var2: str = vars[j]
-                if var2 in out:
-                    continue
-                allPlots += [[var1,var2]]
-                allAxis += [[i, j - 1]]
-                # plot_multi_scatters_chart(data, var1, var2, target, ax=axs[i, j - 1])
+                # allPlots += [[var1,var2]]
+                # allAxis += [[i, j - 1]]
+                plot_multi_scatters_chart(data, var1, var2, target, ax=axs[i, j - 1])
         # savefig(f"images/{file_tag}_sparsity_per_class_study.png")
         # show()
         print(allPlots, len(allPlots))
-        for i in range(len(allPlots)):
-            var1, var2 = allPlots[i][0], allPlots[i][1]
-            plot_multi_scatters_chart(data, var1, var2, target, ax=axs[allAxis[i][0], allAxis[i][1]])
-        savefig(f"images/{file_tag}_ll_sparsity_per_class_study.png")
+        # for i in range(len(allPlots)):
+        #     var1, var2 = allPlots[i][0], allPlots[i][1]
+        #     plot_multi_scatters_chart(data, var1, var2, target, ax=axs[allAxis[i][0], allAxis[i][1]])
+        savefig(f"images/{file_tag}_All_sparsity_per_class_study.png")
         show()
-        # for i in range(3,39):
-        #     var1, var2 = allPlots[i][0], allPlots[i][1]
-        #     plot_multi_scatters_chart(data, var1, var2, target, ax=axs[allAxis[i][0], allAxis[i][1]])
-        # print("loop01 done")
-        # savefig(f"images/{file_tag}01_sparsity_per_class_study.png")
-        # print("loop1 start")
-        
-        # for i in range(39,117):
-        #     var1, var2 = allPlots[i][0], allPlots[i][1]
-        #     plot_multi_scatters_chart(data, var1, var2, target, ax=axs[allAxis[i][0], allAxis[i][1]])
-        # print("loop1 done")
-        
-        # savefig(f"images/{file_tag}1_sparsity_per_class_study.png")
-        # print("starting loop2")
-        # for i in range(117, 234):
-        #     var1, var2 = allPlots[i][0], allPlots[i][1]
-        #     plot_multi_scatters_chart(data, var1, var2, target, ax=axs[allAxis[i][0], allAxis[i][1]])
-        # print("loop2 done")
-        # savefig(f"images/{file_tag}2_sparsity_per_class_study.png")
-        # print("starting loop3")
-        # for i in range(234, 351):
-        #     var1, var2 = allPlots[i][0], allPlots[i][1]
-        #     plot_multi_scatters_chart(data, var1, var2, target, ax=axs[allAxis[i][0], allAxis[i][1]])
-        # print("loop3 done")
-        # savefig(f"images/{file_tag}3_sparsity_per_class_study.png")
-        # print("loop3 saved")
     
     else:
         print("Sparsity per class: there are no variables.")
@@ -580,10 +553,11 @@ if __name__ == "__main__":
 
     #print(data.shape)
     #print(data.head)
-    #data['Age'] = data['Age'].astype(str).str.replace('_', '', regex=False)
+    data['Age'] = data['Age'].astype(str).str.replace('_', '', regex=False).astype(int)
 
     # granularity
-    scatterPlots(data, file_tag)
+    variableTypes(data,file_tag)
+    # scatterPlots(data, file_tag)
     #symbolic_variables_granularity(data, file_tag)
 
     # distribution
@@ -593,7 +567,7 @@ if __name__ == "__main__":
     #outliers(data, file_tag)
     #class_distribution(data, file_tag, target)
     #histograms_numeric_vars(data, file_tag)
-    distributions_numeric_vars(data, file_tag)
+    # distributions_numeric_vars(data, file_tag)
     #histograms_symbolic_vars(data, file_tag)
     
     #print(get_symbolic_nonBinary_variables(data))

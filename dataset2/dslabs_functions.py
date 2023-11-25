@@ -161,13 +161,22 @@ def plot_multibar_chart(group_labels: list, yvalues: dict, ax: Axes=None, title:
 def plot_multi_scatters_chart(data: DataFrame, var1: str, var2: str, var3: str=None, ax: Axes=None):
     if ax is None:
         ax = gca()
+    
+    out = ["Customer_ID","ID","SSN", "Type_of_Loan"]
 
+    data1, data2 = [], []
     title=f'{var1} x {var2}'
+    if var1 in out:
+        data1 = abreviate_type_of_loan(data[var1])
+    if var2 in out:
+        data2 = abreviate_type_of_loan(data[var2])
+
     if var3 is not None:
         title += f' per {var3}'
         values = data[var3].unique().tolist()
         if len(values) > 2:
-            chart = ax.scatter(data[var1], data[var2], c=data[var3])
+            
+            chart = ax.scatter(data1, data2, c=data[var3])
             cbar = gcf().colorbar(chart)
             cbar.outline.set_visible(False)
             cbar.set_label(var3, loc='top')
@@ -178,7 +187,7 @@ def plot_multi_scatters_chart(data: DataFrame, var1: str, var2: str, var3: str=N
                 ax.scatter(subset[var1], subset[var2], color=ACTIVE_COLORS[i], label=values[i])
             ax.legend(fontsize='xx-small')
     else:
-        ax.scatter(data[var1], data[var2], color=FILL_COLOR)
+        ax.scatter(data1, data2, color=FILL_COLOR)
     ax = set_chart_labels(ax=ax, title=title, xlabel=var1, ylabel=var2)
     return ax
 
@@ -468,3 +477,13 @@ def knn_study(trnX, trnY, tstX, tstY, k_max=19, lag=2, metric='accuracy', file_t
     savefig(f'images/{file_tag}_knn_{metric}_study.png')
 
     return best_model, best_params
+
+def abreviate_type_of_loan(list: str) -> str:
+    abrev = []
+    for tl in list:
+        res = ""
+        for letter in tl:
+            if letter.isupper() or letter == ",":
+                res += letter
+        abrev += res
+    return abrev
