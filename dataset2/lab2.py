@@ -20,6 +20,12 @@ def get_all_unique_loans(data: DataFrame) -> list:
 def get_unique_loans_for1entry(full_loan_entry: str) -> list:
     return list(map(lambda x: x.strip(), full_loan_entry.split(',')))
 
+def get_all_unique_credit_history_age(data: DataFrame) -> list:
+    return data["Credit_History_Age"].dropna().unique().tolist()
+
+def transfrom_CHA_to_int(unique_CHA: str) -> int:
+    return int(unique_CHA.split(" ")[0]) + round(int(unique_CHA.split(" ")[3])/12, 2)
+
 def encoding(data: DataFrame, file_tag: str):
     variable_types: dict[str, list] = get_variable_types(data)
 
@@ -49,7 +55,7 @@ def encoding(data: DataFrame, file_tag: str):
     print("Payment_of_Min_Amount - Ordinal linear encoding [No, NM, Yes] -> [0,1,2]")
 
     # ID, Customer_ID, Name, SSN - dropping...
-    data.drop(columns=["Customer_ID", "Name", "SSN"])
+    data.drop(columns=["Customer_ID", "Name", "SSN"], inplace=True)
 
     # Occupation
     STEM = 0
@@ -75,7 +81,7 @@ def encoding(data: DataFrame, file_tag: str):
         'Architect': STEM
     }
 
-    # Type_of_Loan
+    # Type_of_Loan - dummification
     unique_loan_rep: dict[str, list] = {}
     for aux in get_all_unique_loans(data):
         unique_loan_rep[aux] = []
@@ -92,7 +98,7 @@ def encoding(data: DataFrame, file_tag: str):
                     unique_loan_rep[entry] += [0]
     for entry in unique_loan_rep:
         data[entry] = unique_loan_rep[entry]
-    data.drop(columns=["Type_of_Loan"])
+    data.drop(columns=["Type_of_Loan"], inplace=True)
 
     # Credit_Score
     credit_score_encoding: dict[str, int] = {"Poor": 0, "Good": 1}
@@ -108,15 +114,17 @@ def encoding(data: DataFrame, file_tag: str):
         'July': 6,
         'August': 7
     }
-    data["Month_sin"] = list(map(lambda x: sin(2*pi*month_cycle[x]/7) if type(x) == str else nan, data["Month"].values))
-    data["Month_sin"] = list(map(lambda x: cos(2*pi*month_cycle[x]/7) if type(x) == str else nan, data["Month"].values))
-    data.drop(columns=["Month"])
+    data["Month_sin"] = list(map(lambda x: round(sin(2*pi*month_cycle[x]/7), 2) if type(x) == str else nan, data["Month"].values))
+    data["Month_cos"] = list(map(lambda x: round(cos(2*pi*month_cycle[x]/7), 2) if type(x) == str else nan, data["Month"].values))
+    data.drop(columns=["Month"], inplace=True)
 
     # CreditMix
     creditMix_encoding: dict[str, int] = {"Bad": 0, "Standard": 1, "Good": 2}
 
     # Credit_History_Age
-    # TODO
+    credit_history_age_encoding: dict[str, int] = {}
+    for unique_CHA in get_all_unique_credit_history_age(data):
+        credit_history_age_encoding[unique_CHA] = transfrom_CHA_to_int(unique_CHA)
 
     # Payment_Behaviour
     payment_behaviour_encoding: dict[str, int] = {
@@ -136,10 +144,11 @@ def encoding(data: DataFrame, file_tag: str):
         "Credit_Score": credit_score_encoding,
         "CreditMix": creditMix_encoding,
         "Payment_Behaviour": payment_behaviour_encoding,
-        "Payment_of_Min_Amount": payment_of_min_amount_encoding
+        "Payment_of_Min_Amount": payment_of_min_amount_encoding,
+        "Credit_History_Age": credit_history_age_encoding
     }
 
-    data.replace(encoding, inplace=False)
+    data.replace(encoding, inplace=True)
 
     print(f"the data shape after the encoding: {data.shape}")
 
@@ -158,6 +167,7 @@ if __name__ == "__main__":
 
     # variable encoding step
     encoding(data, file_tag)
+    data.head(20).to_csv("data_vars_encoded.csv")
 
     # print(list(data.columns))
     
