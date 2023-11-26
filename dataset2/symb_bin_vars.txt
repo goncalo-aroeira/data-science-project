@@ -35,3 +35,14 @@ Unique Loans (9):
  ['Auto Loan', 'Credit-Builder Loan', 'Personal Loan', 
   'Home Equity Loan', 'Not Specified', 'Mortgage Loan', 
   'Student Loan', 'Debt Consolidation Loan', 'Payday Loan']
+
+  {'numeric': ['Age', 'Annual_Income', 'Monthly_Inhand_Salary', 
+    'Num_Bank_Accounts', 'Num_Credit_Card', 'Interest_Rate', 'NumofLoan',
+    'Delay_from_due_date', 'NumofDelayedPayment', 'ChangedCreditLimit',
+    'NumCreditInquiries', 'OutstandingDebt', 'CreditUtilizationRatio',
+    'TotalEMIpermonth', 'Amountinvestedmonthly', 'MonthlyBalance'], 
+    'binary': ['Credit_Score', 'Auto Loan', 'Credit-Builder Loan',
+    'Personal Loan', 'Home Equity Loan', 'Not Specified', 
+    'Mortgage Loan', 'Student Loan', 'Debt Consolidation Loan', 
+    'Payday Loan'], 'date': [], 'symbolic': ['Occupation', 'CreditMix',
+    'Credit_History_Age', 'Payment_of_Min_Amount', 'Payment_Behaviour']}

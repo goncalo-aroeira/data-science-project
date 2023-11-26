@@ -460,6 +460,7 @@ def mvi_by_filling(data: DataFrame, strategy: str, symb_vars: list[str], num_var
     variables: dict = get_variable_types(data)
     variables["numeric"] = num_vars
     variables["symbolic"] = symb_vars
+    print(variables)
     stg_num, v_num = "mean", -1
     stg_sym, v_sym = "most_frequent", "NA"
     stg_bool, v_bool = "most_frequent", False
@@ -490,7 +491,7 @@ def mvi_by_filling(data: DataFrame, strategy: str, symb_vars: list[str], num_var
             lst_dfs.append(tmp_bool)
         df = concat(lst_dfs, axis=1)
     else:
-        imp = KNNImputer(n_neighbors=5)
+        imp = KNNImputer(n_neighbors=n_neighbors)
         imp.fit(data)
         ar: ndarray = imp.transform(data)
         df = DataFrame(ar, columns=data.columns, index=data.index)
@@ -691,6 +692,7 @@ def run_KNN(trnX, trnY, tstX, tstY, metric="accuracy") -> dict[str, float]:
             eval[key] = CLASS_EVAL_METRICS[key](tstY, prd)
     return eval
 
+from  sklearn.preprocessing import MinMaxScaler
 
 def evaluate_approach(
     train: DataFrame, test: DataFrame, target: str = "class", metric: str = "accuracy"
@@ -700,6 +702,10 @@ def evaluate_approach(
     tstY = test.pop(target).values
     tstX: ndarray = test.values
     eval: dict[str, list] = {}
+
+    scaler = MinMaxScaler()
+    trnX = scaler.fit_transform(trnX) 
+    tstX = scaler.transform(tstX)
 
     eval_NB: dict[str, float] | None = run_NB(trnX, trnY, tstX, tstY, metric=metric)
     eval_KNN: dict[str, float] | None = run_KNN(trnX, trnY, tstX, tstY, metric=metric)

@@ -1,7 +1,8 @@
 from pandas import read_csv, DataFrame
-from dslabs_functions import get_variable_types, mvi_by_filling, evaluate_approach, plot_evaluation_results
+from dslabs_functions import get_variable_types, mvi_by_filling, evaluate_approach, plot_multibar_chart
 from math import pi, sin, cos
 from numpy import nan
+from matplotlib.pyplot import show, savefig, figure, close
 
 #***************************************************************************************************
 #                                        Variable Encoding                                         *
@@ -173,16 +174,32 @@ def missing_values_imputation(data: DataFrame, og_symb_vars: list[str], og_num_v
     data_filling_knn = mvi_by_filling(data, "knn", og_symb_vars, og_num_vars, 3)
     data_filling_knn.to_csv("data/ccs_mvi_fill_knn.csv")
 
-def mvi_evaluation(target: str):
+def mvi_evaluation(target: str, file_tag: str):
     frequent_fn = "data/ccs_mvi_fill_frequent.csv"
     knn_fn = "data/ccs_mvi_fill_knn.csv"
     data_frequent_mvi_fill: DataFrame = read_csv(frequent_fn)
-    data_knn_mvi_fill: DataFrame = read_csv(knn_fn)
+    data_knn_mvi_fill: DataFrame = read_csv(knn_fn, index_col="ID")
 
-    freq_evaluation = evaluate_approach(data_frequent_mvi_fill.head(int(data_frequent_mvi_fill.shape[0]*0.8)), 
-                                        data_frequent_mvi_fill.tail(int(data_frequent_mvi_fill.shape[0]*0.2)), 
-                                        target)
-    print(freq_evaluation)
+    figure()
+    eval: dict[str, list] = evaluate_approach(data_frequent_mvi_fill.head(int(data_frequent_mvi_fill.shape[0]*0.8)), 
+                                              data_frequent_mvi_fill.tail(int(data_frequent_mvi_fill.shape[0]*0.2)), 
+                                              target=target, metric="recall")
+    plot_multibar_chart(
+        ["NB", "KNN"], eval, title=f"{file_tag} evaluation", percentage=True
+    )
+    savefig(f"images/{file_tag}_mvi_freq_eval.png")
+    show()
+    close()
+
+    figure()
+    eval: dict[str, list] = evaluate_approach(data_knn_mvi_fill.head(int(data_knn_mvi_fill.shape[0]*0.8)), 
+                                              data_knn_mvi_fill.tail(int(data_knn_mvi_fill.shape[0]*0.2)), 
+                                              target=target, metric="recall")
+    plot_multibar_chart(
+        ["NB", "KNN"], eval, title=f"{file_tag} evaluation", percentage=True
+    )
+    savefig(f"images/{file_tag}_mvi_knn_eval.png")
+    show()
 
 
 #***************************************************************************************************
@@ -214,7 +231,7 @@ if __name__ == "__main__":
     # missing values imputation step
     #print()
     #missing_values_imputation(data, og_symb_vars, og_num_vars)
-    mvi_evaluation(target)
+    mvi_evaluation(target, file_tag)
 
     # print(list(data.columns))
     
