@@ -397,12 +397,12 @@ def plot_evaluation_results(model, trn_y, prd_trn, tst_y, prd_tst, labels: ndarr
 
     params_st = '' if () == model['params'] else str(model['params'])
     fig, axs = subplots(1, 2, figsize=(2 * HEIGHT, HEIGHT))
-    fig.suptitle(f'Best {model['metric']} for {model['name']} {params_st}')
+    fig.suptitle(f'Best {model["metric"]} for {model["name"]} {params_st}')
     plot_multibar_chart(['Train', 'Test'], evaluation, ax=axs[0], percentage=True)
 
     cnf_mtx_tst = confusion_matrix(tst_y, prd_tst, labels=labels)
     plot_confusion_matrix(cnf_mtx_tst, labels, ax=axs[1])
-    savefig(f'images/{file_tag}_{model['name']}_best_{model['metric']}_eval.png')
+    savefig(f'images/{file_tag}_{model["name"]}_best_{model["metric"]}_eval.png')
     return axs
 
 def naive_Bayes_study(trnX, trnY, tstX, tstY, metric='accuracy', file_tag=''):
@@ -455,7 +455,7 @@ def knn_study(trnX, trnY, tstX, tstY, k_max=19, lag=2, metric='accuracy', file_t
                 best_params['params'] = (k, d)
                 best_model = clf
         values[d] = y_tst_values
-    print(f'KNN best with k={best_params['params'][0]} and {best_params['params'][1]}')
+    print(f'KNN best with k={best_params["params"][0]} and {best_params["params"][1]}')
 
     plot_multiple_line_chart(kvalues, values, title=f'KNN Models ({metric})', xlabel='k', ylabel=metric, percentage=True)
     savefig(f'images/{file_tag}_knn_{metric}_study.png')
