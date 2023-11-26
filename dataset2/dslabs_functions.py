@@ -447,14 +447,19 @@ def mvi_by_dropping(
     return df
 
 
-def mvi_by_filling(data: DataFrame, strategy: str = "frequent") -> DataFrame:
+def mvi_by_filling(data: DataFrame, strategy: str, symb_vars: list[str], num_vars: list[str],
+                   n_neighbors: int = 1) -> DataFrame:
     """
     data: DataFrame - the data to clean
     strategy: str - the strategy to apply ('frequent', 'constant' or 'knn')
+    symb_vars: variables that were symbolic before the encoding
+    num_vars: variables that were numeric before the encoding
     return the data modified
     """
     df: DataFrame
     variables: dict = get_variable_types(data)
+    variables["numeric"] = num_vars
+    variables["symbolic"] = symb_vars
     stg_num, v_num = "mean", -1
     stg_sym, v_sym = "most_frequent", "NA"
     stg_bool, v_bool = "most_frequent", False

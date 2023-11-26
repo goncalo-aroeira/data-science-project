@@ -1,5 +1,5 @@
 from pandas import read_csv, DataFrame
-from dslabs_functions import get_variable_types
+from dslabs_functions import get_variable_types, mvi_by_filling, evaluate_approach, plot_evaluation_results
 from math import pi, sin, cos
 from numpy import nan
 
@@ -27,8 +27,6 @@ def transfrom_CHA_to_int(unique_CHA: str) -> int:
     return int(unique_CHA.split(" ")[0]) + round(int(unique_CHA.split(" ")[3])/12, 2)
 
 def encoding(data: DataFrame, file_tag: str):
-    variable_types: dict[str, list] = get_variable_types(data)
-
     # missing vars study (Ze: nao creio que isto seja necessario)
     print('num records', data["CreditMix"].count())
     print('missing records', data["CreditMix"].isna().sum())
@@ -154,20 +152,69 @@ def encoding(data: DataFrame, file_tag: str):
 
 #***************************************************************************************************
 
+#***************************************************************************************************
+#                                   Missing Values Imputation                                      *
+#***************************************************************************************************
+
+def missing_values_imputation(data: DataFrame, og_symb_vars: list[str], og_num_vars: list[str]):
+    vars_with_mv: list = []
+    for var in data.columns:
+        if data[var].isna().sum() > 0:
+            vars_with_mv += [var]
+    print(f"variables with missing values: {vars_with_mv}")
+
+    # no variable has a considerable amount of missing values therefore we wont drop columns
+    # remove rows with a lot of missing values (80%) - number of columns = 33
+    MIN_MV_IN_A_RECORD_RATIO = 0.8
+    data.dropna(axis=0, thresh=round(data.shape[1] * MIN_MV_IN_A_RECORD_RATIO, 0), inplace=True)
+
+    data_filling_frequent = mvi_by_filling(data, "frequent", og_symb_vars, og_num_vars)
+    data_filling_frequent.to_csv("data/ccs_mvi_fill_frequent.csv")
+    data_filling_knn = mvi_by_filling(data, "knn", og_symb_vars, og_num_vars, 3)
+    data_filling_knn.to_csv("data/ccs_mvi_fill_knn.csv")
+
+def mvi_evaluation(target: str):
+    frequent_fn = "data/ccs_mvi_fill_frequent.csv"
+    knn_fn = "data/ccs_mvi_fill_knn.csv"
+    data_frequent_mvi_fill: DataFrame = read_csv(frequent_fn)
+    data_knn_mvi_fill: DataFrame = read_csv(knn_fn)
+
+    freq_evaluation = evaluate_approach(data_frequent_mvi_fill.head(int(data_frequent_mvi_fill.shape[0]*0.8)), 
+                                        data_frequent_mvi_fill.tail(int(data_frequent_mvi_fill.shape[0]*0.2)), 
+                                        target)
+    print(freq_evaluation)
+
+
+#***************************************************************************************************
+
 
 if __name__ == "__main__":
     filename = "data/class_credit_score.csv"
     file_tag = "Credit_Score"
     target = "Credit_Score"
     data: DataFrame = read_csv(filename, na_values="", index_col="ID")
+    data['Age'] = data['Age'].astype(str).str.replace('_', '', regex=False).astype(int)
     
     stroke: DataFrame = read_csv("data/stroke.csv", na_values="")
 
-    data['Age'] = data['Age'].astype(str).str.replace('_', '', regex=False).astype(int)
+    # originally symbolic variables
+    og_symb_vars = get_variable_types(data)["symbolic"]
+    og_symb_vars.remove("Customer_ID")
+    og_symb_vars.remove("Name")
+    og_symb_vars.remove("SSN")
+    og_symb_vars.remove("Month")
+    og_symb_vars.remove("Type_of_Loan")
+    # originally numeric variables
+    og_num_vars = get_variable_types(data)["numeric"]
 
     # variable encoding step
-    encoding(data, file_tag)
-    data.head(20).to_csv("data_vars_encoded.csv")
+    #encoding(data, file_tag)
+    #data.head(20).to_csv("data_vars_encoded.csv")
+
+    # missing values imputation step
+    #print()
+    #missing_values_imputation(data, og_symb_vars, og_num_vars)
+    mvi_evaluation(target)
 
     # print(list(data.columns))
     
