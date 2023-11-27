@@ -31,29 +31,24 @@ health_values: dict[str, int] = {
     "Excelent": 4,
 }
 last_checkup_time_values: dict[str, int] = {
-    '''
-    "Within past year (anytime less than 12 months ago)"
-    "Within past 2 years (1 year but less than 2 years ago)"
-    "Within past 5 years (2 years but less than 5 years ago)"
-    "5 or more years ago"
-    '''
+    #dividir em last year e not last year devido ao baixo numero de valores para as categorias de mais de um ano
+    "Within past year (anytime less than 12 months ago)": 0,
+    "Within past 2 years (1 year but less than 2 years ago)": 1,
+    "Within past 5 years (2 years but less than 5 years ago)": 1,
+    "5 or more years ago": 1,
 }
 removed_teeth_values: dict[str, int] = {
-    '''
-    "None of them"
-    "1 to 5"
-    "6 or more, but not all"
-    "All"
-    '''
+    "None of them": 0,
+    "1 to 5": 1,
+    "6 or more, but not all": 2,
+    "All": 3,
 }
 had_diabetes_values: dict[str, int] = {
     # dividir em yes e no??? implica perda de detalhe
-    '''
-    "Yes"
-    "No"
-    "No, pre-diabetes or borderline diabetes"
-    "Yes, but only during pregnancy (female)"
-    '''
+    "No": 0,
+    "Yes": 1,
+    "No, pre-diabetes or borderline diabetes": 0,
+    "Yes, but only during pregnancy (female)": 1,
 }
 smoker_status_values: dict[str, int] = {
     "Current smoker - now smokes every day": 0,
@@ -76,12 +71,20 @@ race_ethnicity_values: dict[str, int] = {
     "Other race only, Non-Hispanic": 4,
 }
 age_category_values: dict[str, int] = {
-    '''
-    'Age 80 or older' nan 'Age 40 to 44' 'Age 75 to 79' 'Age 70 to 74'
- 'Age 55 to 59' 'Age 65 to 69' 'Age 60 to 64' 'Age 50 to 54'
- 'Age 45 to 49' 'Age 35 to 39' 'Age 30 to 34' 'Age 25 to 29'
- 'Age 18 to 24'
- '''
+    # apos estudar a granularidade atraves do grfico do data profiling decidi usar o que tinha os intervalos de 10 anos
+    'Age 18 to 24': 0,
+    'Age 25 to 29': 0,
+    'Age 30 to 34': 1,
+    'Age 35 to 39': 1,
+    'Age 40 to 44': 2,
+    'Age 45 to 49': 2,
+    'Age 50 to 54': 3,
+    'Age 55 to 59': 3,
+    'Age 60 to 64': 4,
+    'Age 65 to 69': 4,
+    'Age 70 to 74': 5,
+    'Age 75 to 79': 5,
+    'Age 80 or older': 6,
 }
 tetanus_last_10_tdap_values: dict[str, int] = {
     # dividir em yes e no??? implica perda de detalhe
