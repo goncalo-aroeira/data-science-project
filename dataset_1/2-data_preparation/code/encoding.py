@@ -22,8 +22,8 @@ health_values: dict[str, int] = {
     "Poor": 0,
     "Fair": 1,
     "Good": 2,
-    "Very Good": 3,
-    "Excelent": 4,
+    "Very good": 3,
+    "Excellent": 4,
 }
 last_checkup_time_values: dict[str, int] = {
     #dividir em last year e not last year devido ao baixo numero de valores para as categorias de mais de um ano
@@ -107,12 +107,12 @@ encoding: dict[str, dict[str, int]] = {
     "HadDiabetes": had_diabetes_values,
     "DeafOrHardOfHearing": yes_no,
     "BlindOrVisionDifficulty": yes_no,
-    "DificultyConcentrating": yes_no,
+    "DifficultyConcentrating": yes_no,
     "DifficultyWalking": yes_no,
     "DifficultyDressingBathing": yes_no,
     "DifficultyErrands": yes_no,
     "SmokerStatus": smoker_status_values,
-    "ECigarreteUsage": e_cigarrete_values,
+    "ECigaretteUsage": e_cigarrete_values,
     "ChestScan": yes_no,
     "RaceEthnicityCategory": race_ethnicity_values,
     "AgeCategory": age_category_values,
@@ -124,8 +124,9 @@ encoding: dict[str, dict[str, int]] = {
     "HighRiskLastYear": yes_no,
     "CovidPos": yes_no,
 }
-df: DataFrame = data.replace(encoding, inplace=False)
-df.head()
+data.replace(encoding, inplace=True)
+data.to_csv("../data/ccs_vars_encoded.csv")
+
 
 for v in vars["symbolic"]:
     print(v, data[v].unique())
@@ -153,14 +154,14 @@ og_symb_vars = get_variable_types(data)["symbolic"]
 og_num_vars = get_variable_types(data)["numeric"]
 
 data_filling_frequent = mvi_by_filling(data, "frequent", og_symb_vars, og_num_vars)
-data_filling_frequent.to_csv("data/ccs_mvi_fill_frequent.csv")
+data_filling_frequent.to_csv("../data/ccs_mvi_fill_frequent.csv")
 data_filling_knn = mvi_by_filling(data, "knn", og_symb_vars, og_num_vars, 3)
-data_filling_knn.to_csv("data/ccs_mvi_fill_knn.csv")
+data_filling_knn.to_csv("../data/ccs_mvi_fill_knn.csv")
 
 
 ############################################# MV Evaluation #############################################
-frequent_fn = "data/ccs_mvi_fill_frequent.csv"
-knn_fn = "data/ccs_mvi_fill_knn.csv"
+frequent_fn = "../data/ccs_mvi_fill_frequent.csv"
+knn_fn = "../data/ccs_mvi_fill_knn.csv"
 data_frequent_mvi_fill: DataFrame = read_csv(frequent_fn)
 data_knn_mvi_fill: DataFrame = read_csv(knn_fn, index_col="ID")
 
@@ -182,5 +183,5 @@ eval: dict[str, list] = evaluate_approach(data_knn_mvi_fill.head(int(data_knn_mv
 plot_multibar_chart(
     ["NB", "KNN"], eval, title=f"{file_tag} evaluation", percentage=True
 )
-savefig(f"images/{file_tag}_mvi_knn_eval.png")
+savefig(f"../images/{file_tag}_mvi_knn_eval.png")
 show()
