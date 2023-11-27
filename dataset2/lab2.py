@@ -210,7 +210,7 @@ def missing_values_imputation(data_filename: str, og_symb_vars: list[str], og_nu
     MIN_MV_IN_A_RECORD_RATIO = 0.9
     data.dropna(axis=0, thresh=round(data.shape[1] * MIN_MV_IN_A_RECORD_RATIO, 0), inplace=True)
 
-    data_filling_frequent = mvi_by_filling(data, "frequent", og_symb_vars, og_num_vars + unique_loans)
+    data_filling_frequent = mvi_by_filling(data, "frequent", og_symb_vars + unique_loans, og_num_vars)
     data_filling_frequent.to_csv("data/ccs_mvi_fill_frequent.csv")
     data_filling_knn = mvi_by_filling(data, "knn", og_symb_vars, og_num_vars, 3)
     data_filling_knn.to_csv("data/ccs_mvi_fill_knn.csv")
