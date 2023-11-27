@@ -15,12 +15,12 @@ def get_all_unique_loans(data: DataFrame) -> list:
         for individual_loan in list(map(lambda x: x.strip(), loan.split(','))):
             if "and " in individual_loan:
                 individual_loan = individual_loan.replace("and ", "", 1)
-            if individual_loan not in res:
-                res += [individual_loan]
+            if individual_loan.replace(" ","_") not in res:
+                res += [individual_loan.replace(" ","_")]
     return res
 
 def get_unique_loans_for1entry(full_loan_entry: str) -> list:
-    return list(map(lambda x: x.strip(), full_loan_entry.split(',')))
+    return list(map(lambda x: x.strip().replace("and ", "").replace(" ", "_"), full_loan_entry.split(',')))
 
 def get_all_unique_credit_history_age(data: DataFrame) -> list:
     return data["Credit_History_Age"].dropna().unique().tolist()
@@ -55,7 +55,34 @@ def encoding(data: DataFrame, file_tag: str):
     print("Payment_of_Min_Amount - Ordinal linear encoding [No, NM, Yes] -> [0,1,2]")
 
     # ID, Customer_ID, Name, SSN - dropping...
-    data.drop(columns=["ID", "Customer_ID", "Name", "SSN"], inplace=True)
+    # data.drop(columns=["ID", "Customer_ID", "Name", "SSN"], inplace=True)
+    # ID
+    # for i in range(data["ID"].count()):
+    #     if type(data["ID"][i]) == str:
+    #         data["ID"][i] = int(data["ID"][i], 16)
+    data["ID"] = list(map(lambda x: int(x, 16) if type(x) == str else nan, data["ID"].values))
+
+    # Customer_ID
+    data["Customer_ID"] = list(map(lambda x: int(x.replace("CUS_",""), 16) if type(x) == str else nan, data["Customer_ID"].values))
+
+    #SSN
+    data["SSN"] = list(map(lambda x: int(x.replace("-","")) if type(x) == str else nan, data["SSN"].values))
+
+    # Name
+    names_encoding: dict[str, int] = {}
+    n = 0
+    for name in data["Name"].dropna().unique():
+        names_encoding[name] = n
+        n += 1
+    data["Name"] = list(map(lambda x: names_encoding[x] if type(x) == str else nan, data["Name"].values))
+
+
+    # def name_transform(name):
+    #     res = 0
+    #     for c in name:
+    #         res += ord(c)
+    #     return res
+    # data["Name"] = list(map(lambda x: name_transform(x) if type(x) == str else nan, data["Name"].values))
 
     # Occupation
     SERVICES = 0
@@ -90,8 +117,9 @@ def encoding(data: DataFrame, file_tag: str):
             for entry in unique_loan_rep:
                 unique_loan_rep[entry] += [nan]
         else:
+            single_loans_for1entry = get_unique_loans_for1entry(full_loan_entry)
             for entry in unique_loan_rep:
-                unique_loan_rep[entry] += [full_loan_entry.count(entry)]
+                unique_loan_rep[entry] += [single_loans_for1entry.count(entry)]
     for entry in unique_loan_rep:
         data[entry] = unique_loan_rep[entry]
     data.drop(columns=["Type_of_Loan"], inplace=True)
@@ -152,6 +180,8 @@ def encoding(data: DataFrame, file_tag: str):
 
     print(f"the data shape after the encoding: {data.shape}")
     data.to_csv("data/ccs_vars_encoded.csv")
+
+    print(data.head(20))
 
 def newNoMissing(data: DataFrame, file_tag: str):
     variable_types: dict[str, list] = get_variable_types(data)
@@ -232,10 +262,6 @@ if __name__ == "__main__":
 
     # originally symbolic variables
     og_symb_vars = get_variable_types(data)["symbolic"]
-    og_symb_vars.remove("ID")
-    og_symb_vars.remove("Customer_ID")
-    og_symb_vars.remove("Name")
-    og_symb_vars.remove("SSN")
     og_symb_vars.remove("Month")
     og_symb_vars.remove("Type_of_Loan")
     # originally numeric variables
@@ -244,7 +270,8 @@ if __name__ == "__main__":
     og_unique_loans = get_all_unique_loans(data)
 
     # variable encoding step
-    #encoding(data, file_tag)
+    encoding(data, file_tag)
+    newNoMissing(data, file_tag)
 
     # missing values imputation step
     missing_values_imputation("data/ccs_vars_encoded.csv", og_symb_vars, og_num_vars, og_unique_loans)
