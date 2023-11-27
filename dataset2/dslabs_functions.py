@@ -650,12 +650,11 @@ CLASS_EVAL_METRICS: dict[str, Callable] = {
 
 
 def run_NB(trnX, trnY, tstX, tstY, metric: str = "accuracy") -> dict[str, float]:
-    estimators: dict[str, GaussianNB | MultinomialNB | BernoulliNB] = {
+    estimators: dict[str, GaussianNB | BernoulliNB] = {
         "GaussianNB": GaussianNB(),
-        "MultinomialNB": MultinomialNB(),
         "BernoulliNB": BernoulliNB(),
     }
-    best_model: GaussianNB | MultinomialNB | BernoulliNB = None  # type: ignore
+    best_model: GaussianNB | BernoulliNB = None  # type: ignore
     best_performance: float = 0.0
     eval: dict[str, float] = {}
 
@@ -692,8 +691,6 @@ def run_KNN(trnX, trnY, tstX, tstY, metric="accuracy") -> dict[str, float]:
             eval[key] = CLASS_EVAL_METRICS[key](tstY, prd)
     return eval
 
-from  sklearn.preprocessing import MinMaxScaler
-
 def evaluate_approach(
     train: DataFrame, test: DataFrame, target: str = "class", metric: str = "accuracy"
 ) -> dict[str, list]:
@@ -702,10 +699,6 @@ def evaluate_approach(
     tstY = test.pop(target).values
     tstX: ndarray = test.values
     eval: dict[str, list] = {}
-
-    scaler = MinMaxScaler()
-    trnX = scaler.fit_transform(trnX) 
-    tstX = scaler.transform(tstX)
 
     eval_NB: dict[str, float] | None = run_NB(trnX, trnY, tstX, tstY, metric=metric)
     eval_KNN: dict[str, float] | None = run_KNN(trnX, trnY, tstX, tstY, metric=metric)

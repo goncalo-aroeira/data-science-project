@@ -1,5 +1,6 @@
 from pandas import read_csv, DataFrame
-from dslabs_functions import get_variable_types, mvi_by_filling, evaluate_approach, plot_multibar_chart
+from dslabs_functions import (get_variable_types, mvi_by_filling, evaluate_approach, 
+                              plot_multibar_chart, determine_outlier_thresholds_for_var, NR_STDEV)
 from math import pi, sin, cos
 from numpy import nan
 from matplotlib.pyplot import show, savefig, figure, close
@@ -54,13 +55,13 @@ def encoding(data: DataFrame, file_tag: str):
     print("Payment_of_Min_Amount - Ordinal linear encoding [No, NM, Yes] -> [0,1,2]")
 
     # ID, Customer_ID, Name, SSN - dropping...
-    data.drop(columns=["Customer_ID", "Name", "SSN"], inplace=True)
+    data.drop(columns=["ID", "Customer_ID", "Name", "SSN"], inplace=True)
 
     # Occupation
-    STEM = 0
+    SERVICES = 0
+    STEM = 1
     BUSINESS = 2
-    MEDIA = 2
-    SERVICES = 3
+    MEDIA = 3
     CREATIVE = 4
     occupation_encoding: dict[str, int] = {
         'Scientist': STEM,
@@ -89,12 +90,8 @@ def encoding(data: DataFrame, file_tag: str):
             for entry in unique_loan_rep:
                 unique_loan_rep[entry] += [nan]
         else:
-            unique_loans = get_unique_loans_for1entry(full_loan_entry)
             for entry in unique_loan_rep:
-                if entry in unique_loans:
-                    unique_loan_rep[entry] += [1]
-                else:
-                    unique_loan_rep[entry] += [0]
+                unique_loan_rep[entry] += [full_loan_entry.count(entry)]
     for entry in unique_loan_rep:
         data[entry] = unique_loan_rep[entry]
     data.drop(columns=["Type_of_Loan"], inplace=True)
@@ -111,10 +108,14 @@ def encoding(data: DataFrame, file_tag: str):
         'May': 4,
         'June': 5,
         'July': 6,
-        'August': 7
+        'August': 7,
+        'September': 8,
+        'October': 9,
+        'November': 10,
+        'December': 11
     }
-    data["Month_sin"] = list(map(lambda x: round(sin(2*pi*month_cycle[x]/7), 2) if type(x) == str else nan, data["Month"].values))
-    data["Month_cos"] = list(map(lambda x: round(cos(2*pi*month_cycle[x]/7), 2) if type(x) == str else nan, data["Month"].values))
+    data["Month_sin"] = list(map(lambda x: round(sin(2*pi*month_cycle[x]/12), 2) if type(x) == str else nan, data["Month"].values))
+    data["Month_cos"] = list(map(lambda x: round(cos(2*pi*month_cycle[x]/12), 2) if type(x) == str else nan, data["Month"].values))
     data.drop(columns=["Month"], inplace=True)
 
     # CreditMix
@@ -150,6 +151,15 @@ def encoding(data: DataFrame, file_tag: str):
     data.replace(encoding, inplace=True)
 
     print(f"the data shape after the encoding: {data.shape}")
+    data.to_csv("data/ccs_vars_encoded.csv")
+
+def newNoMissing(data: DataFrame, file_tag: str):
+    variable_types: dict[str, list] = get_variable_types(data)
+    print(variable_types)
+    for key in data:
+        print('Column Name : ', key)
+        print('Column Contents : ', data[key].unique())
+        print('Missing Records : ', data[key].isna().sum(), '\n')
 
 #***************************************************************************************************
 
@@ -157,7 +167,8 @@ def encoding(data: DataFrame, file_tag: str):
 #                                   Missing Values Imputation                                      *
 #***************************************************************************************************
 
-def missing_values_imputation(data: DataFrame, og_symb_vars: list[str], og_num_vars: list[str]):
+def missing_values_imputation(data_filename: str, og_symb_vars: list[str], og_num_vars: list[str], unique_loans: list[str]):
+    data: DataFrame = read_csv(data_filename)
     vars_with_mv: list = []
     for var in data.columns:
         if data[var].isna().sum() > 0:
@@ -165,11 +176,11 @@ def missing_values_imputation(data: DataFrame, og_symb_vars: list[str], og_num_v
     print(f"variables with missing values: {vars_with_mv}")
 
     # no variable has a considerable amount of missing values therefore we wont drop columns
-    # remove rows with a lot of missing values (80%) - number of columns = 33
-    MIN_MV_IN_A_RECORD_RATIO = 0.8
+    # remove rows with a lot of missing values (90%) - number of columns = 33
+    MIN_MV_IN_A_RECORD_RATIO = 0.9
     data.dropna(axis=0, thresh=round(data.shape[1] * MIN_MV_IN_A_RECORD_RATIO, 0), inplace=True)
 
-    data_filling_frequent = mvi_by_filling(data, "frequent", og_symb_vars, og_num_vars)
+    data_filling_frequent = mvi_by_filling(data, "frequent", og_symb_vars, og_num_vars + unique_loans)
     data_filling_frequent.to_csv("data/ccs_mvi_fill_frequent.csv")
     data_filling_knn = mvi_by_filling(data, "knn", og_symb_vars, og_num_vars, 3)
     data_filling_knn.to_csv("data/ccs_mvi_fill_knn.csv")
@@ -184,9 +195,7 @@ def mvi_evaluation(target: str, file_tag: str):
     eval: dict[str, list] = evaluate_approach(data_frequent_mvi_fill.head(int(data_frequent_mvi_fill.shape[0]*0.8)), 
                                               data_frequent_mvi_fill.tail(int(data_frequent_mvi_fill.shape[0]*0.2)), 
                                               target=target, metric="recall")
-    plot_multibar_chart(
-        ["NB", "KNN"], eval, title=f"{file_tag} evaluation", percentage=True
-    )
+    plot_multibar_chart(["NB", "KNN"], eval, title=f"{file_tag} evaluation", percentage=True)
     savefig(f"images/{file_tag}_mvi_freq_eval.png")
     show()
     close()
@@ -195,12 +204,19 @@ def mvi_evaluation(target: str, file_tag: str):
     eval: dict[str, list] = evaluate_approach(data_knn_mvi_fill.head(int(data_knn_mvi_fill.shape[0]*0.8)), 
                                               data_knn_mvi_fill.tail(int(data_knn_mvi_fill.shape[0]*0.2)), 
                                               target=target, metric="recall")
-    plot_multibar_chart(
-        ["NB", "KNN"], eval, title=f"{file_tag} evaluation", percentage=True
-    )
+    plot_multibar_chart(["NB", "KNN"], eval, title=f"{file_tag} evaluation", percentage=True)
     savefig(f"images/{file_tag}_mvi_knn_eval.png")
     show()
 
+
+#***************************************************************************************************
+
+#***************************************************************************************************
+#                                       Outliers Treatment                                         *
+#***************************************************************************************************
+
+def outliers_treatment(data_filename: str):
+    data: DataFrame = read_csv(data_filename)
 
 #***************************************************************************************************
 
@@ -209,13 +225,14 @@ if __name__ == "__main__":
     filename = "data/class_credit_score.csv"
     file_tag = "Credit_Score"
     target = "Credit_Score"
-    data: DataFrame = read_csv(filename, na_values="", index_col="ID")
+    data: DataFrame = read_csv(filename, na_values="")
     data['Age'] = data['Age'].astype(str).str.replace('_', '', regex=False).astype(int)
     
     stroke: DataFrame = read_csv("data/stroke.csv", na_values="")
 
     # originally symbolic variables
     og_symb_vars = get_variable_types(data)["symbolic"]
+    og_symb_vars.remove("ID")
     og_symb_vars.remove("Customer_ID")
     og_symb_vars.remove("Name")
     og_symb_vars.remove("SSN")
@@ -223,15 +240,16 @@ if __name__ == "__main__":
     og_symb_vars.remove("Type_of_Loan")
     # originally numeric variables
     og_num_vars = get_variable_types(data)["numeric"]
+    # originally unique loans
+    og_unique_loans = get_all_unique_loans(data)
 
     # variable encoding step
     #encoding(data, file_tag)
-    #data.head(20).to_csv("data_vars_encoded.csv")
 
     # missing values imputation step
-    #print()
-    #missing_values_imputation(data, og_symb_vars, og_num_vars)
+    missing_values_imputation("data/ccs_vars_encoded.csv", og_symb_vars, og_num_vars, og_unique_loans)
     mvi_evaluation(target, file_tag)
 
-    # print(list(data.columns))
-    
+    # outliers treatment
+    mvi_decided_data = "data/ccs_mvi_fill_knn.csv"
+    #outliers_treatment(mvi_decided_data)    
