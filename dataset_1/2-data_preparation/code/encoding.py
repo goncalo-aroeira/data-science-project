@@ -41,7 +41,7 @@ removed_teeth_values: dict[str, int] = {
     "None of them": 0,
     "1 to 5": 1,
     "6 or more, but not all": 2,
-    "All": 3,
+    "All": 2,
 }
 had_diabetes_values: dict[str, int] = {
     # dividir em yes e no??? implica perda de detalhe
@@ -52,15 +52,15 @@ had_diabetes_values: dict[str, int] = {
 }
 smoker_status_values: dict[str, int] = {
     "Current smoker - now smokes every day": 0,
-    "Current smoker - now smokes some days": 1,
-    "Former smoker": 2,
-    "Never smoked": 3,
+    "Current smoker - now smokes some days": 0,
+    "Former smoker": 1,
+    "Never smoked": 2,
     }
 e_cigarrete_values: dict[str, int] = {
     "Use them every day": 0,
-    "Use them some days": 1,
-    "Not at all (right now)": 2,
-    "Never used e-cigarettes in my entire life": 3,
+    "Use them some days": 0,
+    "Not at all (right now)": 1,
+    "Never used e-cigarettes in my entire life": 2,
 }
 race_ethnicity_values: dict[str, int] = {
     # taxonomia em que dividi em hispanic e non-hispanic e depois em raças por ordem de parecença
