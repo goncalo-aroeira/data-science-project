@@ -9,13 +9,13 @@ yes_no: dict[str, int] = {"no": 0, "No": 0, "yes": 1, "Yes": 1}
 sex_values: dict[str, int] = {"Male": 0, "Female": 1}
 
 state_values: dict[str, int] = {
-    'Alabama': 0, 'Alaska' : 1, 'Arizona': 2, 'Arkansas': 3, 'California': 4, 'Colorado': 5, 'Connecticut': 6, 'Delaware': 7, 
-    'District of Columbia': 8, 'Florida': 9, 'Georgia': 10, 'Hawaii': 11, 'Idaho': 12, 'Illinois': 13, 'Indiana': 14, 'Iowa': 15, 
-    'Kansas': 16, 'Kentucky': 17, 'Louisiana': 18, 'Maine': 19, 'Maryland': 20, 'Massachusetts': 21, 'Michigan': 22, 'Minnesota': 23,
-    'Mississippi': 24, 'Missouri': 25, 'Montana': 26, 'Nebraska': 27, 'Nevada': 28, 'New Hampshire': 29, 'New Jersey': 30, 'New Mexico': 31, 
-    'New York': 32, 'North Carolina': 33, 'North Dakota': 34, 'Ohio': 35, 'Oklahoma': 36, 'Oregon': 37, 'Pennsylvania': 38, 'Rhode Island': 39, 
-    'South Carolina': 40, 'South Dakota': 41, 'Tennessee': 42, 'Texas': 43, 'Utah': 44, 'Vermont': 45, 'Virginia': 46, 'Washington': 47, 
-    'West Virginia': 48, 'Wisconsin': 49, 'Wyoming': 50, 'Guam': 51, 'Puerto Rico': 52, 'Virgin Islands': 53
+    "Alabama": 0, "Alaska": 1, "Arizona": 2, "Arkansas": 3, "California": 4, "Colorado": 5, "Connecticut": 6, "Delaware": 7, 
+    "District of Columbia": 8, "Florida": 9, "Georgia": 10, "Hawaii": 11, "Idaho": 12, "Illinois": 13, "Indiana": 14, "Iowa": 15, 
+    "Kansas": 16, "Kentucky": 17, "Louisiana": 18, "Maine": 19, "Maryland": 20, "Massachusetts": 21, "Michigan": 22, "Minnesota": 23,
+    "Mississippi": 24, "Missouri": 25, "Montana": 26, "Nebraska": 27, "Nevada": 28, "New Hampshire": 29, "New Jersey": 30, "New Mexico": 31, 
+    "New York": 32, "North Carolina": 33, "North Dakota": 34, "Ohio": 35, "Oklahoma": 36, "Oregon": 37, "Pennsylvania": 38, "Rhode Island": 39, 
+    "South Carolina": 40, "South Dakota": 41, "Tennessee": 42, "Texas": 43, "Utah": 44, "Vermont": 45, "Virginia": 46, "Washington": 47, 
+    "West Virginia": 48, "Wisconsin": 49, "Wyoming": 50, "Guam": 51, "Puerto Rico": 52, "Virgin Islands": 53
 }
 
 health_values: dict[str, int] = {
@@ -67,28 +67,25 @@ race_ethnicity_values: dict[str, int] = {
 }
 age_category_values: dict[str, int] = {
     # apos estudar a granularidade atraves do grfico do data profiling decidi usar o que tinha os intervalos de 10 anos
-    'Age 18 to 24': 0,
-    'Age 25 to 29': 0,
-    'Age 30 to 34': 1,
-    'Age 35 to 39': 1,
-    'Age 40 to 44': 2,
-    'Age 45 to 49': 2,
-    'Age 50 to 54': 3,
-    'Age 55 to 59': 3,
-    'Age 60 to 64': 4,
-    'Age 65 to 69': 4,
-    'Age 70 to 74': 5,
-    'Age 75 to 79': 5,
-    'Age 80 or older': 6,
+    "Age 18 to 24": 0,
+    "Age 25 to 29": 0,
+    "Age 30 to 34": 1,
+    "Age 35 to 39": 1,
+    "Age 40 to 44": 2,
+    "Age 45 to 49": 2,
+    "Age 50 to 54": 3,
+    "Age 55 to 59": 3,
+    "Age 60 to 64": 4,
+    "Age 65 to 69": 4,
+    "Age 70 to 74": 5,
+    "Age 75 to 79": 5,
+    "Age 80 or older": 6,
 }
 tetanus_last_10_tdap_values: dict[str, int] = {
-    # dividir em yes e no??? implica perda de detalhe
-    '''
-    "Yes, received tetanus shot but not sure what type"
-    "No, did not receive any tetanus shot in the past 10 years"
-    "Yes, received Tdap"
-    "Yes, received tetanus shot, but not Tdap"
-    '''
+    "Yes, received tetanus shot but not sure what type": 1,
+    "No, did not receive any tetanus shot in the past 10 years": 0,
+    "Yes, received Tdap": 1,
+    "Yes, received tetanus shot, but not Tdap": 1,
 }
 
 encoding: dict[str, dict[str, int]] = {
