@@ -78,4 +78,3 @@ boxplot.whiskers: 0.75
 # FIGURE OUTPUT
 figure.figsize      : 4, 3
 figure.dpi          : 150
-

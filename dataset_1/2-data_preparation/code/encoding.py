@@ -1,6 +1,6 @@
 from pandas import read_csv, DataFrame
-from dslabs_functions import get_variable_types, mvi_by_filling, evaluate_approach, plot_multibar_chart
-from matplotlib.pyplot import figure, show, savefig, close, legend
+from dslabs_functions import get_variable_types, mvi_by_filling, mvi_by_dropping, evaluate_approach, plot_multibar_chart
+from matplotlib.pyplot import figure, savefig, close, legend
 
 data: DataFrame = read_csv("../../../class_pos_covid.csv", na_values="")
 vars: dict[str, list] = get_variable_types(data)
@@ -9,13 +9,14 @@ yes_no: dict[str, int] = {"no": 0, "No": 0, "yes": 1, "Yes": 1}
 sex_values: dict[str, int] = {"Male": 0, "Female": 1}
 
 state_values: dict[str, int] = {
-    "Alabama": 0, "Alaska": 1, "Arizona": 2, "Arkansas": 3, "California": 4, "Colorado": 5, "Connecticut": 6, "Delaware": 7, 
-    "District of Columbia": 8, "Florida": 9, "Georgia": 10, "Hawaii": 11, "Idaho": 12, "Illinois": 13, "Indiana": 14, "Iowa": 15, 
-    "Kansas": 16, "Kentucky": 17, "Louisiana": 18, "Maine": 19, "Maryland": 20, "Massachusetts": 21, "Michigan": 22, "Minnesota": 23,
-    "Mississippi": 24, "Missouri": 25, "Montana": 26, "Nebraska": 27, "Nevada": 28, "New Hampshire": 29, "New Jersey": 30, "New Mexico": 31, 
-    "New York": 32, "North Carolina": 33, "North Dakota": 34, "Ohio": 35, "Oklahoma": 36, "Oregon": 37, "Pennsylvania": 38, "Rhode Island": 39, 
-    "South Carolina": 40, "South Dakota": 41, "Tennessee": 42, "Texas": 43, "Utah": 44, "Vermont": 45, "Virginia": 46, "Washington": 47, 
-    "West Virginia": 48, "Wisconsin": 49, "Wyoming": 50, "Guam": 51, "Puerto Rico": 52, "Virgin Islands": 53
+    #DC não é um estado, mas pertence à regiao 3
+    "Alabama": 3, "Alaska": 4, "Arizona": 4, "Arkansas": 3, "California": 4, "Colorado": 4, "Connecticut": 1, "Delaware": 3, 
+    "District of Columbia": 3, "Florida": 3, "Georgia": 3, "Hawaii": 4, "Idaho": 4, "Illinois": 2, "Indiana": 2, "Iowa": 2, 
+    "Kansas": 2, "Kentucky": 3, "Louisiana": 3, "Maine": 1, "Maryland": 3, "Massachusetts": 1, "Michigan": 2, "Minnesota": 2,
+    "Mississippi": 3, "Missouri": 2, "Montana": 4, "Nebraska": 2, "Nevada": 4, "New Hampshire": 1, "New Jersey": 1, "New Mexico": 4, 
+    "New York": 1, "North Carolina": 3, "North Dakota": 2, "Ohio": 2, "Oklahoma": 3, "Oregon": 4, "Pennsylvania": 1, "Rhode Island": 1, 
+    "South Carolina": 3, "South Dakota": 2, "Tennessee": 3, "Texas": 3, "Utah": 4, "Vermont": 1, "Virginia": 3, "Washington": 4, 
+    "West Virginia": 3, "Wisconsin": 2, "Wyoming": 4, "Guam": 5, "Puerto Rico": 5, "Virgin Islands": 5
 }
 
 health_values: dict[str, int] = {
@@ -124,60 +125,69 @@ encoding: dict[str, dict[str, int]] = {
     "HighRiskLastYear": yes_no,
     "CovidPos": yes_no,
 }
+og_symb_vars = get_variable_types(data)["symbolic"]
+og_num_vars = get_variable_types(data)["numeric"]
 data.replace(encoding, inplace=True)
-data_copy = data.copy()
-data.to_csv("../data/CovidPos_vars_encoded.csv")
+data.to_csv("../data/ccs_vars_encoded.csv", index=False)
     
-    
-    
+def newNoMissing(data: DataFrame, file_tag: str):
+    variable_types: dict[str, list] = get_variable_types(data)
+    print(variable_types)
+    for key in data:
+        print('Column Name : ', key)
+        print('Column Contents : ', data[key].unique())
+        print('Missing Records : ', data[key].isna().sum(), '\n')
+   
     
 ############################################# MV Imputation #############################################
 
 file_tag = "CovidPos"
 target = "CovidPos"
 
-vars_with_mv: list = []
-for var in data.columns:
-    if data[var].isna().sum() > 0:
-        vars_with_mv += [var]
-
 # no variable has a considerable amount of missing values therefore we wont drop columns
-# remove rows with a lot of missing values (80%) - number of columns = 40
-MIN_MV_IN_A_RECORD_RATIO = 0.8
-data.dropna(axis=0, thresh=round(data.shape[1] * MIN_MV_IN_A_RECORD_RATIO, 0), inplace=True)
+# remove rows with a lot of missing values (85%) - number of columns = 40
+data=mvi_by_dropping(data, 0.90, 0.98)
 
-og_symb_vars = get_variable_types(data)["symbolic"]
-og_num_vars = get_variable_types(data)["numeric"]
+print(int(data.shape[0]))
+print(int(data.shape[1]))
 
-data_filling_frequent = mvi_by_filling(data, "frequent", og_symb_vars, og_num_vars)
-data_filling_frequent.to_csv("../data/CovidPos_mvi_fill_frequent.csv")
-data_filling_knn = mvi_by_filling(data_copy, "knn", og_symb_vars, og_num_vars, 3)
-print("done filling knn")
-data_filling_knn.to_csv("../data/CovidPos_mvi_fill_knn.csv")
-
+print("frequent")
+data_filling_frequent = mvi_by_filling(data, "frequent", og_symb_vars, og_num_vars, 3)
+data_filling_frequent.to_csv("../data/ccs_mvi_fill_frequent.csv")
+print("knn")
+data_filling_knn = mvi_by_filling(data, "knn", og_symb_vars, og_num_vars, 3)
+data_filling_knn.to_csv("../data/ccs_mvi_fill_knn.csv")
 
 ############################################# MV Evaluation #############################################
-frequent_fn = "../data/CovidPos_mvi_fill_frequent.csv"
-knn_fn = "../data/CovidPos_mvi_fill_knn.csv"
+frequent_fn = "../data/ccs_mvi_fill_frequent.csv"
+knn_fn = "../data/ccs_mvi_fill_knn.csv"
 data_frequent_mvi_fill: DataFrame = read_csv(frequent_fn)
 data_knn_mvi_fill: DataFrame = read_csv(knn_fn)
 
-figure()
-eval: dict[str, list] = evaluate_approach(data_frequent_mvi_fill.head(int(data_frequent_mvi_fill.shape[0]*0.8)), 
-                                            data_frequent_mvi_fill.tail(int(data_frequent_mvi_fill.shape[0]*0.2)), 
-                                            target=target, metric="recall")
-plot_multibar_chart(
-    ["NB", "KNN"], eval, title=f"{file_tag} evaluation", percentage=True
-)
-savefig(f"../images/{file_tag}_mvi_freq_eval.png")
- 
-close()
+data_frequent_shuffle: DataFrame = data_frequent_mvi_fill.sample(frac=1, random_state=42)
+data_frequent_shuffle.to_csv("../data/ccs_mvi_fill_frequent_shuffle.csv")
+data_knn_shuffle: DataFrame = data_knn_mvi_fill.sample(frac=1, random_state=42)
+data_knn_shuffle.to_csv("../data/ccs_mvi_fill_knn_shuffle.csv")
+
+print("Frequent")
 
 figure()
-eval: dict[str, list] = evaluate_approach(data_knn_mvi_fill.head(int(data_knn_mvi_fill.shape[0]*0.8)), 
-                                            data_knn_mvi_fill.tail(int(data_knn_mvi_fill.shape[0]*0.2)), 
+eval: dict[str, list] = evaluate_approach(data_frequent_shuffle.head(int(data_frequent_shuffle.shape[0]*0.8)), 
+                                              data_frequent_shuffle.tail(int(data_frequent_shuffle.shape[0]*0.2)), 
+                                              target=target, metric="recall")
+
+plot_multibar_chart(["NB", "KNN"], eval, title=f"{file_tag} evaluation", percentage=True)
+savefig(f"../images/{file_tag}_mvi_freq_eval.png")
+close()
+
+print("KNN")
+
+figure()
+eval: dict[str, list] = evaluate_approach(data_knn_shuffle.sample(int(data_knn_shuffle.shape[0]*0.8)), 
+                                            data_knn_shuffle.tail(int(data_knn_shuffle.shape[0]*0.2)), 
                                             target=target, metric="recall")
+
 plot_multibar_chart(
     ["NB", "KNN"], eval, title=f"{file_tag} evaluation", percentage=True
 )
-savefig(f"../images/{file_tag}_mvi_knn_eval.png") 
+savefig(f"../images/{file_tag}_mvi_knn_eval.png")

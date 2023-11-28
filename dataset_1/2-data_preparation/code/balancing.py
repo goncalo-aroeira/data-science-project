@@ -6,7 +6,7 @@ from matplotlib.pyplot import figure, savefig, show
 from dslabs_functions import evaluate_approach, plot_multibar_chart
 
 target = "CovidPos"
-data_filename: str = "../data/CovidPos_outliers_rowDrop_stdBased.csv"
+data_filename: str = "../data/CovidPos_outliers_rowDrop_NotStdBased.csv"
 
 def random_train_test_data_split(data: DataFrame) -> list[DataFrame]:
     train, test = train_test_split(data, test_size=0.2, train_size=0.8)
@@ -14,6 +14,7 @@ def random_train_test_data_split(data: DataFrame) -> list[DataFrame]:
 
 def balancing_evaluation(data_filename: str, strategy: str):
     data: DataFrame = read_csv(data_filename)
+    data=data.sample(frac=1, random_state=42)
     figure()
     eval: dict[str, list] = evaluate_approach(data.head(int(data.shape[0]*0.8)),
                                               data.tail(int(data.shape[0]*0.2)),
@@ -24,7 +25,9 @@ def balancing_evaluation(data_filename: str, strategy: str):
     
 
 data: DataFrame = read_csv(data_filename)
-data_train = random_train_test_data_split(data)[0]
+data_balancing_shuffle: DataFrame = data.sample(frac=1, random_state=42)
+data_balancing_shuffle.to_csv("../data/data_balancing_shuffle.csv")
+data_train = random_train_test_data_split(data_balancing_shuffle)[0]
 
 # Approach 1 - undersampling
 target_count: Series = data_train[target].value_counts()

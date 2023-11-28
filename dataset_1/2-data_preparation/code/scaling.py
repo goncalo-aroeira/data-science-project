@@ -2,7 +2,7 @@ from pandas import read_csv, DataFrame, Series
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from matplotlib.pyplot import figure, savefig, close, show, subplots
 
-data_filename: str = "../data/CovidPos_outliers_rowDrop_stdBased.csv"
+data_filename: str = "../data/CovidPos_outliers_rowDrop_NotStdBased.csv"
 file_tag: str = "CovidPos"
 target = "CovidPos"
 

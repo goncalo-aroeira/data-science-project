@@ -5,7 +5,7 @@ from dslabs_functions import determine_outlier_thresholds_for_var, plot_multibar
 target = "CovidPos"
 
 
-data: DataFrame = read_csv("../data/CovidPos_mvi_fill_frequent.csv")
+data: DataFrame = read_csv("../data/ccs_mvi_fill_frequent_shuffle.csv")
 # Approach 1 - Dropping outliers (std_based = true)
 print(f"Data before dropping outliers: {data.shape}")
 data_outliers_rowDrop: DataFrame = data.copy(deep=True)
