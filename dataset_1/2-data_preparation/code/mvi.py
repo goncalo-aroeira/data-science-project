@@ -1,6 +1,6 @@
 from pandas import read_csv, DataFrame
 from matplotlib.pyplot import figure, savefig, close
-from dslabs_functions import plot_bar_chart, mvi_by_filling, get_variable_types, evaluate_approach, plot_multibar_chart
+from dslabs_functions import plot_bar_chart, mvi_by_filling, get_variable_types, evaluate_approach, plot_multibar_chart, mvi_by_dropping
 
 
 filename = "../../../class_pos_covid.csv"
@@ -44,9 +44,11 @@ data.dropna(axis=0, thresh=round(data.shape[1] * MIN_MV_IN_A_RECORD_RATIO, 0), i
 og_symb_vars = get_variable_types(data)["symbolic"]
 og_num_vars = get_variable_types(data)["numeric"]
 
-data_filling_frequent = mvi_by_filling(data, "frequent", og_symb_vars, og_num_vars)
+#data_filling_frequent = mvi_by_filling(data, "frequent", og_symb_vars, og_num_vars)
+data_filling_frequent = mvi_by_dropping(data, og_symb_vars, og_num_vars)
 data_filling_frequent.to_csv("../data/CovidPos_mvi_fill_frequent.csv")
-data_filling_knn = mvi_by_filling(data_copy, "knn", og_symb_vars, og_num_vars, 3)
+#data_filling_knn = mvi_by_filling(data_copy, "knn", og_symb_vars, og_num_vars, 3)
+data_filling_knn = mvi_by_dropping(data_copy, og_symb_vars, og_num_vars)
 data_filling_knn.to_csv("../data/CovidPos_mvi_fill_knn.csv")
 
 
