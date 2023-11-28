@@ -1,5 +1,5 @@
 from pandas import read_csv, DataFrame
-from matplotlib.pyplot import figure, show, savefig, close
+from matplotlib.pyplot import figure, savefig, close
 from dslabs_functions import plot_bar_chart, mvi_by_filling, get_variable_types, evaluate_approach, plot_multibar_chart
 
 
@@ -8,6 +8,7 @@ file_tag = "CovidPos"
 target = "CovidPos"
 
 data: DataFrame = read_csv(filename, na_values="")
+data_copy = data.copy()
 print(f"Dataset nr records={data.shape[0]}", f"nr variables={data.shape[1]}")
 
 mv: dict[str, int] = {}
@@ -25,7 +26,6 @@ plot_bar_chart(
     ylabel="nr missing values",
 )
 savefig(f"../images/{file_tag}_missing_values_per_variable.png")
-show()
 
 
 ############################################# MV Imputation #############################################
@@ -45,16 +45,16 @@ og_symb_vars = get_variable_types(data)["symbolic"]
 og_num_vars = get_variable_types(data)["numeric"]
 
 data_filling_frequent = mvi_by_filling(data, "frequent", og_symb_vars, og_num_vars)
-data_filling_frequent.to_csv("data/ccs_mvi_fill_frequent.csv")
-data_filling_knn = mvi_by_filling(data, "knn", og_symb_vars, og_num_vars, 3)
-data_filling_knn.to_csv("data/ccs_mvi_fill_knn.csv")
+data_filling_frequent.to_csv("../data/CovidPos_mvi_fill_frequent.csv")
+data_filling_knn = mvi_by_filling(data_copy, "knn", og_symb_vars, og_num_vars, 3)
+data_filling_knn.to_csv("../data/CovidPos_mvi_fill_knn.csv")
 
 
 ############################################# MV Evaluation #############################################
-frequent_fn = "data/ccs_mvi_fill_frequent.csv"
-knn_fn = "data/ccs_mvi_fill_knn.csv"
+frequent_fn = "../data/CovidPos_mvi_fill_frequent.csv"
+knn_fn = "../data/CovidPos_mvi_fill_knn.csv"
 data_frequent_mvi_fill: DataFrame = read_csv(frequent_fn)
-data_knn_mvi_fill: DataFrame = read_csv(knn_fn, index_col="ID")
+data_knn_mvi_fill: DataFrame = read_csv(knn_fn)
 
 figure()
 eval: dict[str, list] = evaluate_approach(data_frequent_mvi_fill.head(int(data_frequent_mvi_fill.shape[0]*0.8)), 
@@ -63,8 +63,7 @@ eval: dict[str, list] = evaluate_approach(data_frequent_mvi_fill.head(int(data_f
 plot_multibar_chart(
     ["NB", "KNN"], eval, title=f"{file_tag} evaluation", percentage=True
 )
-savefig(f"images/{file_tag}_mvi_freq_eval.png")
-show()
+savefig(f"../images/{file_tag}_mvi_freq_eval.png")
 close()
 
 figure()
@@ -74,5 +73,4 @@ eval: dict[str, list] = evaluate_approach(data_knn_mvi_fill.head(int(data_knn_mv
 plot_multibar_chart(
     ["NB", "KNN"], eval, title=f"{file_tag} evaluation", percentage=True
 )
-savefig(f"images/{file_tag}_mvi_knn_eval.png")
-show()
+savefig(f"../images/{file_tag}_mvi_knn_eval.png")
