@@ -223,8 +223,8 @@ def plot_multibar_chart(
     ax = set_chart_labels(ax=ax, title=title, xlabel=xlabel, ylabel=ylabel)
     if percentage:
         ax.set_ylim(0.0, 1.0)
-    print(yvalues)
     bar_labels: list = list(yvalues.keys())
+
     # This is the location for each bar
     index: ndarray = arange(len(group_labels))
     bar_width: float = 0.8 / len(bar_labels)
@@ -650,11 +650,12 @@ CLASS_EVAL_METRICS: dict[str, Callable] = {
 
 
 def run_NB(trnX, trnY, tstX, tstY, metric: str = "accuracy") -> dict[str, float]:
-    estimators: dict[str, GaussianNB | BernoulliNB] = {
+    estimators: dict[str, GaussianNB | MultinomialNB | BernoulliNB] = {
         "GaussianNB": GaussianNB(),
+        "MultinomialNB": MultinomialNB(),
         "BernoulliNB": BernoulliNB(),
     }
-    best_model: GaussianNB | BernoulliNB = None  # type: ignore
+    best_model: GaussianNB | MultinomialNB | BernoulliNB = None  # type: ignore
     best_performance: float = 0.0
     eval: dict[str, float] = {}
 
@@ -690,6 +691,7 @@ def run_KNN(trnX, trnY, tstX, tstY, metric="accuracy") -> dict[str, float]:
         for key in CLASS_EVAL_METRICS:
             eval[key] = CLASS_EVAL_METRICS[key](tstY, prd)
     return eval
+
 
 def evaluate_approach(
     train: DataFrame, test: DataFrame, target: str = "class", metric: str = "accuracy"
