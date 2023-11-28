@@ -288,6 +288,7 @@ def outliers_treatment(data_filename: str):
     data_outliers_trunc.to_csv("data/ccs_outliers_trunc_minmax.csv", index=True)
 
     # Evaluate the different approaches
+    outliers_evaluation(data_filename, "original")
     outliers_evaluation("data/ccs_outliers_rowDrop_stdBased.csv", "rowDrop_stdBased")
     outliers_evaluation("data/ccs_outliers_rowDrop_NotStdBased.csv", "rowDrop_NotStdBased")
     outliers_evaluation("data/ccs_outliers_rep_fixed_median.csv", "rep_fixed_median")
@@ -325,16 +326,19 @@ def scaling_treatment(data_filename: str, file_tag: str):
     df_zscore = DataFrame(transf.transform(data), index=data.index)
     df_zscore[file_tag] = target_data
     df_zscore.columns = vars
-    df_zscore.to_csv(f"data/{file_tag}_scaled_zscore.csv", index="ID")
+    df_zscore.to_csv(f"data/css_scaled_zscore.csv", index=False)
     print(f"Data after standard scaling: {df_zscore.head(20)}")
+    print(get_variable_types(df_zscore))
+
 
     # Approach 2 - Minmax Scaler [0,1]
     transf: MinMaxScaler = MinMaxScaler(feature_range=(0, 1), copy=True).fit(data)
     df_minmax = DataFrame(transf.transform(data), index=data.index)
     df_minmax[target] = target_data
     df_minmax.columns = vars
-    df_minmax.to_csv(f"data/{file_tag}_scaled_minmax.csv", index="id")
+    df_minmax.to_csv(f"data/css_scaled_minmax.csv", index=False)
     print(f"Data after minmax scaling: {df_minmax.head(20)}")
+    print(get_variable_types(df_minmax))
 
     # Approach 2 - Minmax Scaler2 [0,10]
     # transf: MinMaxScaler = MinMaxScaler(feature_range=(-1, 1), copy=True).fit(data)
@@ -343,20 +347,49 @@ def scaling_treatment(data_filename: str, file_tag: str):
     # df_minmaxRange.columns = vars
     # df_minmaxRange.to_csv(f"data/{file_tag}_scaled_minmaxRange.csv", index="id")
     # print(f"Data after minmax scaling: {df_minmaxRange.head(20)}")
+    
+    scaling_evaluation(data_filename, "Original")
+    # scaling_evaluation("data/css_scaled_zscore.csv", "Z-Score")
+    scaling_evaluation("data/css_scaled_minmax.csv", "MinMax")
 
-    # Evaluate the different approaches
-    fig, axs = subplots(1, 3, figsize=(25, 10), squeeze=False)
-    axs[0, 0].set_title("Original data")
-    data.boxplot(ax=axs[0, 0])
-    axs[0, 1].set_title("Z-score normalization")
-    df_zscore.boxplot(ax=axs[0, 1])
-    # axs[0, 2].set_title("MinMax2 normalization")
-    # df_minmaxRange.boxplot(ax=axs[0, 2])
-    axs[0, 2].set_title("MinMax normalization")
-    df_minmax.boxplot(ax=axs[0, 2])
-    savefig(f"images/Credit_Score_scaling.png")
+    # # Evaluate the different approaches
+    # fig, axs = subplots(1, 3, figsize=(25, 10), squeeze=False)
+    # axs[0, 0].set_title("Original data")
+    # data.boxplot(ax=axs[0, 0])
+    # axs[0, 1].set_title("Z-score normalization")
+    # df_zscore.boxplot(ax=axs[0, 1])
+    # # axs[0, 2].set_title("MinMax2 normalization")
+    # # df_minmaxRange.boxplot(ax=axs[0, 2])
+    # axs[0, 2].set_title("MinMax normalization")
+    # df_minmax.boxplot(ax=axs[0, 2])
+    # savefig(f"images/Credit_Score_scaling.png")
+    # show()
+
+    # fig, axs = subplots(1, 1, figsize=(25, 10), squeeze=False)
+    # axs[0, 0].set_title("Original data")
+    # data.boxplot(ax=axs[0, 0])
+    # savefig(f"images/Credit_Score_scaling_original.png")
+    # fig, axs = subplots(1, 1, figsize=(25, 10), squeeze=False)
+    # axs[0, 0].set_title("Z-score normalization")
+    # df_zscore.boxplot(ax=axs[0, 0])
+    # savefig(f"images/Credit_Score_scaling_zscore.png")
+    # # axs[0, 2].set_title("MinMax2 normalization")
+    # # df_minmaxRange.boxplot(ax=axs[0, 2])
+    # fig, axs = subplots(1, 1, figsize=(25, 10), squeeze=False)
+    # axs[0, 0].set_title("MinMax normalization")
+    # df_minmax.boxplot(ax=axs[0, 0])
+    # savefig(f"images/Credit_Score_scaling_minmax.png")
+    # show()
+
+def scaling_evaluation(data_filename: str, strategy: str):
+    data: DataFrame = read_csv(data_filename)
+    figure()
+    eval: dict[str, list] = evaluate_approach(random_train_test_data_split(data)[0],
+                                              random_train_test_data_split(data)[1],
+                                              target=target, metric="recall")
+    plot_multibar_chart(["NB", "KNN"], eval, title=f"Scaling using {strategy} evaluation", percentage=True)
+    savefig(f"images/Credit_Score_scaling_{strategy}.png")
     show()
-
 #***************************************************************************************************
 
 #***************************************************************************************************
@@ -364,17 +397,20 @@ def scaling_treatment(data_filename: str, file_tag: str):
 #***************************************************************************************************
 
 def random_train_test_data_split(data: DataFrame) -> list[DataFrame]:
-    train, test = train_test_split(data, test_size=0.2, train_size=0.8)
+    train, test = train_test_split(data, test_size=0.18, train_size=0.82)
     return [train, test]
 
 def balancing(data_filename: str, target: str):
     data: DataFrame = read_csv(data_filename)
+    print("credit score values",data["Credit_Score"].unique())
     data_train = random_train_test_data_split(data)[0]
-
+    # data_train = data.head(int(data.shape[0]*0.8))
+    # data_test = data.tail(int(data.shape[0]*0.2))
+    print("training credit score",data_train["Credit_Score"].unique())
     # Approach 1 - undersampling
     target_count: Series = data_train[target].value_counts()
-    positive_class = target_count.idxmin()
-    negative_class = target_count.idxmax()
+    positive_class = target_count.idxmin() # 0.0
+    negative_class = target_count.idxmax() # 1.0
     data_positives: Series = data_train[data_train[target] == positive_class]
     data_negatives: Series = data_train[data_train[target] == negative_class]
 
@@ -382,11 +418,22 @@ def balancing(data_filename: str, target: str):
     df_under: DataFrame = concat([data_positives, df_neg_sample], axis=0)
     df_under.to_csv("data/ccs_bal_undersamp.csv", index=False)
 
+    print("Undersampling results")
     print("Minority class=", positive_class, ":", len(data_positives))
     print("Majority class=", negative_class, ":", len(df_neg_sample))
     print("Proportion:", round(len(data_positives) / len(df_neg_sample), 2), ": 1")
 
-    # Approach 2 - SMOTE
+    # Aproach 2 - oversampling
+    df_pos_sample: DataFrame = DataFrame(data_positives.sample(len(data_negatives), replace=True))
+    df_over: DataFrame = concat([df_pos_sample, data_negatives], axis=0)
+    df_over.to_csv(f"data/ccs_bal_over.csv", index=False)
+
+    print("Oversampling results")
+    print("Minority class=", positive_class, ":", len(df_pos_sample))
+    print("Majority class=", negative_class, ":", len(data_negatives))
+    print("Proportion:", round(len(df_pos_sample) / len(data_negatives), 2), ": 1")
+
+    # Approach 3 - SMOTE
     RANDOM_STATE = 42
 
     smote: SMOTE = SMOTE(sampling_strategy="minority", random_state=RANDOM_STATE)
@@ -398,19 +445,21 @@ def balancing(data_filename: str, target: str):
     df_smote.to_csv("data/ccs_bal_SMOTE.csv", index=False)
 
     smote_target_count: Series = Series(smote_y).value_counts()
+    print("SMOTE results")
     print("Minority class=", positive_class, ":", smote_target_count[positive_class])
     print("Majority class=", negative_class, ":", smote_target_count[negative_class])
     print("Proportion:",round(smote_target_count[positive_class] / smote_target_count[negative_class], 2),": 1",)
     print(df_smote.shape)
 
     balancing_evaluation("data/ccs_bal_undersamp.csv", "undersampling")
+    balancing_evaluation("data/ccs_bal_over.csv", "oversampling")
     balancing_evaluation("data/ccs_bal_SMOTE.csv", "SMOTE")
 
 def balancing_evaluation(data_filename: str, strategy: str):
     data: DataFrame = read_csv(data_filename)
     figure()
-    eval: dict[str, list] = evaluate_approach(data.head(int(data.shape[0]*0.8)),
-                                              data.tail(int(data.shape[0]*0.2)),
+    eval: dict[str, list] = evaluate_approach(random_train_test_data_split(data)[0],
+                                              random_train_test_data_split(data)[1],
                                               target=target, metric="recall")
     plot_multibar_chart(["NB", "KNN"], eval, title=f"Balacing using {strategy} evaluation", percentage=True)
     savefig(f"images/Credit_Score_balancing_{strategy}.png")
@@ -442,16 +491,16 @@ if __name__ == "__main__":
     #newNoMissing(data, file_tag)
 
     # missing values imputation step
-    #missing_values_imputation("data/ccs_vars_encoded.csv", og_symb_vars, og_num_vars, og_unique_loans)
+    # missing_values_imputation("data/ccs_vars_encoded.csv", og_symb_vars, og_num_vars, og_unique_loans)
     #mvi_evaluation(target, file_tag)
 
     # outliers treatment
     mvi_decided_data = "data/ccs_mvi_fill_knn.csv"
-    #outliers_treatment(mvi_decided_data)
+    # outliers_treatment(mvi_decided_data)
 
     # Scaling
-    outliers_treat_decision = "data/ccs_outliers_rowDrop_stdBased.csv"
-    scaling_treatment(outliers_treat_decision, file_tag)
+    outliers_decision = "data/ccs_outliers_rowDrop_stdBased.csv"
+    scaling_treatment(outliers_decision, file_tag)
 
     # Balacing
     last_decision = "data/ccs_outliers_rowDrop_stdBased.csv"
