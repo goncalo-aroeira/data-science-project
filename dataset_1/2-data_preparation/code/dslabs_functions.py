@@ -223,6 +223,7 @@ def plot_multibar_chart(
     ax = set_chart_labels(ax=ax, title=title, xlabel=xlabel, ylabel=ylabel)
     if percentage:
         ax.set_ylim(0.0, 1.0)
+    print(yvalues)
     bar_labels: list = list(yvalues.keys())
     # This is the location for each bar
     index: ndarray = arange(len(group_labels))
