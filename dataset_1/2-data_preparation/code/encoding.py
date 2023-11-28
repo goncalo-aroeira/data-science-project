@@ -144,9 +144,11 @@ def newNoMissing(data: DataFrame, file_tag: str):
 file_tag = "CovidPos"
 target = "CovidPos"
 
+data=data.sample(frac=0.5, random_state=42)
+
 # no variable has a considerable amount of missing values therefore we wont drop columns
 # remove rows with a lot of missing values (85%) - number of columns = 40
-data=mvi_by_dropping(data, 0.90, 0.98)
+data=mvi_by_dropping(data, 0.85, 0.90)
 
 print(int(data.shape[0]))
 print(int(data.shape[1]))
@@ -183,11 +185,9 @@ close()
 print("KNN")
 
 figure()
-eval: dict[str, list] = evaluate_approach(data_knn_shuffle.sample(int(data_knn_shuffle.shape[0]*0.8)), 
+eval: dict[str, list] = evaluate_approach(data_knn_shuffle.head(int(data_knn_shuffle.shape[0]*0.8)), 
                                             data_knn_shuffle.tail(int(data_knn_shuffle.shape[0]*0.2)), 
                                             target=target, metric="recall")
 
-plot_multibar_chart(
-    ["NB", "KNN"], eval, title=f"{file_tag} evaluation", percentage=True
-)
+plot_multibar_chart(["NB", "KNN"], eval, title=f"{file_tag} evaluation", percentage=True)
 savefig(f"../images/{file_tag}_mvi_knn_eval.png")
