@@ -1,9 +1,11 @@
-from pandas import read_csv, DataFrame, Series
+from pandas import read_csv, DataFrame, Series, concat
 from dslabs_functions import (get_variable_types, mvi_by_filling, evaluate_approach, 
                               plot_multibar_chart, determine_outlier_thresholds_for_var)
 from math import pi, sin, cos
-from numpy import nan
+from numpy import nan, ndarray
 from matplotlib.pyplot import show, savefig, figure, close
+from sklearn.model_selection import train_test_split
+from imblearn.over_sampling import SMOTE
 
 #***************************************************************************************************
 #                                        Variable Encoding                                         *
@@ -293,13 +295,71 @@ def outliers_treatment(data_filename: str):
 
 def outliers_evaluation(data_filename: str, strategy: str):
     data: DataFrame = read_csv(data_filename)
-
     figure()
     eval: dict[str, list] = evaluate_approach(data.head(int(data.shape[0]*0.8)),
                                               data.tail(int(data.shape[0]*0.2)),
                                               target=target, metric="recall")
     plot_multibar_chart(["NB", "KNN"], eval, title=f"Outliers Treatment with {strategy} evaluation", percentage=True)
     savefig(f"images/Credit_Score_outliers_treat_{strategy}.png")
+    show()
+
+#***************************************************************************************************
+
+#***************************************************************************************************
+#                                          Balancing                                               *
+#***************************************************************************************************
+
+def random_train_test_data_split(data: DataFrame) -> list[DataFrame]:
+    train, test = train_test_split(data, test_size=0.2, train_size=0.8)
+    return [train, test]
+
+def balancing(data_filename: str, target: str):
+    data: DataFrame = read_csv(data_filename)
+    data_train = random_train_test_data_split(data)[0]
+
+    # Approach 1 - undersampling
+    target_count: Series = data_train[target].value_counts()
+    positive_class = target_count.idxmin()
+    negative_class = target_count.idxmax()
+    data_positives: Series = data_train[data_train[target] == positive_class]
+    data_negatives: Series = data_train[data_train[target] == negative_class]
+
+    df_neg_sample: DataFrame = DataFrame(data_negatives.sample(len(data_positives)))
+    df_under: DataFrame = concat([data_positives, df_neg_sample], axis=0)
+    df_under.to_csv("data/ccs_bal_undersamp.csv", index=False)
+
+    print("Minority class=", positive_class, ":", len(data_positives))
+    print("Majority class=", negative_class, ":", len(df_neg_sample))
+    print("Proportion:", round(len(data_positives) / len(df_neg_sample), 2), ": 1")
+
+    # Approach 2 - SMOTE
+    RANDOM_STATE = 42
+
+    smote: SMOTE = SMOTE(sampling_strategy="minority", random_state=RANDOM_STATE)
+    y = data_train.pop(target).values
+    X: ndarray = data_train.values
+    smote_X, smote_y = smote.fit_resample(X, y)
+    df_smote: DataFrame = concat([DataFrame(smote_X), DataFrame(smote_y)], axis=1)
+    df_smote.columns = list(data_train.columns) + [target]
+    df_smote.to_csv("data/ccs_bal_SMOTE.csv", index=False)
+
+    smote_target_count: Series = Series(smote_y).value_counts()
+    print("Minority class=", positive_class, ":", smote_target_count[positive_class])
+    print("Majority class=", negative_class, ":", smote_target_count[negative_class])
+    print("Proportion:",round(smote_target_count[positive_class] / smote_target_count[negative_class], 2),": 1",)
+    print(df_smote.shape)
+
+    balancing_evaluation("data/ccs_bal_undersamp.csv", "undersampling")
+    balancing_evaluation("data/ccs_bal_SMOTE.csv", "SMOTE")
+
+def balancing_evaluation(data_filename: str, strategy: str):
+    data: DataFrame = read_csv(data_filename)
+    figure()
+    eval: dict[str, list] = evaluate_approach(data.head(int(data.shape[0]*0.8)),
+                                              data.tail(int(data.shape[0]*0.2)),
+                                              target=target, metric="recall")
+    plot_multibar_chart(["NB", "KNN"], eval, title=f"Balacing using {strategy} evaluation", percentage=True)
+    savefig(f"images/Credit_Score_balancing_{strategy}.png")
     show()
 
 #***************************************************************************************************
@@ -333,7 +393,12 @@ if __name__ == "__main__":
 
     # outliers treatment
     mvi_decided_data = "data/ccs_mvi_fill_knn.csv"
-    outliers_treatment(mvi_decided_data)
+    #outliers_treatment(mvi_decided_data)
 
     # Scaling
     outliers_treat_decision = "data/ccs_outliers_rowDrop_stdBased.csv"
+
+
+    # Balacing
+    last_decision = "data/ccs_outliers_rowDrop_stdBased.csv"
+    balancing(last_decision, target)
