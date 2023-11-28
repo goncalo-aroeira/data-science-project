@@ -129,6 +129,8 @@ og_symb_vars = get_variable_types(data)["symbolic"]
 og_num_vars = get_variable_types(data)["numeric"]
 data.replace(encoding, inplace=True)
 data.to_csv("../data/ccs_vars_encoded.csv", index=False)
+
+shuffled = data.sample(frac=1, random_state=42)
     
 def newNoMissing(data: DataFrame, file_tag: str):
     variable_types: dict[str, list] = get_variable_types(data)
@@ -139,27 +141,36 @@ def newNoMissing(data: DataFrame, file_tag: str):
         print('Missing Records : ', data[key].isna().sum(), '\n')
    
     
-############################################# MV Imputation #############################################
+############################################# MV Imputation Frequent #############################################
 
 file_tag = "CovidPos"
 target = "CovidPos"
 
 # no variable has a considerable amount of missing values therefore we wont drop columns
 # remove rows with a lot of missing values (85%) - number of columns = 40
-data=mvi_by_dropping(data, 0.85, 0.90)
+shuffled=mvi_by_dropping(shuffled, 0.85, 0.90)
 
-print(int(data.shape[0]))
-print(int(data.shape[1]))
+print(int(shuffled.shape[0]))
+print(int(shuffled.shape[1]))
 
-""" print("frequent")
-data_filling_frequent = mvi_by_filling(data, "frequent", og_symb_vars, og_num_vars, 3)
+print("frequent")
+data_filling_frequent = mvi_by_filling(shuffled, "frequent", og_symb_vars, og_num_vars, 3)
 data_filling_frequent.to_csv("../data/ccs_mvi_fill_frequent.csv")
-print("knn")
-data_filling_knn = mvi_by_filling(data, "knn", og_symb_vars, og_num_vars, 3)
-data_filling_knn.to_csv("../data/ccs_mvi_fill_knn.csv") """
 
-############################################# MV Evaluation #############################################
-frequent_fn = "../data/ccs_mvi_fill_frequent.csv"
+print("Frequent")
+
+############################################# MV Evaluation Frequent #############################################
+figure()
+eval: dict[str, list] = evaluate_approach(data_filling_frequent.head(int(data_filling_frequent.shape[0]*0.6)), 
+                                              data_filling_frequent.tail(int(data_filling_frequent.shape[0]*0.4)), 
+                                              target=target, metric="recall")
+
+plot_multibar_chart(["NB", "KNN"], eval, title=f"{file_tag} evaluation", percentage=True)
+savefig(f"../images/{file_tag}_mvi_freq_eval.png")
+close()
+
+
+'''frequent_fn = "../data/ccs_mvi_fill_frequent.csv"
 knn_fn = "../data/ccs_mvi_fill_knn.csv"
 data_frequent_mvi_fill: DataFrame = read_csv(frequent_fn)
 data_knn_mvi_fill: DataFrame = read_csv(knn_fn)
@@ -167,24 +178,20 @@ data_knn_mvi_fill: DataFrame = read_csv(knn_fn)
 data_frequent_shuffle: DataFrame = data_frequent_mvi_fill.sample(frac=1, random_state=42)
 data_frequent_shuffle.to_csv("../data/ccs_mvi_fill_frequent_shuffle.csv")
 data_knn_shuffle: DataFrame = data_knn_mvi_fill.sample(frac=1, random_state=42)
-data_knn_shuffle.to_csv("../data/ccs_mvi_fill_knn_shuffle.csv")
+data_knn_shuffle.to_csv("../data/ccs_mvi_fill_knn_shuffle.csv")'''
 
-print("Frequent")
+############################################# MV Imputation KNN #############################################
 
-figure()
-eval: dict[str, list] = evaluate_approach(data_frequent_shuffle.head(int(data_frequent_shuffle.shape[0]*0.6)), 
-                                              data_frequent_shuffle.tail(int(data_frequent_shuffle.shape[0]*0.4)), 
-                                              target=target, metric="recall")
+print("knn")
+data_filling_knn = mvi_by_filling(shuffled, "knn", og_symb_vars, og_num_vars, 3)
+data_filling_knn.to_csv("../data/ccs_mvi_fill_knn.csv") 
 
-plot_multibar_chart(["NB", "KNN"], eval, title=f"{file_tag} evaluation", percentage=True)
-savefig(f"../images/{file_tag}_mvi_freq_eval.png")
-close()
+############################################# MV Evaluation KNN #############################################
 
 print("KNN")
-
 figure()
-eval: dict[str, list] = evaluate_approach(data_knn_shuffle.head(int(data_knn_shuffle.shape[0]*0.6)), 
-                                            data_knn_shuffle.tail(int(data_knn_shuffle.shape[0]*0.4)), 
+eval: dict[str, list] = evaluate_approach(data_filling_knn.head(int(data_filling_knn.shape[0]*0.6)), 
+                                            data_filling_knn.tail(int(data_filling_knn.shape[0]*0.4)), 
                                             target=target, metric="recall")
 
 plot_multibar_chart(["NB", "KNN"], eval, title=f"{file_tag} evaluation", percentage=True)
