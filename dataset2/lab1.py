@@ -13,7 +13,7 @@ def nrRecordsVars(data: DataFrame, file_tag: str):
     plot_bar_chart(
         list(values.keys()), list(values.values()), title="Nr of records vs nr variables"
     )
-    savefig(f"images/{file_tag}_records_variables.png")
+    savefig(f"images/lab1/{file_tag}_records_variables.png")
     show()
 
 #***********************************************************************************
@@ -35,7 +35,7 @@ def variableTypes(data: DataFrame, file_tag: str):
     plot_bar_chart(
         list(counts.keys()), list(counts.values()), title="Nr of variables per type"
     )
-    savefig(f"images/{file_tag}_variable_types.png")
+    savefig(f"images/lab1/{file_tag}_variable_types.png")
     show()
 
 
@@ -66,13 +66,13 @@ def missingVals(data: DataFrame, file_tag: str):
     )
 
     tight_layout()
-    savefig(f"images/{file_tag}_mv.png")
+    savefig(f"images/lab1/{file_tag}_mv.png")
     show()
 
 # DATA SPARSITY
 #***********************************************************************************
 #*                                   EX 1                                          *
-#*                Scatter-plots (all x all - including class)                      *
+#*             4.1 - Scatter-plots (all x all - including class)                   *
 #***********************************************************************************
 import pandas as pd
 from numpy import ndarray
@@ -81,7 +81,7 @@ from matplotlib.figure import Figure
 from matplotlib.pyplot import figure, subplots, savefig, show
 from dslabs_functions import HEIGHT, plot_multi_scatters_chart, plot_scatter_chart
 
-def scatterPlots(data: DataFrame, file_tag: str):
+def scatterPlots(data: DataFrame, file_tag: str, target: str):
     out = ["Customer_ID","ID","SSN"]
     data = data.dropna()
 
@@ -93,33 +93,21 @@ def scatterPlots(data: DataFrame, file_tag: str):
     allPlots, allAxis = [], []
     
     if [] != vars:
-        target = "Credit_Score"
         n: int = len(vars) - 1
         fig, axs = subplots(n, n, figsize=(n * HEIGHT, n * HEIGHT), squeeze=False)
         for i in range(len(vars)):
             var1: str = vars[i]
             for j in range(i + 1, len(vars)):
                 var2: str = vars[j]
-                # allPlots += [[var1,var2]]
-                # allAxis += [[i, j - 1]]
                 plot_multi_scatters_chart(data, var1, var2, target, ax=axs[i, j - 1])
-        # savefig(f"images/{file_tag}_sparsity_per_class_study.png")
-        # show()
-        print(allPlots, len(allPlots))
-        # for i in range(len(allPlots)):
-        #     var1, var2 = allPlots[i][0], allPlots[i][1]
-        #     plot_multi_scatters_chart(data, var1, var2, target, ax=axs[allAxis[i][0], allAxis[i][1]])
-        savefig(f"images/{file_tag}_All_sparsity_per_class_study.png")
+        savefig(f"images/{file_tag}_sparsity_per_class_study.png")
         show()
-    
     else:
         print("Sparsity per class: there are no variables.")
-    
-    print("Sparsity done")
 
 #***********************************************************************************
 #*                                   EX 2                                          *
-#*                 Correlation (all x all - including class)                       *
+#*              4.2 - Correlation (all x all - including class)                    *
 #***********************************************************************************
 
 from seaborn import heatmap
@@ -131,7 +119,7 @@ def correlationAll(data: DataFrame, file_tag: str):
     corr_mtx: DataFrame = data[numeric].corr().abs()
 
     fig = figure(figsize=(5, 4))
-    fig.suptitle(f"Scatter-plots (all x all - including class)")
+    fig.suptitle(f"Correlation (all x all - including class)")
     ax = heatmap(
         abs(corr_mtx),
         xticklabels=numeric,
@@ -143,7 +131,7 @@ def correlationAll(data: DataFrame, file_tag: str):
     )
     ax.set_xticklabels(numeric, rotation=40, ha='right')
     tight_layout()
-    savefig(f"images/{file_tag}_correlation_analysis.png")
+    savefig(f"images/lab1/{file_tag}_correlation_analysis.png")
     show()
 
 #***********************************************************************************
@@ -170,6 +158,16 @@ def analyse_property_granularity(data: DataFrame, axs: ndarray, j: int, vars: li
             title=vars[i],
             xlabel=vars[i],
             ylabel="number of records",
+            percentage=False,
+        )
+    if vars == ["Type_of_Loan", "Loan_grouped"]: # plotting the unique loans count on the same row
+        plot_bar_chart(
+            list(type_of_loan_unique_count(data).keys()),
+            list(type_of_loan_unique_count(data).values()),
+            ax=axs[j, i+1],
+            title="Unique Loans Count",
+            xlabel="Loan",
+            ylabel="Number of Occurences",
             percentage=False,
         )
     return axs
@@ -232,17 +230,31 @@ def type_of_loan_gran_data(tl: str) -> str:
             return "single_loan"
     else:
         return nan
+    
+def get_all_unique_loans(data: DataFrame) -> list:
+    res = []
+    for loan in data["Type_of_Loan"].dropna().unique().tolist():
+        for individual_loan in list(map(lambda x: x.strip(), loan.split(','))):
+            if "and " in individual_loan:
+                individual_loan = individual_loan.replace("and ", "", 1)
+            if individual_loan.replace(" ","_") not in res:
+                res += [individual_loan.replace(" ","_")]
+    return res
+
+def get_unique_loans_for1entry(full_loan_entry: str) -> list:
+    return list(map(lambda x: x.strip().replace("and ", "").replace(" ", "_"), full_loan_entry.split(',')))
+
+def type_of_loan_unique_count(data: DataFrame):
+    res = {}
+    for unique_loan in get_all_unique_loans(data):
+        res[unique_loan] = 0
+    for full_loan_entry in data["Type_of_Loan"].dropna():
+        for split_fle in get_unique_loans_for1entry(full_loan_entry):
+            res[split_fle] += 1
+    return res
             
 
 def symbolic_variables_granularity(data: DataFrame, file_tag: str):
-    #res = []
-    #for loan in data["Type_of_Loan"].dropna().unique().tolist():
-    #    for individual_loan in list(map(lambda x: x.strip(), loan.split(','))):
-    #        if "and " in individual_loan:
-    #            individual_loan = individual_loan.replace("and ", "", 1)
-    #        if individual_loan not in res:
-    #            res += [individual_loan]
-    #print(len(res), res)
     variables = get_symbolic_nonBinary_variables(data)
     cols: int = 3
     rows: int = len(variables)
@@ -271,7 +283,7 @@ def symbolic_variables_granularity(data: DataFrame, file_tag: str):
         i += 1
     # MAYBE CLEANUP ?????
     data.drop(["Area_of_Occupation", "CHA_year", "PB_amount_spent", "PB_size_payments", "Loan_grouped"], axis = 1)
-    savefig(f"images/{file_tag}_granularity.png", bbox_inches='tight')
+    savefig(f"images/lab1/{file_tag}_granularity.png", bbox_inches='tight')
     show()
 
 #***********************************************************************************
@@ -294,19 +306,7 @@ def global_box_plot(data: DataFrame, file_tag: str):
     numeric: list[str] = variables_types["numeric"]
     if [] != numeric:
         data.boxplot(rot=45)
-        savefig(f"images/{file_tag}_global_boxplot.png", bbox_inches='tight')
-        show()
-    else:
-        print("There are no numeric variables.")
-
-def global_box_plot_modified_data(data: DataFrame, file_tag: str):
-    variables_types: dict[str, list] = get_variable_types(data)
-    numeric: list[str] = variables_types["numeric"]
-    if [] != numeric:
-        data = data[data['MonthlyBalance'] >= -3e26]
-        print(data.shape)
-        data.boxplot(rot=45)
-        savefig(f"images/{file_tag}_global_boxplot_modified.png", bbox_inches='tight')
+        savefig(f"images/lab1/{file_tag}_global_boxplot.png", bbox_inches='tight')
         show()
     else:
         print("There are no numeric variables.")
@@ -331,7 +331,7 @@ def boxplots_individual_num_vars(data: DataFrame, file_tag: str):
             axs[i, j].set_title("Boxplot for %s" % numeric[n])
             axs[i, j].boxplot(data[numeric[n]].dropna().values)
             i, j = (i + 1, 0) if (n + 1) % cols == 0 else (i, j + 1)
-        savefig(f"images/{file_tag}_single_boxplots.png")
+        savefig(f"images/lab1/{file_tag}_single_boxplots.png")
         show()
     else:
         print("There are no numeric variables.")
@@ -405,7 +405,7 @@ def outliers(data: DataFrame, file_tag: str):
             ylabel="nr outliers",
             percentage=False,
         )
-        savefig(f"images/{file_tag}_outliers_standard.png")
+        savefig(f"images/lab1/{file_tag}_outliers_standard.png")
         show()
     else:
         print("There are no numeric variables.")
@@ -437,7 +437,7 @@ def histograms_numeric_vars(data: DataFrame, file_tag: str):
             )
             axs[i, j].hist(data[numeric[n]].dropna().values, 60)
             i, j = (i + 1, 0) if (n + 1) % cols == 0 else (i, j + 1)
-        savefig(f"images/{file_tag}_single_histograms_numeric.png")
+        savefig(f"images/lab1/{file_tag}_single_histograms_numeric.png")
         show()
     else:
         print("There are no numeric variables.")
@@ -488,7 +488,7 @@ def distributions_numeric_vars(data: DataFrame, file_tag: str):
         for n in range(len(numeric)):
             histogram_with_distributions(axs[i, j], data[numeric[n]].dropna(), numeric[n])
             i, j = (i + 1, 0) if (n + 1) % cols == 0 else (i, j + 1)
-        savefig(f"images/{file_tag}_numeric_distribution.png")
+        savefig(f"images/lab1/{file_tag}_numeric_distribution.png")
         show()
     else:
         print("There are no numeric variables.")
@@ -528,7 +528,7 @@ def histograms_symbolic_vars(data: DataFrame, file_tag: str):
             )
             
             i, j = (i + 1, 0) if (n + 1) % cols == 0 else (i, j + 1)
-        savefig(f"images/{file_tag}_histograms_symbolic.png")
+        savefig(f"images/lab1/{file_tag}_histograms_symbolic.png")
         show()
     else:
         print("There are no symbolic variables.")
@@ -545,7 +545,7 @@ def class_distribution(data: DataFrame, file_tag: str, target: str):
         values.to_list(),
         title=f"Target distribution (target={target})",
     )
-    savefig(f"images/{file_tag}_class_distribution.png", bbox_inches='tight')
+    savefig(f"images/lab1/{file_tag}_class_distribution.png", bbox_inches='tight')
     show()
 
 #***********************************************************************************
@@ -563,14 +563,12 @@ if __name__ == "__main__":
     #print(data.shape)
     #print(data.head)
     data['Age'] = data['Age'].astype(str).str.replace('_', '', regex=False).astype(int)
-
+    
     # granularity
-    #scatterPlots(data, file_tag)
     symbolic_variables_granularity(data, file_tag)
 
     # distribution
     #global_box_plot(data, file_tag)
-    #global_box_plot_modified_data(data, file_tag)
     #boxplots_individual_num_vars(data, file_tag)
     #outliers(data, file_tag)
     #class_distribution(data, file_tag, target)
@@ -578,5 +576,6 @@ if __name__ == "__main__":
     #distributions_numeric_vars(data, file_tag)
     #histograms_symbolic_vars(data, file_tag)
     
-    #print(get_symbolic_nonBinary_variables(data))
-    #print(data['Type_of_Loan'].unique())
+    # Data Sparsity
+    #scatterPlots(data, file_tag, target)
+    #correlationAll(data, file_tag)

@@ -91,6 +91,9 @@ def set_chart_xticks(
             rotation = 45
 
         ax.tick_params(axis="x", labelrotation=rotation, labelsize="xx-small")
+        if len(xvalues) > 40:
+            print("wfkqfqoenfrqofnoqnefiqneron")
+            ax.set_xticklabels([])
 
     return ax
 
@@ -267,6 +270,12 @@ def plot_multi_scatters_chart(
                 ax.scatter(
                     subset[var1], subset[var2], color=ACTIVE_COLORS[i], label=values[i]
                 )
+            if var1 == "Type_of_Loan" or var1 == "Credit_History_Age":
+                # Turn off x tick labels
+                ax.set_xticklabels([])
+            if var2 == "Type_of_Loan" or var2 == "Credit_History_Age":
+                # Turn off y tick labels
+                ax.set_yticklabels([])
             ax.legend(fontsize="xx-small")
     else:
         ax.scatter(data[var1], data[var2], color=FILL_COLOR)
