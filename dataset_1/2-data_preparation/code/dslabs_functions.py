@@ -502,6 +502,7 @@ def select_low_variance_variables(
     data: DataFrame, max_threshold: float, target: str = "class"
 ) -> list:
     summary5: DataFrame = data.describe()
+    #print(data.describe().loc["std"]* data.describe().loc["std"])    
     vars2drop: Index[str] = summary5.columns[
         summary5.loc["std"] * summary5.loc["std"] < max_threshold
     ]
@@ -521,9 +522,13 @@ def study_variance_for_feature_selection(
     options: list[float] = [
         round(i * lag, 3) for i in range(1, ceil(max_threshold / lag + lag))
     ]
+    print(train.describe().loc["std"]* train.describe().loc["std"]) 
+    print("OPTIONS")
+    print(options)   
     results: dict[str, list] = {"NB": [], "KNN": []}
     summary5: DataFrame = train.describe()
     for thresh in options:
+        print(thresh)
         vars2drop: Index[str] = summary5.columns[
             summary5.loc["std"] * summary5.loc["std"] < thresh
         ]
@@ -546,7 +551,7 @@ def study_variance_for_feature_selection(
         ylabel=metric,
         percentage=True,
     )
-    savefig(f"images/{file_tag}_fs_low_var_{metric}_study.png")
+    savefig(f"../images/{file_tag}_fs_low_var_{metric}_study.png")
     return results
 
 
@@ -581,12 +586,16 @@ def study_redundancy_for_feature_selection(
         round(min_threshold + i * lag, 3)
         for i in range(ceil((1 - min_threshold) / lag) + 1)
     ]
+    print("OPTIONS")
+    print(options)
+    print(train.describe().loc["std"]* train.describe().loc["std"])
 
     df: DataFrame = train.drop(target, axis=1, inplace=False)
     corr_matrix: DataFrame = abs(df.corr())
     variables: Index[str] = corr_matrix.columns
     results: dict[str, list] = {"NB": [], "KNN": []}
     for thresh in options:
+        print(thresh)
         vars2drop: list = []
         for v1 in variables:
             vars_corr: Series = (corr_matrix[v1]).loc[corr_matrix[v1] >= thresh]
@@ -614,7 +623,7 @@ def study_redundancy_for_feature_selection(
         ylabel=metric,
         percentage=True,
     )
-    savefig(f"images/{file_tag}_fs_redundancy_{metric}_study.png")
+    savefig(f"../images/{file_tag}_fs_redundancy_{metric}_study.png")
     return results
 
 
@@ -626,9 +635,9 @@ def apply_feature_selection(
     tag: str = "",
 ) -> tuple[DataFrame, DataFrame]:
     train_copy: DataFrame = train.drop(vars2drop, axis=1, inplace=False)
-    train_copy.to_csv(f"{filename}_train_{tag}.csv", index=True)
+    train_copy.to_csv(f"../data/{filename}_train_{tag}.csv", index=True)
     test_copy: DataFrame = test.drop(vars2drop, axis=1, inplace=False)
-    test_copy.to_csv(f"{filename}_test_{tag}.csv", index=True)
+    test_copy.to_csv(f"../data/{filename}_test_{tag}.csv", index=True)
     return train_copy, test_copy
 
 
