@@ -209,11 +209,14 @@ def missing_values_imputation(data_filename: str, og_symb_vars: list[str], og_nu
 
     # no variable has a considerable amount of missing values therefore we wont drop columns
     # remove rows with a lot of missing values (90%) - number of columns = 33
+    print("og data", data.shape)
     MIN_MV_IN_A_RECORD_RATIO = 0.9
     data.dropna(axis=0, thresh=round(data.shape[1] * MIN_MV_IN_A_RECORD_RATIO, 0), inplace=True)
-
+    print("dropped data", data.shape)
+    print("filling frequent")
     data_filling_frequent = mvi_by_filling(data, "frequent", og_symb_vars + unique_loans, og_num_vars)
     data_filling_frequent.to_csv("data/ccs_mvi_fill_frequent.csv", index=False)
+    print("filling knn")
     data_filling_knn = mvi_by_filling(data, "knn", og_symb_vars, og_num_vars, 3)
     data_filling_knn.to_csv("data/ccs_mvi_fill_knn.csv", index=False)
 
@@ -247,26 +250,27 @@ def mvi_evaluation(target: str, file_tag: str):
 #                                       Outliers Treatment                                         *
 #***************************************************************************************************
 
-def outliers_treatment(data_filename: str):
+def outliers_treatment(data_filename: str,  og_num_vars: list[str]):
     data: DataFrame = read_csv(data_filename)
 
     # Approach 1 - Dropping outliers (std_based = true)
     print(f"Data before dropping outliers: {data.shape}")
     data_outliers_rowDrop: DataFrame = data.copy(deep=True)
     summary5: DataFrame = data.describe()
-    for var in data.columns:
-        top_threshold, bottom_threshold = determine_outlier_thresholds_for_var(summary5[var])
+    print(summary5)
+    for var in og_num_vars:
+        top_threshold, bottom_threshold = determine_outlier_thresholds_for_var(summary5[var]) #mean
         outliers: Series = data_outliers_rowDrop[(data_outliers_rowDrop[var] > top_threshold) | (data_outliers_rowDrop[var] < bottom_threshold)]
         data_outliers_rowDrop.drop(outliers.index, axis=0, inplace=True)
     data_outliers_rowDrop.to_csv("data/ccs_outliers_rowDrop_stdBased.csv", index=False)
-    print(f"Data after dropping outliers: {data_outliers_rowDrop.shape}")
+    print(f"Data after dropping std outliers: {data_outliers_rowDrop.shape}")
 
     # Approach 2 - Dropping outliers (std_based = false)
     print(f"Data before dropping outliers: {data.shape}")
     data_outliers_rowDrop: DataFrame = data.copy(deep=True)
     summary5: DataFrame = data.describe()
-    for var in data.columns:
-        top_threshold, bottom_threshold = determine_outlier_thresholds_for_var(summary5[var], std_based=False)
+    for var in og_num_vars:
+        top_threshold, bottom_threshold = determine_outlier_thresholds_for_var(summary5[var], std_based=False) #IQR
         outliers: Series = data_outliers_rowDrop[(data_outliers_rowDrop[var] > top_threshold) | (data_outliers_rowDrop[var] < bottom_threshold)]
         data_outliers_rowDrop.drop(outliers.index, axis=0, inplace=True)
     data_outliers_rowDrop.to_csv("data/ccs_outliers_rowDrop_NotStdBased.csv", index=False)
@@ -274,7 +278,7 @@ def outliers_treatment(data_filename: str):
 
     # Approach 3 - Replacing Outliers (if > than max or < min) with fixed values - using the median
     data_outliers_rep_fixedMedian: DataFrame = data.copy(deep=True)
-    for var in data.columns:
+    for var in og_num_vars:
         top, bottom = determine_outlier_thresholds_for_var(summary5[var])
         median: float = data_outliers_rep_fixedMedian[var].median()
         data_outliers_rep_fixedMedian[var] = data_outliers_rep_fixedMedian[var].apply(lambda x: median if x > top or x < bottom else x)
@@ -282,7 +286,7 @@ def outliers_treatment(data_filename: str):
 
     # Approach 4 - Truncating outliers with the max and min
     data_outliers_trunc: DataFrame = data.copy(deep=True)
-    for var in data.columns:
+    for var in og_num_vars:
         top, bottom = determine_outlier_thresholds_for_var(summary5[var])
         data_outliers_trunc[var] = data_outliers_trunc[var].apply(lambda x: top if x > top else bottom if x < bottom else x)
     data_outliers_trunc.to_csv("data/ccs_outliers_trunc_minmax.csv", index=True)
@@ -326,35 +330,27 @@ def scaling_treatment(data_filename: str, target: str):
     df_zscore.columns = vars
     df_zscore[target] = target_data
     df_zscore.to_csv(f"data/ccs_scaled_zscore.csv", index=False)
-    #print(f"Data after standard scaling: {df_zscore.head(20)}")
+    print(f"Data after standard scaling: {df_zscore.head(20)}")
     print(get_variable_types(df_zscore))
 
-    # Approach 2 - Minmax Scaler [0,1]
-    #transf: MinMaxScaler = MinMaxScaler(feature_range=(0, 1), copy=True).fit(data)
-    #df_minmax = DataFrame(transf.transform(data), index=data.index)
-    #df_minmax[target] = target_data
-    #df_minmax.columns = vars
-    #df_minmax.to_csv(f"data/ccs_scaled_minmax.csv", index=False)
-    #print(f"Data after minmax scaling: {df_minmax.head(20)}")
-    #print(get_variable_types(df_minmax))
 
-    # Approach 2 - Minmax Scaler2 [0,10]
-    # transf: MinMaxScaler = MinMaxScaler(feature_range=(-1, 1), copy=True).fit(data)
-    # df_minmaxRange = DataFrame(transf.transform(data), index=data.index)
-    # df_minmaxRange[target] = target_data
-    # df_minmaxRange.columns = vars
-    # df_minmaxRange.to_csv(f"data/ccs_scaled_minmaxRange.csv", index="id")
-    # print(f"Data after minmax scaling: {df_minmaxRange.head(20)}")
-    
-    #scaling_evaluation(data_filename, "Original", target)
+    transf: MinMaxScaler = MinMaxScaler(feature_range=(0, 1), copy=True).fit(data)
+    df_minmax = DataFrame(transf.transform(data), index=data.index)
+    df_minmax.columns = vars
+    df_minmax[target] = target_data
+    df_minmax.to_csv(f"data/ccs_scaled_minmax.csv", index=False)
+    print(f"Data after minmax scaling: {df_minmax.head(20)}")
+    print(get_variable_types(df_minmax))
+
+    scaling_evaluation(data_filename, "Original", target)
     scaling_evaluation("data/ccs_scaled_zscore.csv", "Z-Score", target)
-    #scaling_evaluation("data/ccs_scaled_minmaxRange.csv", "MinMax", target)
+    scaling_evaluation("data/ccs_scaled_minmax.csv", "MinMax", target)
 
 def scaling_evaluation(data_filename: str, strategy: str, target: str):
     data: DataFrame = read_csv(data_filename)
     figure()
-    eval: dict[str, list] = evaluate_approach(random_train_test_data_split(data)[0],
-                                              random_train_test_data_split(data)[1],
+    train, test = random_train_test_data_split(data)
+    eval: dict[str, list] = evaluate_approach(train, test,
                                               target=target, metric="recall")
     knn_eval = {}
     for entry in eval:
@@ -373,13 +369,11 @@ def random_train_test_data_split(data: DataFrame) -> list[DataFrame]:
     train, test = train_test_split(data, test_size=0.18, train_size=0.82)
     return [train, test]
 
-def balancing(data_filename: str, target: str):
-    data: DataFrame = read_csv(data_filename)
+def balancing(data: DataFrame, data_test: DataFrame, target: str):
     print("credit score values",data["Credit_Score"].unique())
-    data_train = random_train_test_data_split(data)[0]
     # data_train = data.head(int(data.shape[0]*0.8))
     # data_test = data.tail(int(data.shape[0]*0.2))
-    print("training credit score",data_train["Credit_Score"].unique())
+    # print("training credit score",data_train["Credit_Score"].unique())
     # Approach 1 - undersampling
     target_count: Series = data_train[target].value_counts()
     positive_class = target_count.idxmin() # 0.0
@@ -424,19 +418,23 @@ def balancing(data_filename: str, target: str):
     print("Proportion:",round(smote_target_count[positive_class] / smote_target_count[negative_class], 2),": 1",)
     print(df_smote.shape)
 
-    balancing_evaluation("data/ccs_bal_undersamp.csv", "undersampling")
-    balancing_evaluation("data/ccs_bal_over.csv", "oversampling")
-    balancing_evaluation("data/ccs_bal_SMOTE.csv", "SMOTE")
+    print("start evaluation 1")
+    balancing_evaluation("data/ccs_bal_undersamp.csv", "undersampling", data_test)
+    print("start evaluation 2")
+    balancing_evaluation("data/ccs_bal_over.csv", "oversampling", data_test)
+    print("start evaluation 3")
+    balancing_evaluation("data/ccs_bal_SMOTE.csv", "SMOTE", data_test)
 
-def balancing_evaluation(data_filename: str, strategy: str):
+def balancing_evaluation(data_filename: str, strategy: str, data_test: DataFrame):
     data: DataFrame = read_csv(data_filename)
     figure()
-    eval: dict[str, list] = evaluate_approach(random_train_test_data_split(data)[0],
-                                              random_train_test_data_split(data)[1],
-                                              target=target, metric="recall")
+
+    testY = data_test[target]
+    eval: dict[str, list] = evaluate_approach(data, data_test, target=target, metric="recall")
     plot_multibar_chart(["NB", "KNN"], eval, title=f"Balacing using {strategy} evaluation", percentage=True)
     savefig(f"images/Credit_Score_balancing_{strategy}.png")
     show()
+    data_test[target] = testY
 
 #***************************************************************************************************
 
@@ -465,16 +463,29 @@ if __name__ == "__main__":
 
     # missing values imputation step
     # missing_values_imputation("data/ccs_vars_encoded.csv", og_symb_vars, og_num_vars, og_unique_loans)
-    #mvi_evaluation(target, file_tag)
+    # print("starting evaluation")
+    # mvi_evaluation(target, file_tag)
+
+    # frequent
 
     # outliers treatment
-    mvi_decided_data = "data/ccs_mvi_fill_knn.csv"
-    # outliers_treatment(mvi_decided_data)
+    print("begin outlier treatment")
+    mvi_decided_data = "data/ccs_mvi_fill_frequent.csv"
+    # outliers_treatment(mvi_decided_data, og_num_vars)
+
+    # drop row std based
 
     # Scaling
     outliers_decision = "data/ccs_outliers_rowDrop_stdBased.csv"
-    scaling_treatment(outliers_decision, target)
+    # scaling_treatment(outliers_decision, target)
+    # zscore
+
+    # TODO feature engineering
+
+    scaling_decision = "data/ccs_scaled_zscore.csv"
+    data: DataFrame = read_csv(scaling_decision)
+    data_train, data_test = random_train_test_data_split(data)
 
     # Balacing
-    last_decision = "data/ccs_outliers_rowDrop_stdBased.csv"
-    # balancing(last_decision, target)
+    # balancing(data_train, data_test, target)
+    # SMOTE
