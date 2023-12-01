@@ -652,7 +652,7 @@ CLASS_EVAL_METRICS: dict[str, Callable] = {
 def run_NB(trnX, trnY, tstX, tstY, metric: str = "accuracy") -> dict[str, float]:
     estimators: dict[str, GaussianNB | MultinomialNB | BernoulliNB] = {
         "GaussianNB": GaussianNB(),
-        "MultinomialNB": MultinomialNB(),
+        #"MultinomialNB": MultinomialNB(),
         "BernoulliNB": BernoulliNB(),
     }
     best_model: GaussianNB | MultinomialNB | BernoulliNB = None  # type: ignore
