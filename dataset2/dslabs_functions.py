@@ -30,6 +30,7 @@ from sklearn.naive_bayes import _BaseNB, GaussianNB, MultinomialNB, BernoulliNB
 from sklearn.neighbors import KNeighborsClassifier
 
 from config import ACTIVE_COLORS, LINE_COLOR, FILL_COLOR, cmap_blues
+from typing import Literal
 
 NR_COLUMNS: int = 3
 HEIGHT: int = 4
@@ -88,9 +89,12 @@ def set_chart_xticks(
             ax.set_xlim(left=xvalues[0], right=xvalues[-1])
             ax.set_xticks(xvalues, labels=xvalues)
         else:
-            rotation = 45
+            rotation = 0
 
         ax.tick_params(axis="x", labelrotation=rotation, labelsize="xx-small")
+        if len(xvalues) > 40:
+            print("wfkqfqoenfrqofnoqnefiqneron")
+            ax.set_xticklabels([])
 
     return ax
 
@@ -267,6 +271,12 @@ def plot_multi_scatters_chart(
                 ax.scatter(
                     subset[var1], subset[var2], color=ACTIVE_COLORS[i], label=values[i]
                 )
+            if var1 == "Type_of_Loan" or var1 == "Credit_History_Age":
+                # Turn off x tick labels
+                ax.set_xticklabels([])
+            if var2 == "Type_of_Loan" or var2 == "Credit_History_Age":
+                # Turn off y tick labels
+                ax.set_yticklabels([])
             ax.legend(fontsize="xx-small")
     else:
         ax.scatter(data[var1], data[var2], color=FILL_COLOR)
@@ -513,14 +523,10 @@ def study_variance_for_feature_selection(
     train: DataFrame,
     test: DataFrame,
     target: str = "class",
-    max_threshold: float = 1,
-    lag: float = 0.05,
+    options: list[float] = [],
     metric: str = "accuracy",
     file_tag: str = "",
 ) -> dict:
-    options: list[float] = [
-        round(i * lag, 3) for i in range(1, ceil(max_threshold / lag + lag))
-    ]
     results: dict[str, list] = {"NB": [], "KNN": []}
     summary5: DataFrame = train.describe()
     for thresh in options:
@@ -572,15 +578,10 @@ def study_redundancy_for_feature_selection(
     train: DataFrame,
     test: DataFrame,
     target: str = "class",
-    min_threshold: float = 0.90,
-    lag: float = 0.05,
+    options: list[float] = [],
     metric: str = "accuracy",
     file_tag: str = "",
 ) -> dict:
-    options: list[float] = [
-        round(min_threshold + i * lag, 3)
-        for i in range(ceil((1 - min_threshold) / lag) + 1)
-    ]
 
     df: DataFrame = train.drop(target, axis=1, inplace=False)
     corr_matrix: DataFrame = abs(df.corr())
@@ -609,12 +610,12 @@ def study_redundancy_for_feature_selection(
     plot_multiline_chart(
         options,
         results,
-        title=f"{file_tag} redundancy study ({metric})",
+        title=f"{target} redundancy study ({metric})",
         xlabel="correlation threshold",
         ylabel=metric,
         percentage=True,
     )
-    savefig(f"images/{file_tag}_fs_redundancy_{metric}_study.png")
+    savefig(f"images/{target}_fs_redundancy_{metric}_study.png")
     return results
 
 
@@ -626,9 +627,9 @@ def apply_feature_selection(
     tag: str = "",
 ) -> tuple[DataFrame, DataFrame]:
     train_copy: DataFrame = train.drop(vars2drop, axis=1, inplace=False)
-    train_copy.to_csv(f"{filename}_train_{tag}.csv", index=True)
+    train_copy.to_csv(f"{filename}_train_{tag}.csv", index=False)
     test_copy: DataFrame = test.drop(vars2drop, axis=1, inplace=False)
-    test_copy.to_csv(f"{filename}_test_{tag}.csv", index=True)
+    test_copy.to_csv(f"{filename}_test_{tag}.csv", index=False)
     return train_copy, test_copy
 
 
@@ -671,6 +672,41 @@ def run_NB(trnX, trnY, tstX, tstY, metric: str = "accuracy") -> dict[str, float]
             eval[key] = CLASS_EVAL_METRICS[key](tstY, prd)
     return eval
 
+def naive_Bayes_study(
+    trnX: ndarray, trnY: array, tstX: ndarray, tstY: array, metric: str = "accuracy"
+) -> tuple:
+    estimators: dict = {
+        "GaussianNB": GaussianNB(),
+        # "MultinomialNB": MultinomialNB(),
+        "BernoulliNB": BernoulliNB(),
+    }
+
+    xvalues: list = []
+    yvalues: list = []
+    best_model = None
+    best_params: dict = {"name": "", "metric": metric, "params": ()}
+    best_performance = 0
+    for clf in estimators:
+        xvalues.append(clf)
+        estimators[clf].fit(trnX, trnY)
+        prdY: array = estimators[clf].predict(tstX)
+        eval: float = CLASS_EVAL_METRICS[metric](tstY, prdY)
+        if eval - best_performance > DELTA_IMPROVE:
+            best_performance: float = eval
+            best_params["name"] = clf
+            best_params[metric] = eval
+            best_model = estimators[clf]
+        yvalues.append(eval)
+        # print(f'NB {clf}')
+    plot_bar_chart(
+        xvalues,
+        yvalues,
+        title=f"Naive Bayes Models ({metric})",
+        ylabel=metric,
+        percentage=True,
+    )
+
+    return best_model, best_params
 
 def run_KNN(trnX, trnY, tstX, tstY, metric="accuracy") -> dict[str, float]:
     kvalues: list[int] = [1] + [i for i in range(5, 26, 5)]
@@ -690,6 +726,36 @@ def run_KNN(trnX, trnY, tstX, tstY, metric="accuracy") -> dict[str, float]:
         for key in CLASS_EVAL_METRICS:
             eval[key] = CLASS_EVAL_METRICS[key](tstY, prd)
     return eval
+
+def knn_study(
+        trnX: ndarray, trnY: array, tstX: ndarray, tstY: array, k_max: int=19, lag: int=2, metric='accuracy'
+        ) -> tuple[KNeighborsClassifier | None, dict]:
+    dist: list[Literal['manhattan', 'euclidean', 'chebyshev']] = ['manhattan', 'euclidean', 'chebyshev']
+
+    kvalues: list[int] = [i for i in range(1, k_max+1, lag)]
+    best_model: KNeighborsClassifier | None = None
+    best_params: dict = {'name': 'KNN', 'metric': metric, 'params': ()}
+    best_performance: float = 0.0
+
+    values: dict[str, list] = {}
+    for d in dist:
+        y_tst_values: list = []
+        for k in kvalues:
+            clf = KNeighborsClassifier(n_neighbors=k, metric=d)
+            clf.fit(trnX, trnY)
+            prdY: array = clf.predict(tstX)
+            eval: float = CLASS_EVAL_METRICS[metric](tstY, prdY)
+            y_tst_values.append(eval)
+            if eval - best_performance > DELTA_IMPROVE:
+                best_performance: float = eval
+                best_params['params'] = (k, d)
+                best_model = clf
+            # print(f'KNN {d} k={k}')
+        values[d] = y_tst_values
+    print(f'KNN best with k={best_params['params'][0]} and {best_params['params'][1]}')
+    plot_multiline_chart(kvalues, values, title=f'KNN Models ({metric})', xlabel='k', ylabel=metric, percentage=True)
+
+    return best_model, best_params
 
 def evaluate_approach(
     train: DataFrame, test: DataFrame, target: str = "class", metric: str = "accuracy"
