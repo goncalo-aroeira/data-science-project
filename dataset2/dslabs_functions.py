@@ -522,14 +522,10 @@ def study_variance_for_feature_selection(
     train: DataFrame,
     test: DataFrame,
     target: str = "class",
-    max_threshold: float = 1,
-    lag: float = 0.05,
+    options: list[float] = [],
     metric: str = "accuracy",
     file_tag: str = "",
 ) -> dict:
-    options: list[float] = [
-        round(i * lag, 3) for i in range(1, ceil(max_threshold / lag + lag))
-    ]
     results: dict[str, list] = {"NB": [], "KNN": []}
     summary5: DataFrame = train.describe()
     for thresh in options:
@@ -581,15 +577,10 @@ def study_redundancy_for_feature_selection(
     train: DataFrame,
     test: DataFrame,
     target: str = "class",
-    min_threshold: float = 0.90,
-    lag: float = 0.05,
+    options: list[float] = [],
     metric: str = "accuracy",
     file_tag: str = "",
 ) -> dict:
-    options: list[float] = [
-        round(min_threshold + i * lag, 3)
-        for i in range(ceil((1 - min_threshold) / lag) + 1)
-    ]
 
     df: DataFrame = train.drop(target, axis=1, inplace=False)
     corr_matrix: DataFrame = abs(df.corr())
@@ -618,12 +609,12 @@ def study_redundancy_for_feature_selection(
     plot_multiline_chart(
         options,
         results,
-        title=f"{file_tag} redundancy study ({metric})",
+        title=f"{target} redundancy study ({metric})",
         xlabel="correlation threshold",
         ylabel=metric,
         percentage=True,
     )
-    savefig(f"images/{file_tag}_fs_redundancy_{metric}_study.png")
+    savefig(f"images/{target}_fs_redundancy_{metric}_study.png")
     return results
 
 

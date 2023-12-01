@@ -1,6 +1,9 @@
 from pandas import read_csv, DataFrame, Series, concat
 from dslabs_functions import (get_variable_types, mvi_by_filling, evaluate_approach, 
-                              plot_multibar_chart, determine_outlier_thresholds_for_var)
+                              plot_multibar_chart, determine_outlier_thresholds_for_var,
+                              select_low_variance_variables, select_redundant_variables,
+                              study_variance_for_feature_selection, study_redundancy_for_feature_selection,
+                              apply_feature_selection)
 from math import pi, sin, cos
 from numpy import nan, ndarray
 from matplotlib.pyplot import show, savefig, figure, close, subplots
@@ -362,6 +365,45 @@ def scaling_evaluation(data_filename: str, strategy: str, target: str):
 #***************************************************************************************************
 
 #***************************************************************************************************
+#                                      Feature Engineering                                         *
+#***************************************************************************************************
+
+def feature_selection(data_filename: str, target: str):
+    data = read_csv(data_filename)
+    
+    print(data.describe())
+
+    #for i in range(100):
+    #    vars2drop: list[str] = select_low_variance_variables(data, 1 + i / 100, target=target)
+    #    print("Variables to drop by low variance - threshhold = ", 1+i/100, len(vars2drop))
+    # results: if threshold == 1 then does not drop any variable, higher or equal to 1.01 drops all
+
+    #for i in range(70):
+    #    vars2drop: list[str] = select_redundant_variables(data, target=target, min_threshold=0.1+i/100)
+    #    print("Variables to drop by redundacy - threshhold = ", 0.1+i/100, len(vars2drop))
+    # results at min_threshhold:
+    # - 0.1 -> 24
+    # - 0.19 -> 18
+    # - 0.2 -> 13
+    # - 0.3 -> 11
+    # - 0.35 -> 9
+    # - 0.4 -> 8
+    # - 0.44 -> 6
+    # - 0.5 -> 5
+    # - 0.53 -> 3
+    # - 0.55 -> 2
+    # - 0.57 -> 0
+
+    #data_train, data_test = random_train_test_data_split(data)
+    #study_variance_for_feature_selection(data_train, data_test, target, options=[0.9, 0.98, 1, 1.02, 1.05], file_tag=target)
+    #study_redundancy_for_feature_selection(data_train, data_test, target, options=[0.1, 0.19, 0.2, 0.3, 0.35, 0.4, 0.44, 0.5, 0.53, 0.55, 0.57])
+
+    data_train, data_test = random_train_test_data_split(data)
+    apply_feature_selection(data_train, data_test, vars2drop=[], filename="data/ccs_data_fe", tag="res")
+
+    
+    
+#***************************************************************************************************
 #                                          Balancing                                               *
 #***************************************************************************************************
 
@@ -369,11 +411,8 @@ def random_train_test_data_split(data: DataFrame) -> list[DataFrame]:
     train, test = train_test_split(data, test_size=0.18, train_size=0.82)
     return [train, test]
 
-def balancing(data: DataFrame, data_test: DataFrame, target: str):
-    print("credit score values",data["Credit_Score"].unique())
-    # data_train = data.head(int(data.shape[0]*0.8))
-    # data_test = data.tail(int(data.shape[0]*0.2))
-    # print("training credit score",data_train["Credit_Score"].unique())
+def balancing(data_train: DataFrame, data_test: DataFrame, target: str):
+
     # Approach 1 - undersampling
     target_count: Series = data_train[target].value_counts()
     positive_class = target_count.idxmin() # 0.0
@@ -469,23 +508,20 @@ if __name__ == "__main__":
     # frequent
 
     # outliers treatment
-    print("begin outlier treatment")
     mvi_decided_data = "data/ccs_mvi_fill_frequent.csv"
     # outliers_treatment(mvi_decided_data, og_num_vars)
-
-    # drop row std based
 
     # Scaling
     outliers_decision = "data/ccs_outliers_rowDrop_stdBased.csv"
     # scaling_treatment(outliers_decision, target)
     # zscore
 
-    # TODO feature engineering
-
+    # Feature engineering
     scaling_decision = "data/ccs_scaled_zscore.csv"
-    data: DataFrame = read_csv(scaling_decision)
-    data_train, data_test = random_train_test_data_split(data)
+    feature_selection(scaling_decision, target)
 
-    # Balacing
-    # balancing(data_train, data_test, target)
+    # Balancing
+    data_train = read_csv("data/ccs_data_fe_train_res.csv")
+    data_test = read_csv("data/ccs_data_fe_train_res.csv")
+    balancing(data_train, data_test, target)
     # SMOTE
