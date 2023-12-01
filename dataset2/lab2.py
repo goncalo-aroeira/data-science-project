@@ -472,7 +472,7 @@ def balancing_evaluation(data_filename: str, strategy: str, data_test: DataFrame
     eval: dict[str, list] = evaluate_approach(data, data_test, target=target, metric="recall")
     plot_multibar_chart(["NB", "KNN"], eval, title=f"Balacing using {strategy} evaluation", percentage=True)
     savefig(f"images/Credit_Score_balancing_{strategy}.png")
-    show()
+    # show()
     data_test[target] = testY
 
 #***************************************************************************************************
@@ -522,6 +522,6 @@ if __name__ == "__main__":
 
     # Balancing
     data_train = read_csv("data/ccs_data_fe_train_res.csv")
-    data_test = read_csv("data/ccs_data_fe_train_res.csv")
+    data_test = read_csv("data/ccs_data_fe_test_res.csv")
     balancing(data_train, data_test, target)
     # SMOTE
