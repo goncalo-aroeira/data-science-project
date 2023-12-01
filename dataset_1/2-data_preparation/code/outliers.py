@@ -32,7 +32,7 @@ for var in data.columns:
     top_threshold, bottom_threshold = determine_outlier_thresholds_for_var(summary5[var])
     outliers: Series = data_outliers_rowDrop[(data_outliers_rowDrop[var] > top_threshold) | (data_outliers_rowDrop[var] < bottom_threshold)]
     data_outliers_rowDrop.drop(outliers.index, axis=0, inplace=True)
-data_outliers_rowDrop.to_csv("../data/CovidPos_outliers_rowDrop_stdBased.csv")
+data_outliers_rowDrop.to_csv("../data/CovidPos_outliers_rowDrop_stdBased.csv", index=False)
 print(f"Data after dropping outliers: {data_outliers_rowDrop.shape}")
 outliers_evaluation("../data/CovidPos_outliers_rowDrop_stdBased.csv", "rowDrop_stdBased")
 
@@ -45,7 +45,7 @@ for var in data.columns:
     top_threshold, bottom_threshold = determine_outlier_thresholds_for_var(summary5[var], std_based=False)
     outliers: Series = data_outliers_rowDrop[(data_outliers_rowDrop[var] > top_threshold) | (data_outliers_rowDrop[var] < bottom_threshold)]
     data_outliers_rowDrop.drop(outliers.index, axis=0, inplace=True)
-data_outliers_rowDrop.to_csv("../data/CovidPos_outliers_rowDrop_NotStdBased.csv")
+data_outliers_rowDrop.to_csv("../data/CovidPos_outliers_rowDrop_NotStdBased.csv", index=False)
 print(f"Data after dropping outliers: {data_outliers_rowDrop.shape}")
 outliers_evaluation("../data/CovidPos_outliers_rowDrop_NotStdBased.csv", "rowDrop_NotStdBased")
 
@@ -57,7 +57,7 @@ for var in data.columns:
     top, bottom = determine_outlier_thresholds_for_var(summary5[var])
     median: float = data_outliers_rep_fixedMedian[var].median()
     data_outliers_rep_fixedMedian[var] = data_outliers_rep_fixedMedian[var].apply(lambda x: median if x > top or x < bottom else x)
-data_outliers_rep_fixedMedian.to_csv("../data/CovidPos_outliers_rep_fixed_median.csv")
+data_outliers_rep_fixedMedian.to_csv("../data/CovidPos_outliers_rep_fixed_median.csv", index=False)
 print(f"Data after replacing outliers: {data_outliers_rep_fixedMedian.shape}")
 outliers_evaluation("../data/CovidPos_outliers_rep_fixed_median.csv", "rep_fixed_median")
 
@@ -71,3 +71,11 @@ for var in data.columns:
 data_outliers_trunc.to_csv("../data/CovidPos_outliers_trunc_minmax.csv")
 print(f"Data after truncating outliers: {data_outliers_trunc.shape}")
 outliers_evaluation("../data/CovidPos_outliers_trunc_minmax.csv", "truncating_minmax")
+
+
+# Soma de valores:
+# original = 420
+# rowDrop_stdBased = 385
+# rowDrop_NotStdBased = 371
+# rep_fixed_median = 393
+# truncating_minmax = 398
