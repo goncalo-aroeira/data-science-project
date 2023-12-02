@@ -88,6 +88,8 @@ if __name__ == "__main__":
     eval_metrics = ["accuracy","recall","precision","auc","f1"]
     for metric in eval_metrics:
         # parameters_nb(trnX, trnY, tstX, tstY, metric, labels)
+
+        # need to evaluate diferent k values
         parameters_knn(trnX, trnY, tstX, tstY, metric, labels)
         
     
