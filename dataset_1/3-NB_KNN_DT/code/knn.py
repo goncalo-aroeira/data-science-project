@@ -10,7 +10,7 @@ file_tag = 'CovidPos'
 train_filename = "../../2-data_preparation/data/CovidPos_bal_undersamp.csv"
 test_filename = "../../2-data_preparation/data/CovidPos_test_redundant.csv"
 target = 'CovidPos'
-eval_metric = 'accuracy'
+eval_metric = 'f1'
 
 trnX, tstX, trnY, tstY, labels, vars = read_train_test_from_files(train_filename, test_filename, target)
 print(f'Train#={len(trnX)} Test#={len(tstX)}')
@@ -20,7 +20,7 @@ figure()
 best_model, params = knn_study(trnX, trnY, tstX, tstY, k_max=25, metric=eval_metric)
 savefig(f'../images/{file_tag}_knn_{eval_metric}_study.png')
 show()
-
+print(params)
 
 prd_trn: array = best_model.predict(trnX)
 prd_tst: array = best_model.predict(tstX)
@@ -29,7 +29,7 @@ plot_evaluation_results(params, trnY, prd_trn, tstY, prd_tst, labels)
 savefig(f'../images/{file_tag}_knn_{params["name"]}_best_{params["metric"]}_eval.png')
 show()
 
-
+'''
 distance: Literal["manhattan", "euclidean", "chebyshev"] = params["params"][1]
 K_MAX = 25
 kvalues: list[int] = [i for i in range(1, K_MAX, 2)]
@@ -55,3 +55,4 @@ plot_multiline_chart(
 )
 savefig(f"../images/{file_tag}_knn_overfitting.png")
 show()
+'''
