@@ -6,8 +6,11 @@ from matplotlib.pyplot import figure, savefig, show
 from dslabs_functions import evaluate_approach, plot_multibar_chart
 
 target = "CovidPos"
-data_filename: str = "../data/CovidPos_scaled_zscore.csv"
-data: DataFrame = read_csv(data_filename)
+data_train_filename: str = "../data/CovidPos_train_redundant.csv"
+data_train: DataFrame = read_csv(data_train_filename)
+
+data_test_filename: str = "../data/CovidPos_test_redundant.csv"
+data_test: DataFrame = read_csv(data_test_filename)
 
 
 def random_train_test_data_split(data: DataFrame) -> list[DataFrame]:
@@ -25,9 +28,6 @@ def balancing_evaluation(data_filename: str, strategy: str, data_test: DataFrame
     show()
     data_test[target] = testY
     
-print("credit score values",data["CovidPos"].unique())
-
-data_train, data_test = train_test_split(data, test_size=0.2, random_state=42)
 
 # data_train = data.head(int(data.shape[0]*0.8))
 # data_test = data.tail(int(data.shape[0]*0.2))
@@ -47,6 +47,8 @@ print("Undersampling results")
 print("Minority class=", positive_class, ":", len(data_positives))
 print("Majority class=", negative_class, ":", len(df_neg_sample))
 print("Proportion:", round(len(data_positives) / len(df_neg_sample), 2), ": 1")
+print("start evaluation 1")
+balancing_evaluation("../data/CovidPos_bal_undersamp.csv", "undersampling", data_test)
 
 # Aproach 2 - oversampling
 df_pos_sample: DataFrame = DataFrame(data_positives.sample(len(data_negatives), replace=True))
@@ -57,6 +59,8 @@ print("Oversampling results")
 print("Minority class=", positive_class, ":", len(df_pos_sample))
 print("Majority class=", negative_class, ":", len(data_negatives))
 print("Proportion:", round(len(df_pos_sample) / len(data_negatives), 2), ": 1")
+print("start evaluation 2")
+balancing_evaluation("../data/CovidPos_bal_over.csv", "oversampling", data_test)
 
 # Approach 3 - SMOTE
 RANDOM_STATE = 42
@@ -75,16 +79,11 @@ print("Minority class=", positive_class, ":", smote_target_count[positive_class]
 print("Majority class=", negative_class, ":", smote_target_count[negative_class])
 print("Proportion:",round(smote_target_count[positive_class] / smote_target_count[negative_class], 2),": 1",)
 print(df_smote.shape)
-
-print("start evaluation 1")
-balancing_evaluation("../data/CovidPos_bal_undersamp.csv", "undersampling", data_test)
-print("start evaluation 2")
-balancing_evaluation("../data/CovidPos_bal_over.csv", "oversampling", data_test)
 print("start evaluation 3")
 balancing_evaluation("../data/CovidPos_bal_SMOTE.csv", "SMOTE", data_test)
 
 
 # valores para
-# Undersampling = 507
-# Oversampling = 502
-# SMOTE = 505
+# Undersampling = 478
+# Oversampling = 477
+# SMOTE = 472
