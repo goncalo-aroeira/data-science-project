@@ -31,6 +31,7 @@ from sklearn.neighbors import KNeighborsClassifier
 
 from config import ACTIVE_COLORS, LINE_COLOR, FILL_COLOR, cmap_blues
 from typing import Literal
+from matplotlib.pyplot import figure, savefig
 
 NR_COLUMNS: int = 3
 HEIGHT: int = 4
@@ -756,6 +757,24 @@ def knn_study(
     plot_multiline_chart(kvalues, values, title=f'KNN Models ({metric})', xlabel='k', ylabel=metric, percentage=True)
 
     return best_model, best_params
+
+def overfitting_knn(trnX: ndarray, trnY: array, tstX: ndarray, tstY: array, distance, file_tag = "Credit_Score", k_max = 25):
+    K_MAX = k_max
+    kvalues: list[int] = [i for i in range(3, K_MAX, 2)]
+    y_tst_values: list = []
+    y_trn_values: list = []
+    acc_metric: str = "accuracy"
+    for k in kvalues:
+        clf = KNeighborsClassifier(n_neighbors=k, metric=distance)
+        clf.fit(trnX, trnY)
+        prd_tst_Y: array = clf.predict(tstX)
+        prd_trn_Y: array = clf.predict(trnX)
+        y_tst_values.append(CLASS_EVAL_METRICS[acc_metric](tstY, prd_tst_Y))
+        y_trn_values.append(CLASS_EVAL_METRICS[acc_metric](trnY, prd_trn_Y))
+
+    return y_tst_values, y_trn_values
+
+    
 
 def evaluate_approach(
     train: DataFrame, test: DataFrame, target: str = "class", metric: str = "accuracy"
