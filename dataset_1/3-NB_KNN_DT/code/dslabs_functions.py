@@ -28,6 +28,7 @@ from sklearn.metrics import f1_score
 from sklearn.metrics import confusion_matrix, RocCurveDisplay, roc_auc_score
 from sklearn.naive_bayes import _BaseNB, GaussianNB, MultinomialNB, BernoulliNB
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier
 
 from config import ACTIVE_COLORS, LINE_COLOR, FILL_COLOR, cmap_blues
 from typing import Literal
@@ -89,7 +90,7 @@ def set_chart_xticks(
             ax.set_xlim(left=xvalues[0], right=xvalues[-1])
             ax.set_xticks(xvalues, labels=xvalues)
         else:
-            rotation = 0
+            rotation = 90
 
         ax.tick_params(axis="x", labelrotation=rotation, labelsize="xx-small")
         if len(xvalues) > 40:
@@ -932,3 +933,39 @@ def ts_aggregation_by(
     df.index = df.index.to_timestamp()
 
     return df
+
+
+
+# ---------------------------------------
+#             Decision Trees
+# ---------------------------------------
+
+def trees_study(
+        trnX: ndarray, trnY: array, tstX: ndarray, tstY: array, d_max: int=10, lag:int=2, metric='accuracy'
+        ) -> tuple:
+    criteria: list[Literal['entropy', 'gini']] = ['entropy', 'gini']
+    depths: list[int] = [i for i in range(2, d_max+1, lag)]
+
+    best_model: DecisionTreeClassifier | None = None
+    best_params: dict = {'name': 'DT', 'metric': metric, 'params': ()}
+    best_performance: float = 0.0
+
+    values: dict = {}
+    for c in criteria:
+        y_tst_values: list[float] = []
+        for d in depths:
+            clf = DecisionTreeClassifier(max_depth=d, criterion=c, min_impurity_decrease=0)
+            clf.fit(trnX, trnY)
+            prdY: array = clf.predict(tstX)
+            eval: float = CLASS_EVAL_METRICS[metric](tstY, prdY)
+            y_tst_values.append(eval)
+            if eval - best_performance > DELTA_IMPROVE:
+                best_performance = eval
+                best_params['params'] = (c, d)
+                best_model = clf
+            # print(f'DT {c} and d={d}')
+        values[c] = y_tst_values
+    print(f'DT best with {best_params['params'][0]} and d={best_params['params'][1]}')
+    plot_multiline_chart(depths, values, title=f'DT Models ({metric})', xlabel='d', ylabel=metric, percentage=True)
+
+    return best_model, best_params
