@@ -1,8 +1,8 @@
 from pandas import read_csv, DataFrame
 from dslabs_functions import (read_train_test_from_files, naive_Bayes_study, plot_evaluation_results,
                              knn_study, overfitting_knn, plot_multiline_chart, CLASS_EVAL_METRICS, DELTA_IMPROVE,
-                             plot_horizontal_bar_chart)
-from matplotlib.pyplot import show, savefig, figure
+                             plot_horizontal_bar_chart, HEIGHT)
+from matplotlib.pyplot import show, savefig, figure, subplots
 from numpy import array, ndarray, argsort
 from typing import Literal
 from sklearn.tree import DecisionTreeClassifier, plot_tree
@@ -74,7 +74,8 @@ def study_overfitting_knn(trnX: DataFrame, trnY:DataFrame, tstX: DataFrame, tstY
 #***************************************************************************************************
 
 def decision_trees_study(
-        trnX: ndarray, trnY: array, tstX: ndarray, tstY: array, d_max: int=10, lag:int=2, metric='accuracy'
+        trnX: ndarray, trnY: array, tstX: ndarray, tstY: array, axes: ndarray, i: int, j: int,
+        d_max: int=10, lag:int=2, metric='accuracy'
         ) -> tuple:
     criteria: list[Literal['entropy', 'gini']] = ['entropy', 'gini']
     depths: list[int] = [i for i in range(2, d_max+1, lag)]
@@ -100,8 +101,15 @@ def decision_trees_study(
         values[c] = y_tst_values
     print(f'DT best with {best_params['params'][0]} and d={best_params['params'][1]} for metric: {metric}')
     figure()
-    plot_multiline_chart(depths, values, title=f'DT Models ({metric})', xlabel='d', ylabel=metric, percentage=True)
-    savefig(f"images/Credit_Score_DT_{metric}_study.png")
+    plot_multiline_chart(
+        depths, 
+        values,
+        ax=axes[i, j],
+        title=f'DT Models ({metric})', 
+        xlabel='d', 
+        ylabel=metric, 
+        percentage=True)
+    #savefig(f"images/Credit_Score_DT_{metric}_study.png")
 
     return best_model, best_params
 
@@ -205,15 +213,22 @@ if __name__ == "__main__":
 
 
     eval_metrics = ["accuracy","recall","precision","auc","f1"]
-    #for metric in eval_metrics:
+    fig, axs = subplots(nrows=2, ncols=3, figsize=(3*HEIGHT, 2*HEIGHT), squeeze=False)
+    fig.suptitle("Decision trees study for different parameters")
+    i, j = 0, 0
+    for metric in eval_metrics:
         # parameters_nb(trnX, trnY, tstX, tstY, metric, labels)
 
         # need to evaluate diferent k values
         #parameters_knn(trnX, trnY, tstX, tstY, metric, labels)
-        #decision_trees_study(trnX, trnY, tstX, tstY, d_max=20, metric=metric)
+        decision_trees_study(trnX, trnY, tstX, tstY, axs, j, i, d_max=20, metric=metric)
+        i = i+1 if i < 2 else i
+        j = j if i == 2 else j+1
+    savefig(f"images/Credit_Score_DT_eval.png")
+    show()
     
     #DT_best_model_performance(trnX, trnY, tstX, tstY, depth=14)
     #DT_overfitting_study(trnX, trnY, tstX, tstY)
-    DT_variable_importance(trnX, trnY, tstX, tstY, depth=14)
+    #DT_variable_importance(trnX, trnY, tstX, tstY, depth=14)
         
     
