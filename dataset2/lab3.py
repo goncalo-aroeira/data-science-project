@@ -12,15 +12,13 @@ from subprocess import call
 #                                         Naive Bayes                                              *
 #***************************************************************************************************
 
-def parameters_nb(trnX: DataFrame, trnY:DataFrame, tstX: DataFrame, tstY:DataFrame, eval_metric: str, labels):
-
-    figure()
-    best_model, params = naive_Bayes_study(trnX, trnY, tstX, tstY, eval_metric)
-    savefig(f"images/{file_tag}_nb_{eval_metric}_study.png")
+def parameters_nb(trnX: DataFrame, trnY:DataFrame, tstX: DataFrame, tstY:DataFrame, axs: ndarray,
+                  i: int, j: int, eval_metric: str, labels):
+    best_model, params = naive_Bayes_study(trnX, trnY, tstX, tstY, axs, i, j, eval_metric)
 
     # o evaluation de qualquer metric é igual para qualquer dos modelos (Bernoulli ou Gaussian)
-    if eval_metric == "accuracy":
-        performance_nb(trnX, trnY, tstX, tstY, best_model, params, labels)
+    #if eval_metric == "accuracy":
+        #performance_nb(trnX, trnY, tstX, tstY, best_model, params, labels)
 
 def performance_nb(trnX: DataFrame, trnY:DataFrame, tstX: DataFrame, tstY:DataFrame, best_model, params, labels):
     prd_trn: array = best_model.predict(trnX)
@@ -33,16 +31,16 @@ def performance_nb(trnX: DataFrame, trnY:DataFrame, tstX: DataFrame, tstY:DataFr
 #                                             KNN                                                  *
 #***************************************************************************************************
 
-def parameters_knn(trnX: DataFrame, trnY:DataFrame, tstX: DataFrame, tstY:DataFrame, eval_metric: str, labels):
-    print("knn", eval_metric)
-    figure()
-    best_model, params = knn_study(trnX, trnY, tstX, tstY, k_max=25, metric=eval_metric)
-    savefig(f'images/{file_tag}_knn_{eval_metric}_study.png')  
+def parameters_knn(trnX: DataFrame, trnY:DataFrame, tstX: DataFrame, tstY:DataFrame, 
+                   axs: ndarray, i: int, j: int, eval_metric: str, labels):
+    #print("knn", eval_metric)
+    best_model, params = knn_study(trnX, trnY, tstX, tstY, axs, i, j ,k_max=25, metric=eval_metric)
+    #savefig(f'images/{file_tag}_knn_{eval_metric}_study.png')  
 
     # o evaluation de qualquer metric é igual para qualquer dos modelos (Bernoulli ou Gaussian)
-    if eval_metric == "accuracy":
-        performance_knn(trnX, trnY, tstX, tstY, best_model, params, labels)
-        study_overfitting_knn(trnX, trnY, tstX, tstY, params, eval_metric)
+    #if eval_metric == "accuracy":
+        #performance_knn(trnX, trnY, tstX, tstY, best_model, params, labels)
+        #study_overfitting_knn(trnX, trnY, tstX, tstY, params, eval_metric)
 
 def performance_knn(trnX: DataFrame, trnY:DataFrame, tstX: DataFrame, tstY:DataFrame, best_model, params, labels):
     prd_trn: array = best_model.predict(trnX)
@@ -100,7 +98,6 @@ def decision_trees_study(
             # print(f'DT {c} and d={d}')
         values[c] = y_tst_values
     print(f'DT best with {best_params['params'][0]} and d={best_params['params'][1]} for metric: {metric}')
-    figure()
     plot_multiline_chart(
         depths, 
         values,
@@ -217,14 +214,15 @@ if __name__ == "__main__":
     fig.suptitle("Decision trees study for different parameters")
     i, j = 0, 0
     for metric in eval_metrics:
-        # parameters_nb(trnX, trnY, tstX, tstY, metric, labels)
-
-        # need to evaluate diferent k values
-        #parameters_knn(trnX, trnY, tstX, tstY, metric, labels)
-        decision_trees_study(trnX, trnY, tstX, tstY, axs, j, i, d_max=20, metric=metric)
-        i = i+1 if i < 2 else i
-        j = j if i == 2 else j+1
-    savefig(f"images/Credit_Score_DT_eval.png")
+        #parameters_nb(trnX, trnY, tstX, tstY, axs, i, j, metric, labels)
+        parameters_knn(trnX, trnY, tstX, tstY, axs, i, j, metric, labels)
+        #decision_trees_study(trnX, trnY, tstX, tstY, axs, i, j, d_max=20, metric=metric)
+        if j == 2:
+            j = 0
+            i = 1
+        else:
+            j += 1
+    savefig(f"images/Credit_Score_KNN_eval.png")
     show()
     
     #DT_best_model_performance(trnX, trnY, tstX, tstY, depth=14)

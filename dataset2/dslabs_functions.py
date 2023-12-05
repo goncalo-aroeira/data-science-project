@@ -674,7 +674,8 @@ def run_NB(trnX, trnY, tstX, tstY, metric: str = "accuracy") -> dict[str, float]
     return eval
 
 def naive_Bayes_study(
-    trnX: ndarray, trnY: array, tstX: ndarray, tstY: array, metric: str = "accuracy"
+    trnX: ndarray, trnY: array, tstX: ndarray, tstY: array, axes: ndarray, i: int, j: int, 
+    metric: str = "accuracy"
 ) -> tuple:
     estimators: dict = {
         "GaussianNB": GaussianNB(),
@@ -698,10 +699,11 @@ def naive_Bayes_study(
             best_params[metric] = eval
             best_model = estimators[clf]
         yvalues.append(eval)
-        # print(f'NB {clf}')
+        print(f'NB {clf}')
     plot_bar_chart(
         xvalues,
         yvalues,
+        ax=axes[i, j],
         title=f"Naive Bayes Models ({metric})",
         ylabel=metric,
         percentage=True,
@@ -729,7 +731,8 @@ def run_KNN(trnX, trnY, tstX, tstY, metric="accuracy") -> dict[str, float]:
     return eval
 
 def knn_study(
-        trnX: ndarray, trnY: array, tstX: ndarray, tstY: array, k_max: int=19, lag: int=2, metric='accuracy'
+        trnX: ndarray, trnY: array, tstX: ndarray, tstY: array, axes: ndarray, i: int, 
+        j: int, k_max: int=19, lag: int=2, metric='accuracy'
         ) -> tuple[KNeighborsClassifier | None, dict]:
     dist: list[Literal['manhattan', 'euclidean', 'chebyshev']] = ['manhattan', 'euclidean', 'chebyshev']
 
@@ -754,7 +757,14 @@ def knn_study(
             # print(f'KNN {d} k={k}')
         values[d] = y_tst_values
     print(f'KNN best with k={best_params['params'][0]} and {best_params['params'][1]}')
-    plot_multiline_chart(kvalues, values, title=f'KNN Models ({metric})', xlabel='k', ylabel=metric, percentage=True)
+    plot_multiline_chart(
+        kvalues, 
+        values,
+        ax=axes[i, j], 
+        title=f'KNN Models ({metric})', 
+        xlabel='k', 
+        ylabel=metric, 
+        percentage=True)
 
     return best_model, best_params
 
