@@ -28,6 +28,8 @@ from sklearn.metrics import f1_score
 from sklearn.metrics import confusion_matrix, RocCurveDisplay, roc_auc_score
 from sklearn.naive_bayes import _BaseNB, GaussianNB, MultinomialNB, BernoulliNB
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.neural_network import MLPClassifier
+from sklearn.ensemble import RandomForestClassifier
 
 from config import ACTIVE_COLORS, LINE_COLOR, FILL_COLOR, cmap_blues
 from typing import Literal
@@ -756,7 +758,7 @@ def knn_study(
                 best_model = clf
             # print(f'KNN {d} k={k}')
         values[d] = y_tst_values
-    print(f'KNN best with k={best_params['params'][0]} and {best_params['params'][1]}')
+    # print(f'KNN best with k={best_params['params'][0]} and {best_params['params'][1]}')
     plot_multiline_chart(
         kvalues, 
         values,
@@ -784,7 +786,129 @@ def overfitting_knn(trnX: ndarray, trnY: array, tstX: ndarray, tstY: array, dist
 
     return y_tst_values, y_trn_values
 
-    
+def mlp_study(
+    trnX: ndarray,
+    trnY: array,
+    tstX: ndarray,
+    tstY: array,
+    nr_max_iterations: int = 2500,
+    lag: int = 500,
+    metric: str = "accuracy",
+) -> tuple[MLPClassifier | None, dict]:
+    nr_iterations: list[int] = [lag] + [
+        i for i in range(2 * lag, nr_max_iterations + 1, lag)
+    ]
+
+    lr_types: list[Literal["constant", "invscaling", "adaptive"]] = [
+        "constant",
+        "invscaling",
+        "adaptive",
+    ]  # only used if optimizer='sgd'
+    learning_rates: list[float] = [0.5, 0.05, 0.005, 0.0005]
+
+    best_model: MLPClassifier | None = None
+    best_params: dict = {"name": "MLP", "metric": metric, "params": ()}
+    best_performance: float = 0.0
+
+    values: dict = {}
+    _, axs = subplots(
+        1, len(lr_types), figsize=(len(lr_types) * HEIGHT, HEIGHT), squeeze=False
+    )
+    for i in range(len(lr_types)):
+        type: str = lr_types[i]
+        values = {}
+        for lr in learning_rates:
+            warm_start: bool = False
+            y_tst_values: list[float] = []
+            for j in range(len(nr_iterations)):
+                clf = MLPClassifier(
+                    learning_rate=type,
+                    learning_rate_init=lr,
+                    max_iter=lag,
+                    warm_start=warm_start,
+                    activation="logistic",
+                    solver="sgd",
+                    verbose=False,
+                )
+                clf.fit(trnX, trnY)
+                prdY: array = clf.predict(tstX)
+                eval: float = CLASS_EVAL_METRICS[metric](tstY, prdY)
+                y_tst_values.append(eval)
+                warm_start = True
+                if eval - best_performance > DELTA_IMPROVE:
+                    best_performance = eval
+                    best_params["params"] = (type, lr, nr_iterations[j])
+                    best_model = clf
+                # print(f'MLP lr_type={type} lr={lr} n={nr_iterations[j]}')
+            values[lr] = y_tst_values
+        plot_multiline_chart(
+            nr_iterations,
+            values,
+            ax=axs[0, i],
+            title=f"MLP with {type}",
+            xlabel="nr iterations",
+            ylabel=metric,
+            percentage=True,
+        )
+    print(
+        f'MLP best for {best_params["params"][2]} iterations (lr_type={best_params["params"][0]} and lr={best_params["params"][1]}'
+    )
+
+    return best_model, best_params
+   
+def random_forests_study(
+    trnX: ndarray,
+    trnY: array,
+    tstX: ndarray,
+    tstY: array,
+    nr_max_trees: int = 2500,
+    lag: int = 500,
+    metric: str = "accuracy",
+) -> tuple[RandomForestClassifier | None, dict]:
+    n_estimators: list[int] = [100] + [i for i in range(500, nr_max_trees + 1, lag)]
+    max_depths: list[int] = [2, 5, 7]
+    max_features: list[float] = [0.1, 0.3, 0.5, 0.7, 0.9]
+
+    best_model: RandomForestClassifier | None = None
+    best_params: dict = {"name": "RF", "metric": metric, "params": ()}
+    best_performance: float = 0.0
+
+    values: dict = {}
+
+    cols: int = len(max_depths)
+    _, axs = subplots(1, cols, figsize=(cols * HEIGHT, HEIGHT), squeeze=False)
+    for i in range(len(max_depths)):
+        d: int = max_depths[i]
+        values = {}
+        for f in max_features:
+            y_tst_values: list[float] = []
+            for n in n_estimators:
+                clf = RandomForestClassifier(
+                    n_estimators=n, max_depth=d, max_features=f
+                )
+                clf.fit(trnX, trnY)
+                prdY: array = clf.predict(tstX)
+                eval: float = CLASS_EVAL_METRICS[metric](tstY, prdY)
+                y_tst_values.append(eval)
+                if eval - best_performance > DELTA_IMPROVE:
+                    best_performance = eval
+                    best_params["params"] = (d, f, n)
+                    best_model = clf
+                # print(f'RF d={d} f={f} n={n}')
+            values[f] = y_tst_values
+        plot_multiline_chart(
+            n_estimators,
+            values,
+            ax=axs[0, i],
+            title=f"Random Forests with max_depth={d}",
+            xlabel="nr estimators",
+            ylabel=metric,
+            percentage=True,
+        )
+    print(
+        f'RF best for {best_params["params"][2]} trees (d={best_params["params"][0]} and f={best_params["params"][1]})'
+    )
+    return best_model, best_params
 
 def evaluate_approach(
     train: DataFrame, test: DataFrame, target: str = "class", metric: str = "accuracy"
