@@ -187,7 +187,7 @@ if __name__ == "__main__":
     print(f"Labels={labels}")
 
 
-    eval_metrics = ["accuracy","recall","precision","auc","f1"]
+    eval_metrics = ["recall","precision","auc","f1"]
     fig, axs = subplots(nrows=2, ncols=3, figsize=(3*HEIGHT, 2*HEIGHT), squeeze=False)
     fig.suptitle("Decision trees study for different parameters")
     i, j = 0, 0
