@@ -13,68 +13,66 @@ file_tag = "CovidPos"
 train_filename = "../data/CovidPos_bal_undersamp.csv"
 test_filename = "../data/CovidPos_test_redundant.csv"
 target = "CovidPos"
-eval_metrics = ["precision", "recall", "f1", "auc"]
+eval_metric = "f1"
 
 
 print("RF")
-for eval_metric in eval_metrics:
     
-    trnX, tstX, trnY, tstY, labels, vars = read_train_test_from_files(
-        train_filename, test_filename, target
-    )
-    print(f"Train#={len(trnX)} Test#={len(tstX)}")
-    print(f"Labels={labels}")
-    
-    print(f"Metric={eval_metric}")
-    figure()
-    best_model, params = random_forests_study(
-        trnX,
-        trnY,
-        tstX,
-        tstY,
-        nr_max_trees=1000,
-        lag=250,
-        metric=eval_metric,
-    )
-    savefig(f"../images/{file_tag}_rf_{eval_metric}_study.png")
-    show()
+trnX, tstX, trnY, tstY, labels, vars = read_train_test_from_files(
+    train_filename, test_filename, target
+)
+print(f"Train#={len(trnX)} Test#={len(tstX)}")
+print(f"Labels={labels}")
+
+print(f"Metric={eval_metric}")
+figure()
+best_model, params = random_forests_study(
+    trnX,
+    trnY,
+    tstX,
+    tstY,
+    nr_max_trees=1000,
+    lag=250,
+    metric=eval_metric,
+)
+savefig(f"../images/{file_tag}_rf_{eval_metric}_study.png")
+show()
 
 
-    prd_trn: array = best_model.predict(trnX)
-    prd_tst: array = best_model.predict(tstX)
-    figure()
-    plot_evaluation_results(params, trnY, prd_trn, tstY, prd_tst, labels)
-    savefig(f'../images/{file_tag}_rf_{params["name"]}_best_{params["metric"]}_eval.png')
-    show()
+prd_trn: array = best_model.predict(trnX)
+prd_tst: array = best_model.predict(tstX)
+figure()
+plot_evaluation_results(params, trnY, prd_trn, tstY, prd_tst, labels)
+savefig(f'../images/{file_tag}_rf_{params["name"]}_best_{params["metric"]}_eval.png')
+show()
 
 
 
-    stdevs: list[float] = list(
-        std([tree.feature_importances_ for tree in best_model.estimators_], axis=0)
-    )
-    importances = best_model.feature_importances_
-    indices: list[int] = argsort(importances)[::-1]
-    elems: list[str] = []
-    imp_values: list[float] = []
-    for f in range(len(vars)):
-        elems += [vars[indices[f]]]
-        imp_values.append(importances[indices[f]])
-        print(f"{f+1}. {elems[f]} ({importances[indices[f]]})")
+stdevs: list[float] = list(
+    std([tree.feature_importances_ for tree in best_model.estimators_], axis=0)
+)
+importances = best_model.feature_importances_
+indices: list[int] = argsort(importances)[::-1]
+elems: list[str] = []
+imp_values: list[float] = []
+for f in range(len(vars)):
+    elems += [vars[indices[f]]]
+    imp_values.append(importances[indices[f]])
+    print(f"{f+1}. {elems[f]} ({importances[indices[f]]})")
 
-    figure()
-    plot_horizontal_bar_chart(
-        elems,
-        imp_values,
-        error=stdevs,
-        title="RF variables importance",
-        xlabel="importance",
-        ylabel="variables",
-        percentage=True,
-    )
-    savefig(f"../images/{file_tag}_rf_{eval_metric}_vars_ranking.png")
+figure(figsize=(10, 15))
+plot_horizontal_bar_chart(
+    elems,
+    imp_values,
+    error=stdevs,
+    title="RF variables importance",
+    xlabel="importance",
+    ylabel="variables",
+    percentage=True,
+)
+savefig(f"../images/{file_tag}_rf_{eval_metric}_vars_ranking.png")
 
 
-'''
 
 d_max: int = params["params"][0]
 feat: float = params["params"][1]
@@ -103,4 +101,11 @@ plot_multiline_chart(
     percentage=True,
 )
 savefig(f"../images/{file_tag}_rf_{eval_metric}_overfitting.png")
-'''
+
+
+# valores para metricas
+# accuracy 569
+# precision 582 
+# recall 578
+# f1 583
+# auc 583

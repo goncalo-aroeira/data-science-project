@@ -14,7 +14,7 @@ file_tag = "CovidPos"
 train_filename = "../data/CovidPos_bal_undersamp.csv"
 test_filename = "../data/CovidPos_test_redundant.csv"
 target = "CovidPos"
-eval_metrics = ["precision", "recall", "f1", "auc"]
+eval_metrics = ["recall", "f1", "auc"]
 
 print("GB")
 
@@ -108,3 +108,10 @@ plot_multiline_chart(
 )
 savefig(f"../images/{file_tag}_gb_{eval_metric}_overfitting.png")
 '''
+
+# valores para metricas
+# accuracy 585
+# precision 584
+# recall 582
+# f1 585
+# auc 583
