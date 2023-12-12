@@ -16,7 +16,13 @@ file_tag = "CovidPos"
 train_filename = "../data/CovidPos_bal_undersamp.csv"
 test_filename = "../data/CovidPos_test_redundant.csv"
 target = "CovidPos"
-eval_metric = "accuracy"
+
+eval_metric = "recall"
+
+
+print("MLP")
+
+
 
 trnX, tstX, trnY, tstY, labels, vars = read_train_test_from_files(
     train_filename, test_filename, target
@@ -24,7 +30,8 @@ trnX, tstX, trnY, tstY, labels, vars = read_train_test_from_files(
 print(f"Train#={len(trnX)} Test#={len(tstX)}")
 print(f"Labels={labels}")
 
-figure()
+print(f"Metric={eval_metric}")
+figure(figsize=(10, 15))
 best_model, params = mlp_study(
     trnX,
     trnY,
@@ -44,6 +51,8 @@ figure()
 plot_evaluation_results(params, trnY, prd_trn, tstY, prd_tst, labels)
 savefig(f'../images/{file_tag}_mlp_{params["name"]}_best_{params["metric"]}_eval.png')
 show()
+
+
 
 
 lr_type: Literal["constant", "invscaling", "adaptive"] = params["params"][0]
@@ -71,7 +80,8 @@ for n in nr_iterations:
     y_tst_values.append(CLASS_EVAL_METRICS[acc_metric](tstY, prd_tst_Y))
     y_trn_values.append(CLASS_EVAL_METRICS[acc_metric](trnY, prd_trn_Y))
     warm_start = True
-
+    
+    
 figure()
 plot_multiline_chart(
     nr_iterations,
@@ -82,3 +92,8 @@ plot_multiline_chart(
     percentage=True,
 )
 savefig(f"../images/{file_tag}_mlp_{eval_metric}_overfitting.png")
+
+
+# valores para metricas
+# recall 570
+# f1 570

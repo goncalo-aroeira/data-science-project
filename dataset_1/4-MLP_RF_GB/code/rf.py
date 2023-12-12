@@ -13,14 +13,18 @@ file_tag = "CovidPos"
 train_filename = "../data/CovidPos_bal_undersamp.csv"
 test_filename = "../data/CovidPos_test_redundant.csv"
 target = "CovidPos"
-eval_metric = "accuracy"
+eval_metric = "f1"
 
+
+print("RF")
+    
 trnX, tstX, trnY, tstY, labels, vars = read_train_test_from_files(
     train_filename, test_filename, target
 )
 print(f"Train#={len(trnX)} Test#={len(tstX)}")
 print(f"Labels={labels}")
 
+print(f"Metric={eval_metric}")
 figure()
 best_model, params = random_forests_study(
     trnX,
@@ -56,7 +60,7 @@ for f in range(len(vars)):
     imp_values.append(importances[indices[f]])
     print(f"{f+1}. {elems[f]} ({importances[indices[f]]})")
 
-figure()
+figure(figsize=(10, 15))
 plot_horizontal_bar_chart(
     elems,
     imp_values,
@@ -85,7 +89,8 @@ for n in nr_estimators:
     prd_trn_Y: array = clf.predict(trnX)
     y_tst_values.append(CLASS_EVAL_METRICS[acc_metric](tstY, prd_tst_Y))
     y_trn_values.append(CLASS_EVAL_METRICS[acc_metric](trnY, prd_trn_Y))
-
+    
+    
 figure()
 plot_multiline_chart(
     nr_estimators,
@@ -96,3 +101,11 @@ plot_multiline_chart(
     percentage=True,
 )
 savefig(f"../images/{file_tag}_rf_{eval_metric}_overfitting.png")
+
+
+# valores para metricas
+# accuracy 569
+# precision 582 
+# recall 578
+# f1 583
+# auc 583
