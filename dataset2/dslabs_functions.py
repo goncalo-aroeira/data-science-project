@@ -29,7 +29,7 @@ from sklearn.metrics import confusion_matrix, RocCurveDisplay, roc_auc_score
 from sklearn.naive_bayes import _BaseNB, GaussianNB, MultinomialNB, BernoulliNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 
 from config import ACTIVE_COLORS, LINE_COLOR, FILL_COLOR, cmap_blues
 from typing import Literal
@@ -908,6 +908,60 @@ def random_forests_study(
     print(
         f'RF best for {best_params["params"][2]} trees (d={best_params["params"][0]} and f={best_params["params"][1]})'
     )
+    return best_model, best_params
+
+def gradient_boosting_study(
+    trnX: ndarray,
+    trnY: array,
+    tstX: ndarray,
+    tstY: array,
+    axs: ndarray,
+    index: int,
+    nr_max_trees: int = 2500,
+    lag: int = 500,
+    metric: str = "accuracy",
+) -> tuple[GradientBoostingClassifier | None, dict]:
+    n_estimators: list[int] = [100] + [i for i in range(300, nr_max_trees + 1, lag)]
+    max_depths: list[int] = [2, 4, 6]
+    learning_rates: list[float] = [0.1, 0.3, 0.5, 0.7, 0.9]
+
+    best_model: GradientBoostingClassifier | None = None
+    best_params: dict = {"name": "GB", "metric": metric, "params": ()}
+    best_performance: float = 0.0
+
+    values: dict = {}
+    for i in range(len(max_depths)):
+        d: int = max_depths[i]
+        values = {}
+        for lr in learning_rates:
+            y_tst_values: list[float] = []
+            for n in n_estimators:
+                clf = GradientBoostingClassifier(
+                    n_estimators=n, max_depth=d, learning_rate=lr
+                )
+                clf.fit(trnX, trnY)
+                prdY: array = clf.predict(tstX)
+                eval: float = CLASS_EVAL_METRICS[metric](tstY, prdY)
+                y_tst_values.append(eval)
+                if eval - best_performance > DELTA_IMPROVE:
+                    best_performance = eval
+                    best_params["params"] = (d, lr, n)
+                    best_model = clf
+                print(f'GB d={d} lr={lr} n={n}')
+            values[lr] = y_tst_values
+        plot_multiline_chart(
+            n_estimators,
+            values,
+            ax=axs[index, i],
+            title=f"Gradient Boosting, max_depth={d}, ({metric})",
+            xlabel="nr estimators",
+            ylabel=metric,
+            percentage=True,
+        )
+    print(
+        f'Metric: {metric}; GB best for {best_params["params"][2]} trees (d={best_params["params"][0]} and lr={best_params["params"][1]})'
+    )
+
     return best_model, best_params
 
 def evaluate_approach(
