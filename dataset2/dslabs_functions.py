@@ -95,9 +95,9 @@ def set_chart_xticks(
             rotation = 0
 
         ax.tick_params(axis="x", labelrotation=rotation, labelsize="xx-small")
-        if len(xvalues) > 40:
-            print("wfkqfqoenfrqofnoqnefiqneron")
-            ax.set_xticklabels([])
+        # if len(xvalues) > 40:
+        #     print("wfkqfqoenfrqofnoqnefiqneron")
+        #     ax.set_xticklabels([])
 
     return ax
 
