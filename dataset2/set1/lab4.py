@@ -2,7 +2,7 @@ from pandas import read_csv, DataFrame
 from dslabs_functions import (read_train_test_from_files, mlp_study, HEIGHT, plot_evaluation_results,
                               plot_multiline_chart, CLASS_EVAL_METRICS, plot_horizontal_bar_chart,
                               random_forests_study)
-from matplotlib.pyplot import show, savefig, figure, subplots
+from matplotlib.pyplot import show, savefig, figure, subplots, tight_layout
 from numpy import array, ndarray, argsort, std
 from typing import Literal
 from sklearn.tree import DecisionTreeClassifier, plot_tree
@@ -31,9 +31,9 @@ def rf(trnX: DataFrame, trnY:DataFrame, tstX: DataFrame, tstY:DataFrame, eval_me
 
     if eval_metric == "accuracy":
         print("overfitting")
-        rf_performance(trnX, trnY, tstX, tstY, best_model, params, labels)
+        # rf_performance(trnX, trnY, tstX, tstY, best_model, params, labels)
         rf_feature_importance(best_model, eval_metric)
-        rf_overfitting(trnX, trnY, tstX, tstY, params, eval_metric)
+        # rf_overfitting(trnX, trnY, tstX, tstY, params, eval_metric)
 
 def rf_performance(trnX: DataFrame, trnY:DataFrame, tstX: DataFrame, tstY:DataFrame, best_model, params, labels):
     prd_trn: array = best_model.predict(trnX)
@@ -65,6 +65,7 @@ def rf_feature_importance(best_model, eval_metric = "accuracy"):
         ylabel="variables",
         percentage=True,
     )
+    tight_layout()
     savefig(f"images/{file_tag}_rf_{eval_metric}_vars_ranking.png")
 
 def rf_overfitting(trnX: DataFrame, trnY:DataFrame, tstX: DataFrame, tstY:DataFrame, params, eval_metric = "accuracy"):
@@ -187,7 +188,7 @@ if __name__ == "__main__":
     print(f"Labels={labels}")
 
 
-    eval_metrics = ["recall","precision","auc","f1"]
+    eval_metrics = ["accuracy"]#,"recall","precision","auc","f1"]
     fig, axs = subplots(nrows=2, ncols=3, figsize=(3*HEIGHT, 2*HEIGHT), squeeze=False)
     fig.suptitle("Decision trees study for different parameters")
     i, j = 0, 0
