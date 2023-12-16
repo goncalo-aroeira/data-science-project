@@ -1,0 +1,16 @@
+Encoding:
+  - Tratar mesmo dos meses como variáveis cíclicas??
+
+MVI:
+  - Fazer substituição dos missing values usando KNN?? 
+    não parece fazer grande diferença para stratégia de (moda, média...)
+
+Balancing:
+  - Fazer undersampling ou oversampling
+  - Como testar o Balancing - usar o test como tava e o train balanceado
+
+
+Geral:
+  - A funcao evaluate_approach tem um argumento chamado "metrics", 
+    o que é que isto faz e é necessário preocupar-nos. Nao creio que seja preocupacao
+  - Aparecimento de colunas "Unnamed: 0", provavelmente ids, como nos livramos disto?
