@@ -1,5 +1,5 @@
 from pandas import read_csv, DataFrame, Series, Index, Period
-from matplotlib.pyplot import figure, show, savefig, tight_layout, subplots
+from matplotlib.pyplot import figure, show, savefig, tight_layout, subplots, plot, legend
 from dslabs_functions import plot_line_chart, HEIGHT, set_chart_labels, plot_multiline_chart, plot_components, ts_aggregation_by
 from numpy import array
 from matplotlib.figure import Figure
@@ -128,9 +128,13 @@ def autocorrelation_study(series: Series, max_lag: int, delta: int = 1):
     savefig(f"images/{file_tag}_autocorrelation.png", bbox_inches='tight')
     return
 
-def component_study(series: Series, file_tag: str, target:str):
-    print(series.index)
+def component_study():
+    
+    filename = "data/forecast_traffic_single.csv"
+    file_tag = "fts"
+    target = "Total"
     index = "Timestamp"
+
     data: DataFrame = read_csv(
         filename,
         index_col=index,
@@ -140,6 +144,7 @@ def component_study(series: Series, file_tag: str, target:str):
         infer_datetime_format=True,
     )
     series: Series = data[target]
+
     plot_components(
         series,
         title=f"{file_tag} by minutes {target}",
@@ -147,7 +152,58 @@ def component_study(series: Series, file_tag: str, target:str):
         y_label=target,
     )
     show()
-    savefig(f"images/{file_tag}_component_study.png", bbox_inches='tight')
+    savefig(f"images/{file_tag}_components_study.png")
+
+def stationary_study(series: Series, file_tag: str, target:str):
+    figure(figsize=(3 * HEIGHT, HEIGHT))
+    plot_line_chart(
+        series.index.to_list(),
+        series.to_list(),
+        xlabel=series.index.name,
+        ylabel=target,
+        title=f"{file_tag} stationary study",
+        name="original",
+    )
+    n: int = len(series)
+    plot(series.index, [series.mean()] * n, "r-", label="mean")
+    legend()
+    savefig(f"images/{file_tag}_stationarity_study_1.png")
+
+    BINS = 10
+    mean_line: list[float] = []
+
+    for i in range(BINS):
+        segment: Series = series[i * n // BINS : (i + 1) * n // BINS]
+        mean_value: list[float] = [segment.mean()] * (n // BINS)
+        mean_line += mean_value
+    mean_line += [mean_line[-1]] * (n - len(mean_line))
+
+    figure(figsize=(3 * HEIGHT, HEIGHT))
+    plot_line_chart(
+        series.index.to_list(),
+        series.to_list(),
+        xlabel=series.index.name,
+        ylabel=target,
+        title=f"{file_tag} stationary study",
+        name="original",
+        show_stdev=True,
+    )
+    n: int = len(series)
+    plot(series.index, mean_line, "r-", label="mean")
+    legend()
+    savefig(f"images/{file_tag}_stationarity_study_2.png")
+
+from statsmodels.tsa.stattools import adfuller
+
+
+def eval_stationarity(series: Series) -> bool:
+    result = adfuller(series)
+    print(f"ADF Statistic: {result[0]:.3f}")
+    print(f"p-value: {result[1]:.3f}")
+    print("Critical Values:")
+    for key, value in result[4].items():
+        print(f"\t{key}: {value:.3f}")
+    return result[1] <= 0.05
 
 #***********************************************************************************
 
@@ -181,4 +237,14 @@ if __name__ == "__main__":
     # lag(series, file_tag, target)
     # autocorrelation_study(series, 10, 1)
     # I have given up peco imensa desculpa
-    # component_study(series, file_tag, target)
+    # component_study()
+    # stationary_study(series, file_tag, target)
+    print(f"The series {('is' if eval_stationarity(series) else 'is not')} stationary")
+        # result for eval stationary:
+        # ADF Statistic: -9.927
+        # p-value: 0.000
+        # Critical Values:
+        #     1%: -3.433
+        #     5%: -2.863
+        #     10%: -2.567
+        # The series is stationary
