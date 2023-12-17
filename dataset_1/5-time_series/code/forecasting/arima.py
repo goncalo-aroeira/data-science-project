@@ -7,7 +7,7 @@ from pandas import read_csv, DataFrame, Series
 from statsmodels.tsa.arima.model import ARIMA
 from dslabs_functions import series_train_test_split, HEIGHT
 
-filename: str = "data/forecast_Covid_first_derivative.csv"
+filename: str = "../../data/forecast_Covid_scaled.csv"
 file_tag: str = "Covid"
 target: str = "deaths"
 timecol: str = "date"

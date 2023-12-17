@@ -141,7 +141,6 @@ plot_forecasting_eval(
     prd_tst,
     title=f"{file_tag} - LSTM (length={best_length}, hidden={params[1]}, epochs={params[2]})",
 )
-savefig(f"images/{file_tag}_lstms_{measure}_eval.png")
 
 
 
@@ -157,4 +156,3 @@ plot_forecasting_series(
     xlabel=timecol,
     ylabel=target,
 )
-savefig(f"images/{file_tag}_lstms_{measure}_forecast.png")
