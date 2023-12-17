@@ -7,7 +7,6 @@ from matplotlib.figure import Figure
 #***********************************************************************************
 #*                                   EX 1
 #*                                Granularity                                      *
-#*                          2.1 - Symbolic Variables                               *
 #***********************************************************************************
 
 def symbolic_variables_granularity(series: Series, file_tag: str, target: str):
@@ -23,7 +22,7 @@ def symbolic_variables_granularity(series: Series, file_tag: str, target: str):
             title=f"{grans[i]} mean for {target}",
         )
         tight_layout()
-        savefig(f"images/{file_tag}_granularity_{grans[i]}.png", bbox_inches='tight')
+        savefig(f"images/ts_analysis/{file_tag}_granularity_{grans[i]}.png", bbox_inches='tight')
 
 #***********************************************************************************
 #*                                   EX 2
@@ -41,19 +40,19 @@ def boxplots_individual_num_vars(series: Series, file_tag: str, target:str):
     #     fig = figure(figsize=(2 * HEIGHT, HEIGHT))
     #     fig.suptitle("distribution for "+ i, fontsize=14, fontweight='bold')
     #     boxplot(ss)
-    #     savefig(f"images/{file_tag}_boxplot_{i}.png", bbox_inches='tight')
+    #     savefig(f"images/ts_analysis/{file_tag}_boxplot_{i}.png", bbox_inches='tight')
 
     fig: Figure
     axs: array
     ss_mins, ss_hours, ss_daily, ss_weekly = ts_aggregation_by(series, grans[0]),ts_aggregation_by(series, grans[1]), ts_aggregation_by(series, grans[2]),ts_aggregation_by(series, grans[3])
-    fig, axs = subplots(2, 3, figsize=(2 * HEIGHT, HEIGHT))
+    fig, axs = subplots(2, 4, figsize=(2 * HEIGHT, HEIGHT))
     set_chart_labels(axs[0, 0], title="MINUTES")
     axs[0, 0].boxplot(ss_mins)
     set_chart_labels(axs[0, 1], title="HOURLY")
     axs[0, 1].boxplot(ss_hours)
-    set_chart_labels(axs[0, 3], title="DAILY")
+    set_chart_labels(axs[0, 2], title="DAILY")
     axs[0, 2].boxplot(ss_daily)
-    set_chart_labels(axs[0, 2], title="WEEKLY")
+    set_chart_labels(axs[0, 3], title="WEEKLY")
     axs[0, 3].boxplot(ss_weekly)
 
     axs[1, 0].grid(False)
@@ -71,7 +70,7 @@ def boxplots_individual_num_vars(series: Series, file_tag: str, target:str):
     axs[1, 3].grid(False)
     axs[1, 3].set_axis_off()
     axs[1, 3].text(0.2, 0, str(ss_weekly.describe()), fontsize="small")
-    savefig(f"images/{file_tag}_boxplot.png", bbox_inches='tight')
+    savefig(f"images/ts_analysis/{file_tag}_boxplot.png", bbox_inches='tight')
 
 
 def histograms(series: Series, file_tag: str, target:str):
@@ -90,7 +89,7 @@ def histograms(series: Series, file_tag: str, target:str):
     for i in range(len(grans)):
         set_chart_labels(axs[i], title=f"{gran_names[i]}", xlabel=target, ylabel="Nr records")
         axs[i].hist(grans[i].values)
-    savefig(f"images/{file_tag}_histogram.png", bbox_inches='tight')
+    savefig(f"images/ts_analysis/{file_tag}_histogram.png", bbox_inches='tight')
     
 
 def get_lagged_series(series: Series, max_lag: int, delta: int = 1):
@@ -103,7 +102,7 @@ def lag(series: Series, file_tag: str, target:str):
     figure(figsize=(3 * HEIGHT, HEIGHT))
     lags = get_lagged_series(series, 20, 10)
     plot_multiline_chart(series.index.to_list(), lags, xlabel="Timestamp", ylabel=target)
-    savefig(f"images/{file_tag}_lag.png", bbox_inches='tight')
+    savefig(f"images/ts_analysis/{file_tag}_lag.png", bbox_inches='tight')
 
 from matplotlib.pyplot import setp
 from matplotlib.gridspec import GridSpec
@@ -125,7 +124,7 @@ def autocorrelation_study(series: Series, max_lag: int, delta: int = 1):
     ax.acorr(series, maxlags=max_lag)
     ax.set_title("Autocorrelation")
     ax.set_xlabel("Lags")
-    savefig(f"images/{file_tag}_autocorrelation.png", bbox_inches='tight')
+    savefig(f"images/ts_analysis/{file_tag}_autocorrelation.png", bbox_inches='tight')
     return
 
 def component_study():
@@ -152,7 +151,7 @@ def component_study():
         y_label=target,
     )
     show()
-    savefig(f"images/{file_tag}_components_study.png")
+    savefig(f"images/ts_analysis/{file_tag}_components_study.png")
 
 def stationary_study(series: Series, file_tag: str, target:str):
     figure(figsize=(3 * HEIGHT, HEIGHT))
@@ -167,7 +166,7 @@ def stationary_study(series: Series, file_tag: str, target:str):
     n: int = len(series)
     plot(series.index, [series.mean()] * n, "r-", label="mean")
     legend()
-    savefig(f"images/{file_tag}_stationarity_study_1.png")
+    savefig(f"images/ts_analysis/{file_tag}_stationarity_study_1.png")
 
     BINS = 10
     mean_line: list[float] = []
@@ -191,7 +190,7 @@ def stationary_study(series: Series, file_tag: str, target:str):
     n: int = len(series)
     plot(series.index, mean_line, "r-", label="mean")
     legend()
-    savefig(f"images/{file_tag}_stationarity_study_2.png")
+    savefig(f"images/ts_analysis/{file_tag}_stationarity_study_2.png")
 
 from statsmodels.tsa.stattools import adfuller
 
@@ -232,14 +231,14 @@ if __name__ == "__main__":
     
     # granularity
     # symbolic_variables_granularity(series, file_tag, target)
-    # boxplots_individual_num_vars(series, file_tag, target)
+    boxplots_individual_num_vars(series, file_tag, target)
     # histograms(series, file_tag, target)
     # lag(series, file_tag, target)
     # autocorrelation_study(series, 10, 1)
     # I have given up peco imensa desculpa
     # component_study()
     # stationary_study(series, file_tag, target)
-    print(f"The series {('is' if eval_stationarity(series) else 'is not')} stationary")
+    # print(f"The series {('is' if eval_stationarity(series) else 'is not')} stationary")
         # result for eval stationary:
         # ADF Statistic: -9.927
         # p-value: 0.000
