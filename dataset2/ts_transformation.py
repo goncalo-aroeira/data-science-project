@@ -10,6 +10,37 @@ from matplotlib.figure import Figure
 #*****************************************************************************************************#
 #                                           Aggregation                                               #
 #*****************************************************************************************************#
+
+def aggregation(file_tag, target, index, series, data):
+    ss_mins: Series = ts_aggregation_by(series, gran_level="min", agg_func="mean")
+    df_mins: DataFrame = ts_aggregation_by(data, gran_level="min", agg_func="mean")    
+    df_mins.to_csv(f"data/forecast_{file_tag}_minutely.csv")
+
+    ss_hours: Series = ts_aggregation_by(series, gran_level="H", agg_func="mean")
+    df_hours: DataFrame = ts_aggregation_by(data, gran_level="H", agg_func="mean")    
+    df_hours.to_csv(f"data/forecast_{file_tag}_hourly.csv")
+
+    ss_daily: Series = ts_aggregation_by(series, gran_level="D", agg_func="mean")
+    df_daily: DataFrame = ts_aggregation_by(data, gran_level="D", agg_func="mean")  
+    df_daily.to_csv(f"data/forecast_{file_tag}_daily.csv")
+
+    ss_weeks: Series = ts_aggregation_by(series, gran_level="W", agg_func="mean")
+    df_weeks: DataFrame = ts_aggregation_by(data, gran_level="W", agg_func="mean")
+    df_weeks.to_csv(f"data/forecast_{file_tag}_weekly.csv")
+
+
+    grans: list[Series] = [ss_mins, ss_hours, ss_daily, ss_weeks]
+    gran_names: list[str] = ["Minutely", "Hourly", "Daily", "Weekly"]
+    filenames = ["data/forecast_fts_minutely.csv", 
+                "data/forecast_fts_hourly.csv", 
+                "data/forecast_fts_daily.csv", 
+                "data/forecast_fts_weekly.csv"]
+
+    print("starting loop")
+    for i in [3]:
+    # for i in range(len(grans)):
+        print("starting ", filenames[i])
+        aggregationStudy
  
 def aggregationStudy(filename: str, gran_name:str, file_tag: str, target: str, index:str):
     data: DataFrame = read_csv(filename, index_col=index, sep=",", decimal=".", parse_dates=True)
@@ -56,9 +87,25 @@ def aggregationStudy(filename: str, gran_name:str, file_tag: str, target: str, i
 #                                                  Smoothing                                          #
 #*****************************************************************************************************#
     
-def forecasting_after_smoothing(file_tag, target, index, window_size: int, series: Series):
-    ss_smooth: Series = series.rolling(window=window_size).mean()
-    train, test = series_train_test_split(ss_smooth)
+def smoothing(file_tag, target, index, series, data):
+    series_list: list[Series] = []
+    window_sizes = [25, 50, 75, 100]
+    filenames: list[str] = []
+    for ws in window_sizes:
+        series_list += series.rolling(window=ws).mean()
+        df_smooth: DataFrame = data.rolling(window=ws).mean()
+        filenames += list(f"data/forecast_{file_tag}_ws_{ws}.csv")
+        df_smooth.to_csv(f"data/forecast_{file_tag}_ws_{ws}.csv")
+
+    for i in range(len(window_sizes)):
+        forecasting_after_smoothing(file_tag, target, index, filenames[i], window_sizes[i])
+
+    
+    
+def forecasting_after_smoothing(file_tag, target, index, filename, window_size: int):
+    data: DataFrame = read_csv(filename, index_col=index, sep=",", decimal=".", parse_dates=True)
+    series: Series = data[target]
+    train, test = series_train_test_split(data)
     
     trnX = arange(len(train)).reshape(-1, 1)
     trnY = train.to_numpy()
@@ -142,43 +189,11 @@ def main():
         sep=",", decimal=".", 
         parse_dates=True, 
         infer_datetime_format=True
-        )
-    
-    stroke: DataFrame = read_csv(filename, na_values="")
+        )    
     series: Series = data[target]
 
-    ss_mins: Series = ts_aggregation_by(series, gran_level="min", agg_func="mean")
-    df_mins: DataFrame = ts_aggregation_by(data, gran_level="min", agg_func="mean")    
-    df_mins.to_csv(f"data/forecast_{file_tag}_minutely.csv")
-
-    ss_hours: Series = ts_aggregation_by(series, gran_level="H", agg_func="mean")
-    df_hours: DataFrame = ts_aggregation_by(data, gran_level="H", agg_func="mean")    
-    df_hours.to_csv(f"data/forecast_{file_tag}_hourly.csv")
-
-    ss_daily: Series = ts_aggregation_by(series, gran_level="D", agg_func="mean")
-    df_daily: DataFrame = ts_aggregation_by(data, gran_level="D", agg_func="mean")  
-    df_daily.to_csv(f"data/forecast_{file_tag}_daily.csv")
-
-    ss_weeks: Series = ts_aggregation_by(series, gran_level="W", agg_func="mean")
-    df_weeks: DataFrame = ts_aggregation_by(data, gran_level="W", agg_func="mean")
-    df_weeks.to_csv(f"data/forecast_{file_tag}_weekly.csv")
-
-
-    grans: list[Series] = [ss_mins, ss_hours, ss_daily, ss_weeks]
-    gran_names: list[str] = ["Minutely", "Hourly", "Daily", "Weekly"]
-    filenames = ["data/forecast_fts_minutely.csv", 
-                "data/forecast_fts_hourly.csv", 
-                "data/forecast_fts_daily.csv", 
-                "data/forecast_fts_weekly.csv"]
-
-    # grans: list[str] = ["min", "H","D", "W"]
-
-    print("starting loop")
-    for i in [3]:
-    # for i in range(len(grans)):
-        print("starting ", filenames[i])
-        aggregationStudy
-        
+    #aggregation(file_tag, series, data)
+    smoothing(file_tag, target, index, series, data)
 
 
 if __name__ == "__main__":
