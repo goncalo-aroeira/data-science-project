@@ -59,6 +59,9 @@ for filename, name in zip(filenames, names):
     data: DataFrame = read_csv(filename, index_col=timecol, sep=",", decimal=".", parse_dates=True)
     series: Series = data[target]
     train, test = series_train_test_split(data, trn_pct=0.90)
+    
+    train.to_csv(f"../../data/forecast_{file_tag}_train.csv")
+    test.to_csv(f"../../data/forecast_{file_tag}_test.csv")
 
     trnX = arange(len(train)).reshape(-1, 1)
     trnY = train.to_numpy()
