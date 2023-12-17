@@ -21,6 +21,7 @@ data: DataFrame = read_csv(
 series: Series = data[target]
 
 df: DataFrame = scale_all_dataframe(data)
+df.to_csv(f"../../data/forecast_{file_tag}_scaled.csv")
 ss: Series = df[target]
 
 ss_weeks: Series = ts_aggregation_by(ss, gran_level="W", agg_func=sum)
@@ -30,7 +31,7 @@ ss_quarters: Series = ts_aggregation_by(ss, gran_level="Q", agg_func=sum)
 grans: list[Series] = [ss_weeks, ss_months, ss_quarters]
 gran_names: list[str] = ["Weekly", "Monthly", "Quarterly"]
 
-fig, axs = subplots(3, 1, figsize=(10, 15))  # Create 3 subplots vertically
+fig, axs = subplots(3, 1, figsize=(10, 15))  
 
 for i in range(len(grans)):
     axs[i].plot(

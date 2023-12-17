@@ -880,6 +880,8 @@ def plot_forecasting_series(
     ax.plot(tst.index, tst.values, label="test", color=FUTURE_COLOR)
     ax.plot(prd_tst.index, prd_tst.values, "--", label="test prediction", color=PRED_FUTURE_COLOR)
     ax.legend(prop={"size": 5})
+    
+    savefig(f"images/{title}_forecasting_series.png")
 
     return ax
 
