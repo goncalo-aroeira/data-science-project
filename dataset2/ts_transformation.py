@@ -86,14 +86,15 @@ def aggregationStudy(filename: str, gran_name:str, file_tag: str, target: str, i
 #*****************************************************************************************************#
     
 def smoothing(file_tag, target, index, series, data):
-    series_list: list[Series] = []
     window_sizes = [25, 50, 75, 100]
     filenames: list[str] = []
     for ws in window_sizes:
-        series_list += series.rolling(window=ws).mean()
         df_smooth: DataFrame = data.rolling(window=ws).mean()
-        filenames += list(f"data/forecast_{file_tag}_ws_{ws}.csv")
+        df_smooth.dropna(inplace=True)
+        filenames += [f"data/forecast_{file_tag}_ws_{ws}.csv"]
         df_smooth.to_csv(f"data/forecast_{file_tag}_ws_{ws}.csv")
+
+    print(filenames)
 
     for i in range(len(window_sizes)):
         forecasting_after_smoothing(file_tag, target, index, filenames[i], window_sizes[i])
@@ -102,8 +103,9 @@ def smoothing(file_tag, target, index, series, data):
     
 def forecasting_after_smoothing(file_tag, target, index, filename, window_size: int):
     data: DataFrame = read_csv(filename, index_col=index, sep=",", decimal=".", parse_dates=True)
+    print(data)
     series: Series = data[target]
-    train, test = series_train_test_split(data)
+    train, test = series_train_test_split(data, trn_pct=0.90)
     
     trnX = arange(len(train)).reshape(-1, 1)
     trnY = train.to_numpy()

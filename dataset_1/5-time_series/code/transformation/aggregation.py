@@ -7,7 +7,7 @@ from numpy import arange
 file_tag = "Covid"
 target = "deaths"
 data: DataFrame = read_csv(
-    "../../data/forecast_Covid_scaled.csv",
+    "../../data/forecast_covid_single.csv",
     index_col="date",
     sep=",",
     decimal=".",
@@ -50,7 +50,6 @@ show()
 
 
 
-filename: str = "data/time_series/ashrae.csv"
 timecol: str = "date"
 
 filenames: list[str] = [ "../../data/forecast_Covid_weekly.csv", "../../data/forecast_Covid_monthly.csv", "../../data/forecast_Covid_quarterly.csv"]

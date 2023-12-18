@@ -23,7 +23,7 @@ class SimpleAvgRegressor(RegressorMixin):
     
     
 
-filename: str = "data/forecast_Covid_first_derivative.csv"
+filename: str = "../../data/forecast_Covid_scaled.csv"
 file_tag: str = "Covid"
 target: str = "deaths"
 timecol: str = "date"
