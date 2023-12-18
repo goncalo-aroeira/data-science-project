@@ -237,7 +237,7 @@ if __name__ == "__main__":
     # lag(series, file_tag, target)
     # autocorrelation_study(series, 10, 1)
     # I have given up peco imensa desculpa
-    # component_study()
+    component_study()
     # stationary_study(series, file_tag, target)
     print(f"The series {('is' if eval_stationarity(series) else 'is not')} stationary")
         # result for eval stationary:

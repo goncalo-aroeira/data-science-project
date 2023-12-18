@@ -1,0 +1,477 @@
+Train#=34549 Test#=5303
+Labels=[0, 1]
+GB d=2 lr=0.1 n=100
+GB d=2 lr=0.1 n=300
+GB d=2 lr=0.1 n=500
+GB d=2 lr=0.1 n=700
+GB d=2 lr=0.3 n=100
+GB d=2 lr=0.3 n=300
+GB d=2 lr=0.3 n=500
+GB d=2 lr=0.3 n=700
+GB d=2 lr=0.5 n=100
+GB d=2 lr=0.5 n=300
+GB d=2 lr=0.5 n=500
+GB d=2 lr=0.5 n=700
+GB d=2 lr=0.7 n=100
+GB d=2 lr=0.7 n=300
+GB d=2 lr=0.7 n=500
+GB d=2 lr=0.7 n=700
+GB d=2 lr=0.9 n=100
+GB d=2 lr=0.9 n=300
+GB d=2 lr=0.9 n=500
+GB d=2 lr=0.9 n=700
+GB d=4 lr=0.1 n=100
+GB d=4 lr=0.1 n=300
+GB d=4 lr=0.1 n=500
+GB d=4 lr=0.1 n=700
+GB d=4 lr=0.3 n=100
+GB d=4 lr=0.3 n=300
+GB d=4 lr=0.3 n=500
+GB d=4 lr=0.3 n=700
+GB d=4 lr=0.5 n=100
+GB d=4 lr=0.5 n=300
+GB d=4 lr=0.5 n=500
+GB d=4 lr=0.5 n=700
+GB d=4 lr=0.7 n=100
+GB d=4 lr=0.7 n=300
+GB d=4 lr=0.7 n=500
+GB d=4 lr=0.7 n=700
+GB d=4 lr=0.9 n=100
+GB d=4 lr=0.9 n=300
+GB d=4 lr=0.9 n=500
+GB d=4 lr=0.9 n=700
+GB d=6 lr=0.1 n=100
+GB d=6 lr=0.1 n=300
+GB d=6 lr=0.1 n=500
+GB d=6 lr=0.1 n=700
+GB d=6 lr=0.3 n=100
+GB d=6 lr=0.3 n=300
+GB d=6 lr=0.3 n=500
+GB d=6 lr=0.3 n=700
+GB d=6 lr=0.5 n=100
+GB d=6 lr=0.5 n=300
+GB d=6 lr=0.5 n=500
+GB d=6 lr=0.5 n=700
+GB d=6 lr=0.7 n=100
+GB d=6 lr=0.7 n=300
+GB d=6 lr=0.7 n=500
+GB d=6 lr=0.7 n=700
+GB d=6 lr=0.9 n=100
+GB d=6 lr=0.9 n=300
+GB d=6 lr=0.9 n=500
+GB d=6 lr=0.9 n=700
+Metric: accuracy; GB best for 700 trees (d=6 and lr=0.1)
+GB d=2 lr=0.1 n=100
+GB d=2 lr=0.1 n=300
+GB d=2 lr=0.1 n=500
+GB d=2 lr=0.1 n=700
+GB d=2 lr=0.3 n=100
+GB d=2 lr=0.3 n=300
+GB d=2 lr=0.3 n=500
+GB d=2 lr=0.3 n=700
+GB d=2 lr=0.5 n=100
+GB d=2 lr=0.5 n=300
+GB d=2 lr=0.5 n=500
+GB d=2 lr=0.5 n=700
+GB d=2 lr=0.7 n=100
+GB d=2 lr=0.7 n=300
+GB d=2 lr=0.7 n=500
+GB d=2 lr=0.7 n=700
+GB d=2 lr=0.9 n=100
+GB d=2 lr=0.9 n=300
+GB d=2 lr=0.9 n=500
+GB d=2 lr=0.9 n=700
+GB d=4 lr=0.1 n=100
+GB d=4 lr=0.1 n=300
+GB d=4 lr=0.1 n=500
+GB d=4 lr=0.1 n=700
+GB d=4 lr=0.3 n=100
+GB d=4 lr=0.3 n=300
+GB d=4 lr=0.3 n=500
+GB d=4 lr=0.3 n=700
+GB d=4 lr=0.5 n=100
+GB d=4 lr=0.5 n=300
+GB d=4 lr=0.5 n=500
+GB d=4 lr=0.5 n=700
+GB d=4 lr=0.7 n=100
+GB d=4 lr=0.7 n=300
+GB d=4 lr=0.7 n=500
+GB d=4 lr=0.7 n=700
+GB d=4 lr=0.9 n=100
+GB d=4 lr=0.9 n=300
+GB d=4 lr=0.9 n=500
+GB d=4 lr=0.9 n=700
+GB d=6 lr=0.1 n=100
+GB d=6 lr=0.1 n=300
+GB d=6 lr=0.1 n=500
+GB d=6 lr=0.1 n=700
+GB d=6 lr=0.3 n=100
+GB d=6 lr=0.3 n=300
+GB d=6 lr=0.3 n=500
+GB d=6 lr=0.3 n=700
+GB d=6 lr=0.5 n=100
+GB d=6 lr=0.5 n=300
+GB d=6 lr=0.5 n=500
+GB d=6 lr=0.5 n=700
+GB d=6 lr=0.7 n=100
+GB d=6 lr=0.7 n=300
+GB d=6 lr=0.7 n=500
+GB d=6 lr=0.7 n=700
+GB d=6 lr=0.9 n=100
+GB d=6 lr=0.9 n=300
+GB d=6 lr=0.9 n=500
+GB d=6 lr=0.9 n=700
+Metric: recall; GB best for 700 trees (d=6 and lr=0.1)
+GB d=2 lr=0.1 n=100
+GB d=2 lr=0.1 n=300
+GB d=2 lr=0.1 n=500
+GB d=2 lr=0.1 n=700
+GB d=2 lr=0.3 n=100
+GB d=2 lr=0.3 n=300
+GB d=2 lr=0.3 n=500
+GB d=2 lr=0.3 n=700
+GB d=2 lr=0.5 n=100
+GB d=2 lr=0.5 n=300
+GB d=2 lr=0.5 n=500
+GB d=2 lr=0.5 n=700
+GB d=2 lr=0.7 n=100
+GB d=2 lr=0.7 n=300
+GB d=2 lr=0.7 n=500
+GB d=2 lr=0.7 n=700
+GB d=2 lr=0.9 n=100
+GB d=2 lr=0.9 n=300
+GB d=2 lr=0.9 n=500
+GB d=2 lr=0.9 n=700
+GB d=4 lr=0.1 n=100
+GB d=4 lr=0.1 n=300
+GB d=4 lr=0.1 n=500
+GB d=4 lr=0.1 n=700
+GB d=4 lr=0.3 n=100
+GB d=4 lr=0.3 n=300
+GB d=4 lr=0.3 n=500
+GB d=4 lr=0.3 n=700
+GB d=4 lr=0.5 n=100
+GB d=4 lr=0.5 n=300
+GB d=4 lr=0.5 n=500
+GB d=4 lr=0.5 n=700
+GB d=4 lr=0.7 n=100
+GB d=4 lr=0.7 n=300
+GB d=4 lr=0.7 n=500
+GB d=4 lr=0.7 n=700
+GB d=4 lr=0.9 n=100
+GB d=4 lr=0.9 n=300
+GB d=4 lr=0.9 n=500
+GB d=4 lr=0.9 n=700
+GB d=6 lr=0.1 n=100
+GB d=6 lr=0.1 n=300
+GB d=6 lr=0.1 n=500
+GB d=6 lr=0.1 n=700
+GB d=6 lr=0.3 n=100
+GB d=6 lr=0.3 n=300
+GB d=6 lr=0.3 n=500
+GB d=6 lr=0.3 n=700
+GB d=6 lr=0.5 n=100
+GB d=6 lr=0.5 n=300
+GB d=6 lr=0.5 n=500
+GB d=6 lr=0.5 n=700
+GB d=6 lr=0.7 n=100
+GB d=6 lr=0.7 n=300
+GB d=6 lr=0.7 n=500
+GB d=6 lr=0.7 n=700
+GB d=6 lr=0.9 n=100
+GB d=6 lr=0.9 n=300
+GB d=6 lr=0.9 n=500
+GB d=6 lr=0.9 n=700
+Metric: precision; GB best for 700 trees (d=6 and lr=0.3)
+GB d=2 lr=0.1 n=100
+GB d=2 lr=0.1 n=300
+GB d=2 lr=0.1 n=500
+GB d=2 lr=0.1 n=700
+GB d=2 lr=0.3 n=100
+GB d=2 lr=0.3 n=300
+GB d=2 lr=0.3 n=500
+GB d=2 lr=0.3 n=700
+GB d=2 lr=0.5 n=100
+GB d=2 lr=0.5 n=300
+GB d=2 lr=0.5 n=500
+GB d=2 lr=0.5 n=700
+GB d=2 lr=0.7 n=100
+GB d=2 lr=0.7 n=300
+GB d=2 lr=0.7 n=500
+GB d=2 lr=0.7 n=700
+GB d=2 lr=0.9 n=100
+GB d=2 lr=0.9 n=300
+GB d=2 lr=0.9 n=500
+GB d=2 lr=0.9 n=700
+GB d=4 lr=0.1 n=100
+GB d=4 lr=0.1 n=300
+GB d=4 lr=0.1 n=500
+GB d=4 lr=0.1 n=700
+GB d=4 lr=0.3 n=100
+GB d=4 lr=0.3 n=300
+GB d=4 lr=0.3 n=500
+GB d=4 lr=0.3 n=700
+GB d=4 lr=0.5 n=100
+GB d=4 lr=0.5 n=300
+GB d=4 lr=0.5 n=500
+GB d=4 lr=0.5 n=700
+GB d=4 lr=0.7 n=100
+GB d=4 lr=0.7 n=300
+GB d=4 lr=0.7 n=500
+GB d=4 lr=0.7 n=700
+GB d=4 lr=0.9 n=100
+GB d=4 lr=0.9 n=300
+GB d=4 lr=0.9 n=500
+GB d=4 lr=0.9 n=700
+GB d=6 lr=0.1 n=100
+GB d=6 lr=0.1 n=300
+GB d=6 lr=0.1 n=500
+GB d=6 lr=0.1 n=700
+GB d=6 lr=0.3 n=100
+GB d=6 lr=0.3 n=300
+GB d=6 lr=0.3 n=500
+GB d=6 lr=0.3 n=700
+GB d=6 lr=0.5 n=100
+GB d=6 lr=0.5 n=300
+GB d=6 lr=0.5 n=500
+GB d=6 lr=0.5 n=700
+GB d=6 lr=0.7 n=100
+GB d=6 lr=0.7 n=300
+GB d=6 lr=0.7 n=500
+GB d=6 lr=0.7 n=700
+GB d=6 lr=0.9 n=100
+GB d=6 lr=0.9 n=300
+GB d=6 lr=0.9 n=500
+GB d=6 lr=0.9 n=700
+Metric: auc; GB best for 700 trees (d=6 and lr=0.3)
+GB d=2 lr=0.1 n=100
+GB d=2 lr=0.1 n=300
+GB d=2 lr=0.1 n=500
+GB d=2 lr=0.1 n=700
+GB d=2 lr=0.3 n=100
+GB d=2 lr=0.3 n=300
+GB d=2 lr=0.3 n=500
+GB d=2 lr=0.3 n=700
+GB d=2 lr=0.5 n=100
+GB d=2 lr=0.5 n=300
+GB d=2 lr=0.5 n=500
+GB d=2 lr=0.5 n=700
+GB d=2 lr=0.7 n=100
+GB d=2 lr=0.7 n=300
+GB d=2 lr=0.7 n=500
+GB d=2 lr=0.7 n=700
+GB d=2 lr=0.9 n=100
+GB d=2 lr=0.9 n=300
+GB d=2 lr=0.9 n=500
+GB d=2 lr=0.9 n=700
+GB d=4 lr=0.1 n=100
+GB d=4 lr=0.1 n=300
+GB d=4 lr=0.1 n=500
+GB d=4 lr=0.1 n=700
+GB d=4 lr=0.3 n=100
+GB d=4 lr=0.3 n=300
+GB d=4 lr=0.3 n=500
+GB d=4 lr=0.3 n=700
+GB d=4 lr=0.5 n=100
+GB d=4 lr=0.5 n=300
+GB d=4 lr=0.5 n=500
+GB d=4 lr=0.5 n=700
+GB d=4 lr=0.7 n=100
+GB d=4 lr=0.7 n=300
+GB d=4 lr=0.7 n=500
+GB d=4 lr=0.7 n=700
+GB d=4 lr=0.9 n=100
+GB d=4 lr=0.9 n=300
+GB d=4 lr=0.9 n=500
+GB d=4 lr=0.9 n=700
+GB d=6 lr=0.1 n=100
+GB d=6 lr=0.1 n=300
+GB d=6 lr=0.1 n=500
+GB d=6 lr=0.1 n=700
+GB d=6 lr=0.3 n=100
+GB d=6 lr=0.3 n=300
+GB d=6 lr=0.3 n=500
+GB d=6 lr=0.3 n=700
+GB d=6 lr=0.5 n=100
+GB d=6 lr=0.5 n=300
+GB d=6 lr=0.5 n=500
+GB d=6 lr=0.5 n=700
+GB d=6 lr=0.7 n=100
+GB d=6 lr=0.7 n=300
+GB d=6 lr=0.7 n=500
+GB d=6 lr=0.7 n=700
+GB d=6 lr=0.9 n=100
+GB d=6 lr=0.9 n=300
+GB d=6 lr=0.9 n=500
+GB d=6 lr=0.9 n=700
+Metric: f1; GB best for 700 trees (d=6 and lr=0.1)
+1. OutstandingDebt (0.36744260651777755)
+2. Interest_Rate (0.11487906229935335)
+3. Payment_Behaviour (0.06564655994493859)
+4. Num_Credit_Card (0.060982076060491185)
+5. CreditMix (0.05042833363642621)
+6. Delay_from_due_date (0.04685118930615888)
+7. ChangedCreditLimit (0.026660006177096972)
+8. Credit_History_Age (0.02099763428277239)
+9. ID (0.02045024539962601)
+10. NumCreditInquiries (0.018741412268357904)
+11. NumofDelayedPayment (0.018059546898596523)
+12. TotalEMIpermonth (0.01777028696924256)
+13. Customer_ID (0.017494727090931292)
+14. Num_Bank_Accounts (0.017299707685613525)
+15. Annual_Income (0.015423960603575353)
+16. SSN (0.014319042105431752)
+17. CreditUtilizationRatio (0.013594448943287245)
+18. Amountinvestedmonthly (0.013214667076246911)
+19. Monthly_Inhand_Salary (0.012025474584010406)
+20. Payment_of_Min_Amount (0.010372981984509732)
+21. Name (0.010311317442730016)
+22. Age (0.009740691407938415)
+23. NumofLoan (0.007156805377806985)
+24. Occupation (0.005461775803172519)
+25. Payday_Loan (0.0036169278363244713)
+26. Personal_Loan (0.003452481139703836)
+27. Home_Equity_Loan (0.00322981705440986)
+28. Auto_Loan (0.003187295652596365)
+29. Credit-Builder_Loan (0.0026752022507885893)
+30. Student_Loan (0.0025460940246915258)
+31. Not_Specified (0.002300135602235324)
+32. Mortgage_Loan (0.0018440411343455946)
+33. Debt_Consolidation_Loan (0.0016476544553638965)
+34. MonthlyBalance (0.000175790983448181)
+1. OutstandingDebt (0.36716837748621683)
+2. Interest_Rate (0.11503131297468683)
+3. Payment_Behaviour (0.06568892963373076)
+4. Num_Credit_Card (0.060966321764086805)
+5. CreditMix (0.050501752392128195)
+6. Delay_from_due_date (0.04677017395889777)
+7. ChangedCreditLimit (0.026848389238146402)
+8. Credit_History_Age (0.02112357465733335)
+9. ID (0.020408550244708994)
+10. NumCreditInquiries (0.018731662087554425)
+11. NumofDelayedPayment (0.01785611290403577)
+12. TotalEMIpermonth (0.01773049872616403)
+13. Customer_ID (0.017365632335005328)
+14. Num_Bank_Accounts (0.017291107679403953)
+15. Annual_Income (0.015647045105356222)
+16. SSN (0.014292929578567651)
+17. CreditUtilizationRatio (0.01349947337399919)
+18. Amountinvestedmonthly (0.01316819868690451)
+19. Monthly_Inhand_Salary (0.012097497362453)
+20. Payment_of_Min_Amount (0.010425863537383557)
+21. Name (0.010182717167093257)
+22. Age (0.00972297596982299)
+23. NumofLoan (0.007154366006663871)
+24. Occupation (0.005576097155039165)
+25. Payday_Loan (0.0036591914189003693)
+26. Personal_Loan (0.003373016084183151)
+27. Auto_Loan (0.0032610073801722936)
+28. Home_Equity_Loan (0.0032358561388321767)
+29. Credit-Builder_Loan (0.002707821752752128)
+30. Student_Loan (0.002528065748903332)
+31. Not_Specified (0.0022876350186942186)
+32. Mortgage_Loan (0.0018459963532900718)
+33. Debt_Consolidation_Loan (0.001688524634158373)
+34. MonthlyBalance (0.00016332544473108247)
+1. OutstandingDebt (0.3603836569999589)
+2. Interest_Rate (0.10988057278497411)
+3. Payment_Behaviour (0.06557156656276364)
+4. Num_Credit_Card (0.056248370102766586)
+5. CreditMix (0.05134957091723144)
+6. Delay_from_due_date (0.042026003756345)
+7. ChangedCreditLimit (0.027831958954003137)
+8. NumCreditInquiries (0.02281998763347844)
+9. Credit_History_Age (0.022485736941344144)
+10. ID (0.021442182117092704)
+11. Customer_ID (0.019774550262789646)
+12. Num_Bank_Accounts (0.018428604066644726)
+13. TotalEMIpermonth (0.016908443110889133)
+14. NumofDelayedPayment (0.016830077371892203)
+15. CreditUtilizationRatio (0.01678298163383362)
+16. Annual_Income (0.016402361261616996)
+17. Amountinvestedmonthly (0.01593414416784594)
+18. SSN (0.013833420771086955)
+19. Payment_of_Min_Amount (0.013657555713113988)
+20. Monthly_Inhand_Salary (0.012986556020670295)
+21. Name (0.012077777156530021)
+22. Age (0.008954300108698288)
+23. Occupation (0.006043961238127087)
+24. NumofLoan (0.005757965185903069)
+25. Home_Equity_Loan (0.003806994094705013)
+26. Not_Specified (0.0032940808637804725)
+27. Personal_Loan (0.0031311695340280384)
+28. Payday_Loan (0.0028414440617464)
+29. Auto_Loan (0.002707515476395378)
+30. Student_Loan (0.002634464518474286)
+31. Mortgage_Loan (0.0023762514053892515)
+32. Credit-Builder_Loan (0.002267914133032946)
+33. Debt_Consolidation_Loan (0.0022597536252124367)
+34. MonthlyBalance (0.00026810744763562124)
+1. OutstandingDebt (0.3605048940162117)
+2. Interest_Rate (0.1097295677306126)
+3. Payment_Behaviour (0.06564888495314747)
+4. Num_Credit_Card (0.05613230516846364)
+5. CreditMix (0.05147295169953712)
+6. Delay_from_due_date (0.04208925088064653)
+7. ChangedCreditLimit (0.027730517600381817)
+8. NumCreditInquiries (0.022963516407562314)
+9. Credit_History_Age (0.022359454437051646)
+10. ID (0.021052748021886097)
+11. Customer_ID (0.019583652351056555)
+12. Num_Bank_Accounts (0.018261104876515485)
+13. NumofDelayedPayment (0.016995613315052765)
+14. TotalEMIpermonth (0.016955477082705683)
+15. CreditUtilizationRatio (0.01651082193484823)
+16. Annual_Income (0.016283540263696394)
+17. Amountinvestedmonthly (0.015708177478943406)
+18. SSN (0.014233699652027029)
+19. Payment_of_Min_Amount (0.013620207365853208)
+20. Monthly_Inhand_Salary (0.013276484523756932)
+21. Name (0.01246250212277213)
+22. Age (0.009102728725159989)
+23. Occupation (0.005943731410656697)
+24. NumofLoan (0.005821769623205629)
+25. Home_Equity_Loan (0.0035787691645926623)
+26. Not_Specified (0.0032612912195377525)
+27. Personal_Loan (0.003163746566413847)
+28. Payday_Loan (0.002887412138843859)
+29. Auto_Loan (0.002802313120596161)
+30. Student_Loan (0.002716664533844154)
+31. Debt_Consolidation_Loan (0.002370266603749115)
+32. Credit-Builder_Loan (0.002272705202983237)
+33. Mortgage_Loan (0.002211715304601977)
+34. MonthlyBalance (0.00029151450308616543)
+1. OutstandingDebt (0.36763426386128056)
+2. Interest_Rate (0.11483648585511166)
+3. Payment_Behaviour (0.06550225108738558)
+4. Num_Credit_Card (0.0611369752381028)
+5. CreditMix (0.05023442076072961)
+6. Delay_from_due_date (0.04719623351746259)
+7. ChangedCreditLimit (0.02614225342537015)
+8. ID (0.020741138241096562)
+9. Credit_History_Age (0.020645396426483227)
+10. NumCreditInquiries (0.019207248794963654)
+11. Customer_ID (0.0181685481916526)
+12. NumofDelayedPayment (0.01764923770147075)
+13. TotalEMIpermonth (0.017442469683048068)
+14. Num_Bank_Accounts (0.017220889532076664)
+15. Annual_Income (0.015301050686536982)
+16. CreditUtilizationRatio (0.014243539384959876)
+17. SSN (0.013960262528210199)
+18. Amountinvestedmonthly (0.013497897241574592)
+19. Monthly_Inhand_Salary (0.012016461012039317)
+20. Payment_of_Min_Amount (0.010427376216240928)
+21. Name (0.009988927684835433)
+22. Age (0.009352506081047663)
+23. NumofLoan (0.007358407254754675)
+24. Occupation (0.005545562209260451)
+25. Payday_Loan (0.0035798908441304843)
+26. Home_Equity_Loan (0.003302798455466921)
+27. Auto_Loan (0.003185610723158719)
+28. Personal_Loan (0.003169285464778766)
+29. Credit-Builder_Loan (0.0026342537674451444)
+30. Student_Loan (0.0025274566764724037)
+31. Not_Specified (0.0022297304475069335)
+32. Mortgage_Loan (0.0019315429622394956)
+33. Debt_Consolidation_Loan (0.0018564030639801172)
+34. MonthlyBalance (0.00013322497912642898)
