@@ -7,7 +7,6 @@ from matplotlib.figure import Figure
 #***********************************************************************************
 #*                                   EX 1
 #*                                Granularity                                      *
-#*                          2.1 - Symbolic Variables                               *
 #***********************************************************************************
 
 def symbolic_variables_granularity(series: Series, file_tag: str, target: str):
@@ -46,14 +45,14 @@ def boxplots_individual_num_vars(series: Series, file_tag: str, target:str):
     fig: Figure
     axs: array
     ss_mins, ss_hours, ss_daily, ss_weekly = ts_aggregation_by(series, grans[0]),ts_aggregation_by(series, grans[1]), ts_aggregation_by(series, grans[2]),ts_aggregation_by(series, grans[3])
-    fig, axs = subplots(2, 3, figsize=(2 * HEIGHT, HEIGHT))
+    fig, axs = subplots(2, 4, figsize=(2 * HEIGHT, HEIGHT))
     set_chart_labels(axs[0, 0], title="MINUTES")
     axs[0, 0].boxplot(ss_mins)
     set_chart_labels(axs[0, 1], title="HOURLY")
     axs[0, 1].boxplot(ss_hours)
-    set_chart_labels(axs[0, 3], title="DAILY")
+    set_chart_labels(axs[0, 2], title="DAILY")
     axs[0, 2].boxplot(ss_daily)
-    set_chart_labels(axs[0, 2], title="WEEKLY")
+    set_chart_labels(axs[0, 3], title="WEEKLY")
     axs[0, 3].boxplot(ss_weekly)
 
     axs[1, 0].grid(False)
@@ -232,14 +231,14 @@ if __name__ == "__main__":
     
     # granularity
     # symbolic_variables_granularity(series, file_tag, target)
-    # boxplots_individual_num_vars(series, file_tag, target)
+    boxplots_individual_num_vars(series, file_tag, target)
     # histograms(series, file_tag, target)
     # lag(series, file_tag, target)
     # autocorrelation_study(series, 10, 1)
     # I have given up peco imensa desculpa
-    component_study()
+    # component_study()
     # stationary_study(series, file_tag, target)
-    print(f"The series {('is' if eval_stationarity(series) else 'is not')} stationary")
+    # print(f"The series {('is' if eval_stationarity(series) else 'is not')} stationary")
         # result for eval stationary:
         # ADF Statistic: -9.927
         # p-value: 0.000
