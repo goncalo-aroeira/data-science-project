@@ -171,8 +171,8 @@ def forecasting_after_differentation(file_tag, target, index, filename, diff):
     
     model = LinearRegression()
     model.fit(trnX, trnY)
-    prd_trn: Series = Series(model.predict(trnX))
-    prd_tst: Series = Series(model.predict(tstX))
+    prd_trn: Series = Series(model.predict(trnX), index=train.index)
+    prd_tst: Series = Series(model.predict(tstX), index=test.index)
     
     plot_forecasting_eval(
         trn=train,
