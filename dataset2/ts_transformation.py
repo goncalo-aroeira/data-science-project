@@ -12,20 +12,20 @@ from matplotlib.figure import Figure
 #*****************************************************************************************************#
 
 def aggregation(file_tag, target, index, series, data):
-    ss_mins: Series = ts_aggregation_by(series, gran_level="min", agg_func="mean")
-    df_mins: DataFrame = ts_aggregation_by(data, gran_level="min", agg_func="mean")    
+    ss_mins: Series = ts_aggregation_by(series, gran_level="min", agg_func="sum")
+    df_mins: DataFrame = ts_aggregation_by(data, gran_level="min", agg_func="sum")    
     df_mins.to_csv(f"data/forecast_{file_tag}_minutely.csv")
 
-    ss_hours: Series = ts_aggregation_by(series, gran_level="H", agg_func="mean")
-    df_hours: DataFrame = ts_aggregation_by(data, gran_level="H", agg_func="mean")    
+    ss_hours: Series = ts_aggregation_by(series, gran_level="H", agg_func="sum")
+    df_hours: DataFrame = ts_aggregation_by(data, gran_level="H", agg_func="sum")    
     df_hours.to_csv(f"data/forecast_{file_tag}_hourly.csv")
 
-    ss_daily: Series = ts_aggregation_by(series, gran_level="D", agg_func="mean")
-    df_daily: DataFrame = ts_aggregation_by(data, gran_level="D", agg_func="mean")  
+    ss_daily: Series = ts_aggregation_by(series, gran_level="D", agg_func="sum")
+    df_daily: DataFrame = ts_aggregation_by(data, gran_level="D", agg_func="sum")  
     df_daily.to_csv(f"data/forecast_{file_tag}_daily.csv")
 
-    ss_weeks: Series = ts_aggregation_by(series, gran_level="W", agg_func="mean")
-    df_weeks: DataFrame = ts_aggregation_by(data, gran_level="W", agg_func="mean")
+    ss_weeks: Series = ts_aggregation_by(series, gran_level="W", agg_func="sum")
+    df_weeks: DataFrame = ts_aggregation_by(data, gran_level="W", agg_func="sum")
     df_weeks.to_csv(f"data/forecast_{file_tag}_weekly.csv")
 
 
@@ -37,10 +37,9 @@ def aggregation(file_tag, target, index, series, data):
                 "data/forecast_fts_weekly.csv"]
 
     print("starting loop")
-    for i in [3]:
-    # for i in range(len(grans)):
+    for i in range(len(grans)):
         print("starting ", filenames[i])
-        aggregationStudy
+        aggregationStudy(filenames[i], gran_names[i], file_tag, target, index)
  
 def aggregationStudy(filename: str, gran_name:str, file_tag: str, target: str, index:str):
     data: DataFrame = read_csv(filename, index_col=index, sep=",", decimal=".", parse_dates=True)
@@ -50,7 +49,8 @@ def aggregationStudy(filename: str, gran_name:str, file_tag: str, target: str, i
 
     if gran_name == "Weekly":
         train, test = series_train_test_split(data, trn_pct=0.80)
-    train, test = series_train_test_split(data, trn_pct=0.90)
+    else: 
+        train, test = series_train_test_split(data, trn_pct=0.90)
     print("\ntrain\n",train, "\ntest\n",test)
 
     trnX = arange(len(train)).reshape(-1, 1)
@@ -66,7 +66,7 @@ def aggregationStudy(filename: str, gran_name:str, file_tag: str, target: str, i
 
     print("evaluating")
     plot_forecasting_eval(train, test, prd_trn, prd_tst, title=f"{file_tag} - Linear Regression")
-    savefig(f"images/{file_tag}_linear_regression_eval_{gran_name}.png")
+    savefig(f"images//ts_transformation/{file_tag}_linear_regression_eval_{gran_name}.png")
 
     print("forecast")
     plot_forecasting_series(
@@ -77,9 +77,7 @@ def aggregationStudy(filename: str, gran_name:str, file_tag: str, target: str, i
         xlabel=index,
         ylabel=target,
     )
-    savefig(f"images/{file_tag}_linear_regression_forecast_{gran_name}.png")
-
-#***********************************************************************************
+    savefig(f"images//ts_transformation/{file_tag}_linear_regression_forecast_{gran_name}.png")
 
 #*****************************************************************************************************#
 
@@ -192,7 +190,7 @@ def main():
         )    
     series: Series = data[target]
 
-    #aggregation(file_tag, series, data)
+    #aggregation(file_tag, target, index, series_og, data_og)
     smoothing(file_tag, target, index, series, data)
 
 
