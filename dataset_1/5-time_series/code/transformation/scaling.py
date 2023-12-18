@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 
     
 file_tag = "Covid"
-filename = "../../data/forecast_covid_single.csv"
+filename = "../../data/forecast_Covid_first_derivative.csv"
 index = "date"
 target = "deaths"
 
@@ -24,24 +24,17 @@ df: DataFrame = scale_all_dataframe(data)
 df.to_csv(f"../../data/forecast_{file_tag}_scaled.csv")
 ss: Series = df[target]
 
-ss_weeks: Series = ts_aggregation_by(ss, gran_level="W", agg_func=sum)
-ss_months: Series = ts_aggregation_by(ss, gran_level="M", agg_func=sum)
-ss_quarters: Series = ts_aggregation_by(ss, gran_level="Q", agg_func=sum)
 
-grans: list[Series] = [ss_weeks, ss_months, ss_quarters]
-gran_names: list[str] = ["Weekly", "Monthly", "Quarterly"]
+df: DataFrame = scale_all_dataframe(data)
 
-fig, axs = subplots(3, 1, figsize=(10, 15))  
-
-for i in range(len(grans)):
-    axs[i].plot(
-        grans[i].index.to_list(),
-        grans[i].to_list(),
-    )
-    axs[i].set_xlabel(grans[i].index.name)
-    axs[i].set_ylabel(target)
-    axs[i].set_title(f"{file_tag} {target} {gran_names[i]}")
-
-tight_layout()  
+ss: Series = df[target]
+figure(figsize=(3 * HEIGHT, HEIGHT / 2))
+plot_line_chart(
+    ss.index.to_list(),
+    ss.to_list(),
+    xlabel=ss.index.name,
+    ylabel=target,
+    title=f"{file_tag} {target} after scaling",
+)
 savefig(f"images/{file_tag}_{target}_scaling.png")  
 show()

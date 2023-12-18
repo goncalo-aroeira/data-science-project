@@ -60,7 +60,7 @@ def rolling_mean_study(train: Series, test: Series, measure: str = "R2"):
 
 
 
-filename: str = "data/forecast_Covid_first_derivative.csv"
+filename: str = "../../data/forecast_Covid_scaled.csv"
 file_tag: str = "Covid"
 target: str = "deaths"
 timecol: str = "date"
