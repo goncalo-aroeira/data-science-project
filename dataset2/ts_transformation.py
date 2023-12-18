@@ -141,10 +141,28 @@ def forecasting_after_smoothing(file_tag, target, index, filename, window_size: 
 #*****************************************************************************************************#
 #                                            Differentiation                                          #
 #*****************************************************************************************************#
-
-def forecasting_after_differentation(file_tag, target, index, diff, series: Series):
+    
+def differentiation(file_tag, target, index, series, data):
     ss_diff: Series = series.diff()
-    train, test = series_train_test_split(ss_diff)
+    ss_diff.dropna(inplace=True)
+    ss_diff.to_csv(f"data/forecast_{file_tag}_first_derivative.csv")
+
+    ss_diff2: Series = ss_diff.diff()
+    ss_diff2.dropna(inplace=True)
+    ss_diff2.to_csv(f"data/forecast_{file_tag}_second_derivative.csv")
+
+    ss_list: list[Series] = [ss_diff, ss_diff2]
+    names = ["First derivative", "Second derivative"]
+    filenames = [f"data/forecast_{file_tag}_first_derivative.csv", 
+                 f"data/forecast_{file_tag}_second_derivative.csv"]
+
+    for i in range(0, 2):
+        forecasting_after_differentation(file_tag, target, index, filenames[i], names[i])
+
+def forecasting_after_differentation(file_tag, target, index, filename, diff):
+    data: DataFrame = read_csv(filename, index_col=index, sep=",", decimal=".", parse_dates=True)
+    series: Series = data[target]
+    train, test = series_train_test_split(data)
     
     trnX = arange(len(train)).reshape(-1, 1)
     trnY = train.to_numpy()
@@ -193,7 +211,8 @@ def main():
     series: Series = data[target]
 
     #aggregation(file_tag, target, index, series_og, data_og)
-    smoothing(file_tag, target, index, series, data)
+    #smoothing(file_tag, target, index, series, data)
+    differentiation(file_tag, target, index, series, data)
 
 
 if __name__ == "__main__":
