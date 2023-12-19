@@ -114,8 +114,8 @@ def forecasting_after_smoothing(file_tag, target, index, filename, window_size: 
     
     model = LinearRegression()
     model.fit(trnX, trnY)
-    prd_trn: Series = Series(model.predict(trnX))
-    prd_tst: Series = Series(model.predict(tstX))
+    prd_trn: Series = Series(model.predict(trnX), index=train.index)
+    prd_tst: Series = Series(model.predict(tstX), index=test.index)
     
     plot_forecasting_eval(
         trn=train,
@@ -209,9 +209,28 @@ def main():
         infer_datetime_format=True
         )    
     series: Series = data[target]
-
-    #aggregation(file_tag, target, index, series_og, data_og)
+    #aggregation(file_tag, target, index, series, data)
+    
+    filename = "data/forecast_fts_hourly.csv"
+    data: DataFrame = read_csv(
+        filename, na_values="", 
+        index_col=index,
+        sep=",", decimal=".", 
+        parse_dates=True, 
+        infer_datetime_format=True
+        )    
+    series: Series = data[target]
     #smoothing(file_tag, target, index, series, data)
+
+    filename = "data/forecast_fts_ws_50.csv"
+    data: DataFrame = read_csv(
+        filename, na_values="", 
+        index_col=index,
+        sep=",", decimal=".", 
+        parse_dates=True, 
+        infer_datetime_format=True
+        )    
+    series: Series = data[target]
     differentiation(file_tag, target, index, series, data)
 
 
