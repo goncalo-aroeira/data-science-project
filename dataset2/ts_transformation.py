@@ -222,7 +222,7 @@ def main():
     series: Series = data[target]
     #smoothing(file_tag, target, index, series, data)
 
-    filename = "data/forecast_fts_ws_50.csv"
+    filename = "data/forecast_fts_ws_100.csv"
     data: DataFrame = read_csv(
         filename, na_values="", 
         index_col=index,
