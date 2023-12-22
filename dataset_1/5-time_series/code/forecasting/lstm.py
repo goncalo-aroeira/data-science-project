@@ -117,6 +117,7 @@ def lstm_study(train, test, nr_episodes: int = 1000, measure: str = "R2"):
             ylabel=measure,
             percentage=flag,
         )
+    savefig(f"images/{file_tag}_lstm_study_{measure}_{length}.png")
     print(
         f"LSTM best results achieved with length={best_params['params'][0]} hidden_units={best_params['params'][1]} and nr_episodes={best_params['params'][2]}) ==> measure={best_performance:.2f}"
     )

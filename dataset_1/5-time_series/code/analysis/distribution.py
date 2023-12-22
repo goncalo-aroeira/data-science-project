@@ -49,7 +49,7 @@ axs[1, 2].grid(False)
 axs[1, 2].set_axis_off()
 axs[1, 2].text(0.2, 0, str(ss_months.describe()), fontsize="small")
 show()
-savefig(f"../images/{file_tag}_distribution_boxplot.png")
+savefig(f"images/{file_tag}_distribution_boxplot.png")
 
 
 grans: list[Series] = [ss_weeks, ss_months, ss_quarters]
@@ -62,7 +62,7 @@ for i in range(len(grans)):
     set_chart_labels(axs[i], title=f"{gran_names[i]}", xlabel=target, ylabel="Nr records")
     axs[i].hist(grans[i].values)
 show()
-savefig(f"../images/{file_tag}_distribution_histogram.png")
+savefig(f"images/{file_tag}_distribution_histogram.png")
 
 
 
@@ -76,7 +76,7 @@ def get_lagged_series(series: Series, max_lag: int, delta: int = 1):
 figure(figsize=(3 * HEIGHT, HEIGHT))
 lags = get_lagged_series(series, 20, 10)
 plot_multiline_chart(series.index.to_list(), lags, xlabel=index, ylabel=target)
-savefig(f"../images/{file_tag}_distribution_lags.png")
+savefig(f"images/{file_tag}_distribution_lags.png")
 
 
 def autocorrelation_study(series: Series, max_lag: int, delta: int = 1):
@@ -92,10 +92,10 @@ def autocorrelation_study(series: Series, max_lag: int, delta: int = 1):
         ax.set_xlabel(f"lag {lag}")
         ax.set_ylabel("original")
     ax = fig.add_subplot(gs[1, :])
-    ax.acorr(series, maxlags=max_lag)
+    ax.acorr(series, maxlags=max_lag, normed=False)
     ax.set_title("Autocorrelation")
     ax.set_xlabel("Lags")
-    savefig(f"../images/{file_tag}_distribution_autocorrelation.png")
+    savefig(f"images/{file_tag}_distribution_autocorrelation.png")
     return
 
 

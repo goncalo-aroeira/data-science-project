@@ -1,0 +1,2103 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.12.22)  22 DEC 2023 23:26
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14>
+(/usr/share/texlive/texmf-dist/tex/latex/extsizes/extarticle.cls
+Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/exscale.sty
+Package: exscale 2018/09/24 v2.1i Standard LaTeX package exscale
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+\big@size=\dimen134
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen135
+)
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+
+! LaTeX Error: File `anyfontsize.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen136
+\ar@mcellbox=\box45
+\extrarowheight=\dimen137
+\NC@list=\toks14
+\extratabsurround=\skip49
+\backup@length=\skip50
+\ar@cellbox=\box46
+)
+\TX@col@width=\dimen138
+\TX@old@table=\dimen139
+\TX@old@col=\dimen140
+\TX@target=\dimen141
+\TX@delta=\dimen142
+\TX@cols=\count175
+\TX@ftn=\toks15
+)
+
+! LaTeX Error: File `multirow.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+
+! LaTeX Error: File `soul.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+)
+
+! LaTeX Error: File `blindtext.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+
+! LaTeX Error: File `titling.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+! Undefined control sequence.
+<argument> \droptitle 
+                      
+l.18 \setlength{\droptitle}{-14em}
+                                     % This is your set screw
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \setlength{\droptitle}{-14em}
+                                     % This is your set screw
+? 
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/02/14 3.40 The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2020/02/14 3.40 Babel switching mechanism
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/02/14 3.40 Babel common definitions
+\babel@savecnt=\count176
+\U@D=\dimen143
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count177
+)
+Package babel Info: \l@british = using hyphenrules for english
+(babel)             (\language0) on input line 82.
+Package babel Info: \l@UKenglish = using hyphenrules for english
+(babel)             (\language0) on input line 83.
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for english
+(babel)             (\language0) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for english
+(babel)             (\language0) on input line 108.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+)
+\Gin@req@height=\dimen144
+\Gin@req@width=\dimen145
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count178
+\float@exts=\toks17
+\float@box=\box47
+\@float@everytoks=\toks18
+\@floatcapt=\box48
+)
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
+
+(/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen146
+\captionmargin@=\dimen147
+\captionwidth=\dimen148
+\caption@tempdima=\dimen149
+\caption@indent=\dimen150
+\caption@parindent=\dimen151
+\caption@hangindent=\dimen152
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count179
+\c@continuedfloat=\count180
+Package caption Info: float package is loaded.
+)
+\c@subfigure=\count181
+\c@subtable=\count182
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count183
+\Gm@cntv=\count184
+\c@Gm@tempcnt=\count185
+\Gm@bindingoffset=\dimen153
+\Gm@wd@mp=\dimen154
+\Gm@odd@mp=\dimen155
+\Gm@even@mp=\dimen156
+\Gm@layoutwidth=\dimen157
+\Gm@layoutheight=\dimen158
+\Gm@layouthoffset=\dimen159
+\Gm@layoutvoffset=\dimen160
+\Gm@dimlist=\toks19
+)
+
+! LaTeX Error: File `placeins.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+
+! LaTeX Error: Unknown option `section' for package `placeins'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 \geometry
+              {margin=2cm, bmargin=2cm, tmargin=3cm}
+? 
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count186
+\l__pdf_internal_box=\box49
+)
+(./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 3
+7.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
+File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count187
+\scratchdimen=\dimen161
+\scratchbox=\box50
+\nofMPsegments=\count188
+\nofMParguments=\count189
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count190
+\MPscratchDim=\dimen162
+\MPnumerator=\count191
+\makeMPintoPDFobject=\count192
+\everyMPtoPDFconversion=\toks21
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box51
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 500.484pt, 56.9055pt)
+* v-part:(T,H,B)=(85.35826pt, 652.70622pt, 56.9055pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=500.484pt
+* \textheight=652.70622pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-23.91173pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+! Undefined control sequence.
+<argument> \droptitle 
+                      
+l.54 \setlength{\droptitle}{1cm}
+                                
+? 
+<./images/tecnico_logo.jpg, id=1, 142.8975pt x 70.299pt>
+File: ./images/tecnico_logo.jpg Graphic file (type jpg)
+<use ./images/tecnico_logo.jpg>
+Package pdftex.def Info: ./images/tecnico_logo.jpg  used on input line 57.
+(pdftex.def)             Requested size: 135.75186pt x 66.78365pt.
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+ <./images/tecnico_logo.jpg>]
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <6> on input line 57.
+
+
+LaTeX Warning: No \author given.
+
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <7> on input line 60.
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <5> on input line 60.
+! Undefined control sequence.
+<recently read> \multirow 
+                          
+l.62         \multirow
+                      {4}{6em}{\textbf{Team nr: } Insert here} & \textbf{Stu...
+
+? 
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.70 ...graphics} command, after uncommenting it.}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.70 ...graphics} command, after uncommenting it.}
+                                                  
+? 
+
+LaTeX Font Warning: Font shape `T1/cmss/bx/n' in size <21.33955> not available
+(Font)              size <20.74> substituted on input line 73.
+
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.77 ...\textbf{Shall not exceed 200 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.77 ...\textbf{Shall not exceed 200 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.80 ...\textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.80 ...\textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+<images/dataset1/data_profiling/CovidPos_records_variables.png, id=10, 361.35pt
+ x 361.35pt>
+File: images/dataset1/data_profiling/CovidPos_records_variables.png Graphic fil
+e (type png)
+<use images/dataset1/data_profiling/CovidPos_records_variables.png>
+Package pdftex.def Info: images/dataset1/data_profiling/CovidPos_records_variab
+les.png  used on input line 84.
+(pdftex.def)             Requested size: 252.94327pt x 252.94327pt.
+
+LaTeX Warning: File `images/dataset2/data_profiling/Credit_Score_records_variab
+les.png' not found on input line 85.
+
+
+! Package pdftex.def Error: File `images/dataset2/data_profiling/Credit_Score_r
+ecords_variables.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...filing/Credit_Score_records_variables.png}
+                                                  
+? 
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 8
+5.
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+) [2]
+<images/dataset1/data_profiling/CovidPos_variable_types.png, id=21, 361.35pt x 
+361.35pt>
+File: images/dataset1/data_profiling/CovidPos_variable_types.png Graphic file (
+type png)
+<use images/dataset1/data_profiling/CovidPos_variable_types.png>
+Package pdftex.def Info: images/dataset1/data_profiling/CovidPos_variable_types
+.png  used on input line 90.
+(pdftex.def)             Requested size: 252.94327pt x 252.94327pt.
+
+
+LaTeX Warning: File `images/dataset2/data_profiling/Credit_Score_variable_types
+.png' not found on input line 91.
+
+
+! Package pdftex.def Error: File `images/dataset2/data_profiling/Credit_Score_v
+ariable_types.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.91 ...profiling/Credit_Score_variable_types.png}
+                                                  
+? 
+<images/dataset1/data_profiling/CovidPos_mv.png, id=22, 361.35pt x 505.89pt>
+File: images/dataset1/data_profiling/CovidPos_mv.png Graphic file (type png)
+<use images/dataset1/data_profiling/CovidPos_mv.png>
+Package pdftex.def Info: images/dataset1/data_profiling/CovidPos_mv.png  used o
+n input line 96.
+(pdftex.def)             Requested size: 252.94327pt x 354.12057pt.
+
+LaTeX Warning: File `images/dataset2/data_profiling/Credit_Score_mv.png' not fo
+und on input line 97.
+
+
+! Package pdftex.def Error: File `images/dataset2/data_profiling/Credit_Score_m
+v.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.97 ...taset2/data_profiling/Credit_Score_mv.png}
+                                                  
+? 
+[3 <./images/dataset1/data_profiling/CovidPos_records_variables.png> <./images/
+dataset1/data_profiling/CovidPos_variable_types.png>]
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.102 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.102 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+<images/dataset1/data_profiling/CovidPos_global_boxplot.png, id=29, 722.7pt x 5
+78.16pt>
+File: images/dataset1/data_profiling/CovidPos_global_boxplot.png Graphic file (
+type png)
+<use images/dataset1/data_profiling/CovidPos_global_boxplot.png>
+Package pdftex.def Info: images/dataset1/data_profiling/CovidPos_global_boxplot
+.png  used on input line 105.
+(pdftex.def)             Requested size: 361.3491pt x 289.07928pt.
+
+LaTeX Warning: File `images/dataset2/data_profiling/Credit_Score_global_boxplot
+_modified.png' not found on input line 106.
+
+
+! Package pdftex.def Error: File `images/dataset2/data_profiling/Credit_Score_g
+lobal_boxplot_modified.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.106 ...Credit_Score_global_boxplot_modified.png}
+                                                  
+? 
+[4 <./images/dataset1/data_profiling/CovidPos_mv.png>]
+<images/dataset1/data_profiling/CovidPos_single_boxplots.png, id=34, 867.24pt x
+ 578.16pt>
+File: images/dataset1/data_profiling/CovidPos_single_boxplots.png Graphic file 
+(type png)
+<use images/dataset1/data_profiling/CovidPos_single_boxplots.png>
+Package pdftex.def Info: images/dataset1/data_profiling/CovidPos_single_boxplot
+s.png  used on input line 111.
+(pdftex.def)             Requested size: 520.34802pt x 346.89867pt.
+
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 111--112
+ [][] 
+ []
+
+[5 <./images/dataset1/data_profiling/CovidPos_global_boxplot.png>]
+
+LaTeX Warning: File `images/dataset2/data_profiling/Credit_Score_single_boxplot
+s.png' not found on input line 116.
+
+
+! Package pdftex.def Error: File `images/dataset2/data_profiling/Credit_Score_s
+ingle_boxplots.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.116 ...ofiling/Credit_Score_single_boxplots.png}
+                                                  
+? 
+<images/dataset1/data_profiling/CovidPos_single_histograms_numeric.png, id=39, 
+867.24pt x 578.16pt>
+File: images/dataset1/data_profiling/CovidPos_single_histograms_numeric.png Gra
+phic file (type png)
+<use images/dataset1/data_profiling/CovidPos_single_histograms_numeric.png>
+Package pdftex.def Info: images/dataset1/data_profiling/CovidPos_single_histogr
+ams_numeric.png  used on input line 121.
+(pdftex.def)             Requested size: 520.34802pt x 346.89867pt.
+
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 121--122
+ [][] 
+ []
+
+[6 <./images/dataset1/data_profiling/CovidPos_single_boxplots.png>]
+
+LaTeX Warning: File `images/dataset2/data_profiling/Credit_Score_single_histogr
+ams_numeric.png' not found on input line 126.
+
+
+! Package pdftex.def Error: File `images/dataset2/data_profiling/Credit_Score_s
+ingle_histograms_numeric.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.126 ...edit_Score_single_histograms_numeric.png}
+                                                  
+? 
+<images/dataset1/data_profiling/CovidPos_outliers_standard.png, id=44, 867.24pt
+ x 289.08pt>
+File: images/dataset1/data_profiling/CovidPos_outliers_standard.png Graphic fil
+e (type png)
+<use images/dataset1/data_profiling/CovidPos_outliers_standard.png>
+Package pdftex.def Info: images/dataset1/data_profiling/CovidPos_outliers_stand
+ard.png  used on input line 131.
+(pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
+
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 131--132
+ [][] 
+ []
+
+[7 <./images/dataset1/data_profiling/CovidPos_single_histograms_numeric.png>]
+
+LaTeX Warning: File `images/dataset2/data_profiling/Credit_Score_outliers_stand
+ard.png' not found on input line 136.
+
+
+! Package pdftex.def Error: File `images/dataset2/data_profiling/Credit_Score_o
+utliers_standard.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...iling/Credit_Score_outliers_standard.png}
+                                                  
+? 
+<images/dataset1/data_profiling/CovidPos_class_distribution.png, id=50, 289.08p
+t x 144.54pt>
+File: images/dataset1/data_profiling/CovidPos_class_distribution.png Graphic fi
+le (type png)
+<use images/dataset1/data_profiling/CovidPos_class_distribution.png>
+Package pdftex.def Info: images/dataset1/data_profiling/CovidPos_class_distribu
+tion.png  used on input line 141.
+(pdftex.def)             Requested size: 274.62444pt x 137.3122pt.
+
+LaTeX Warning: File `images/dataset2/data_profiling/Credit_Score_class_distribu
+tion.png' not found on input line 146.
+
+
+! Package pdftex.def Error: File `images/dataset2/data_profiling/Credit_Score_c
+lass_distribution.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.146 ...ling/Credit_Score_class_distribution.png}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.151 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.151 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+[8 <./images/dataset1/data_profiling/CovidPos_outliers_standard.png> <./images/
+dataset1/data_profiling/CovidPos_class_distribution.png>]
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.164 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.164 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+<images/dataset1/data_profiling/CovidPos_correlation_analysis.png, id=56, 722.7
+pt x 578.16pt>
+File: images/dataset1/data_profiling/CovidPos_correlation_analysis.png Graphic 
+file (type png)
+<use images/dataset1/data_profiling/CovidPos_correlation_analysis.png>
+Package pdftex.def Info: images/dataset1/data_profiling/CovidPos_correlation_an
+alysis.png  used on input line 177.
+(pdftex.def)             Requested size: 433.62334pt x 346.89867pt.
+[9 <./images/dataset1/data_profiling/CovidPos_correlation_analysis.png>]
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.189 ...0 characters \textit{for each dataset.}}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.189 ...0 characters \textit{for each dataset.}}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.192 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.192 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+<images/dataset1/data_preparation/CovidPos_mvi_freq_eval.png, id=61, 289.08pt x
+ 216.81pt>
+File: images/dataset1/data_preparation/CovidPos_mvi_freq_eval.png Graphic file 
+(type png)
+<use images/dataset1/data_preparation/CovidPos_mvi_freq_eval.png>
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_mvi_freq_eva
+l.png  used on input line 195.
+(pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
+<images/dataset1/data_preparation/CovidPos_mvi_knn_eval.png, id=62, 289.08pt x 
+216.81pt>
+File: images/dataset1/data_preparation/CovidPos_mvi_knn_eval.png Graphic file (
+type png)
+<use images/dataset1/data_preparation/CovidPos_mvi_knn_eval.png>
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_mvi_knn_eval
+.png  used on input line 196.
+(pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.206 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.206 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+<images/dataset1/data_preparation/CovidPos_outliers_treat_rep_fixed_median.png,
+ id=63, 289.08pt x 216.81pt>
+File: images/dataset1/data_preparation/CovidPos_outliers_treat_rep_fixed_median
+.png Graphic file (type png)
+<use images/dataset1/data_preparation/CovidPos_outliers_treat_rep_fixed_median.
+png>
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_outliers_tre
+at_rep_fixed_median.png  used on input line 209.
+(pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
+<images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_NotStdBased.p
+ng, id=64, 289.08pt x 216.81pt>
+File: images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_NotStdBa
+sed.png Graphic file (type png)
+<use images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_NotStdBas
+ed.png>
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_outliers_tre
+at_rowDrop_NotStdBased.png  used on input line 210.
+(pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
+<images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_StdBased.png,
+ id=65, 289.08pt x 216.81pt>
+File: images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_StdBased
+.png Graphic file (type png)
+<use images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_StdBased.
+png>
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_outliers_tre
+at_rowDrop_StdBased.png  used on input line 211.
+(pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
+<images/dataset1/data_preparation/CovidPos_outliers_treat_truncating_minmax.png
+, id=66, 289.08pt x 216.81pt>
+File: images/dataset1/data_preparation/CovidPos_outliers_treat_truncating_minma
+x.png Graphic file (type png)
+<use images/dataset1/data_preparation/CovidPos_outliers_treat_truncating_minmax
+.png>
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_outliers_tre
+at_truncating_minmax.png  used on input line 212.
+(pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
+[10 <./images/dataset1/data_preparation/CovidPos_mvi_freq_eval.png> <./images/d
+ataset1/data_preparation/CovidPos_mvi_knn_eval.png>]
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.222 ...textbf{Shall not exceed 200 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.222 ...textbf{Shall not exceed 200 characters.}}
+                                                  
+? 
+<images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax1.png, id=73, 28
+9.08pt x 216.81pt>
+File: images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax1.png Graph
+ic file (type png)
+<use images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax1.png>
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_scaling_trea
+t_MinMax1.png  used on input line 225.
+(pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
+<images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax2.png, id=74, 28
+9.08pt x 216.81pt>
+File: images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax2.png Graph
+ic file (type png)
+<use images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax2.png>
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_scaling_trea
+t_MinMax2.png  used on input line 226.
+(pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
+<images/dataset1/data_preparation/CovidPos_scaling_treat_Original.png, id=75, 2
+89.08pt x 216.81pt>
+File: images/dataset1/data_preparation/CovidPos_scaling_treat_Original.png Grap
+hic file (type png)
+<use images/dataset1/data_preparation/CovidPos_scaling_treat_Original.png>
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_scaling_trea
+t_Original.png  used on input line 227.
+(pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
+<images/dataset1/data_preparation/CovidPos_scaling_treat_Z-Score.png, id=76, 28
+9.08pt x 216.81pt>
+File: images/dataset1/data_preparation/CovidPos_scaling_treat_Z-Score.png Graph
+ic file (type png)
+<use images/dataset1/data_preparation/CovidPos_scaling_treat_Z-Score.png>
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_scaling_trea
+t_Z-Score.png  used on input line 228.
+(pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
+[11 <./images/dataset1/data_preparation/CovidPos_outliers_treat_rep_fixed_media
+n.png> <./images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_NotS
+tdBased.png> <./images/dataset1/data_preparation/CovidPos_outliers_treat_rowDro
+p_stdBased.png> <./images/dataset1/data_preparation/CovidPos_outliers_treat_tru
+ncating_minmax.png>]
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.238 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.238 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+<images/dataset1/data_preparation/CovidPos_balancing_oversampling.png, id=84, 2
+89.08pt x 216.81pt>
+File: images/dataset1/data_preparation/CovidPos_balancing_oversampling.png Grap
+hic file (type png)
+<use images/dataset1/data_preparation/CovidPos_balancing_oversampling.png>
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_balancing_ov
+ersampling.png  used on input line 241.
+(pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
+<images/dataset1/data_preparation/CovidPos_balancing_undersampling.png, id=85, 
+289.08pt x 216.81pt>
+File: images/dataset1/data_preparation/CovidPos_balancing_undersampling.png Gra
+phic file (type png)
+<use images/dataset1/data_preparation/CovidPos_balancing_undersampling.png>
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_balancing_un
+dersampling.png  used on input line 242.
+(pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
+<images/dataset1/data_preparation/CovidPos_balancing_SMOTE.png, id=86, 289.08pt
+ x 216.81pt>
+File: images/dataset1/data_preparation/CovidPos_balancing_SMOTE.png Graphic fil
+e (type png)
+<use images/dataset1/data_preparation/CovidPos_balancing_SMOTE.png>
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_balancing_SM
+OTE.png  used on input line 243.
+(pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
+[12 <./images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax1.png> <./
+images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax2.png> <./images/
+dataset1/data_preparation/CovidPos_scaling_treat_Original.png> <./images/datase
+t1/data_preparation/CovidPos_scaling_treat_Z-Score.png>]
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.253 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.253 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+<images/dataset1/data_preparation/CovidPos_fs_low_var_recall_study.png, id=94, 
+578.16pt x 289.08pt>
+File: images/dataset1/data_preparation/CovidPos_fs_low_var_recall_study.png Gra
+phic file (type png)
+<use images/dataset1/data_preparation/CovidPos_fs_low_var_recall_study.png>
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_fs_low_var_r
+ecall_study.png  used on input line 256.
+(pdftex.def)             Requested size: 231.2599pt x 115.62994pt.
+<images/dataset1/data_preparation/CovidPos_fs_redundancy_recall_study.png, id=9
+5, 578.16pt x 289.08pt>
+File: images/dataset1/data_preparation/CovidPos_fs_redundancy_recall_study.png 
+Graphic file (type png)
+<use images/dataset1/data_preparation/CovidPos_fs_redundancy_recall_study.png>
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_fs_redundanc
+y_recall_study.png  used on input line 257.
+(pdftex.def)             Requested size: 231.2599pt x 115.62994pt.
+[13 <./images/dataset1/data_preparation/CovidPos_balancing_oversampling.png> <.
+/images/dataset1/data_preparation/CovidPos_balancing_undersampling.png> <./imag
+es/dataset1/data_preparation/CovidPos_balancing_SMOTE.png>]
+
+! LaTeX Error: File `' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.267 \centering\includegraphics[scale=0.95]{}
+                                              
+? 
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.277 ...textbf{Shall not exceed 200 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.277 ...textbf{Shall not exceed 200 characters.}}
+                                                  
+? 
+<images/dataset1/data_preparation/CovidPos_pca_explained_variance_ratio.png, id
+=103, 1084.05pt x 361.35pt>
+File: images/dataset1/data_preparation/CovidPos_pca_explained_variance_ratio.pn
+g Graphic file (type png)
+<use images/dataset1/data_preparation/CovidPos_pca_explained_variance_ratio.png
+>
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_pca_explaine
+d_variance_ratio.png  used on input line 280.
+(pdftex.def)             Requested size: 542.02368pt x 180.67456pt.
+
+Overfull \hbox (41.53969pt too wide) in paragraph at lines 280--281
+ [][] 
+ []
+
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.290 ...textbf{Shall not exceed 200 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.290 ...textbf{Shall not exceed 200 characters.}}
+                                                  
+? 
+[14 <./images/dataset1/data_preparation/CovidPos_fs_low_var_recall_study.png> <
+./images/dataset1/data_preparation/CovidPos_fs_redundancy_recall_study.png> <./
+images/dataset1/data_preparation/CovidPos_pca_explained_variance_ratio.png>]
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.303 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.303 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.306 ...textbf{Shall not exceed 300 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.306 ...textbf{Shall not exceed 300 characters.}}
+                                                  
+? 
+<images/dataset1/models_evaluation/CovidPos_nb_recall_study.png, id=110, 289.08
+pt x 216.81pt>
+File: images/dataset1/models_evaluation/CovidPos_nb_recall_study.png Graphic fi
+le (type png)
+<use images/dataset1/models_evaluation/CovidPos_nb_recall_study.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_nb_recall_s
+tudy.png  used on input line 309.
+(pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
+<images/dataset1/models_evaluation/CovidPos_GaussianNB_best_recall_eval.png, id
+=111, 578.16pt x 289.08pt>
+File: images/dataset1/models_evaluation/CovidPos_GaussianNB_best_recall_eval.pn
+g Graphic file (type png)
+<use images/dataset1/models_evaluation/CovidPos_GaussianNB_best_recall_eval.png
+>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_GaussianNB_
+best_recall_eval.png  used on input line 319.
+(pdftex.def)             Requested size: 549.24889pt x 274.62444pt.
+
+Overfull \hbox (48.7649pt too wide) in paragraph at lines 319--320
+ [][] 
+ []
+
+[15 <./images/dataset1/models_evaluation/CovidPos_nb_recall_study.png>]
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.324 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.324 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+<images/dataset1/models_evaluation/CovidPos_knn_recall_study.png, id=116, 289.0
+8pt x 216.81pt>
+File: images/dataset1/models_evaluation/CovidPos_knn_recall_study.png Graphic f
+ile (type png)
+<use images/dataset1/models_evaluation/CovidPos_knn_recall_study.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_knn_recall_
+study.png  used on input line 327.
+(pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
+[16 <./images/dataset1/models_evaluation/CovidPos_GaussianNB_best_recall_eval.p
+ng> <./images/dataset1/models_evaluation/CovidPos_knn_recall_study.png>]
+<images/dataset1/models_evaluation/CovidPos_knn_overfitting.png, id=122, 289.08
+pt x 216.81pt>
+File: images/dataset1/models_evaluation/CovidPos_knn_overfitting.png Graphic fi
+le (type png)
+<use images/dataset1/models_evaluation/CovidPos_knn_overfitting.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_knn_overfit
+ting.png  used on input line 337.
+(pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
+<images/dataset1/models_evaluation/CovidPos_knn_KNN_best_recall_eval.png, id=12
+3, 578.16pt x 289.08pt>
+File: images/dataset1/models_evaluation/CovidPos_knn_KNN_best_recall_eval.png G
+raphic file (type png)
+<use images/dataset1/models_evaluation/CovidPos_knn_KNN_best_recall_eval.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_knn_KNN_bes
+t_recall_eval.png  used on input line 342.
+(pdftex.def)             Requested size: 549.24889pt x 274.62444pt.
+
+Overfull \hbox (48.7649pt too wide) in paragraph at lines 342--343
+ [][] 
+ []
+
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.347 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.347 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+[17 <./images/dataset1/models_evaluation/CovidPos_knn_overfitting.png> <./image
+s/dataset1/models_evaluation/CovidPos_knn_KNN_best_recall_eval.png>]
+<images/dataset1/models_evaluation/CovidPos_dt_accuracy_study.png, id=129, 289.
+08pt x 216.81pt>
+File: images/dataset1/models_evaluation/CovidPos_dt_accuracy_study.png Graphic 
+file (type png)
+<use images/dataset1/models_evaluation/CovidPos_dt_accuracy_study.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_dt_accuracy
+_study.png  used on input line 350.
+(pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
+<images/dataset1/models_evaluation/CovidPos_dt_accuracy_overfitting.png, id=130
+, 289.08pt x 216.81pt>
+File: images/dataset1/models_evaluation/CovidPos_dt_accuracy_overfitting.png Gr
+aphic file (type png)
+<use images/dataset1/models_evaluation/CovidPos_dt_accuracy_overfitting.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_dt_accuracy
+_overfitting.png  used on input line 360.
+(pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
+<images/dataset1/models_evaluation/CovidPos_dt_DT_best_accuracy_eval.png, id=13
+1, 578.16pt x 289.08pt>
+File: images/dataset1/models_evaluation/CovidPos_dt_DT_best_accuracy_eval.png G
+raphic file (type png)
+<use images/dataset1/models_evaluation/CovidPos_dt_DT_best_accuracy_eval.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_dt_DT_best_
+accuracy_eval.png  used on input line 365.
+(pdftex.def)             Requested size: 549.24889pt x 274.62444pt.
+
+Overfull \hbox (48.7649pt too wide) in paragraph at lines 365--366
+ [][] 
+ []
+
+[18 <./images/dataset1/models_evaluation/CovidPos_dt_accuracy_study.png> <./ima
+ges/dataset1/models_evaluation/CovidPos_dt_accuracy_overfitting.png>]
+<images/dataset1/models_evaluation/CovidPos_dt_accuracy_best_tree.png, id=137, 
+1011.78pt x 433.62pt>
+File: images/dataset1/models_evaluation/CovidPos_dt_accuracy_best_tree.png Grap
+hic file (type png)
+<use images/dataset1/models_evaluation/CovidPos_dt_accuracy_best_tree.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_dt_accuracy
+_best_tree.png  used on input line 370.
+(pdftex.def)             Requested size: 708.24118pt x 303.53192pt.
+
+Overfull \hbox (207.75719pt too wide) in paragraph at lines 370--371
+ [][] 
+ []
+
+[19 <./images/dataset1/models_evaluation/CovidPos_dt_DT_best_accuracy_eval.png>
+ <./images/dataset1/models_evaluation/CovidPos_dt_accuracy_best_tree.png>]
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.380 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.380 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+<images/dataset1/models_evaluation/CovidPos_rf_recall_study.png, id=144, 867.24
+pt x 289.08pt>
+File: images/dataset1/models_evaluation/CovidPos_rf_recall_study.png Graphic fi
+le (type png)
+<use images/dataset1/models_evaluation/CovidPos_rf_recall_study.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_recall_s
+tudy.png  used on input line 383.
+(pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
+<images/dataset1/models_evaluation/CovidPos_rf_accuracy_study.png, id=145, 867.
+24pt x 289.08pt>
+File: images/dataset1/models_evaluation/CovidPos_rf_accuracy_study.png Graphic 
+file (type png)
+<use images/dataset1/models_evaluation/CovidPos_rf_accuracy_study.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_accuracy
+_study.png  used on input line 384.
+(pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
+<images/dataset1/models_evaluation/CovidPos_rf_f1_study.png, id=146, 867.24pt x
+ 289.08pt>
+File: images/dataset1/models_evaluation/CovidPos_rf_f1_study.png Graphic file (
+type png)
+<use images/dataset1/models_evaluation/CovidPos_rf_f1_study.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_f1_study
+.png  used on input line 385.
+(pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
+<images/dataset1/models_evaluation/CovidPos_rf_precision_study.png, id=147, 867
+.24pt x 289.08pt>
+File: images/dataset1/models_evaluation/CovidPos_rf_precision_study.png Graphic
+ file (type png)
+<use images/dataset1/models_evaluation/CovidPos_rf_precision_study.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_precisio
+n_study.png  used on input line 386.
+(pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
+<images/dataset1/models_evaluation/CovidPos_rf_auc_study.png, id=148, 867.24pt 
+x 289.08pt>
+File: images/dataset1/models_evaluation/CovidPos_rf_auc_study.png Graphic file 
+(type png)
+<use images/dataset1/models_evaluation/CovidPos_rf_auc_study.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_auc_stud
+y.png  used on input line 387.
+(pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
+
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 383--388
+ [][] 
+ []
+
+
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 383--388
+ [] 
+ []
+
+
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 383--388
+ [] 
+ []
+
+
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 383--388
+ [] 
+ []
+
+
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 383--388
+ [] 
+ []
+
+[20]
+Overfull \vbox (240.5404pt too high) has occurred while \output is active []
+
+
+[21 <./images/dataset1/models_evaluation/CovidPos_rf_recall_study.png> <./image
+s/dataset1/models_evaluation/CovidPos_rf_accuracy_study.png> <./images/dataset1
+/models_evaluation/CovidPos_rf_f1_study.png> <./images/dataset1/models_evaluati
+on/CovidPos_rf_precision_study.png> <./images/dataset1/models_evaluation/CovidP
+os_rf_auc_study.png>]
+
+LaTeX Warning: File `images/dataset1/models_evaluation/CovidPos_rf_recall_overf
+itting.png' not found on input line 397.
+
+
+! Package pdftex.def Error: File `images/dataset1/models_evaluation/CovidPos_rf
+_recall_overfitting.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.397 ...ation/CovidPos_rf_recall_overfitting.png}
+                                                  
+? 
+<images/dataset1/models_evaluation/CovidPos_rf_RF_best_recall_eval.png, id=160,
+ 578.16pt x 289.08pt>
+File: images/dataset1/models_evaluation/CovidPos_rf_RF_best_recall_eval.png Gra
+phic file (type png)
+<use images/dataset1/models_evaluation/CovidPos_rf_RF_best_recall_eval.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_RF_best_
+recall_eval.png  used on input line 402.
+(pdftex.def)             Requested size: 549.24889pt x 274.62444pt.
+
+Overfull \hbox (48.7649pt too wide) in paragraph at lines 402--403
+ [][] 
+ []
+
+<images/dataset1/models_evaluation/CovidPos_rf_recall_vars_ranking.png, id=161,
+ 289.08pt x 216.81pt>
+File: images/dataset1/models_evaluation/CovidPos_rf_recall_vars_ranking.png Gra
+phic file (type png)
+<use images/dataset1/models_evaluation/CovidPos_rf_recall_vars_ranking.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_recall_v
+ars_ranking.png  used on input line 407.
+(pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
+[22 <./images/dataset1/models_evaluation/CovidPos_rf_RF_best_recall_eval.png>]
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.412 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.412 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+<images/dataset1/models_evaluation/CovidPos_gb_recall_study.png, id=166, 867.24
+pt x 289.08pt>
+File: images/dataset1/models_evaluation/CovidPos_gb_recall_study.png Graphic fi
+le (type png)
+<use images/dataset1/models_evaluation/CovidPos_gb_recall_study.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_recall_s
+tudy.png  used on input line 415.
+(pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
+<images/dataset1/models_evaluation/CovidPos_gb_accuracy_study.png, id=167, 867.
+24pt x 289.08pt>
+File: images/dataset1/models_evaluation/CovidPos_gb_accuracy_study.png Graphic 
+file (type png)
+<use images/dataset1/models_evaluation/CovidPos_gb_accuracy_study.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_accuracy
+_study.png  used on input line 416.
+(pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
+<images/dataset1/models_evaluation/CovidPos_gb_f1_study.png, id=168, 867.24pt x
+ 289.08pt>
+File: images/dataset1/models_evaluation/CovidPos_gb_f1_study.png Graphic file (
+type png)
+<use images/dataset1/models_evaluation/CovidPos_gb_f1_study.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_f1_study
+.png  used on input line 417.
+(pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
+<images/dataset1/models_evaluation/CovidPos_gb_precision_study.png, id=169, 867
+.24pt x 289.08pt>
+File: images/dataset1/models_evaluation/CovidPos_gb_precision_study.png Graphic
+ file (type png)
+<use images/dataset1/models_evaluation/CovidPos_gb_precision_study.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_precisio
+n_study.png  used on input line 418.
+(pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
+<images/dataset1/models_evaluation/CovidPos_gb_auc_study.png, id=170, 867.24pt 
+x 289.08pt>
+File: images/dataset1/models_evaluation/CovidPos_gb_auc_study.png Graphic file 
+(type png)
+<use images/dataset1/models_evaluation/CovidPos_gb_auc_study.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_auc_stud
+y.png  used on input line 419.
+(pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
+
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 415--420
+ [][] 
+ []
+
+
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 415--420
+ [] 
+ []
+
+
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 415--420
+ [] 
+ []
+
+
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 415--420
+ [] 
+ []
+
+
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 415--420
+ [] 
+ []
+
+[23 <./images/dataset1/models_evaluation/CovidPos_rf_recall_vars_ranking.png>]
+Overfull \vbox (240.5404pt too high) has occurred while \output is active []
+
+
+[24 <./images/dataset1/models_evaluation/CovidPos_gb_recall_study.png> <./image
+s/dataset1/models_evaluation/CovidPos_gb_accuracy_study.png> <./images/dataset1
+/models_evaluation/CovidPos_gb_f1_study.png> <./images/dataset1/models_evaluati
+on/CovidPos_gb_precision_study.png> <./images/dataset1/models_evaluation/CovidP
+os_gb_auc_study.png>]
+
+LaTeX Warning: File `images/dataset1/models_evaluation/CovidPos_gb_recall_overf
+itting.png' not found on input line 429.
+
+
+! Package pdftex.def Error: File `images/dataset1/models_evaluation/CovidPos_gb
+_recall_overfitting.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.429 ...ation/CovidPos_gb_recall_overfitting.png}
+                                                  
+? 
+<images/dataset1/models_evaluation/CovidPos_gb_GB_best_recall_eval.png, id=183,
+ 578.16pt x 289.08pt>
+File: images/dataset1/models_evaluation/CovidPos_gb_GB_best_recall_eval.png Gra
+phic file (type png)
+<use images/dataset1/models_evaluation/CovidPos_gb_GB_best_recall_eval.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_GB_best_
+recall_eval.png  used on input line 434.
+(pdftex.def)             Requested size: 549.24889pt x 274.62444pt.
+
+Overfull \hbox (48.7649pt too wide) in paragraph at lines 434--435
+ [][] 
+ []
+
+<images/dataset1/models_evaluation/CovidPos_gb_recall_vars_ranking.png, id=184,
+ 289.08pt x 216.81pt>
+File: images/dataset1/models_evaluation/CovidPos_gb_recall_vars_ranking.png Gra
+phic file (type png)
+<use images/dataset1/models_evaluation/CovidPos_gb_recall_vars_ranking.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_recall_v
+ars_ranking.png  used on input line 439.
+(pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
+[25 <./images/dataset1/models_evaluation/CovidPos_gb_GB_best_recall_eval.png>]
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.444 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.444 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+<images/dataset1/models_evaluation/CovidPos_mlp_recall_study.png, id=190, 867.2
+4pt x 289.08pt>
+File: images/dataset1/models_evaluation/CovidPos_mlp_recall_study.png Graphic f
+ile (type png)
+<use images/dataset1/models_evaluation/CovidPos_mlp_recall_study.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_mlp_recall_
+study.png  used on input line 447.
+(pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
+<images/dataset1/models_evaluation/CovidPos_mlp_accuracy_study.png, id=191, 867
+.24pt x 289.08pt>
+File: images/dataset1/models_evaluation/CovidPos_mlp_accuracy_study.png Graphic
+ file (type png)
+<use images/dataset1/models_evaluation/CovidPos_mlp_accuracy_study.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_mlp_accurac
+y_study.png  used on input line 448.
+(pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
+<images/dataset1/models_evaluation/CovidPos_mlp_f1_study.png, id=192, 867.24pt 
+x 289.08pt>
+File: images/dataset1/models_evaluation/CovidPos_mlp_f1_study.png Graphic file 
+(type png)
+<use images/dataset1/models_evaluation/CovidPos_mlp_f1_study.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_mlp_f1_stud
+y.png  used on input line 449.
+(pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
+<images/dataset1/models_evaluation/CovidPos_mlp_precision_study.png, id=193, 86
+7.24pt x 289.08pt>
+File: images/dataset1/models_evaluation/CovidPos_mlp_precision_study.png Graphi
+c file (type png)
+<use images/dataset1/models_evaluation/CovidPos_mlp_precision_study.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_mlp_precisi
+on_study.png  used on input line 450.
+(pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
+<images/dataset1/models_evaluation/CovidPos_mlp_auc_study.png, id=194, 867.24pt
+ x 289.08pt>
+File: images/dataset1/models_evaluation/CovidPos_mlp_auc_study.png Graphic file
+ (type png)
+<use images/dataset1/models_evaluation/CovidPos_mlp_auc_study.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_mlp_auc_stu
+dy.png  used on input line 451.
+(pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
+
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 447--452
+ [][] 
+ []
+
+
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 447--452
+ [] 
+ []
+
+
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 447--452
+ [] 
+ []
+
+
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 447--452
+ [] 
+ []
+
+
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 447--452
+ [] 
+ []
+
+[26 <./images/dataset1/models_evaluation/CovidPos_gb_recall_vars_ranking.png>]
+Overfull \vbox (240.5404pt too high) has occurred while \output is active []
+
+
+[27 <./images/dataset1/models_evaluation/CovidPos_mlp_recall_study.png> <./imag
+es/dataset1/models_evaluation/CovidPos_mlp_accuracy_study.png> <./images/datase
+t1/models_evaluation/CovidPos_mlp_f1_study.png> <./images/dataset1/models_evalu
+ation/CovidPos_mlp_precision_study.png> <./images/dataset1/models_evaluation/Co
+vidPos_mlp_auc_study.png>]
+<images/dataset1/models_evaluation/CovidPos_mlp_recall_overfitting.png, id=207,
+ 289.08pt x 216.81pt>
+File: images/dataset1/models_evaluation/CovidPos_mlp_recall_overfitting.png Gra
+phic file (type png)
+<use images/dataset1/models_evaluation/CovidPos_mlp_recall_overfitting.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_mlp_recall_
+overfitting.png  used on input line 461.
+(pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
+<images/dataset1/models_evaluation/CovidPos_mlp_MLP_best_recall_eval.png, id=20
+8, 578.16pt x 289.08pt>
+File: images/dataset1/models_evaluation/CovidPos_mlp_MLP_best_recall_eval.png G
+raphic file (type png)
+<use images/dataset1/models_evaluation/CovidPos_mlp_MLP_best_recall_eval.png>
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_mlp_MLP_bes
+t_recall_eval.png  used on input line 466.
+(pdftex.def)             Requested size: 549.24889pt x 274.62444pt.
+
+Overfull \hbox (48.7649pt too wide) in paragraph at lines 466--467
+ [][] 
+ []
+
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.473 ...ere.  Shall not exceed 2000 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.473 ...ere.  Shall not exceed 2000 characters.}}
+                                                  
+? 
+[28 <./images/dataset1/models_evaluation/CovidPos_mlp_recall_overfitting.png> <
+./images/dataset1/models_evaluation/CovidPos_mlp_MLP_best_recall_eval.png>]
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.483 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.483 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.516 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.516 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+<images/dataset1/time_series/Covid_distribution_boxplot.png, id=214, 578.16pt x
+ 289.08pt>
+File: images/dataset1/time_series/Covid_distribution_boxplot.png Graphic file (
+type png)
+<use images/dataset1/time_series/Covid_distribution_boxplot.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid_distribution_boxplot
+.png  used on input line 519.
+(pdftex.def)             Requested size: 462.52863pt x 231.2643pt.
+[29]
+<images/dataset1/time_series/Covid_distribution_histogram.png, id=218, 867.24pt
+ x 289.08pt>
+File: images/dataset1/time_series/Covid_distribution_histogram.png Graphic file
+ (type png)
+<use images/dataset1/time_series/Covid_distribution_histogram.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid_distribution_histogr
+am.png  used on input line 529.
+(pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
+
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 529--530
+ [][] 
+ []
+
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.539 ...textbf{Shall not exceed 300 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.539 ...textbf{Shall not exceed 300 characters.}}
+                                                  
+? 
+<images/dataset1/time_series/Covid_components_study.png, id=219, 867.24pt x 115
+6.32pt>
+File: images/dataset1/time_series/Covid_components_study.png Graphic file (type
+ png)
+<use images/dataset1/time_series/Covid_components_study.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid_components_study.png
+  used on input line 542.
+(pdftex.def)             Requested size: 433.61894pt x 578.15858pt.
+[30 <./images/dataset1/time_series/Covid_distribution_boxplot.png> <./images/da
+taset1/time_series/Covid_distribution_histogram.png>]
+<images/dataset1/time_series/Covid_stationarity_study_1.png, id=225, 867.24pt x
+ 289.08pt>
+File: images/dataset1/time_series/Covid_stationarity_study_1.png Graphic file (
+type png)
+<use images/dataset1/time_series/Covid_stationarity_study_1.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid_stationarity_study_1
+.png  used on input line 548.
+(pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
+<images/dataset1/time_series/Covid_stationarity_study_2.png, id=226, 867.24pt x
+ 289.08pt>
+File: images/dataset1/time_series/Covid_stationarity_study_2.png Graphic file (
+type png)
+<use images/dataset1/time_series/Covid_stationarity_study_2.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid_stationarity_study_2
+.png  used on input line 549.
+(pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
+
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 548--550
+ [][] 
+ []
+
+
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 548--550
+ [] 
+ []
+
+[31 <./images/dataset1/time_series/Covid_components_study.png>]
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.567 ...textbf{Shall not exceed 300 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.567 ...textbf{Shall not exceed 300 characters.}}
+                                                  
+? 
+<images/dataset1/time_series/Covid Weekly - Linear Regression_forecasting_serie
+s.png, id=232, 1156.32pt x 289.08pt>
+File: images/dataset1/time_series/Covid Weekly - Linear Regression_forecasting_
+series.png Graphic file (type png)
+<use images/dataset1/time_series/Covid Weekly - Linear Regression_forecasting_s
+eries.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid Weekly - Linear Regr
+ession_forecasting_series.png  used on input line 570.
+(pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
+<images/dataset1/time_series/Covid Monthly - Linear Regression_forecasting_seri
+es.png, id=233, 1156.32pt x 289.08pt>
+File: images/dataset1/time_series/Covid Monthly - Linear Regression_forecasting
+_series.png Graphic file (type png)
+<use images/dataset1/time_series/Covid Monthly - Linear Regression_forecasting_
+series.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid Monthly - Linear Reg
+ression_forecasting_series.png  used on input line 571.
+(pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
+<images/dataset1/time_series/Covid Quarterly - Linear Regression_forecasting_se
+ries.png, id=234, 1156.32pt x 289.08pt>
+File: images/dataset1/time_series/Covid Quarterly - Linear Regression_forecasti
+ng_series.png Graphic file (type png)
+<use images/dataset1/time_series/Covid Quarterly - Linear Regression_forecastin
+g_series.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid Quarterly - Linear R
+egression_forecasting_series.png  used on input line 572.
+(pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
+[32 <./images/dataset1/time_series/Covid_stationarity_study_1.png> <./images/da
+taset1/time_series/Covid_stationarity_study_2.png>]
+<images/dataset1/time_series/Covid_Weekly - Linear Regression_forecasting_eval.
+png, id=240, 433.62pt x 216.81pt>
+File: images/dataset1/time_series/Covid_Weekly - Linear Regression_forecasting_
+eval.png Graphic file (type png)
+<use images/dataset1/time_series/Covid_Weekly - Linear Regression_forecasting_e
+val.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid_Weekly - Linear Regr
+ession_forecasting_eval.png  used on input line 577.
+(pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
+<images/dataset1/time_series/Covid_Monthly - Linear Regression_forecasting_eval
+.png, id=241, 433.62pt x 216.81pt>
+File: images/dataset1/time_series/Covid_Monthly - Linear Regression_forecasting
+_eval.png Graphic file (type png)
+<use images/dataset1/time_series/Covid_Monthly - Linear Regression_forecasting_
+eval.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid_Monthly - Linear Reg
+ression_forecasting_eval.png  used on input line 578.
+(pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
+<images/dataset1/time_series/Covid_Quarterly - Linear Regression_forecasting_ev
+al.png, id=242, 433.62pt x 216.81pt>
+File: images/dataset1/time_series/Covid_Quarterly - Linear Regression_forecasti
+ng_eval.png Graphic file (type png)
+<use images/dataset1/time_series/Covid_Quarterly - Linear Regression_forecastin
+g_eval.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid_Quarterly - Linear R
+egression_forecasting_eval.png  used on input line 579.
+(pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
+ [33 <./images/dataset1/time_series/Covid Weekly - Linear Regression_forecastin
+g_series.png> <./images/dataset1/time_series/Covid Monthly - Linear Regression_
+forecasting_series.png> <./images/dataset1/time_series/Covid Quarterly - Linear
+ Regression_forecasting_series.png> <./images/dataset1/time_series/Covid_Weekly
+ - Linear Regression_forecasting_eval.png> <./images/dataset1/time_series/Covid
+_Monthly - Linear Regression_forecasting_eval.png> <./images/dataset1/time_seri
+es/Covid_Quarterly - Linear Regression_forecasting_eval.png>]
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.594 ...textbf{Shall not exceed 300 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.594 ...textbf{Shall not exceed 300 characters.}}
+                                                  
+? 
+<images/dataset1/time_series/Covid Window Size 25 - Linear Regression_forecasti
+ng_series.png, id=252, 1156.32pt x 289.08pt>
+File: images/dataset1/time_series/Covid Window Size 25 - Linear Regression_fore
+casting_series.png Graphic file (type png)
+<use images/dataset1/time_series/Covid Window Size 25 - Linear Regression_forec
+asting_series.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid Window Size 25 - Lin
+ear Regression_forecasting_series.png  used on input line 597.
+(pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
+<images/dataset1/time_series/Covid Window Size 50 - Linear Regression_forecasti
+ng_series.png, id=253, 1156.32pt x 289.08pt>
+File: images/dataset1/time_series/Covid Window Size 50 - Linear Regression_fore
+casting_series.png Graphic file (type png)
+<use images/dataset1/time_series/Covid Window Size 50 - Linear Regression_forec
+asting_series.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid Window Size 50 - Lin
+ear Regression_forecasting_series.png  used on input line 598.
+(pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
+<images/dataset1/time_series/Covid Window Size 75 - Linear Regression_forecasti
+ng_series.png, id=254, 1156.32pt x 289.08pt>
+File: images/dataset1/time_series/Covid Window Size 75 - Linear Regression_fore
+casting_series.png Graphic file (type png)
+<use images/dataset1/time_series/Covid Window Size 75 - Linear Regression_forec
+asting_series.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid Window Size 75 - Lin
+ear Regression_forecasting_series.png  used on input line 599.
+(pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
+<images/dataset1/time_series/Covid Window Size 100 - Linear Regression_forecast
+ing_series.png, id=255, 1156.32pt x 289.08pt>
+File: images/dataset1/time_series/Covid Window Size 100 - Linear Regression_for
+ecasting_series.png Graphic file (type png)
+<use images/dataset1/time_series/Covid Window Size 100 - Linear Regression_fore
+casting_series.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid Window Size 100 - Li
+near Regression_forecasting_series.png  used on input line 600.
+(pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
+<images/dataset1/time_series/Covid_Window_Size_25 - Linear Regression_forecasti
+ng_eval.png, id=256, 433.62pt x 216.81pt>
+File: images/dataset1/time_series/Covid_Window_Size_25 - Linear Regression_fore
+casting_eval.png Graphic file (type png)
+<use images/dataset1/time_series/Covid_Window_Size_25 - Linear Regression_forec
+asting_eval.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid_Window_Size_25 - Lin
+ear Regression_forecasting_eval.png  used on input line 605.
+(pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
+<images/dataset1/time_series/Covid_Window_Size_50 - Linear Regression_forecasti
+ng_eval.png, id=257, 433.62pt x 216.81pt>
+File: images/dataset1/time_series/Covid_Window_Size_50 - Linear Regression_fore
+casting_eval.png Graphic file (type png)
+<use images/dataset1/time_series/Covid_Window_Size_50 - Linear Regression_forec
+asting_eval.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid_Window_Size_50 - Lin
+ear Regression_forecasting_eval.png  used on input line 606.
+(pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
+<images/dataset1/time_series/Covid_Window_Size_75 - Linear Regression_forecasti
+ng_eval.png, id=258, 433.62pt x 216.81pt>
+File: images/dataset1/time_series/Covid_Window_Size_75 - Linear Regression_fore
+casting_eval.png Graphic file (type png)
+<use images/dataset1/time_series/Covid_Window_Size_75 - Linear Regression_forec
+asting_eval.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid_Window_Size_75 - Lin
+ear Regression_forecasting_eval.png  used on input line 607.
+(pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
+<images/dataset1/time_series/Covid_Window_Size_100 - Linear Regression_forecast
+ing_eval.png, id=259, 433.62pt x 216.81pt>
+File: images/dataset1/time_series/Covid_Window_Size_100 - Linear Regression_for
+ecasting_eval.png Graphic file (type png)
+<use images/dataset1/time_series/Covid_Window_Size_100 - Linear Regression_fore
+casting_eval.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid_Window_Size_100 - Li
+near Regression_forecasting_eval.png  used on input line 608.
+(pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
+[34 <./images/dataset1/time_series/Covid Window Size 25 - Linear Regression_for
+ecasting_series.png> <./images/dataset1/time_series/Covid Window Size 50 - Line
+ar Regression_forecasting_series.png> <./images/dataset1/time_series/Covid Wind
+ow Size 75 - Linear Regression_forecasting_series.png> <./images/dataset1/time_
+series/Covid Window Size 100 - Linear Regression_forecasting_series.png>]
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.623 ...textbf{Shall not exceed 300 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.623 ...textbf{Shall not exceed 300 characters.}}
+                                                  
+? 
+<images/dataset1/time_series/Covid First derivative - Linear Regression_forecas
+ting_series.png, id=267, 1156.32pt x 289.08pt>
+File: images/dataset1/time_series/Covid First derivative - Linear Regression_fo
+recasting_series.png Graphic file (type png)
+<use images/dataset1/time_series/Covid First derivative - Linear Regression_for
+ecasting_series.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid First derivative - L
+inear Regression_forecasting_series.png  used on input line 626.
+(pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
+<images/dataset1/time_series/Covid Second derivative - Linear Regression_foreca
+sting_series.png, id=268, 1156.32pt x 289.08pt>
+File: images/dataset1/time_series/Covid Second derivative - Linear Regression_f
+orecasting_series.png Graphic file (type png)
+<use images/dataset1/time_series/Covid Second derivative - Linear Regression_fo
+recasting_series.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid Second derivative - 
+Linear Regression_forecasting_series.png  used on input line 627.
+(pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
+[35 <./images/dataset1/time_series/Covid_Window_Size_25 - Linear Regression_for
+ecasting_eval.png> <./images/dataset1/time_series/Covid_Window_Size_50 - Linear
+ Regression_forecasting_eval.png> <./images/dataset1/time_series/Covid_Window_S
+ize_75 - Linear Regression_forecasting_eval.png> <./images/dataset1/time_series
+/Covid_Window_Size_100 - Linear Regression_forecasting_eval.png>]
+<images/dataset1/time_series/Covid_First derivative - Linear Regression_forecas
+ting_eval.png, id=276, 433.62pt x 216.81pt>
+File: images/dataset1/time_series/Covid_First derivative - Linear Regression_fo
+recasting_eval.png Graphic file (type png)
+<use images/dataset1/time_series/Covid_First derivative - Linear Regression_for
+ecasting_eval.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid_First derivative - L
+inear Regression_forecasting_eval.png  used on input line 632.
+(pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
+<images/dataset1/time_series/Covid_Second derivative - Linear Regression_foreca
+sting_eval.png, id=277, 433.62pt x 216.81pt>
+File: images/dataset1/time_series/Covid_Second derivative - Linear Regression_f
+orecasting_eval.png Graphic file (type png)
+<use images/dataset1/time_series/Covid_Second derivative - Linear Regression_fo
+recasting_eval.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid_Second derivative - 
+Linear Regression_forecasting_eval.png  used on input line 633.
+(pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
+
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.648 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.648 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+<images/dataset1/time_series/Covid_deaths_scaling.png, id=278, 867.24pt x 144.5
+4pt>
+File: images/dataset1/time_series/Covid_deaths_scaling.png Graphic file (type p
+ng)
+<use images/dataset1/time_series/Covid_deaths_scaling.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid_deaths_scaling.png  
+used on input line 651.
+(pdftex.def)             Requested size: 520.34802pt x 86.72466pt.
+
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 651--652
+ [][] 
+ []
+
+[36 <./images/dataset1/time_series/Covid First derivative - Linear Regression_f
+orecasting_series.png> <./images/dataset1/time_series/Covid Second derivative -
+ Linear Regression_forecasting_series.png> <./images/dataset1/time_series/Covid
+_First derivative - Linear Regression_forecasting_eval.png> <./images/dataset1/
+time_series/Covid_Second derivative - Linear Regression_forecasting_eval.png>]
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.671 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.671 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.674 ...textbf{Shall not exceed 200 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.674 ...textbf{Shall not exceed 200 characters.}}
+                                                  
+? 
+<images/dataset1/time_series/Covid - Simple Average_forecasting_series.png, id=
+286, 1156.32pt x 289.08pt>
+File: images/dataset1/time_series/Covid - Simple Average_forecasting_series.png
+ Graphic file (type png)
+<use images/dataset1/time_series/Covid - Simple Average_forecasting_series.png>
+
+Package pdftex.def Info: images/dataset1/time_series/Covid - Simple Average_for
+ecasting_series.png  used on input line 677.
+(pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
+<images/dataset1/time_series/Covid - Simple Average_forecasting_eval.png, id=28
+7, 433.62pt x 216.81pt>
+File: images/dataset1/time_series/Covid - Simple Average_forecasting_eval.png G
+raphic file (type png)
+<use images/dataset1/time_series/Covid - Simple Average_forecasting_eval.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid - Simple Average_for
+ecasting_eval.png  used on input line 682.
+(pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
+[37 <./images/dataset1/time_series/Covid_deaths_scaling.png> <./images/dataset1
+/time_series/Covid - Simple Average_forecasting_series.png>]
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.697 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.697 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+<images/dataset1/time_series/Covid - Persistence Optimist_forecasting_series.pn
+g, id=294, 1156.32pt x 289.08pt>
+File: images/dataset1/time_series/Covid - Persistence Optimist_forecasting_seri
+es.png Graphic file (type png)
+<use images/dataset1/time_series/Covid - Persistence Optimist_forecasting_serie
+s.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid - Persistence Optimi
+st_forecasting_series.png  used on input line 700.
+(pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
+<images/dataset1/time_series/Covid - Persistence Realist_forecasting_series.png
+, id=295, 1156.32pt x 289.08pt>
+File: images/dataset1/time_series/Covid - Persistence Realist_forecasting_serie
+s.png Graphic file (type png)
+<use images/dataset1/time_series/Covid - Persistence Realist_forecasting_series
+.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid - Persistence Realis
+t_forecasting_series.png  used on input line 705.
+(pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
+<images/dataset1/time_series/Covid - Persistence Optimist_forecasting_eval.png,
+ id=296, 433.62pt x 216.81pt>
+File: images/dataset1/time_series/Covid - Persistence Optimist_forecasting_eval
+.png Graphic file (type png)
+<use images/dataset1/time_series/Covid - Persistence Optimist_forecasting_eval.
+png>
+Package pdftex.def Info: images/dataset1/time_series/Covid - Persistence Optimi
+st_forecasting_eval.png  used on input line 710.
+(pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
+<images/dataset1/time_series/Covid - Persistence Realist_forecasting_eval.png, 
+id=297, 433.62pt x 216.81pt>
+File: images/dataset1/time_series/Covid - Persistence Realist_forecasting_eval.
+png Graphic file (type png)
+<use images/dataset1/time_series/Covid - Persistence Realist_forecasting_eval.p
+ng>
+Package pdftex.def Info: images/dataset1/time_series/Covid - Persistence Realis
+t_forecasting_eval.png  used on input line 711.
+(pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
+[38 <./images/dataset1/time_series/Covid - Simple Average_forecasting_eval.png>
+ <./images/dataset1/time_series/Covid - Persistence Optimist_forecasting_series
+.png> <./images/dataset1/time_series/Covid - Persistence Realist_forecasting_se
+ries.png>]
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.731 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.731 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+<images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_series.pn
+g, id=304, 1156.32pt x 289.08pt>
+File: images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_seri
+es.png Graphic file (type png)
+<use images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_serie
+s.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid - Rolling Mean (win=
+3)_forecasting_series.png  used on input line 734.
+(pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
+<images/dataset1/time_series/Covid_rollingmean_R2_study.png, id=305, 289.08pt x
+ 289.08pt>
+File: images/dataset1/time_series/Covid_rollingmean_R2_study.png Graphic file (
+type png)
+<use images/dataset1/time_series/Covid_rollingmean_R2_study.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid_rollingmean_R2_study
+.png  used on input line 739.
+(pdftex.def)             Requested size: 144.53964pt x 144.53964pt.
+[39 <./images/dataset1/time_series/Covid - Persistence Optimist_forecasting_eva
+l.png> <./images/dataset1/time_series/Covid - Persistence Realist_forecasting_e
+val.png> <./images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecastin
+g_series.png>]
+<images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_eval.png,
+ id=312, 433.62pt x 216.81pt>
+File: images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_eval
+.png Graphic file (type png)
+<use images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_eval.
+png>
+Package pdftex.def Info: images/dataset1/time_series/Covid - Rolling Mean (win=
+3)_forecasting_eval.png  used on input line 744.
+(pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
+
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.764 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.764 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+<images/dataset1/time_series/Covid_arima_R2_study.png, id=313, 867.24pt x 289.0
+8pt>
+File: images/dataset1/time_series/Covid_arima_R2_study.png Graphic file (type p
+ng)
+<use images/dataset1/time_series/Covid_arima_R2_study.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid_arima_R2_study.png  
+used on input line 767.
+(pdftex.def)             Requested size: 346.88986pt x 115.62994pt.
+[40 <./images/dataset1/time_series/Covid_rollingmean_R2_study.png> <./images/da
+taset1/time_series/Covid - Rolling Mean (win=3)_forecasting_eval.png>]
+<images/dataset1/time_series/Covid - ARIMA _forecasting_series.png, id=319, 115
+6.32pt x 289.08pt>
+File: images/dataset1/time_series/Covid - ARIMA _forecasting_series.png Graphic
+ file (type png)
+<use images/dataset1/time_series/Covid - ARIMA _forecasting_series.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid - ARIMA _forecasting
+_series.png  used on input line 772.
+(pdftex.def)             Requested size: 578.15858pt x 144.53964pt.
+
+Overfull \hbox (77.67459pt too wide) in paragraph at lines 772--773
+ [][] 
+ []
+
+<images/dataset1/time_series/Covid - ARIMA (p=7, d=2, q=5)_forecasting_eval.png
+, id=320, 433.62pt x 216.81pt>
+File: images/dataset1/time_series/Covid - ARIMA (p=7, d=2, q=5)_forecasting_eva
+l.png Graphic file (type png)
+<use images/dataset1/time_series/Covid - ARIMA (p=7, d=2, q=5)_forecasting_eval
+.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid - ARIMA (p=7, d=2, q
+=5)_forecasting_eval.png  used on input line 777.
+(pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
+[41 <./images/dataset1/time_series/Covid_arima_R2_study.png> <./images/dataset1
+/time_series/Covid - ARIMA _forecasting_series.png> <./images/dataset1/time_ser
+ies/Covid - ARIMA (p=7, d=2, q=5)_forecasting_eval.png>]
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.827 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.827 ...textbf{Shall not exceed 500 characters.}}
+                                                  
+? 
+<images/dataset1/time_series/Covid_lstm_study_R2.png, id=327, 867.24pt x 289.08
+pt>
+File: images/dataset1/time_series/Covid_lstm_study_R2.png Graphic file (type pn
+g)
+<use images/dataset1/time_series/Covid_lstm_study_R2.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid_lstm_study_R2.png  u
+sed on input line 830.
+(pdftex.def)             Requested size: 346.88986pt x 115.62994pt.
+<images/dataset1/time_series/Covid - LSTMs _forecasting_series.png, id=328, 115
+6.32pt x 289.08pt>
+File: images/dataset1/time_series/Covid - LSTMs _forecasting_series.png Graphic
+ file (type png)
+<use images/dataset1/time_series/Covid - LSTMs _forecasting_series.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid - LSTMs _forecasting
+_series.png  used on input line 835.
+(pdftex.def)             Requested size: 578.15858pt x 144.53964pt.
+
+Overfull \hbox (77.67459pt too wide) in paragraph at lines 835--836
+ [][] 
+ []
+
+[42 <./images/dataset1/time_series/Covid_lstm_study_R2.png>]
+<images/dataset1/time_series/Covid - LSTM (length=4, hidden=100, epochs=900)_fo
+recasting_eval.png, id=333, 433.62pt x 216.81pt>
+File: images/dataset1/time_series/Covid - LSTM (length=4, hidden=100, epochs=90
+0)_forecasting_eval.png Graphic file (type png)
+<use images/dataset1/time_series/Covid - LSTM (length=4, hidden=100, epochs=900
+)_forecasting_eval.png>
+Package pdftex.def Info: images/dataset1/time_series/Covid - LSTM (length=4, hi
+dden=100, epochs=900)_forecasting_eval.png  used on input line 840.
+(pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
+ [43 <./images/dataset1/time_series/Covid - LSTMs _forecasting_series.png> <./i
+mages/dataset1/time_series/Covid - LSTM (length=4, hidden=100, epochs=900)_fore
+casting_eval.png>]
+! Undefined control sequence.
+\\ctext ...finecolor {hlcolor}{#1}{#2}\sethlcolor 
+                                                  {hlcolor}\hl {#3}\endgroup 
+l.890 ...extbf{Shall not exceed 2000 characters.}}
+                                                  
+? 
+! Undefined control sequence.
+\\ctext ...color}{#1}{#2}\sethlcolor {hlcolor}\hl 
+                                                  {#3}\endgroup 
+l.890 ...extbf{Shall not exceed 2000 characters.}}
+                                                  
+? 
+[44] (./main.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.59955pt have occurred.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 5804 strings out of 483183
+ 127927 string characters out of 5966291
+ 326090 words of memory out of 5000000
+ 20597 multiletter control sequences out of 15000+600000
+ 546491 words of font info for 51 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 48i,14n,46p,537b,280s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/goncalo_aroeira/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ec
+so1000.600pk> </home/goncalo_aroeira/.texlive2019/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ectt1000.600pk> </home/goncalo_aroeira/.texlive2019/texmf-var/fonts/pk
+/ljfour/jknappen/ec/ecso1200.600pk> </home/goncalo_aroeira/.texlive2019/texmf-v
+ar/fonts/pk/ljfour/jknappen/ec/ecsx1440.600pk> </home/goncalo_aroeira/.texlive2
+019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx2074.600pk> </home/goncalo_aroeir
+a/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsi1000.600pk> </home/gon
+calo_aroeira/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx1000.600pk>
+ </home/goncalo_aroeira/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss
+1000.600pk> </home/goncalo_aroeira/.texlive2019/texmf-var/fonts/pk/ljfour/jknap
+pen/ec/ecrm1000.600pk> </home/goncalo_aroeira/.texlive2019/texmf-var/fonts/pk/l
+jfour/jknappen/ec/ecss3583.600pk></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb>
+Output written on main.pdf (44 pages, 3194682 bytes).
+PDF statistics:
+ 624 PDF objects out of 1000 (max. 8388607)
+ 144 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 476 words of extra memory for PDF output out of 10000 (max. 10000000)
+
