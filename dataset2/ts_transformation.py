@@ -3,7 +3,8 @@ from pandas import read_csv, DataFrame, Series, Index, Period
 from matplotlib.pyplot import figure, show, savefig, tight_layout, subplots, plot, legend
 from sklearn.linear_model import LinearRegression
 from dslabs_functions import (plot_line_chart, HEIGHT, plot_forecasting_series, 
-                              plot_forecasting_eval, series_train_test_split, ts_aggregation_by)
+                              plot_forecasting_eval, series_train_test_split, ts_aggregation_by,
+                              scale_all_dataframe)
 from numpy import arange, array
 from matplotlib.figure import Figure
 
@@ -152,7 +153,7 @@ def differentiation(file_tag, target, index, series, data):
     ss_diff2.to_csv(f"data/forecast_{file_tag}_second_derivative.csv")
 
     ss_list: list[Series] = [ss_diff, ss_diff2]
-    names = ["First derivative", "Second derivative"]
+    names = ["FirstDerivative", "SecondDerivative"]
     filenames = [f"data/forecast_{file_tag}_first_derivative.csv", 
                  f"data/forecast_{file_tag}_second_derivative.csv"]
 
@@ -181,7 +182,7 @@ def forecasting_after_differentation(file_tag, target, index, filename, diff):
         prd_tst=prd_tst,
         title=f"Forecasting eval after {diff} differentiation"
     )
-    savefig(f"images/ts_transformation/{file_tag}_forecast_eval_after_diff_{diff}", bbox_inches="tight")
+    savefig(f"images/ts_transformation/{file_tag}_forecast_eval_{diff}", bbox_inches="tight")
 
     plot_forecasting_series(
         train,
@@ -191,7 +192,27 @@ def forecasting_after_differentation(file_tag, target, index, filename, diff):
         xlabel=index,
         ylabel=target,
     )
-    savefig(f"images/ts_transformation/{file_tag}_forecast_ts_after_diff_{diff}", bbox_inches="tight")
+    savefig(f"images/ts_transformation/{file_tag}_forecast_ts_{diff}", bbox_inches="tight")
+
+def scaling(file_tag, target, data):
+    df: DataFrame = scale_all_dataframe(data)
+    df.to_csv(f"data/forecast_{file_tag}_scaled.csv")
+    ss: Series = df[target]
+
+
+    df: DataFrame = scale_all_dataframe(data)
+
+    ss: Series = df[target]
+    figure(figsize=(3 * HEIGHT, HEIGHT / 2))
+    plot_line_chart(
+        ss.index.to_list(),
+        ss.to_list(),
+        xlabel=ss.index.name,
+        ylabel=target,
+        title=f"{file_tag} {target} after scaling",
+    )
+    savefig(f"images/ts_transformation/{file_tag}_{target}_scaling.png")  
+    show()
 
 #*****************************************************************************************************#
 
@@ -231,7 +252,17 @@ def main():
         infer_datetime_format=True
         )    
     series: Series = data[target]
-    differentiation(file_tag, target, index, series, data)
+    # differentiation(file_tag, target, index, series, data)
+
+    filename = "data/forecast_fts_first_derivative.csv"
+    data: DataFrame = read_csv(
+        filename, na_values="", 
+        index_col=index,
+        sep=",", decimal=".", 
+        parse_dates=True, 
+        infer_datetime_format=True
+        )    
+    scaling(file_tag, target, data)
 
 
 if __name__ == "__main__":
