@@ -20,7 +20,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{eso-pic}
-\graphicspath{ {./images/} }
+\graphicspath{ {./report_imgs/} }
 \usepackage{subcaption}
 \usepackage{geometry}
 \usepackage[section]{placeins}
@@ -67,7 +67,7 @@
     \end{tabular}
 \end{center}
 
-\ctext[RGB]{190,190,190}{The present document presents a template for the Data Science Project report. It specifies the mandatory format and suggests the structure to follow. All text with grey background shall be replaced with the analysis made over the datasets. Put your charts in the \textit{images} folder, and set the name of the file in the \textit{includegraphics} command, after uncommenting it.} 
+\ctext[RGB]{190,190,190}{The present document presents a template for the Data Science Project report. It specifies the mandatory format and suggests the structure to follow. All text with grey background shall be replaced with the analysis made over the datasets. Put your charts in the \textit{report_imgs} folder, and set the name of the file in the \textit{includegraphics} command, after uncommenting it.} 
 
 \begin{center}
 	\section*{\fontsize{0.75cm}{1cm}\selectfont CLASSIFICATION}
@@ -80,21 +80,17 @@
 \ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to the data dimensionality perspective, such as the number of records and number of dimensions, and their impact on the following analysis. \textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
-\centering
-\includegraphics[scale=0.70]{images/dataset1/data_profiling/CovidPos_records_variables.png}
-%\includegraphics[scale=0.95]{images/dataset2/data_profiling/Credit_Score_records_variables.png}
+\centering\includegraphics[scale=0.95]{ds_latex/report_imgs/Credit_Score_records_variables.png}
 \caption{Nr Records x Nr variables for dataset 1 (left) and dataset 2 (right)}
 \end{figure}
 
 \begin{figure}[H]
-  \includegraphics[scale=0.70]{images/dataset1/data_profiling/CovidPos_variable_types.png}
-  %\centering\includegraphics[scale=0.95]{images/dataset2/data_profiling/Credit_Score_variable_types.png}
+\centering\includegraphics[scale=0.95]{ds_latex/report_imgs/Credit_Score_variable_types.png}
 \caption{Nr variables per type for dataset 1 (left) and dataset 2 (right)}
 \end{figure}
 
 \begin{figure}[H]
-  \includegraphics[scale=0.70]{images/dataset1/data_profiling/CovidPos_mv.png}
-  %\centering\includegraphics[scale=0.95]{images/dataset2/data_profiling/Credit_Score_mv.png}
+\centering\includegraphics[scale=0.95]{ds_latex/report_imgs/Credit_Score_mv.png}
 \caption{Nr missing values for dataset 1 (left) and dataset 2 (right)}
 \end{figure}
 
@@ -102,8 +98,7 @@
 \ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to the data distribution perspective, such as each variable distribution, type, domain and range. May be used to describe any useful observation about the data, and that was used in the current project.  \textbf{Shall not exceed 500 characters.}} 
 
 \begin{figure}[H]
-  \includegraphics[scale=0.50]{images/dataset1/data_profiling/CovidPos_global_boxplot.png}
-  %\centering\includegraphics[scale=0.95]{images/dataset2/data_profiling/Credit_Score_global_boxplot_modified.png}
+\centering\includegraphics[scale=0.95]{ds_latex/report_imgs/Credit_Score_global_boxplot_modified.png}
 \caption{Global boxplots dataset 1 (left) and dataset 2 (right)}
 \end{figure}
 
@@ -113,7 +108,7 @@
 \end{figure}
 
 \begin{figure}[H]
-%\centering\includegraphics[scale=0.6]{images/dataset2/data_profiling/Credit_Score_single_boxplots.png}
+\centering\includegraphics[scale=0.6]{ds_latex/report_imgs/Credit_Score_single_boxplots.png}
 \caption{Single variables boxplots for dataset 2}
 \end{figure}
 
@@ -123,7 +118,7 @@
 \end{figure}
 
 \begin{figure}[H]
-%\centering\includegraphics[scale=0.6]{images/dataset2/data_profiling/Credit_Score_single_histograms_numeric.png}
+\centering\includegraphics[scale=0.6]{ds_latex/report_imgs/Credit_Score_single_histograms_numeric.png}
 \caption{Histograms for dataset 2} %(with distributions is enough)
 \end{figure}
 
@@ -133,7 +128,7 @@
 \end{figure}
 
 \begin{figure}[H]
-%\centering\includegraphics[scale=0.8]{images/dataset2/data_profiling/Credit_Score_outliers_standard.png}
+\centering\includegraphics[scale=0.8]{ds_latex/report_imgs/Credit_Score_outliers_standard.png}
 \caption{Outliers study dataset 2}
 \end{figure}
 
@@ -143,7 +138,7 @@
 \end{figure}
 
 \begin{figure}[H]
-%\centering\includegraphics[scale=0.95]{images/dataset2/data_profiling/Credit_Score_class_distribution.png}
+\centering\includegraphics[scale=0.95]{ds_latex/report_imgs/Credit_Score_class_distribution.png}
 \caption{Class distribution for dataset 2}
 \end{figure}
 
