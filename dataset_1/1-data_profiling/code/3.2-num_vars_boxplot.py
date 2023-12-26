@@ -24,7 +24,9 @@ if [] != numeric:
     for n in range(len(numeric)):
         axs[i, j].set_title("Boxplot for %s" % numeric[n])
         axs[i, j].boxplot(data[numeric[n]].dropna().values)
+        axs[i, j].set_xticklabels(["%s" % numeric[n]])
         i, j = (i + 1, 0) if (n + 1) % cols == 0 else (i, j + 1)
+
     savefig(f"../images/{file_tag}_single_boxplots.png")
     show()
 else:
