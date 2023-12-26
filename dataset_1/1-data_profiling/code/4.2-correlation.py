@@ -14,10 +14,11 @@ corr_mtx: DataFrame = data[numeric+binary].corr().abs()
 
 # Create a heatmap using matplotlib
 fig, ax = plt.subplots(figsize=(10, 8))
+fig.suptitle(f"Correlation (all x all - including class)")
 cax = ax.matshow(abs(corr_mtx), cmap='Blues')
 plt.xticks(range(len(numeric)+len(binary)), numeric+binary, rotation=45, ha='left')
 plt.yticks(range(len(numeric)+len(binary)), numeric+binary)
 plt.colorbar(cax)
-
+plt.tight_layout()
 plt.savefig(f"../images/{file_tag}_correlation_analysis.png")
 plt.show()
