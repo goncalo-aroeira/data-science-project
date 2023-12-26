@@ -118,7 +118,7 @@ def correlationAll(data: DataFrame, file_tag: str):
     numeric: list[str] = variables_types["numeric"]
     corr_mtx: DataFrame = data[numeric].corr().abs()
 
-    fig = figure(figsize=(5, 4))
+    fig = figure(figsize=(8, 6))
     fig.suptitle(f"Correlation (all x all - including class)")
     ax = heatmap(
         abs(corr_mtx),
@@ -131,7 +131,7 @@ def correlationAll(data: DataFrame, file_tag: str):
     )
     ax.set_xticklabels(numeric, rotation=40, ha='right')
     tight_layout()
-    savefig(f"images/lab1/{file_tag}_correlation_analysis.png")
+    savefig(f"images/lab1/{file_tag}_correlation_analysis.png", bbox_inches="tight")
     show()
 
 #***********************************************************************************
@@ -553,19 +553,22 @@ def class_distribution(data: DataFrame, file_tag: str, target: str):
 
 
 if __name__ == "__main__":
-    filename = "data/class_credit_score.csv"
+    #filename = "data/class_credit_score.csv"
+    filename = "data/ccs_vars_encoded.csv"
     file_tag = "Credit_Score"
     target = "Credit_Score"
-    data: DataFrame = read_csv(filename, na_values="", index_col="ID")
+    #data: DataFrame = read_csv(filename, na_values="", index_col="")
+    data: DataFrame = read_csv(filename, na_values="", index_col="Unnamed: 0")
     
     stroke: DataFrame = read_csv("data/stroke.csv", na_values="")
 
     #print(data.shape)
     #print(data.head)
-    data['Age'] = data['Age'].astype(str).str.replace('_', '', regex=False).astype(int)
+    
+    #data['Age'] = data['Age'].astype(str).str.replace('_', '', regex=False).astype(int)
     
     # granularity
-    symbolic_variables_granularity(data, file_tag)
+    #symbolic_variables_granularity(data, file_tag)
 
     # distribution
     #global_box_plot(data, file_tag)
@@ -578,4 +581,4 @@ if __name__ == "__main__":
     
     # Data Sparsity
     #scatterPlots(data, file_tag, target)
-    #correlationAll(data, file_tag)
+    correlationAll(data, file_tag)
