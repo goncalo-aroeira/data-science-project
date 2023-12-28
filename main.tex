@@ -75,6 +75,9 @@
 
 \section{DATA PROFILING}
 \ctext[RGB]{190,190,190}{May be used to describe any useful observation about the data, and that was used in the current project. An example is the use of any domain knowledge to process the data or evaluate the results. \textbf{Shall not exceed 200 characters.}}
+\par For the second dataset, the services domain one, we didn't do much processing prior to the study of the data for most forms 
+of analysis. We simply noticed that the \textbf{age} variable had values with the character "\_" which we removed for it to 
+become a numeric variable as it is. There were several anomalies in the values for some of the variables. We decided to keep these values for the profiling.
 
 \subsection*{\textit{Data Dimensionality}}
 \ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to the data dimensionality perspective, such as the number of records and number of dimensions, and their impact on the following analysis. \textbf{Shall not exceed 500 characters.}}
@@ -85,18 +88,26 @@
 \includegraphics[scale=0.7]{images/dataset2/data_profiling/Credit_Score_records_variables.png}
 \caption{Nr Records x Nr variables for dataset 1 (left) and dataset 2 (right)} 
 \end{figure}
+We can see that for both datasets there are much more records than variables, avoiding the curse of dimensionality.
 
 \begin{figure}[H]
   \includegraphics[scale=0.70]{images/dataset1/data_profiling/CovidPos_variable_types.png}
   \centering\includegraphics[scale=0.7]{images/dataset2/data_profiling/Credit_Score_variable_types.png}
 \caption{Nr variables per type for dataset 1 (left) and dataset 2 (right)}
 \end{figure}
+Neither dataset has \textit{date} variables, meaning that theres is no time frame associated with them or the records.
+The dataset about health has predominantly symbolic variables, especially symbolic. This is expected as it is harder 
+to quantify clinical observations about the state of a person. In contrast, the services dataset has mainly numerical variables.
+These offer more precision and are more easily obtained in the financial context the data is in.
 
 \begin{figure}[H]
   \includegraphics[scale=0.70]{images/dataset1/data_profiling/CovidPos_mv.png}
   \centering\includegraphics[scale=0.7]{images/dataset2/data_profiling/Credit_Score_mv.png}
 \caption{Nr missing values for dataset 1 (left) and dataset 2 (right)}
 \end{figure}
+For the health domain dataset, the number of records is 380.932. The variable with the most missing values has less than 10\% of missing values.
+This indicates that some sort of imputation might be a viable option to address them. The second dataset has variables with a bigger ratio 
+of missing values. However these ratios don't go over 20\%, making it unlikely that it will be better to drop said variables.
 
 \subsection*{\textit{Data Distribution}}
 \ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to the data distribution perspective, such as each variable distribution, type, domain and range. May be used to describe any useful observation about the data, and that was used in the current project.  \textbf{Shall not exceed 500 characters.}} 

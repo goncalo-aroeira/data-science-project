@@ -1,0 +1,614 @@
+PWD /home/josecruz/Documents/MEIC/CD/CD_project
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/main.tex
+OUTPUT /home/josecruz/Documents/MEIC/CD/CD_project/main.log
+INPUT /usr/share/texlive/texmf-dist/tex/latex/extsizes/extarticle.cls
+INPUT /usr/share/texlive/texmf-dist/tex/latex/extsizes/extarticle.cls
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/exscale.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/exscale.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/anyfontsize.sty
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/anyfontsize.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/multirow.sty
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/multirow.sty
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/soul.sty
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/soul.sty
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/soul-ori.sty
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/soul-ori.sty
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/blindtext.sty
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/blindtext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/titling.sty
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/titling.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/placeins.sty
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/placeins.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/main.aux
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/main.aux
+OUTPUT /home/josecruz/Documents/MEIC/CD/CD_project/main.aux
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecss1000.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecss1728.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecss1200.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecsx1000.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecsi1000.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecss1440.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecsx1440.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecsx2074.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecsx1200.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecso1200.tfm
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_records_variables.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_records_variables.png
+OUTPUT /home/josecruz/Documents/MEIC/CD/CD_project/main.pdf
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_records_variables.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_records_variables.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_records_variables.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_records_variables.png
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecss3583.tfm
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/./images/tecnico_logo.jpg
+INPUT ./images/tecnico_logo.jpg
+INPUT ./images/tecnico_logo.jpg
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_variable_types.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_variable_types.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_variable_types.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_variable_types.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_variable_types.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_variable_types.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_mv.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_mv.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_mv.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_mv.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_mv.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_mv.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_global_boxplot.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_global_boxplot.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_global_boxplot.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_global_boxplot.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_global_boxplot.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_global_boxplot.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_single_boxplots.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_single_boxplots.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_single_boxplots.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_single_boxplots.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_single_boxplots.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_single_boxplots.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_single_histograms_numeric.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_single_histograms_numeric.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_single_histograms_numeric.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_single_histograms_numeric.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_single_histograms_numeric.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_single_histograms_numeric.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_outliers_standard.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_outliers_standard.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_outliers_standard.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_outliers_standard.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_outliers_standard.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_outliers_standard.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_class_distribution.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_class_distribution.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_class_distribution.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_class_distribution.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_class_distribution.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_class_distribution.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_correlation_analysis.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_correlation_analysis.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_correlation_analysis.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_correlation_analysis.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_correlation_analysis.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_correlation_analysis.png
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecso1000.tfm
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_mvi_freq_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_mvi_freq_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_mvi_freq_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_mvi_knn_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_mvi_knn_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_mvi_knn_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_mvi_freq_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_mvi_freq_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_mvi_freq_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_mvi_knn_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_mvi_knn_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_mvi_knn_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_outliers_treat_rep_fixed_median.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_outliers_treat_rep_fixed_median.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_outliers_treat_rep_fixed_median.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_NotStdBased.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_NotStdBased.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_NotStdBased.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_stdBased.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_stdBased.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_stdBased.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_outliers_treat_truncating_minmax.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_outliers_treat_truncating_minmax.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_outliers_treat_truncating_minmax.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_outliers_treat_rep_fixed_median.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_outliers_treat_rep_fixed_median.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_outliers_treat_rep_fixed_median.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_outliers_treat_rowDrop_NotStdBased.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_outliers_treat_rowDrop_NotStdBased.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_outliers_treat_rowDrop_NotStdBased.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_outliers_treat_rowDrop_stdBased.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_outliers_treat_rowDrop_stdBased.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_outliers_treat_rowDrop_stdBased.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_outliers_treat_truncating_minmax.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_outliers_treat_truncating_minmax.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_outliers_treat_truncating_minmax.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax1.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax1.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax1.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax2.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax2.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax2.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_scaling_treat_Original.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_scaling_treat_Original.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_scaling_treat_Original.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_scaling_treat_Z-Score.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_scaling_treat_Z-Score.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_scaling_treat_Z-Score.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_scaling_MinMax.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_scaling_MinMax.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_scaling_MinMax.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_scaling_Original.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_scaling_Original.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_scaling_Original.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_scaling_Z-Score.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_scaling_Z-Score.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_scaling_Z-Score.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_balancing_oversampling.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_balancing_oversampling.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_balancing_oversampling.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_balancing_undersampling.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_balancing_undersampling.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_balancing_undersampling.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_balancing_SMOTE.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_balancing_SMOTE.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_balancing_SMOTE.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_balancing_oversampling.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_balancing_oversampling.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_balancing_oversampling.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_balancing_undersampling.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_balancing_undersampling.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_balancing_undersampling.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_balancing_SMOTE.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_balancing_SMOTE.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_balancing_SMOTE.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_fs_low_var_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_fs_low_var_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_fs_low_var_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_fs_redundancy_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_fs_redundancy_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_fs_redundancy_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_fs_low_var_accuracy_study_.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_fs_low_var_accuracy_study_.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_fs_low_var_accuracy_study_.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_fs_redundancy_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_fs_redundancy_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_fs_redundancy_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_pca_explained_variance_ratio.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_pca_explained_variance_ratio.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_pca_explained_variance_ratio.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_nb_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_nb_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_nb_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_nb_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_nb_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_nb_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_GaussianNB_best_recall_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_GaussianNB_best_recall_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_GaussianNB_best_recall_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_nb_BernoulliNB_best_accuracy_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_nb_BernoulliNB_best_accuracy_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_nb_BernoulliNB_best_accuracy_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_knn_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_knn_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_knn_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_knn_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_knn_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_knn_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_knn_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_knn_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_knn_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_knn_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_knn_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_knn_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_knn_KNN_best_recall_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_knn_KNN_best_recall_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_knn_KNN_best_recall_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_knn_KNN_best_accuracy_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_knn_KNN_best_accuracy_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_knn_KNN_best_accuracy_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_dt_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_dt_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_dt_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_DT_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_DT_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_DT_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_dt_accuracy_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_dt_accuracy_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_dt_accuracy_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_DT_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_DT_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_DT_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_dt_DT_best_accuracy_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_dt_DT_best_accuracy_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_dt_DT_best_accuracy_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_DT_best_accuracy_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_DT_best_accuracy_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_DT_best_accuracy_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_dt_accuracy_best_tree.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_dt_accuracy_best_tree.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_dt_accuracy_best_tree.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_DT_best_tree.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_DT_best_tree.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_DT_best_tree.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_f1_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_f1_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_f1_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_precision_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_precision_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_precision_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_auc_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_auc_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_auc_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_f1_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_f1_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_f1_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_precision_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_precision_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_precision_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_auc_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_auc_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_auc_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_f1_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_f1_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_f1_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_accuracy_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_accuracy_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_accuracy_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_RF_best_recall_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_RF_best_recall_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_RF_best_recall_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_RF_best_accuracy_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_RF_best_accuracy_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_RF_best_accuracy_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_recall_vars_ranking.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_recall_vars_ranking.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_recall_vars_ranking.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_accuracy_vars_ranking.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_accuracy_vars_ranking.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_accuracy_vars_ranking.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_f1_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_f1_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_f1_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_precision_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_precision_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_precision_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_auc_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_auc_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_auc_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_gb_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_gb_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_gb_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_accuracy_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_accuracy_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_accuracy_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_gb_accuracy_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_gb_accuracy_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_gb_accuracy_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_GB_best_recall_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_GB_best_recall_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_GB_best_recall_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_gb_best_model_performance_accuracy.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_gb_best_model_performance_accuracy.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_gb_best_model_performance_accuracy.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_recall_vars_ranking.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_recall_vars_ranking.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_recall_vars_ranking.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_gb_accuracy_vars_ranking.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_gb_accuracy_vars_ranking.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_gb_accuracy_vars_ranking.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_f1_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_f1_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_f1_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_precision_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_precision_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_precision_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_auc_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_auc_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_auc_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_recall_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_f1_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_f1_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_f1_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_precision_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_precision_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_precision_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_auc_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_auc_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_auc_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_recall_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_recall_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_recall_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_overfitting.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_MLP_best_recall_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_MLP_best_recall_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_MLP_best_recall_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_MLP_best_accuracy_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_MLP_best_accuracy_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_MLP_best_accuracy_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_granularity_aggregation_W.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_granularity_aggregation_W.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_granularity_aggregation_W.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_granularity_aggregation_M.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_granularity_aggregation_M.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_granularity_aggregation_M.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_granularity_aggregation_Q.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_granularity_aggregation_Q.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_granularity_aggregation_Q.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_distribution_boxplot.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_distribution_boxplot.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_distribution_boxplot.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_boxplot.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_boxplot.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_boxplot.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_distribution_histogram.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_distribution_histogram.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_distribution_histogram.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_histogram.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_histogram.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_histogram.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_components_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_components_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_components_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_stationarity_study_1.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_stationarity_study_1.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_stationarity_study_1.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_stationarity_study_2.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_stationarity_study_2.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_stationarity_study_2.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_components_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_components_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_components_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_stationarity_study_1.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_stationarity_study_1.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_stationarity_study_1.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_stationarity_study_2.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_stationarity_study_2.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_stationarity_study_2.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Weekly - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Weekly - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Weekly - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Monthly - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Monthly - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Monthly - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Quarterly - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Quarterly - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Quarterly - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Weekly - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Weekly - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Weekly - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Monthly - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Monthly - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Monthly - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Quarterly - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Quarterly - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Quarterly - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Window Size 25 - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Window Size 25 - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Window Size 25 - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Window Size 50 - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Window Size 50 - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Window Size 50 - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Window Size 75 - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Window Size 75 - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Window Size 75 - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Window Size 100 - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Window Size 100 - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Window Size 100 - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Window_Size_25 - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Window_Size_25 - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Window_Size_25 - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Window_Size_50 - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Window_Size_50 - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Window_Size_50 - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Window_Size_75 - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Window_Size_75 - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Window_Size_75 - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Window_Size_100 - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Window_Size_100 - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Window_Size_100 - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid First derivative - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid First derivative - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid First derivative - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Second derivative - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Second derivative - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Second derivative - Linear Regression_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_First derivative - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_First derivative - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_First derivative - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Second derivative - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Second derivative - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Second derivative - Linear Regression_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_deaths_scaling.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_deaths_scaling.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_deaths_scaling.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Simple Average_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Simple Average_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Simple Average_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Simple Average_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Simple Average_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Simple Average_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Persistence Optimist_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Persistence Optimist_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Persistence Optimist_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Persistence Realist_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Persistence Realist_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Persistence Realist_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Persistence Optimist_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Persistence Optimist_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Persistence Optimist_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Persistence Realist_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Persistence Realist_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Persistence Realist_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_rollingmean_R2_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_rollingmean_R2_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_rollingmean_R2_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_arima_R2_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_arima_R2_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_arima_R2_study.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - ARIMA _forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - ARIMA _forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - ARIMA _forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - ARIMA (p=7, d=2, q=5)_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - ARIMA (p=7, d=2, q=5)_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - ARIMA (p=7, d=2, q=5)_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_lstm_study_R2.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_lstm_study_R2.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_lstm_study_R2.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - LSTMs _forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - LSTMs _forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - LSTMs _forecasting_series.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - LSTM (length=4, hidden=100, epochs=900)_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - LSTM (length=4, hidden=100, epochs=900)_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - LSTM (length=4, hidden=100, epochs=900)_forecasting_eval.png
+INPUT /home/josecruz/Documents/MEIC/CD/CD_project/main.aux
+INPUT /home/josecruz/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecso1000.600pk
+INPUT /home/josecruz/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecso1200.600pk
+INPUT /home/josecruz/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx1440.600pk
+INPUT /home/josecruz/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx2074.617pk
+INPUT /home/josecruz/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsi1000.600pk
+INPUT /home/josecruz/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1000.600pk
+INPUT /home/josecruz/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx1000.600pk
+INPUT /home/josecruz/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss3583.603pk
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
