@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.12.27)  28 DEC 2023 15:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.12.27)  29 DEC 2023 16:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -390,10 +390,10 @@ Package pdftex.def Info: images/dataset2/data_profiling/Credit_Score_global_boxp
 <images/dataset1/data_profiling/CovidPos_single_boxplots.png, id=36, 867.24pt x 578.16pt>
 File: images/dataset1/data_profiling/CovidPos_single_boxplots.png Graphic file (type png)
 <use images/dataset1/data_profiling/CovidPos_single_boxplots.png>
-Package pdftex.def Info: images/dataset1/data_profiling/CovidPos_single_boxplots.png  used on input line 122.
+Package pdftex.def Info: images/dataset1/data_profiling/CovidPos_single_boxplots.png  used on input line 126.
 (pdftex.def)             Requested size: 520.34802pt x 346.89867pt.
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 122--123
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 126--127
  [][] 
  []
 
@@ -401,10 +401,10 @@ Overfull \hbox (19.86403pt too wide) in paragraph at lines 122--123
 <images/dataset2/data_profiling/Credit_Score_single_boxplots.png, id=42, 867.24pt x 1734.48pt>
 File: images/dataset2/data_profiling/Credit_Score_single_boxplots.png Graphic file (type png)
 <use images/dataset2/data_profiling/Credit_Score_single_boxplots.png>
-Package pdftex.def Info: images/dataset2/data_profiling/Credit_Score_single_boxplots.png  used on input line 127.
+Package pdftex.def Info: images/dataset2/data_profiling/Credit_Score_single_boxplots.png  used on input line 132.
 (pdftex.def)             Requested size: 520.34802pt x 1040.69604pt.
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 127--128
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 132--133
  [][] 
  []
 
@@ -412,1101 +412,1128 @@ Overfull \hbox (19.86403pt too wide) in paragraph at lines 127--128
 Overfull \vbox (409.98982pt too high) has occurred while \output is active []
 
  [6 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_single_boxplots.png>]
-<images/dataset1/data_profiling/CovidPos_single_histograms_numeric.png, id=51, 867.24pt x 578.16pt>
-File: images/dataset1/data_profiling/CovidPos_single_histograms_numeric.png Graphic file (type png)
-<use images/dataset1/data_profiling/CovidPos_single_histograms_numeric.png>
-Package pdftex.def Info: images/dataset1/data_profiling/CovidPos_single_histograms_numeric.png  used on input line 132.
+<images/dataset1/data_profiling/CovidPos_histogram_numeric_distribution.png, id=51, 867.24pt x 578.16pt>
+File: images/dataset1/data_profiling/CovidPos_histogram_numeric_distribution.png Graphic file (type png)
+<use images/dataset1/data_profiling/CovidPos_histogram_numeric_distribution.png>
+Package pdftex.def Info: images/dataset1/data_profiling/CovidPos_histogram_numeric_distribution.png  used on input line 141.
 (pdftex.def)             Requested size: 520.34802pt x 346.89867pt.
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 132--133
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 141--142
  [][] 
  []
 
-<images/dataset2/data_profiling/Credit_Score_single_histograms_numeric.png, id=52, 867.24pt x 1734.48pt>
-File: images/dataset2/data_profiling/Credit_Score_single_histograms_numeric.png Graphic file (type png)
-<use images/dataset2/data_profiling/Credit_Score_single_histograms_numeric.png>
-Package pdftex.def Info: images/dataset2/data_profiling/Credit_Score_single_histograms_numeric.png  used on input line 137.
-(pdftex.def)             Requested size: 520.34802pt x 1040.69604pt.
+<images/dataset2/data_profiling/Credit_Score_histogram_numeric_distribution.png, id=52, 867.24pt x 1445.4pt>
+File: images/dataset2/data_profiling/Credit_Score_histogram_numeric_distribution.png Graphic file (type png)
+<use images/dataset2/data_profiling/Credit_Score_histogram_numeric_distribution.png>
+Package pdftex.def Info: images/dataset2/data_profiling/Credit_Score_histogram_numeric_distribution.png  used on input line 150.
+(pdftex.def)             Requested size: 520.34802pt x 867.2467pt.
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 137--138
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 150--151
  [][] 
  []
 
-[7 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_single_histograms_numeric.png>]
-Overfull \vbox (409.98982pt too high) has occurred while \output is active []
+[7 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_histogram_numeric_distribution.png>]
+Overfull \vbox (236.54048pt too high) has occurred while \output is active []
 
- [8 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_single_histograms_numeric.png>]
+ [8 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_histogram_numeric_distribution.png>]
 <images/dataset1/data_profiling/CovidPos_outliers_standard.png, id=62, 867.24pt x 289.08pt>
 File: images/dataset1/data_profiling/CovidPos_outliers_standard.png Graphic file (type png)
 <use images/dataset1/data_profiling/CovidPos_outliers_standard.png>
-Package pdftex.def Info: images/dataset1/data_profiling/CovidPos_outliers_standard.png  used on input line 142.
+Package pdftex.def Info: images/dataset1/data_profiling/CovidPos_outliers_standard.png  used on input line 159.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 142--143
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 159--160
  [][] 
  []
 
 <images/dataset2/data_profiling/Credit_Score_outliers_standard.png, id=63, 1445.4pt x 289.08pt>
 File: images/dataset2/data_profiling/Credit_Score_outliers_standard.png Graphic file (type png)
 <use images/dataset2/data_profiling/Credit_Score_outliers_standard.png>
-Package pdftex.def Info: images/dataset2/data_profiling/Credit_Score_outliers_standard.png  used on input line 147.
+Package pdftex.def Info: images/dataset2/data_profiling/Credit_Score_outliers_standard.png  used on input line 164.
 (pdftex.def)             Requested size: 867.2467pt x 173.44933pt.
 
-Overfull \hbox (366.76271pt too wide) in paragraph at lines 147--148
+Overfull \hbox (366.76271pt too wide) in paragraph at lines 164--165
  [][] 
  []
 
 <images/dataset1/data_profiling/CovidPos_class_distribution.png, id=64, 289.08pt x 144.54pt>
 File: images/dataset1/data_profiling/CovidPos_class_distribution.png Graphic file (type png)
 <use images/dataset1/data_profiling/CovidPos_class_distribution.png>
-Package pdftex.def Info: images/dataset1/data_profiling/CovidPos_class_distribution.png  used on input line 152.
+Package pdftex.def Info: images/dataset1/data_profiling/CovidPos_class_distribution.png  used on input line 173.
 (pdftex.def)             Requested size: 274.62444pt x 137.3122pt.
-<images/dataset2/data_profiling/Credit_Score_class_distribution.png, id=65, 263.5446pt x 158.0304pt>
+[9 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_outliers_standard.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_outliers_standard.png>]
+<images/dataset2/data_profiling/Credit_Score_class_distribution.png, id=70, 263.5446pt x 158.0304pt>
 File: images/dataset2/data_profiling/Credit_Score_class_distribution.png Graphic file (type png)
 <use images/dataset2/data_profiling/Credit_Score_class_distribution.png>
-Package pdftex.def Info: images/dataset2/data_profiling/Credit_Score_class_distribution.png  used on input line 157.
+Package pdftex.def Info: images/dataset2/data_profiling/Credit_Score_class_distribution.png  used on input line 179.
 (pdftex.def)             Requested size: 250.36594pt x 150.128pt.
-[9 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_outliers_standard.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_outliers_standard.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_class_distribution.png>]
-<images/dataset1/data_profiling/CovidPos_correlation_analysis.png, id=72, 722.7pt x 578.16pt>
+<images/dataset2/data_profiling/Credit_Score_granularity.png, id=71, 723.6636pt x 1113.4398pt>
+File: images/dataset2/data_profiling/Credit_Score_granularity.png Graphic file (type png)
+<use images/dataset2/data_profiling/Credit_Score_granularity.png>
+Package pdftex.def Info: images/dataset2/data_profiling/Credit_Score_granularity.png  used on input line 194.
+(pdftex.def)             Requested size: 687.47653pt x 1057.76183pt.
+
+Overfull \hbox (186.99254pt too wide) in paragraph at lines 194--195
+ [][] 
+ []
+
+[10 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_class_distribution.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_class_distribution.png>]
+Overfull \vbox (427.0556pt too high) has occurred while \output is active []
+
+ [11 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_granularity.png>]
+<images/dataset1/data_profiling/CovidPos_sparsity_per_class_study.png, id=81, 11274.12pt x 11274.12pt>
+File: images/dataset1/data_profiling/CovidPos_sparsity_per_class_study.png Graphic file (type png)
+<use images/dataset1/data_profiling/CovidPos_sparsity_per_class_study.png>
+Package pdftex.def Info: images/dataset1/data_profiling/CovidPos_sparsity_per_class_study.png  used on input line 207.
+(pdftex.def)             Requested size: 10710.35362pt x 10710.35362pt.
+
+Overfull \hbox (10209.86963pt too wide) in paragraph at lines 207--208
+ [][] 
+ []
+
+[12]
+Overfull \vbox (10079.6474pt too high) has occurred while \output is active []
+
+ [13 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_sparsity_per_class_study.png>]
+<images/dataset1/data_profiling/CovidPos_correlation_analysis.png, id=90, 722.7pt x 578.16pt>
 File: images/dataset1/data_profiling/CovidPos_correlation_analysis.png Graphic file (type png)
 <use images/dataset1/data_profiling/CovidPos_correlation_analysis.png>
-Package pdftex.def Info: images/dataset1/data_profiling/CovidPos_correlation_analysis.png  used on input line 188.
+Package pdftex.def Info: images/dataset1/data_profiling/CovidPos_correlation_analysis.png  used on input line 217.
 (pdftex.def)             Requested size: 433.62334pt x 346.89867pt.
- [10 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_class_distribution.png>]
-<images/dataset2/data_profiling/Credit_Score_correlation_analysis.png, id=77, 531.4254pt x 428.3202pt>
+<images/dataset2/data_profiling/Credit_Score_correlation_analysis.png, id=91, 531.4254pt x 428.3202pt>
 File: images/dataset2/data_profiling/Credit_Score_correlation_analysis.png Graphic file (type png)
 <use images/dataset2/data_profiling/Credit_Score_correlation_analysis.png>
-Package pdftex.def Info: images/dataset2/data_profiling/Credit_Score_correlation_analysis.png  used on input line 193.
+Package pdftex.def Info: images/dataset2/data_profiling/Credit_Score_correlation_analysis.png  used on input line 224.
 (pdftex.def)             Requested size: 318.85768pt x 256.9941pt.
- [11 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_correlation_analysis.png>]
-<images/dataset1/data_preparation/CovidPos_mvi_freq_eval.png, id=82, 289.08pt x 216.81pt>
+ [14 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_profiling/CovidPos_correlation_analysis.png>]
+<images/dataset1/data_preparation/CovidPos_mvi_freq_eval.png, id=96, 289.08pt x 216.81pt>
 File: images/dataset1/data_preparation/CovidPos_mvi_freq_eval.png Graphic file (type png)
 <use images/dataset1/data_preparation/CovidPos_mvi_freq_eval.png>
-Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_mvi_freq_eval.png  used on input line 206.
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_mvi_freq_eval.png  used on input line 240.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
-<images/dataset1/data_preparation/CovidPos_mvi_knn_eval.png, id=83, 289.08pt x 216.81pt>
+<images/dataset1/data_preparation/CovidPos_mvi_knn_eval.png, id=97, 289.08pt x 216.81pt>
 File: images/dataset1/data_preparation/CovidPos_mvi_knn_eval.png Graphic file (type png)
 <use images/dataset1/data_preparation/CovidPos_mvi_knn_eval.png>
-Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_mvi_knn_eval.png  used on input line 207.
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_mvi_knn_eval.png  used on input line 241.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
- [12 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_correlation_analysis.png>]
-<images/dataset2/data_preparation/Credit_Score_mvi_freq_eval.png, id=89, 289.08pt x 216.81pt>
+ [15 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_profiling/Credit_Score_correlation_analysis.png>]
+<images/dataset2/data_preparation/Credit_Score_mvi_freq_eval.png, id=103, 289.08pt x 216.81pt>
 File: images/dataset2/data_preparation/Credit_Score_mvi_freq_eval.png Graphic file (type png)
 <use images/dataset2/data_preparation/Credit_Score_mvi_freq_eval.png>
-Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_mvi_freq_eval.png  used on input line 212.
+Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_mvi_freq_eval.png  used on input line 246.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
-<images/dataset2/data_preparation/Credit_Score_mvi_knn_eval.png, id=90, 289.08pt x 216.81pt>
+<images/dataset2/data_preparation/Credit_Score_mvi_knn_eval.png, id=104, 289.08pt x 216.81pt>
 File: images/dataset2/data_preparation/Credit_Score_mvi_knn_eval.png Graphic file (type png)
 <use images/dataset2/data_preparation/Credit_Score_mvi_knn_eval.png>
-Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_mvi_knn_eval.png  used on input line 213.
+Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_mvi_knn_eval.png  used on input line 247.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
-<images/dataset1/data_preparation/CovidPos_outliers_treat_rep_fixed_median.png, id=91, 289.08pt x 216.81pt>
+<images/dataset1/data_preparation/CovidPos_outliers_treat_rep_fixed_median.png, id=105, 289.08pt x 216.81pt>
 File: images/dataset1/data_preparation/CovidPos_outliers_treat_rep_fixed_median.png Graphic file (type png)
 <use images/dataset1/data_preparation/CovidPos_outliers_treat_rep_fixed_median.png>
-Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_outliers_treat_rep_fixed_median.png  used on input line 221.
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_outliers_treat_rep_fixed_median.png  used on input line 255.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
-<images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_NotStdBased.png, id=92, 289.08pt x 216.81pt>
+<images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_NotStdBased.png, id=106, 289.08pt x 216.81pt>
 File: images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_NotStdBased.png Graphic file (type png)
 <use images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_NotStdBased.png>
-Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_NotStdBased.png  used on input line 222.
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_NotStdBased.png  used on input line 256.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
-<images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_StdBased.png, id=93, 289.08pt x 216.81pt>
+<images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_StdBased.png, id=107, 289.08pt x 216.81pt>
 File: images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_StdBased.png Graphic file (type png)
 <use images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_StdBased.png>
-Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_StdBased.png  used on input line 223.
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_StdBased.png  used on input line 257.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
-<images/dataset1/data_preparation/CovidPos_outliers_treat_truncating_minmax.png, id=94, 289.08pt x 216.81pt>
+<images/dataset1/data_preparation/CovidPos_outliers_treat_truncating_minmax.png, id=108, 289.08pt x 216.81pt>
 File: images/dataset1/data_preparation/CovidPos_outliers_treat_truncating_minmax.png Graphic file (type png)
 <use images/dataset1/data_preparation/CovidPos_outliers_treat_truncating_minmax.png>
-Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_outliers_treat_truncating_minmax.png  used on input line 224.
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_outliers_treat_truncating_minmax.png  used on input line 258.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
- [13 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_mvi_freq_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_mvi_knn_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_mvi_freq_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_mvi_knn_eval.png>]
-<images/dataset2/data_preparation/Credit_Score_outliers_treat_rep_fixed_median.png, id=103, 289.08pt x 216.81pt>
+ [16 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_mvi_freq_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_mvi_knn_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_mvi_freq_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_mvi_knn_eval.png>]
+<images/dataset2/data_preparation/Credit_Score_outliers_treat_rep_fixed_median.png, id=116, 289.08pt x 216.81pt>
 File: images/dataset2/data_preparation/Credit_Score_outliers_treat_rep_fixed_median.png Graphic file (type png)
 <use images/dataset2/data_preparation/Credit_Score_outliers_treat_rep_fixed_median.png>
-Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_outliers_treat_rep_fixed_median.png  used on input line 229.
+Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_outliers_treat_rep_fixed_median.png  used on input line 263.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
-<images/dataset2/data_preparation/Credit_Score_outliers_treat_rowDrop_NotStdBased.png, id=104, 289.08pt x 216.81pt>
+<images/dataset2/data_preparation/Credit_Score_outliers_treat_rowDrop_NotStdBased.png, id=117, 289.08pt x 216.81pt>
 File: images/dataset2/data_preparation/Credit_Score_outliers_treat_rowDrop_NotStdBased.png Graphic file (type png)
 <use images/dataset2/data_preparation/Credit_Score_outliers_treat_rowDrop_NotStdBased.png>
-Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_outliers_treat_rowDrop_NotStdBased.png  used on input line 230.
+Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_outliers_treat_rowDrop_NotStdBased.png  used on input line 264.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
-<images/dataset2/data_preparation/Credit_Score_outliers_treat_rowDrop_StdBased.png, id=105, 289.08pt x 216.81pt>
+<images/dataset2/data_preparation/Credit_Score_outliers_treat_rowDrop_StdBased.png, id=118, 289.08pt x 216.81pt>
 File: images/dataset2/data_preparation/Credit_Score_outliers_treat_rowDrop_StdBased.png Graphic file (type png)
 <use images/dataset2/data_preparation/Credit_Score_outliers_treat_rowDrop_StdBased.png>
-Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_outliers_treat_rowDrop_StdBased.png  used on input line 231.
+Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_outliers_treat_rowDrop_StdBased.png  used on input line 265.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
-<images/dataset2/data_preparation/Credit_Score_outliers_treat_truncating_minmax.png, id=106, 289.08pt x 216.81pt>
+<images/dataset2/data_preparation/Credit_Score_outliers_treat_truncating_minmax.png, id=119, 289.08pt x 216.81pt>
 File: images/dataset2/data_preparation/Credit_Score_outliers_treat_truncating_minmax.png Graphic file (type png)
 <use images/dataset2/data_preparation/Credit_Score_outliers_treat_truncating_minmax.png>
-Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_outliers_treat_truncating_minmax.png  used on input line 232.
+Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_outliers_treat_truncating_minmax.png  used on input line 266.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
- [14 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_outliers_treat_rep_fixed_median.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_NotStdBased.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_stdBased.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_outliers_treat_truncating_minmax.png>]
-<images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax1.png, id=114, 289.08pt x 216.81pt>
+ [17 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_outliers_treat_rep_fixed_median.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_NotStdBased.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_stdBased.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_outliers_treat_truncating_minmax.png>]
+<images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax1.png, id=127, 289.08pt x 216.81pt>
 File: images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax1.png Graphic file (type png)
 <use images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax1.png>
-Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax1.png  used on input line 240.
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax1.png  used on input line 274.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
-<images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax2.png, id=115, 289.08pt x 216.81pt>
+<images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax2.png, id=128, 289.08pt x 216.81pt>
 File: images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax2.png Graphic file (type png)
 <use images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax2.png>
-Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax2.png  used on input line 241.
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax2.png  used on input line 275.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
-<images/dataset1/data_preparation/CovidPos_scaling_treat_Original.png, id=116, 289.08pt x 216.81pt>
+<images/dataset1/data_preparation/CovidPos_scaling_treat_Original.png, id=129, 289.08pt x 216.81pt>
 File: images/dataset1/data_preparation/CovidPos_scaling_treat_Original.png Graphic file (type png)
 <use images/dataset1/data_preparation/CovidPos_scaling_treat_Original.png>
-Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_scaling_treat_Original.png  used on input line 242.
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_scaling_treat_Original.png  used on input line 276.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
-<images/dataset1/data_preparation/CovidPos_scaling_treat_Z-Score.png, id=117, 289.08pt x 216.81pt>
+<images/dataset1/data_preparation/CovidPos_scaling_treat_Z-Score.png, id=130, 289.08pt x 216.81pt>
 File: images/dataset1/data_preparation/CovidPos_scaling_treat_Z-Score.png Graphic file (type png)
 <use images/dataset1/data_preparation/CovidPos_scaling_treat_Z-Score.png>
-Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_scaling_treat_Z-Score.png  used on input line 243.
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_scaling_treat_Z-Score.png  used on input line 277.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
- [15 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_outliers_treat_rep_fixed_median.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_outliers_treat_rowDrop_NotStdBased.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_outliers_treat_rowDrop_stdBased.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_outliers_treat_truncating_minmax.png>]
-<images/dataset2/data_preparation/Credit_Score_scaling_MinMax.png, id=125, 289.08pt x 216.81pt>
+ [18 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_outliers_treat_rep_fixed_median.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_outliers_treat_rowDrop_NotStdBased.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_outliers_treat_rowDrop_stdBased.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_outliers_treat_truncating_minmax.png>]
+<images/dataset2/data_preparation/Credit_Score_scaling_MinMax.png, id=138, 289.08pt x 216.81pt>
 File: images/dataset2/data_preparation/Credit_Score_scaling_MinMax.png Graphic file (type png)
 <use images/dataset2/data_preparation/Credit_Score_scaling_MinMax.png>
-Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_scaling_MinMax.png  used on input line 248.
+Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_scaling_MinMax.png  used on input line 282.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
-<images/dataset2/data_preparation/Credit_Score_scaling_Original.png, id=126, 289.08pt x 216.81pt>
+<images/dataset2/data_preparation/Credit_Score_scaling_Original.png, id=139, 289.08pt x 216.81pt>
 File: images/dataset2/data_preparation/Credit_Score_scaling_Original.png Graphic file (type png)
 <use images/dataset2/data_preparation/Credit_Score_scaling_Original.png>
-Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_scaling_Original.png  used on input line 249.
+Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_scaling_Original.png  used on input line 283.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
-<images/dataset2/data_preparation/Credit_Score_scaling_Z-Score.png, id=127, 289.08pt x 216.81pt>
+<images/dataset2/data_preparation/Credit_Score_scaling_Z-Score.png, id=140, 289.08pt x 216.81pt>
 File: images/dataset2/data_preparation/Credit_Score_scaling_Z-Score.png Graphic file (type png)
 <use images/dataset2/data_preparation/Credit_Score_scaling_Z-Score.png>
-Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_scaling_Z-Score.png  used on input line 250.
+Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_scaling_Z-Score.png  used on input line 284.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
- [16 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax1.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax2.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_scaling_treat_Original.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_scaling_treat_Z-Score.png>]
-<images/dataset1/data_preparation/CovidPos_balancing_oversampling.png, id=135, 289.08pt x 216.81pt>
+ [19 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax1.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax2.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_scaling_treat_Original.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_scaling_treat_Z-Score.png>]
+<images/dataset1/data_preparation/CovidPos_balancing_oversampling.png, id=149, 289.08pt x 216.81pt>
 File: images/dataset1/data_preparation/CovidPos_balancing_oversampling.png Graphic file (type png)
 <use images/dataset1/data_preparation/CovidPos_balancing_oversampling.png>
-Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_balancing_oversampling.png  used on input line 258.
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_balancing_oversampling.png  used on input line 292.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
-<images/dataset1/data_preparation/CovidPos_balancing_undersampling.png, id=136, 289.08pt x 216.81pt>
+<images/dataset1/data_preparation/CovidPos_balancing_undersampling.png, id=150, 289.08pt x 216.81pt>
 File: images/dataset1/data_preparation/CovidPos_balancing_undersampling.png Graphic file (type png)
 <use images/dataset1/data_preparation/CovidPos_balancing_undersampling.png>
-Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_balancing_undersampling.png  used on input line 259.
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_balancing_undersampling.png  used on input line 293.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
-<images/dataset1/data_preparation/CovidPos_balancing_SMOTE.png, id=137, 289.08pt x 216.81pt>
+<images/dataset1/data_preparation/CovidPos_balancing_SMOTE.png, id=151, 289.08pt x 216.81pt>
 File: images/dataset1/data_preparation/CovidPos_balancing_SMOTE.png Graphic file (type png)
 <use images/dataset1/data_preparation/CovidPos_balancing_SMOTE.png>
-Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_balancing_SMOTE.png  used on input line 260.
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_balancing_SMOTE.png  used on input line 294.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
- [17 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_scaling_MinMax.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_scaling_Original.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_scaling_Z-Score.png>]
-<images/dataset2/data_preparation/Credit_Score_balancing_oversampling.png, id=144, 289.08pt x 216.81pt>
+ [20 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_scaling_MinMax.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_scaling_Original.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_scaling_Z-Score.png>]
+<images/dataset2/data_preparation/Credit_Score_balancing_oversampling.png, id=158, 289.08pt x 216.81pt>
 File: images/dataset2/data_preparation/Credit_Score_balancing_oversampling.png Graphic file (type png)
 <use images/dataset2/data_preparation/Credit_Score_balancing_oversampling.png>
-Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_balancing_oversampling.png  used on input line 265.
+Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_balancing_oversampling.png  used on input line 299.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
-<images/dataset2/data_preparation/Credit_Score_balancing_undersampling.png, id=145, 289.08pt x 216.81pt>
+<images/dataset2/data_preparation/Credit_Score_balancing_undersampling.png, id=159, 289.08pt x 216.81pt>
 File: images/dataset2/data_preparation/Credit_Score_balancing_undersampling.png Graphic file (type png)
 <use images/dataset2/data_preparation/Credit_Score_balancing_undersampling.png>
-Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_balancing_undersampling.png  used on input line 266.
+Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_balancing_undersampling.png  used on input line 300.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
-<images/dataset2/data_preparation/Credit_Score_balancing_SMOTE.png, id=146, 289.08pt x 216.81pt>
+<images/dataset2/data_preparation/Credit_Score_balancing_SMOTE.png, id=160, 289.08pt x 216.81pt>
 File: images/dataset2/data_preparation/Credit_Score_balancing_SMOTE.png Graphic file (type png)
 <use images/dataset2/data_preparation/Credit_Score_balancing_SMOTE.png>
-Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_balancing_SMOTE.png  used on input line 267.
+Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_balancing_SMOTE.png  used on input line 301.
 (pdftex.def)             Requested size: 231.2643pt x 173.44823pt.
- [18 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_balancing_oversampling.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_balancing_undersampling.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_balancing_SMOTE.png>]
-<images/dataset1/data_preparation/CovidPos_fs_low_var_recall_study.png, id=153, 578.16pt x 289.08pt>
+ [21 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_balancing_oversampling.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_balancing_undersampling.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_balancing_SMOTE.png>]
+<images/dataset1/data_preparation/CovidPos_fs_low_var_recall_study.png, id=167, 578.16pt x 289.08pt>
 File: images/dataset1/data_preparation/CovidPos_fs_low_var_recall_study.png Graphic file (type png)
 <use images/dataset1/data_preparation/CovidPos_fs_low_var_recall_study.png>
-Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_fs_low_var_recall_study.png  used on input line 275.
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_fs_low_var_recall_study.png  used on input line 309.
 (pdftex.def)             Requested size: 231.2599pt x 115.62994pt.
-<images/dataset1/data_preparation/CovidPos_fs_redundancy_recall_study.png, id=154, 578.16pt x 289.08pt>
+<images/dataset1/data_preparation/CovidPos_fs_redundancy_recall_study.png, id=168, 578.16pt x 289.08pt>
 File: images/dataset1/data_preparation/CovidPos_fs_redundancy_recall_study.png Graphic file (type png)
 <use images/dataset1/data_preparation/CovidPos_fs_redundancy_recall_study.png>
-Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_fs_redundancy_recall_study.png  used on input line 276.
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_fs_redundancy_recall_study.png  used on input line 310.
 (pdftex.def)             Requested size: 231.2599pt x 115.62994pt.
-<images/dataset2/data_preparation/Credit_Score_fs_low_var_accuracy_study_.png, id=155, 289.08pt x 216.81pt>
+<images/dataset2/data_preparation/Credit_Score_fs_low_var_accuracy_study_.png, id=169, 289.08pt x 216.81pt>
 File: images/dataset2/data_preparation/Credit_Score_fs_low_var_accuracy_study_.png Graphic file (type png)
 <use images/dataset2/data_preparation/Credit_Score_fs_low_var_accuracy_study_.png>
-Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_fs_low_var_accuracy_study_.png  used on input line 281.
+Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_fs_low_var_accuracy_study_.png  used on input line 315.
 (pdftex.def)             Requested size: 115.62994pt x 86.72246pt.
-<images/dataset2/data_preparation/Credit_Score_fs_redundancy_accuracy_study.png, id=156, 289.08pt x 216.81pt>
+<images/dataset2/data_preparation/Credit_Score_fs_redundancy_accuracy_study.png, id=170, 289.08pt x 216.81pt>
 File: images/dataset2/data_preparation/Credit_Score_fs_redundancy_accuracy_study.png Graphic file (type png)
 <use images/dataset2/data_preparation/Credit_Score_fs_redundancy_accuracy_study.png>
-Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_fs_redundancy_accuracy_study.png  used on input line 282.
+Package pdftex.def Info: images/dataset2/data_preparation/Credit_Score_fs_redundancy_accuracy_study.png  used on input line 316.
 (pdftex.def)             Requested size: 115.62994pt x 86.72246pt.
- [19 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_balancing_oversampling.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_balancing_undersampling.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_balancing_SMOTE.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_fs_low_var_recall_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_fs_redundancy_recall_study.png>]
-<images/dataset1/data_preparation/CovidPos_pca_explained_variance_ratio.png, id=166, 1084.05pt x 361.35pt>
+ [22 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_balancing_oversampling.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_balancing_undersampling.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_balancing_SMOTE.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_fs_low_var_recall_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_fs_redundancy_recall_study.png>]
+<images/dataset1/data_preparation/CovidPos_pca_explained_variance_ratio.png, id=179, 1084.05pt x 361.35pt>
 File: images/dataset1/data_preparation/CovidPos_pca_explained_variance_ratio.png Graphic file (type png)
 <use images/dataset1/data_preparation/CovidPos_pca_explained_variance_ratio.png>
-Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_pca_explained_variance_ratio.png  used on input line 300.
+Package pdftex.def Info: images/dataset1/data_preparation/CovidPos_pca_explained_variance_ratio.png  used on input line 334.
 (pdftex.def)             Requested size: 542.02368pt x 180.67456pt.
 
-Overfull \hbox (41.53969pt too wide) in paragraph at lines 300--301
+Overfull \hbox (41.53969pt too wide) in paragraph at lines 334--335
  [][] 
  []
 
-[20 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_fs_low_var_accuracy_study_.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_fs_redundancy_accuracy_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_pca_explained_variance_ratio.png>]
-<images/dataset1/models_evaluation/CovidPos_nb_recall_study.png, id=173, 289.08pt x 216.81pt>
+[23 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_fs_low_var_accuracy_study_.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/data_preparation/Credit_Score_fs_redundancy_accuracy_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/data_preparation/CovidPos_pca_explained_variance_ratio.png>]
+<images/dataset1/models_evaluation/CovidPos_nb_recall_study.png, id=186, 289.08pt x 216.81pt>
 File: images/dataset1/models_evaluation/CovidPos_nb_recall_study.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_nb_recall_study.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_nb_recall_study.png  used on input line 329.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_nb_recall_study.png  used on input line 363.
 (pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
-<images/dataset2/models_evaluation/Credit_Score_nb_accuracy_study.png, id=174, 289.08pt x 216.81pt>
+<images/dataset2/models_evaluation/Credit_Score_nb_accuracy_study.png, id=187, 289.08pt x 216.81pt>
 File: images/dataset2/models_evaluation/Credit_Score_nb_accuracy_study.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_nb_accuracy_study.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_nb_accuracy_study.png  used on input line 334.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_nb_accuracy_study.png  used on input line 368.
 (pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
- [21 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_nb_recall_study.png>]
-<images/dataset1/models_evaluation/CovidPos_GaussianNB_best_recall_eval.png, id=179, 578.16pt x 289.08pt>
+ [24 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_nb_recall_study.png>]
+<images/dataset1/models_evaluation/CovidPos_GaussianNB_best_recall_eval.png, id=192, 578.16pt x 289.08pt>
 File: images/dataset1/models_evaluation/CovidPos_GaussianNB_best_recall_eval.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_GaussianNB_best_recall_eval.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_GaussianNB_best_recall_eval.png  used on input line 339.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_GaussianNB_best_recall_eval.png  used on input line 373.
 (pdftex.def)             Requested size: 549.24889pt x 274.62444pt.
-<images/dataset2/models_evaluation/Credit_Score_nb_BernoulliNB_best_accuracy_eval.png, id=180, 578.16pt x 289.08pt>
+<images/dataset2/models_evaluation/Credit_Score_nb_BernoulliNB_best_accuracy_eval.png, id=193, 578.16pt x 289.08pt>
 File: images/dataset2/models_evaluation/Credit_Score_nb_BernoulliNB_best_accuracy_eval.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_nb_BernoulliNB_best_accuracy_eval.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_nb_BernoulliNB_best_accuracy_eval.png  used on input line 340.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_nb_BernoulliNB_best_accuracy_eval.png  used on input line 374.
 (pdftex.def)             Requested size: 549.24889pt x 274.62444pt.
 
-Overfull \hbox (48.7649pt too wide) in paragraph at lines 339--341
+Overfull \hbox (48.7649pt too wide) in paragraph at lines 373--375
  [][] 
  []
 
 
-Overfull \hbox (48.7649pt too wide) in paragraph at lines 339--341
+Overfull \hbox (48.7649pt too wide) in paragraph at lines 373--375
  [] 
  []
 
-[22 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_nb_accuracy_study.png>] [23 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_GaussianNB_best_recall_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_nb_BernoulliNB_best_accuracy_eval.png>]
-<images/dataset1/models_evaluation/CovidPos_knn_recall_study.png, id=190, 289.08pt x 216.81pt>
+[25 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_nb_accuracy_study.png>] [26 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_GaussianNB_best_recall_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_nb_BernoulliNB_best_accuracy_eval.png>]
+<images/dataset1/models_evaluation/CovidPos_knn_recall_study.png, id=204, 289.08pt x 216.81pt>
 File: images/dataset1/models_evaluation/CovidPos_knn_recall_study.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_knn_recall_study.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_knn_recall_study.png  used on input line 348.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_knn_recall_study.png  used on input line 382.
 (pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
-<images/dataset2/models_evaluation/Credit_Score_knn_accuracy_study.png, id=191, 289.08pt x 216.81pt>
+<images/dataset2/models_evaluation/Credit_Score_knn_accuracy_study.png, id=205, 289.08pt x 216.81pt>
 File: images/dataset2/models_evaluation/Credit_Score_knn_accuracy_study.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_knn_accuracy_study.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_knn_accuracy_study.png  used on input line 353.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_knn_accuracy_study.png  used on input line 387.
 (pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
-<images/dataset1/models_evaluation/CovidPos_knn_overfitting.png, id=192, 289.08pt x 216.81pt>
+<images/dataset1/models_evaluation/CovidPos_knn_overfitting.png, id=206, 289.08pt x 216.81pt>
 File: images/dataset1/models_evaluation/CovidPos_knn_overfitting.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_knn_overfitting.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_knn_overfitting.png  used on input line 358.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_knn_overfitting.png  used on input line 392.
 (pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
-<images/dataset2/models_evaluation/Credit_Score_knn_overfitting.png, id=193, 289.08pt x 216.81pt>
+<images/dataset2/models_evaluation/Credit_Score_knn_overfitting.png, id=207, 289.08pt x 216.81pt>
 File: images/dataset2/models_evaluation/Credit_Score_knn_overfitting.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_knn_overfitting.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_knn_overfitting.png  used on input line 359.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_knn_overfitting.png  used on input line 393.
 (pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
- [24 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_knn_recall_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_knn_accuracy_study.png>]
-<images/dataset1/models_evaluation/CovidPos_knn_KNN_best_recall_eval.png, id=199, 578.16pt x 289.08pt>
+ [27 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_knn_recall_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_knn_accuracy_study.png>]
+<images/dataset1/models_evaluation/CovidPos_knn_KNN_best_recall_eval.png, id=213, 578.16pt x 289.08pt>
 File: images/dataset1/models_evaluation/CovidPos_knn_KNN_best_recall_eval.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_knn_KNN_best_recall_eval.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_knn_KNN_best_recall_eval.png  used on input line 364.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_knn_KNN_best_recall_eval.png  used on input line 398.
 (pdftex.def)             Requested size: 549.24889pt x 274.62444pt.
-<images/dataset2/models_evaluation/Credit_Score_knn_KNN_best_accuracy_eval.png, id=200, 578.16pt x 289.08pt>
+<images/dataset2/models_evaluation/Credit_Score_knn_KNN_best_accuracy_eval.png, id=214, 578.16pt x 289.08pt>
 File: images/dataset2/models_evaluation/Credit_Score_knn_KNN_best_accuracy_eval.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_knn_KNN_best_accuracy_eval.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_knn_KNN_best_accuracy_eval.png  used on input line 365.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_knn_KNN_best_accuracy_eval.png  used on input line 399.
 (pdftex.def)             Requested size: 549.24889pt x 274.62444pt.
 
-Overfull \hbox (48.7649pt too wide) in paragraph at lines 364--366
+Overfull \hbox (48.7649pt too wide) in paragraph at lines 398--400
  [][] 
  []
 
 
-Overfull \hbox (48.7649pt too wide) in paragraph at lines 364--366
+Overfull \hbox (48.7649pt too wide) in paragraph at lines 398--400
  [] 
  []
 
-[25 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_knn_overfitting.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_knn_overfitting.png>] [26 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_knn_KNN_best_recall_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_knn_KNN_best_accuracy_eval.png>]
-<images/dataset1/models_evaluation/CovidPos_DT_accuracy_study.png, id=212, 289.08pt x 216.81pt>
+[28 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_knn_overfitting.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_knn_overfitting.png>] [29 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_knn_KNN_best_recall_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_knn_KNN_best_accuracy_eval.png>]
+<images/dataset1/models_evaluation/CovidPos_DT_accuracy_study.png, id=225, 289.08pt x 216.81pt>
 File: images/dataset1/models_evaluation/CovidPos_DT_accuracy_study.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_DT_accuracy_study.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_DT_accuracy_study.png  used on input line 373.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_DT_accuracy_study.png  used on input line 407.
 (pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
-<images/dataset2/models_evaluation/Credit_Score_dt_accuracy_study.png, id=213, 289.08pt x 216.81pt>
+<images/dataset2/models_evaluation/Credit_Score_dt_accuracy_study.png, id=226, 289.08pt x 216.81pt>
 File: images/dataset2/models_evaluation/Credit_Score_dt_accuracy_study.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_dt_accuracy_study.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_dt_accuracy_study.png  used on input line 378.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_dt_accuracy_study.png  used on input line 412.
 (pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
-<images/dataset1/models_evaluation/CovidPos_dt_accuracy_overfitting.png, id=214, 289.08pt x 216.81pt>
+<images/dataset1/models_evaluation/CovidPos_dt_accuracy_overfitting.png, id=227, 289.08pt x 216.81pt>
 File: images/dataset1/models_evaluation/CovidPos_dt_accuracy_overfitting.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_dt_accuracy_overfitting.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_dt_accuracy_overfitting.png  used on input line 383.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_dt_accuracy_overfitting.png  used on input line 417.
 (pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
-<images/dataset2/models_evaluation/Credit_Score_DT_overfitting.png, id=215, 289.08pt x 216.81pt>
+<images/dataset2/models_evaluation/Credit_Score_DT_overfitting.png, id=228, 289.08pt x 216.81pt>
 File: images/dataset2/models_evaluation/Credit_Score_DT_overfitting.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_DT_overfitting.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_DT_overfitting.png  used on input line 384.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_DT_overfitting.png  used on input line 418.
 (pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
- [27 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_dt_accuracy_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_DT_accuracy_study.png>]
-<images/dataset1/models_evaluation/CovidPos_dt_DT_best_accuracy_eval.png, id=221, 578.16pt x 289.08pt>
+ [30 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_dt_accuracy_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_DT_accuracy_study.png>]
+<images/dataset1/models_evaluation/CovidPos_dt_DT_best_accuracy_eval.png, id=234, 578.16pt x 289.08pt>
 File: images/dataset1/models_evaluation/CovidPos_dt_DT_best_accuracy_eval.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_dt_DT_best_accuracy_eval.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_dt_DT_best_accuracy_eval.png  used on input line 389.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_dt_DT_best_accuracy_eval.png  used on input line 423.
 (pdftex.def)             Requested size: 549.24889pt x 274.62444pt.
-<images/dataset2/models_evaluation/Credit_Score_DT_best_accuracy_eval.png, id=222, 578.16pt x 289.08pt>
+<images/dataset2/models_evaluation/Credit_Score_DT_best_accuracy_eval.png, id=235, 578.16pt x 289.08pt>
 File: images/dataset2/models_evaluation/Credit_Score_DT_best_accuracy_eval.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_DT_best_accuracy_eval.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_DT_best_accuracy_eval.png  used on input line 390.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_DT_best_accuracy_eval.png  used on input line 424.
 (pdftex.def)             Requested size: 549.24889pt x 274.62444pt.
 
-Overfull \hbox (48.7649pt too wide) in paragraph at lines 389--391
+Overfull \hbox (48.7649pt too wide) in paragraph at lines 423--425
  [][] 
  []
 
 
-Overfull \hbox (48.7649pt too wide) in paragraph at lines 389--391
+Overfull \hbox (48.7649pt too wide) in paragraph at lines 423--425
  [] 
  []
 
-[28 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_dt_accuracy_overfitting.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_DT_overfitting.png>]
-<images/dataset1/models_evaluation/CovidPos_dt_accuracy_best_tree.png, id=228, 1011.78pt x 433.62pt>
+[31 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_dt_accuracy_overfitting.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_DT_overfitting.png>]
+<images/dataset1/models_evaluation/CovidPos_dt_accuracy_best_tree.png, id=242, 1011.78pt x 433.62pt>
 File: images/dataset1/models_evaluation/CovidPos_dt_accuracy_best_tree.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_dt_accuracy_best_tree.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_dt_accuracy_best_tree.png  used on input line 395.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_dt_accuracy_best_tree.png  used on input line 429.
 (pdftex.def)             Requested size: 708.24118pt x 303.53192pt.
 
-Overfull \hbox (207.75719pt too wide) in paragraph at lines 395--396
+Overfull \hbox (207.75719pt too wide) in paragraph at lines 429--430
  [][] 
  []
 
-[29 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_dt_DT_best_accuracy_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_DT_best_accuracy_eval.png>]
-<images/dataset2/models_evaluation/Credit_Score_DT_best_tree.png, id=234, 1011.78pt x 433.62pt>
+[32 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_dt_DT_best_accuracy_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_DT_best_accuracy_eval.png>]
+<images/dataset2/models_evaluation/Credit_Score_DT_best_tree.png, id=248, 1011.78pt x 433.62pt>
 File: images/dataset2/models_evaluation/Credit_Score_DT_best_tree.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_DT_best_tree.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_DT_best_tree.png  used on input line 400.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_DT_best_tree.png  used on input line 434.
 (pdftex.def)             Requested size: 961.18556pt x 411.93666pt.
 
-Overfull \hbox (460.70157pt too wide) in paragraph at lines 400--401
+Overfull \hbox (460.70157pt too wide) in paragraph at lines 434--435
  [][] 
  []
 
-[30 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_dt_accuracy_best_tree.png>]
-<images/dataset1/models_evaluation/CovidPos_rf_recall_study.png, id=239, 867.24pt x 289.08pt>
+[33 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_dt_accuracy_best_tree.png>]
+<images/dataset1/models_evaluation/CovidPos_rf_recall_study.png, id=253, 867.24pt x 289.08pt>
 File: images/dataset1/models_evaluation/CovidPos_rf_recall_study.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_rf_recall_study.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_recall_study.png  used on input line 408.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_recall_study.png  used on input line 442.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
-<images/dataset1/models_evaluation/CovidPos_rf_accuracy_study.png, id=240, 867.24pt x 289.08pt>
+<images/dataset1/models_evaluation/CovidPos_rf_accuracy_study.png, id=254, 867.24pt x 289.08pt>
 File: images/dataset1/models_evaluation/CovidPos_rf_accuracy_study.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_rf_accuracy_study.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_accuracy_study.png  used on input line 409.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_accuracy_study.png  used on input line 443.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
-<images/dataset1/models_evaluation/CovidPos_rf_f1_study.png, id=241, 867.24pt x 289.08pt>
+<images/dataset1/models_evaluation/CovidPos_rf_f1_study.png, id=255, 867.24pt x 289.08pt>
 File: images/dataset1/models_evaluation/CovidPos_rf_f1_study.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_rf_f1_study.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_f1_study.png  used on input line 410.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_f1_study.png  used on input line 444.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
-<images/dataset1/models_evaluation/CovidPos_rf_precision_study.png, id=242, 867.24pt x 289.08pt>
+<images/dataset1/models_evaluation/CovidPos_rf_precision_study.png, id=256, 867.24pt x 289.08pt>
 File: images/dataset1/models_evaluation/CovidPos_rf_precision_study.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_rf_precision_study.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_precision_study.png  used on input line 411.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_precision_study.png  used on input line 445.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
-<images/dataset1/models_evaluation/CovidPos_rf_auc_study.png, id=243, 867.24pt x 289.08pt>
+<images/dataset1/models_evaluation/CovidPos_rf_auc_study.png, id=257, 867.24pt x 289.08pt>
 File: images/dataset1/models_evaluation/CovidPos_rf_auc_study.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_rf_auc_study.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_auc_study.png  used on input line 412.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_auc_study.png  used on input line 446.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 408--413
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 442--447
  [][] 
  []
 
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 408--413
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 442--447
  [] 
  []
 
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 408--413
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 442--447
  [] 
  []
 
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 408--413
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 442--447
  [] 
  []
 
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 408--413
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 442--447
  [] 
  []
 
-[31 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_DT_best_tree.png>]
+[34 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_DT_best_tree.png>]
 Overfull \vbox (240.5404pt too high) has occurred while \output is active []
 
- [32 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_recall_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_accuracy_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_f1_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_precision_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_auc_study.png>]
-<images/dataset2/models_evaluation/Credit_Score_rf_recall_study.png, id=257, 867.24pt x 289.08pt>
+ [35 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_recall_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_accuracy_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_f1_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_precision_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_auc_study.png>]
+<images/dataset2/models_evaluation/Credit_Score_rf_recall_study.png, id=270, 867.24pt x 289.08pt>
 File: images/dataset2/models_evaluation/Credit_Score_rf_recall_study.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_rf_recall_study.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_rf_recall_study.png  used on input line 417.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_rf_recall_study.png  used on input line 451.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
-<images/dataset2/models_evaluation/Credit_Score_rf_accuracy_study.png, id=258, 867.24pt x 289.08pt>
+<images/dataset2/models_evaluation/Credit_Score_rf_accuracy_study.png, id=271, 867.24pt x 289.08pt>
 File: images/dataset2/models_evaluation/Credit_Score_rf_accuracy_study.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_rf_accuracy_study.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_rf_accuracy_study.png  used on input line 418.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_rf_accuracy_study.png  used on input line 452.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
-<images/dataset2/models_evaluation/Credit_Score_rf_f1_study.png, id=259, 867.24pt x 289.08pt>
+<images/dataset2/models_evaluation/Credit_Score_rf_f1_study.png, id=272, 867.24pt x 289.08pt>
 File: images/dataset2/models_evaluation/Credit_Score_rf_f1_study.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_rf_f1_study.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_rf_f1_study.png  used on input line 419.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_rf_f1_study.png  used on input line 453.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
-<images/dataset2/models_evaluation/Credit_Score_rf_precision_study.png, id=260, 867.24pt x 289.08pt>
+<images/dataset2/models_evaluation/Credit_Score_rf_precision_study.png, id=273, 867.24pt x 289.08pt>
 File: images/dataset2/models_evaluation/Credit_Score_rf_precision_study.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_rf_precision_study.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_rf_precision_study.png  used on input line 420.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_rf_precision_study.png  used on input line 454.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
-<images/dataset2/models_evaluation/Credit_Score_rf_auc_study.png, id=261, 867.24pt x 289.08pt>
+<images/dataset2/models_evaluation/Credit_Score_rf_auc_study.png, id=274, 867.24pt x 289.08pt>
 File: images/dataset2/models_evaluation/Credit_Score_rf_auc_study.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_rf_auc_study.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_rf_auc_study.png  used on input line 421.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_rf_auc_study.png  used on input line 455.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 417--422
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 451--456
  [][] 
  []
 
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 417--422
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 451--456
  [] 
  []
 
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 417--422
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 451--456
  [] 
  []
 
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 417--422
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 451--456
  [] 
  []
 
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 417--422
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 451--456
  [] 
  []
 
 
 Overfull \vbox (240.5404pt too high) has occurred while \output is active []
 
- [33 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_recall_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_accuracy_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_f1_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_precision_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_auc_study.png>]
-<images/dataset1/models_evaluation/CovidPos_rf_f1_overfitting.png, id=270, 289.08pt x 216.81pt>
+ [36 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_recall_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_accuracy_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_f1_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_precision_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_auc_study.png>]
+<images/dataset1/models_evaluation/CovidPos_rf_f1_overfitting.png, id=283, 289.08pt x 216.81pt>
 File: images/dataset1/models_evaluation/CovidPos_rf_f1_overfitting.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_rf_f1_overfitting.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_f1_overfitting.png  used on input line 426.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_f1_overfitting.png  used on input line 460.
 (pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
-<images/dataset2/models_evaluation/Credit_Score_rf_accuracy_overfitting.png, id=271, 289.08pt x 216.81pt>
+<images/dataset2/models_evaluation/Credit_Score_rf_accuracy_overfitting.png, id=284, 289.08pt x 216.81pt>
 File: images/dataset2/models_evaluation/Credit_Score_rf_accuracy_overfitting.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_rf_accuracy_overfitting.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_rf_accuracy_overfitting.png  used on input line 427.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_rf_accuracy_overfitting.png  used on input line 461.
 (pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
-<images/dataset1/models_evaluation/CovidPos_rf_RF_best_recall_eval.png, id=272, 578.16pt x 289.08pt>
+<images/dataset1/models_evaluation/CovidPos_rf_RF_best_recall_eval.png, id=285, 578.16pt x 289.08pt>
 File: images/dataset1/models_evaluation/CovidPos_rf_RF_best_recall_eval.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_rf_RF_best_recall_eval.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_RF_best_recall_eval.png  used on input line 432.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_RF_best_recall_eval.png  used on input line 466.
 (pdftex.def)             Requested size: 549.24889pt x 274.62444pt.
-<images/dataset2/models_evaluation/Credit_Score_rf_RF_best_accuracy_eval.png, id=273, 578.16pt x 289.08pt>
+<images/dataset2/models_evaluation/Credit_Score_rf_RF_best_accuracy_eval.png, id=286, 578.16pt x 289.08pt>
 File: images/dataset2/models_evaluation/Credit_Score_rf_RF_best_accuracy_eval.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_rf_RF_best_accuracy_eval.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_rf_RF_best_accuracy_eval.png  used on input line 433.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_rf_RF_best_accuracy_eval.png  used on input line 467.
 (pdftex.def)             Requested size: 549.24889pt x 274.62444pt.
 
-Overfull \hbox (48.7649pt too wide) in paragraph at lines 432--434
+Overfull \hbox (48.7649pt too wide) in paragraph at lines 466--468
  [][] 
  []
 
 
-Overfull \hbox (48.7649pt too wide) in paragraph at lines 432--434
+Overfull \hbox (48.7649pt too wide) in paragraph at lines 466--468
  [] 
  []
 
-[34 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_f1_overfitting.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_accuracy_overfitting.png>]
-<images/dataset1/models_evaluation/CovidPos_rf_recall_vars_ranking.png, id=279, 289.08pt x 216.81pt>
+[37 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_f1_overfitting.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_accuracy_overfitting.png>]
+<images/dataset1/models_evaluation/CovidPos_rf_recall_vars_ranking.png, id=293, 289.08pt x 216.81pt>
 File: images/dataset1/models_evaluation/CovidPos_rf_recall_vars_ranking.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_rf_recall_vars_ranking.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_recall_vars_ranking.png  used on input line 438.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_rf_recall_vars_ranking.png  used on input line 472.
 (pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
-<images/dataset2/models_evaluation/Credit_Score_rf_accuracy_vars_ranking.png, id=280, 289.08pt x 216.81pt>
+<images/dataset2/models_evaluation/Credit_Score_rf_accuracy_vars_ranking.png, id=294, 289.08pt x 216.81pt>
 File: images/dataset2/models_evaluation/Credit_Score_rf_accuracy_vars_ranking.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_rf_accuracy_vars_ranking.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_rf_accuracy_vars_ranking.png  used on input line 439.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_rf_accuracy_vars_ranking.png  used on input line 473.
 (pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
- [35 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_RF_best_recall_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_RF_best_accuracy_eval.png>]
-<images/dataset1/models_evaluation/CovidPos_gb_recall_study.png, id=286, 867.24pt x 289.08pt>
+ [38 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_RF_best_recall_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_RF_best_accuracy_eval.png>]
+<images/dataset1/models_evaluation/CovidPos_gb_recall_study.png, id=300, 867.24pt x 289.08pt>
 File: images/dataset1/models_evaluation/CovidPos_gb_recall_study.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_gb_recall_study.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_recall_study.png  used on input line 447.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_recall_study.png  used on input line 481.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
-<images/dataset1/models_evaluation/CovidPos_gb_accuracy_study.png, id=287, 867.24pt x 289.08pt>
+<images/dataset1/models_evaluation/CovidPos_gb_accuracy_study.png, id=301, 867.24pt x 289.08pt>
 File: images/dataset1/models_evaluation/CovidPos_gb_accuracy_study.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_gb_accuracy_study.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_accuracy_study.png  used on input line 448.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_accuracy_study.png  used on input line 482.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
-<images/dataset1/models_evaluation/CovidPos_gb_f1_study.png, id=288, 867.24pt x 289.08pt>
+<images/dataset1/models_evaluation/CovidPos_gb_f1_study.png, id=302, 867.24pt x 289.08pt>
 File: images/dataset1/models_evaluation/CovidPos_gb_f1_study.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_gb_f1_study.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_f1_study.png  used on input line 449.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_f1_study.png  used on input line 483.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
-<images/dataset1/models_evaluation/CovidPos_gb_precision_study.png, id=289, 867.24pt x 289.08pt>
+<images/dataset1/models_evaluation/CovidPos_gb_precision_study.png, id=303, 867.24pt x 289.08pt>
 File: images/dataset1/models_evaluation/CovidPos_gb_precision_study.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_gb_precision_study.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_precision_study.png  used on input line 450.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_precision_study.png  used on input line 484.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
-<images/dataset1/models_evaluation/CovidPos_gb_auc_study.png, id=290, 867.24pt x 289.08pt>
+<images/dataset1/models_evaluation/CovidPos_gb_auc_study.png, id=304, 867.24pt x 289.08pt>
 File: images/dataset1/models_evaluation/CovidPos_gb_auc_study.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_gb_auc_study.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_auc_study.png  used on input line 451.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_auc_study.png  used on input line 485.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 447--452
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 481--486
  [][] 
  []
 
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 447--452
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 481--486
  [] 
  []
 
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 447--452
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 481--486
  [] 
  []
 
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 447--452
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 481--486
  [] 
  []
 
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 447--452
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 481--486
  [] 
  []
 
-[36 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_recall_vars_ranking.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_accuracy_vars_ranking.png>]
+[39 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_rf_recall_vars_ranking.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_rf_accuracy_vars_ranking.png>]
 Overfull \vbox (240.5404pt too high) has occurred while \output is active []
 
- [37 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_recall_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_accuracy_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_f1_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_precision_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_auc_study.png>]
-<images/dataset2/models_evaluation/Credit_Score_gb_study.png, id=305, 867.24pt x 1445.4pt>
+ [40 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_recall_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_accuracy_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_f1_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_precision_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_auc_study.png>]
+<images/dataset2/models_evaluation/Credit_Score_gb_study.png, id=318, 867.24pt x 1445.4pt>
 File: images/dataset2/models_evaluation/Credit_Score_gb_study.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_gb_study.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_gb_study.png  used on input line 456.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_gb_study.png  used on input line 490.
 (pdftex.def)             Requested size: 520.34802pt x 867.2467pt.
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 456--457
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 490--491
  [][] 
  []
 
 
 Overfull \vbox (236.54048pt too high) has occurred while \output is active []
 
- [38 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_gb_study.png>]
-<images/dataset1/models_evaluation/CovidPos_gb_accuracy_overfitting.png, id=310, 289.08pt x 216.81pt>
+ [41 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_gb_study.png>]
+<images/dataset1/models_evaluation/CovidPos_gb_accuracy_overfitting.png, id=323, 289.08pt x 216.81pt>
 File: images/dataset1/models_evaluation/CovidPos_gb_accuracy_overfitting.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_gb_accuracy_overfitting.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_accuracy_overfitting.png  used on input line 461.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_accuracy_overfitting.png  used on input line 495.
 (pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
-<images/dataset2/models_evaluation/Credit_Score_gb_accuracy_overfitting.png, id=311, 289.08pt x 216.81pt>
+<images/dataset2/models_evaluation/Credit_Score_gb_accuracy_overfitting.png, id=324, 289.08pt x 216.81pt>
 File: images/dataset2/models_evaluation/Credit_Score_gb_accuracy_overfitting.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_gb_accuracy_overfitting.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_gb_accuracy_overfitting.png  used on input line 462.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_gb_accuracy_overfitting.png  used on input line 496.
 (pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
-<images/dataset1/models_evaluation/CovidPos_gb_GB_best_recall_eval.png, id=312, 578.16pt x 289.08pt>
+<images/dataset1/models_evaluation/CovidPos_gb_GB_best_recall_eval.png, id=325, 578.16pt x 289.08pt>
 File: images/dataset1/models_evaluation/CovidPos_gb_GB_best_recall_eval.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_gb_GB_best_recall_eval.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_GB_best_recall_eval.png  used on input line 467.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_GB_best_recall_eval.png  used on input line 501.
 (pdftex.def)             Requested size: 549.24889pt x 274.62444pt.
-<images/dataset2/models_evaluation/Credit_Score_gb_best_model_performance_accuracy.png, id=313, 578.16pt x 289.08pt>
+<images/dataset2/models_evaluation/Credit_Score_gb_best_model_performance_accuracy.png, id=326, 578.16pt x 289.08pt>
 File: images/dataset2/models_evaluation/Credit_Score_gb_best_model_performance_accuracy.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_gb_best_model_performance_accuracy.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_gb_best_model_performance_accuracy.png  used on input line 468.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_gb_best_model_performance_accuracy.png  used on input line 502.
 (pdftex.def)             Requested size: 549.24889pt x 274.62444pt.
 
-Overfull \hbox (48.7649pt too wide) in paragraph at lines 467--469
+Overfull \hbox (48.7649pt too wide) in paragraph at lines 501--503
  [][] 
  []
 
 
-Overfull \hbox (48.7649pt too wide) in paragraph at lines 467--469
+Overfull \hbox (48.7649pt too wide) in paragraph at lines 501--503
  [] 
  []
 
-[39 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_accuracy_overfitting.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_gb_accuracy_overfitting.png>]
-<images/dataset1/models_evaluation/CovidPos_gb_recall_vars_ranking.png, id=319, 289.08pt x 216.81pt>
+[42 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_accuracy_overfitting.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_gb_accuracy_overfitting.png>]
+<images/dataset1/models_evaluation/CovidPos_gb_recall_vars_ranking.png, id=332, 289.08pt x 216.81pt>
 File: images/dataset1/models_evaluation/CovidPos_gb_recall_vars_ranking.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_gb_recall_vars_ranking.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_recall_vars_ranking.png  used on input line 473.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_gb_recall_vars_ranking.png  used on input line 507.
 (pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
-<images/dataset2/models_evaluation/Credit_Score_gb_accuracy_vars_ranking.png, id=320, 289.08pt x 216.81pt>
+<images/dataset2/models_evaluation/Credit_Score_gb_accuracy_vars_ranking.png, id=333, 289.08pt x 216.81pt>
 File: images/dataset2/models_evaluation/Credit_Score_gb_accuracy_vars_ranking.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_gb_accuracy_vars_ranking.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_gb_accuracy_vars_ranking.png  used on input line 474.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_gb_accuracy_vars_ranking.png  used on input line 508.
 (pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
- [40 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_GB_best_recall_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_gb_best_model_performance_accuracy.png>]
-<images/dataset1/models_evaluation/CovidPos_mlp_recall_study.png, id=326, 867.24pt x 289.08pt>
+ [43 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_GB_best_recall_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_gb_best_model_performance_accuracy.png>]
+<images/dataset1/models_evaluation/CovidPos_mlp_recall_study.png, id=340, 867.24pt x 289.08pt>
 File: images/dataset1/models_evaluation/CovidPos_mlp_recall_study.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_mlp_recall_study.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_mlp_recall_study.png  used on input line 482.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_mlp_recall_study.png  used on input line 516.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
-<images/dataset1/models_evaluation/CovidPos_mlp_accuracy_study.png, id=327, 867.24pt x 289.08pt>
+<images/dataset1/models_evaluation/CovidPos_mlp_accuracy_study.png, id=341, 867.24pt x 289.08pt>
 File: images/dataset1/models_evaluation/CovidPos_mlp_accuracy_study.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_mlp_accuracy_study.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_mlp_accuracy_study.png  used on input line 483.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_mlp_accuracy_study.png  used on input line 517.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
-<images/dataset1/models_evaluation/CovidPos_mlp_f1_study.png, id=328, 867.24pt x 289.08pt>
+<images/dataset1/models_evaluation/CovidPos_mlp_f1_study.png, id=342, 867.24pt x 289.08pt>
 File: images/dataset1/models_evaluation/CovidPos_mlp_f1_study.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_mlp_f1_study.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_mlp_f1_study.png  used on input line 484.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_mlp_f1_study.png  used on input line 518.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
-<images/dataset1/models_evaluation/CovidPos_mlp_precision_study.png, id=329, 867.24pt x 289.08pt>
+<images/dataset1/models_evaluation/CovidPos_mlp_precision_study.png, id=343, 867.24pt x 289.08pt>
 File: images/dataset1/models_evaluation/CovidPos_mlp_precision_study.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_mlp_precision_study.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_mlp_precision_study.png  used on input line 485.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_mlp_precision_study.png  used on input line 519.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
-<images/dataset1/models_evaluation/CovidPos_mlp_auc_study.png, id=330, 867.24pt x 289.08pt>
+<images/dataset1/models_evaluation/CovidPos_mlp_auc_study.png, id=344, 867.24pt x 289.08pt>
 File: images/dataset1/models_evaluation/CovidPos_mlp_auc_study.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_mlp_auc_study.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_mlp_auc_study.png  used on input line 486.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_mlp_auc_study.png  used on input line 520.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 482--487
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 516--521
  [][] 
  []
 
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 482--487
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 516--521
  [] 
  []
 
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 482--487
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 516--521
  [] 
  []
 
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 482--487
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 516--521
  [] 
  []
 
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 482--487
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 516--521
  [] 
  []
 
-[41 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_recall_vars_ranking.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_gb_accuracy_vars_ranking.png>]
+[44 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_gb_recall_vars_ranking.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_gb_accuracy_vars_ranking.png>]
 Overfull \vbox (240.5404pt too high) has occurred while \output is active []
 
- [42 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_recall_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_accuracy_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_f1_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_precision_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_auc_study.png>]
-<images/dataset2/models_evaluation/Credit_Score_mlp_recall_study.png, id=344, 867.24pt x 289.08pt>
+ [45 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_recall_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_accuracy_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_f1_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_precision_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_auc_study.png>]
+<images/dataset2/models_evaluation/Credit_Score_mlp_recall_study.png, id=358, 867.24pt x 289.08pt>
 File: images/dataset2/models_evaluation/Credit_Score_mlp_recall_study.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_mlp_recall_study.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_mlp_recall_study.png  used on input line 491.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_mlp_recall_study.png  used on input line 525.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
-<images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_study.png, id=345, 867.24pt x 289.08pt>
+<images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_study.png, id=359, 867.24pt x 289.08pt>
 File: images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_study.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_study.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_study.png  used on input line 492.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_study.png  used on input line 526.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
-<images/dataset2/models_evaluation/Credit_Score_mlp_f1_study.png, id=346, 867.24pt x 289.08pt>
+<images/dataset2/models_evaluation/Credit_Score_mlp_f1_study.png, id=360, 867.24pt x 289.08pt>
 File: images/dataset2/models_evaluation/Credit_Score_mlp_f1_study.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_mlp_f1_study.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_mlp_f1_study.png  used on input line 493.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_mlp_f1_study.png  used on input line 527.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
-<images/dataset2/models_evaluation/Credit_Score_mlp_precision_study.png, id=347, 867.24pt x 289.08pt>
+<images/dataset2/models_evaluation/Credit_Score_mlp_precision_study.png, id=361, 867.24pt x 289.08pt>
 File: images/dataset2/models_evaluation/Credit_Score_mlp_precision_study.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_mlp_precision_study.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_mlp_precision_study.png  used on input line 494.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_mlp_precision_study.png  used on input line 528.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
-<images/dataset2/models_evaluation/Credit_Score_mlp_auc_study.png, id=348, 867.24pt x 289.08pt>
+<images/dataset2/models_evaluation/Credit_Score_mlp_auc_study.png, id=362, 867.24pt x 289.08pt>
 File: images/dataset2/models_evaluation/Credit_Score_mlp_auc_study.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_mlp_auc_study.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_mlp_auc_study.png  used on input line 495.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_mlp_auc_study.png  used on input line 529.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 491--496
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 525--530
  [][] 
  []
 
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 491--496
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 525--530
  [] 
  []
 
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 491--496
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 525--530
  [] 
  []
 
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 491--496
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 525--530
  [] 
  []
 
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 491--496
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 525--530
  [] 
  []
 
 
 Overfull \vbox (240.5404pt too high) has occurred while \output is active []
 
- [43 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_recall_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_f1_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_precision_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_auc_study.png>]
-<images/dataset1/models_evaluation/CovidPos_mlp_recall_overfitting.png, id=358, 289.08pt x 216.81pt>
+ [46 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_recall_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_f1_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_precision_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_auc_study.png>]
+<images/dataset1/models_evaluation/CovidPos_mlp_recall_overfitting.png, id=371, 289.08pt x 216.81pt>
 File: images/dataset1/models_evaluation/CovidPos_mlp_recall_overfitting.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_mlp_recall_overfitting.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_mlp_recall_overfitting.png  used on input line 500.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_mlp_recall_overfitting.png  used on input line 534.
 (pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
-<images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_overfitting.png, id=359, 289.08pt x 216.81pt>
+<images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_overfitting.png, id=372, 289.08pt x 216.81pt>
 File: images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_overfitting.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_overfitting.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_overfitting.png  used on input line 501.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_overfitting.png  used on input line 535.
 (pdftex.def)             Requested size: 274.62444pt x 205.96832pt.
-<images/dataset1/models_evaluation/CovidPos_mlp_MLP_best_recall_eval.png, id=360, 578.16pt x 289.08pt>
+<images/dataset1/models_evaluation/CovidPos_mlp_MLP_best_recall_eval.png, id=373, 578.16pt x 289.08pt>
 File: images/dataset1/models_evaluation/CovidPos_mlp_MLP_best_recall_eval.png Graphic file (type png)
 <use images/dataset1/models_evaluation/CovidPos_mlp_MLP_best_recall_eval.png>
-Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_mlp_MLP_best_recall_eval.png  used on input line 506.
+Package pdftex.def Info: images/dataset1/models_evaluation/CovidPos_mlp_MLP_best_recall_eval.png  used on input line 540.
 (pdftex.def)             Requested size: 549.24889pt x 274.62444pt.
-<images/dataset2/models_evaluation/Credit_Score_mlp_MLP_best_accuracy_eval.png, id=361, 578.16pt x 289.08pt>
+<images/dataset2/models_evaluation/Credit_Score_mlp_MLP_best_accuracy_eval.png, id=374, 578.16pt x 289.08pt>
 File: images/dataset2/models_evaluation/Credit_Score_mlp_MLP_best_accuracy_eval.png Graphic file (type png)
 <use images/dataset2/models_evaluation/Credit_Score_mlp_MLP_best_accuracy_eval.png>
-Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_mlp_MLP_best_accuracy_eval.png  used on input line 507.
+Package pdftex.def Info: images/dataset2/models_evaluation/Credit_Score_mlp_MLP_best_accuracy_eval.png  used on input line 541.
 (pdftex.def)             Requested size: 549.24889pt x 274.62444pt.
 
-Overfull \hbox (48.7649pt too wide) in paragraph at lines 506--508
+Overfull \hbox (48.7649pt too wide) in paragraph at lines 540--542
  [][] 
  []
 
 
-Overfull \hbox (48.7649pt too wide) in paragraph at lines 506--508
+Overfull \hbox (48.7649pt too wide) in paragraph at lines 540--542
  [] 
  []
 
-[44 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_recall_overfitting.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_overfitting.png>] [45 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_MLP_best_recall_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_MLP_best_accuracy_eval.png>]
-<images/dataset1/time_series/Covid_granularity_aggregation_W.png, id=372, 867.24pt x 144.54pt>
+[47 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_recall_overfitting.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_overfitting.png>] [48 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/models_evaluation/CovidPos_mlp_MLP_best_recall_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/models_evaluation/Credit_Score_mlp_MLP_best_accuracy_eval.png>]
+<images/dataset1/time_series/Covid_granularity_aggregation_W.png, id=385, 867.24pt x 144.54pt>
 File: images/dataset1/time_series/Covid_granularity_aggregation_W.png Graphic file (type png)
 <use images/dataset1/time_series/Covid_granularity_aggregation_W.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid_granularity_aggregation_W.png  used on input line 527.
+Package pdftex.def Info: images/dataset1/time_series/Covid_granularity_aggregation_W.png  used on input line 561.
 (pdftex.def)             Requested size: 823.87335pt x 137.3122pt.
 
-Overfull \hbox (323.38936pt too wide) in paragraph at lines 527--528
+Overfull \hbox (323.38936pt too wide) in paragraph at lines 561--562
  [][] 
  []
 
-<images/dataset1/time_series/Covid_granularity_aggregation_M.png, id=373, 867.24pt x 144.54pt>
+<images/dataset1/time_series/Covid_granularity_aggregation_M.png, id=386, 867.24pt x 144.54pt>
 File: images/dataset1/time_series/Covid_granularity_aggregation_M.png Graphic file (type png)
 <use images/dataset1/time_series/Covid_granularity_aggregation_M.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid_granularity_aggregation_M.png  used on input line 532.
+Package pdftex.def Info: images/dataset1/time_series/Covid_granularity_aggregation_M.png  used on input line 566.
 (pdftex.def)             Requested size: 823.87335pt x 137.3122pt.
 
-Overfull \hbox (323.38936pt too wide) in paragraph at lines 532--533
+Overfull \hbox (323.38936pt too wide) in paragraph at lines 566--567
  [][] 
  []
 
-<images/dataset1/time_series/Covid_granularity_aggregation_Q.png, id=374, 867.24pt x 144.54pt>
+<images/dataset1/time_series/Covid_granularity_aggregation_Q.png, id=387, 867.24pt x 144.54pt>
 File: images/dataset1/time_series/Covid_granularity_aggregation_Q.png Graphic file (type png)
 <use images/dataset1/time_series/Covid_granularity_aggregation_Q.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid_granularity_aggregation_Q.png  used on input line 537.
+Package pdftex.def Info: images/dataset1/time_series/Covid_granularity_aggregation_Q.png  used on input line 571.
 (pdftex.def)             Requested size: 823.87335pt x 137.3122pt.
 
-Overfull \hbox (323.38936pt too wide) in paragraph at lines 537--538
+Overfull \hbox (323.38936pt too wide) in paragraph at lines 571--572
  [][] 
  []
 
-[46 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_granularity_aggregation_W.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_granularity_aggregation_M.png>]
-<images/dataset1/time_series/Covid_distribution_boxplot.png, id=380, 578.16pt x 289.08pt>
+[49 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_granularity_aggregation_W.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_granularity_aggregation_M.png>]
+<images/dataset1/time_series/Covid_distribution_boxplot.png, id=394, 578.16pt x 289.08pt>
 File: images/dataset1/time_series/Covid_distribution_boxplot.png Graphic file (type png)
 <use images/dataset1/time_series/Covid_distribution_boxplot.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid_distribution_boxplot.png  used on input line 560.
+Package pdftex.def Info: images/dataset1/time_series/Covid_distribution_boxplot.png  used on input line 594.
 (pdftex.def)             Requested size: 462.52863pt x 231.2643pt.
-<images/dataset2/time_series/fts_boxplot.png, id=381, 515.0442pt x 251.4996pt>
+<images/dataset2/time_series/fts_boxplot.png, id=395, 515.0442pt x 251.4996pt>
 File: images/dataset2/time_series/fts_boxplot.png Graphic file (type png)
 <use images/dataset2/time_series/fts_boxplot.png>
-Package pdftex.def Info: images/dataset2/time_series/fts_boxplot.png  used on input line 565.
+Package pdftex.def Info: images/dataset2/time_series/fts_boxplot.png  used on input line 599.
 (pdftex.def)             Requested size: 412.03593pt x 201.19994pt.
- [47 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_granularity_aggregation_Q.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_distribution_boxplot.png>]
-<images/dataset1/time_series/Covid_distribution_histogram.png, id=387, 867.24pt x 289.08pt>
+ [50 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_granularity_aggregation_Q.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_distribution_boxplot.png>]
+<images/dataset1/time_series/Covid_distribution_histogram.png, id=402, 867.24pt x 289.08pt>
 File: images/dataset1/time_series/Covid_distribution_histogram.png Graphic file (type png)
 <use images/dataset1/time_series/Covid_distribution_histogram.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid_distribution_histogram.png  used on input line 570.
+Package pdftex.def Info: images/dataset1/time_series/Covid_distribution_histogram.png  used on input line 604.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 570--571
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 604--605
  [][] 
  []
 
-<images/dataset2/time_series/fts_histogram.png, id=388, 941.4372pt x 283.7802pt>
+<images/dataset2/time_series/fts_histogram.png, id=403, 941.4372pt x 283.7802pt>
 File: images/dataset2/time_series/fts_histogram.png Graphic file (type png)
 <use images/dataset2/time_series/fts_histogram.png>
-Package pdftex.def Info: images/dataset2/time_series/fts_histogram.png  used on input line 575.
+Package pdftex.def Info: images/dataset2/time_series/fts_histogram.png  used on input line 609.
 (pdftex.def)             Requested size: 564.86667pt x 170.26942pt.
 
-Overfull \hbox (64.38268pt too wide) in paragraph at lines 575--576
+Overfull \hbox (64.38268pt too wide) in paragraph at lines 609--610
  [][] 
  []
 
-[48 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_boxplot.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_distribution_histogram.png>]
-<images/dataset1/time_series/Covid_components_study.png, id=394, 867.24pt x 1156.32pt>
+[51 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_boxplot.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_distribution_histogram.png>]
+<images/dataset1/time_series/Covid_components_study.png, id=409, 867.24pt x 1156.32pt>
 File: images/dataset1/time_series/Covid_components_study.png Graphic file (type png)
 <use images/dataset1/time_series/Covid_components_study.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid_components_study.png  used on input line 583.
+Package pdftex.def Info: images/dataset1/time_series/Covid_components_study.png  used on input line 617.
 (pdftex.def)             Requested size: 433.61894pt x 578.15858pt.
- [49 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_histogram.png>]
-<images/dataset1/time_series/Covid_stationarity_study_1.png, id=400, 867.24pt x 289.08pt>
+ [52 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_histogram.png>]
+<images/dataset1/time_series/Covid_stationarity_study_1.png, id=414, 867.24pt x 289.08pt>
 File: images/dataset1/time_series/Covid_stationarity_study_1.png Graphic file (type png)
 <use images/dataset1/time_series/Covid_stationarity_study_1.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid_stationarity_study_1.png  used on input line 589.
+Package pdftex.def Info: images/dataset1/time_series/Covid_stationarity_study_1.png  used on input line 623.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
-<images/dataset1/time_series/Covid_stationarity_study_2.png, id=401, 867.24pt x 289.08pt>
+<images/dataset1/time_series/Covid_stationarity_study_2.png, id=415, 867.24pt x 289.08pt>
 File: images/dataset1/time_series/Covid_stationarity_study_2.png Graphic file (type png)
 <use images/dataset1/time_series/Covid_stationarity_study_2.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid_stationarity_study_2.png  used on input line 590.
+Package pdftex.def Info: images/dataset1/time_series/Covid_stationarity_study_2.png  used on input line 624.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 589--591
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 623--625
  [][] 
  []
 
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 589--591
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 623--625
  [] 
  []
 
-[50 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_components_study.png>]
-<images/dataset2/time_series/fts_components_study.png, id=407, 867.24pt x 1156.32pt>
+[53 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_components_study.png>]
+<images/dataset2/time_series/fts_components_study.png, id=420, 867.24pt x 1156.32pt>
 File: images/dataset2/time_series/fts_components_study.png Graphic file (type png)
 <use images/dataset2/time_series/fts_components_study.png>
-Package pdftex.def Info: images/dataset2/time_series/fts_components_study.png  used on input line 595.
+Package pdftex.def Info: images/dataset2/time_series/fts_components_study.png  used on input line 629.
 (pdftex.def)             Requested size: 433.61894pt x 578.15858pt.
- [51 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_stationarity_study_1.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_stationarity_study_2.png>]
-<images/dataset2/time_series/fts_stationarity_study_1.png, id=413, 867.24pt x 289.08pt>
+ [54 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_stationarity_study_1.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_stationarity_study_2.png>]
+<images/dataset2/time_series/fts_stationarity_study_1.png, id=426, 867.24pt x 289.08pt>
 File: images/dataset2/time_series/fts_stationarity_study_1.png Graphic file (type png)
 <use images/dataset2/time_series/fts_stationarity_study_1.png>
-Package pdftex.def Info: images/dataset2/time_series/fts_stationarity_study_1.png  used on input line 601.
+Package pdftex.def Info: images/dataset2/time_series/fts_stationarity_study_1.png  used on input line 635.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
-<images/dataset2/time_series/fts_stationarity_study_2.png, id=414, 867.24pt x 289.08pt>
+<images/dataset2/time_series/fts_stationarity_study_2.png, id=427, 867.24pt x 289.08pt>
 File: images/dataset2/time_series/fts_stationarity_study_2.png Graphic file (type png)
 <use images/dataset2/time_series/fts_stationarity_study_2.png>
-Package pdftex.def Info: images/dataset2/time_series/fts_stationarity_study_2.png  used on input line 602.
+Package pdftex.def Info: images/dataset2/time_series/fts_stationarity_study_2.png  used on input line 636.
 (pdftex.def)             Requested size: 520.34802pt x 173.44933pt.
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 601--603
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 635--637
  [][] 
  []
 
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 601--603
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 635--637
  [] 
  []
 
-[52 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_components_study.png>]
-<images/dataset1/time_series/Covid Weekly - Linear Regression_forecasting_series.png, id=419, 1156.32pt x 289.08pt>
+[55 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_components_study.png>]
+<images/dataset1/time_series/Covid Weekly - Linear Regression_forecasting_series.png, id=433, 1156.32pt x 289.08pt>
 File: images/dataset1/time_series/Covid Weekly - Linear Regression_forecasting_series.png Graphic file (type png)
 <use images/dataset1/time_series/Covid Weekly - Linear Regression_forecasting_series.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid Weekly - Linear Regression_forecasting_series.png  used on input line 612.
+Package pdftex.def Info: images/dataset1/time_series/Covid Weekly - Linear Regression_forecasting_series.png  used on input line 646.
 (pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
-<images/dataset1/time_series/Covid Monthly - Linear Regression_forecasting_series.png, id=420, 1156.32pt x 289.08pt>
+<images/dataset1/time_series/Covid Monthly - Linear Regression_forecasting_series.png, id=434, 1156.32pt x 289.08pt>
 File: images/dataset1/time_series/Covid Monthly - Linear Regression_forecasting_series.png Graphic file (type png)
 <use images/dataset1/time_series/Covid Monthly - Linear Regression_forecasting_series.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid Monthly - Linear Regression_forecasting_series.png  used on input line 613.
+Package pdftex.def Info: images/dataset1/time_series/Covid Monthly - Linear Regression_forecasting_series.png  used on input line 647.
 (pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
-<images/dataset1/time_series/Covid Quarterly - Linear Regression_forecasting_series.png, id=421, 1156.32pt x 289.08pt>
+<images/dataset1/time_series/Covid Quarterly - Linear Regression_forecasting_series.png, id=435, 1156.32pt x 289.08pt>
 File: images/dataset1/time_series/Covid Quarterly - Linear Regression_forecasting_series.png Graphic file (type png)
 <use images/dataset1/time_series/Covid Quarterly - Linear Regression_forecasting_series.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid Quarterly - Linear Regression_forecasting_series.png  used on input line 614.
+Package pdftex.def Info: images/dataset1/time_series/Covid Quarterly - Linear Regression_forecasting_series.png  used on input line 648.
 (pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
- [53 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_stationarity_study_1.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_stationarity_study_2.png>]
-<images/dataset1/time_series/Covid_Weekly - Linear Regression_forecasting_eval.png, id=427, 433.62pt x 216.81pt>
+ [56 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_stationarity_study_1.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset2/time_series/fts_stationarity_study_2.png>]
+<images/dataset1/time_series/Covid_Weekly - Linear Regression_forecasting_eval.png, id=441, 433.62pt x 216.81pt>
 File: images/dataset1/time_series/Covid_Weekly - Linear Regression_forecasting_eval.png Graphic file (type png)
 <use images/dataset1/time_series/Covid_Weekly - Linear Regression_forecasting_eval.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid_Weekly - Linear Regression_forecasting_eval.png  used on input line 619.
+Package pdftex.def Info: images/dataset1/time_series/Covid_Weekly - Linear Regression_forecasting_eval.png  used on input line 653.
 (pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
-<images/dataset1/time_series/Covid_Monthly - Linear Regression_forecasting_eval.png, id=428, 433.62pt x 216.81pt>
+<images/dataset1/time_series/Covid_Monthly - Linear Regression_forecasting_eval.png, id=442, 433.62pt x 216.81pt>
 File: images/dataset1/time_series/Covid_Monthly - Linear Regression_forecasting_eval.png Graphic file (type png)
 <use images/dataset1/time_series/Covid_Monthly - Linear Regression_forecasting_eval.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid_Monthly - Linear Regression_forecasting_eval.png  used on input line 620.
+Package pdftex.def Info: images/dataset1/time_series/Covid_Monthly - Linear Regression_forecasting_eval.png  used on input line 654.
 (pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
-<images/dataset1/time_series/Covid_Quarterly - Linear Regression_forecasting_eval.png, id=429, 433.62pt x 216.81pt>
+<images/dataset1/time_series/Covid_Quarterly - Linear Regression_forecasting_eval.png, id=443, 433.62pt x 216.81pt>
 File: images/dataset1/time_series/Covid_Quarterly - Linear Regression_forecasting_eval.png Graphic file (type png)
 <use images/dataset1/time_series/Covid_Quarterly - Linear Regression_forecasting_eval.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid_Quarterly - Linear Regression_forecasting_eval.png  used on input line 621.
+Package pdftex.def Info: images/dataset1/time_series/Covid_Quarterly - Linear Regression_forecasting_eval.png  used on input line 655.
 (pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
- [54 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Weekly - Linear Regression_forecasting_series.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Monthly - Linear Regression_forecasting_series.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Quarterly - Linear Regression_forecasting_series.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Weekly - Linear Regression_forecasting_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Monthly - Linear Regression_forecasting_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Quarterly - Linear Regression_forecasting_eval.png>]
-<images/dataset1/time_series/Covid Window Size 25 - Linear Regression_forecasting_series.png, id=439, 1156.32pt x 289.08pt>
+ [57 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Weekly - Linear Regression_forecasting_series.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Monthly - Linear Regression_forecasting_series.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Quarterly - Linear Regression_forecasting_series.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Weekly - Linear Regression_forecasting_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Monthly - Linear Regression_forecasting_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Quarterly - Linear Regression_forecasting_eval.png>]
+<images/dataset1/time_series/Covid Window Size 25 - Linear Regression_forecasting_series.png, id=453, 1156.32pt x 289.08pt>
 File: images/dataset1/time_series/Covid Window Size 25 - Linear Regression_forecasting_series.png Graphic file (type png)
 <use images/dataset1/time_series/Covid Window Size 25 - Linear Regression_forecasting_series.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid Window Size 25 - Linear Regression_forecasting_series.png  used on input line 639.
+Package pdftex.def Info: images/dataset1/time_series/Covid Window Size 25 - Linear Regression_forecasting_series.png  used on input line 673.
 (pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
-<images/dataset1/time_series/Covid Window Size 50 - Linear Regression_forecasting_series.png, id=440, 1156.32pt x 289.08pt>
+<images/dataset1/time_series/Covid Window Size 50 - Linear Regression_forecasting_series.png, id=454, 1156.32pt x 289.08pt>
 File: images/dataset1/time_series/Covid Window Size 50 - Linear Regression_forecasting_series.png Graphic file (type png)
 <use images/dataset1/time_series/Covid Window Size 50 - Linear Regression_forecasting_series.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid Window Size 50 - Linear Regression_forecasting_series.png  used on input line 640.
+Package pdftex.def Info: images/dataset1/time_series/Covid Window Size 50 - Linear Regression_forecasting_series.png  used on input line 674.
 (pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
-<images/dataset1/time_series/Covid Window Size 75 - Linear Regression_forecasting_series.png, id=441, 1156.32pt x 289.08pt>
+<images/dataset1/time_series/Covid Window Size 75 - Linear Regression_forecasting_series.png, id=455, 1156.32pt x 289.08pt>
 File: images/dataset1/time_series/Covid Window Size 75 - Linear Regression_forecasting_series.png Graphic file (type png)
 <use images/dataset1/time_series/Covid Window Size 75 - Linear Regression_forecasting_series.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid Window Size 75 - Linear Regression_forecasting_series.png  used on input line 641.
+Package pdftex.def Info: images/dataset1/time_series/Covid Window Size 75 - Linear Regression_forecasting_series.png  used on input line 675.
 (pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
-<images/dataset1/time_series/Covid Window Size 100 - Linear Regression_forecasting_series.png, id=442, 1156.32pt x 289.08pt>
+<images/dataset1/time_series/Covid Window Size 100 - Linear Regression_forecasting_series.png, id=456, 1156.32pt x 289.08pt>
 File: images/dataset1/time_series/Covid Window Size 100 - Linear Regression_forecasting_series.png Graphic file (type png)
 <use images/dataset1/time_series/Covid Window Size 100 - Linear Regression_forecasting_series.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid Window Size 100 - Linear Regression_forecasting_series.png  used on input line 642.
+Package pdftex.def Info: images/dataset1/time_series/Covid Window Size 100 - Linear Regression_forecasting_series.png  used on input line 676.
 (pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
-<images/dataset1/time_series/Covid_Window_Size_25 - Linear Regression_forecasting_eval.png, id=443, 433.62pt x 216.81pt>
+<images/dataset1/time_series/Covid_Window_Size_25 - Linear Regression_forecasting_eval.png, id=457, 433.62pt x 216.81pt>
 File: images/dataset1/time_series/Covid_Window_Size_25 - Linear Regression_forecasting_eval.png Graphic file (type png)
 <use images/dataset1/time_series/Covid_Window_Size_25 - Linear Regression_forecasting_eval.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid_Window_Size_25 - Linear Regression_forecasting_eval.png  used on input line 647.
+Package pdftex.def Info: images/dataset1/time_series/Covid_Window_Size_25 - Linear Regression_forecasting_eval.png  used on input line 681.
 (pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
-<images/dataset1/time_series/Covid_Window_Size_50 - Linear Regression_forecasting_eval.png, id=444, 433.62pt x 216.81pt>
+<images/dataset1/time_series/Covid_Window_Size_50 - Linear Regression_forecasting_eval.png, id=458, 433.62pt x 216.81pt>
 File: images/dataset1/time_series/Covid_Window_Size_50 - Linear Regression_forecasting_eval.png Graphic file (type png)
 <use images/dataset1/time_series/Covid_Window_Size_50 - Linear Regression_forecasting_eval.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid_Window_Size_50 - Linear Regression_forecasting_eval.png  used on input line 648.
+Package pdftex.def Info: images/dataset1/time_series/Covid_Window_Size_50 - Linear Regression_forecasting_eval.png  used on input line 682.
 (pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
-<images/dataset1/time_series/Covid_Window_Size_75 - Linear Regression_forecasting_eval.png, id=445, 433.62pt x 216.81pt>
+<images/dataset1/time_series/Covid_Window_Size_75 - Linear Regression_forecasting_eval.png, id=459, 433.62pt x 216.81pt>
 File: images/dataset1/time_series/Covid_Window_Size_75 - Linear Regression_forecasting_eval.png Graphic file (type png)
 <use images/dataset1/time_series/Covid_Window_Size_75 - Linear Regression_forecasting_eval.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid_Window_Size_75 - Linear Regression_forecasting_eval.png  used on input line 649.
+Package pdftex.def Info: images/dataset1/time_series/Covid_Window_Size_75 - Linear Regression_forecasting_eval.png  used on input line 683.
 (pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
-<images/dataset1/time_series/Covid_Window_Size_100 - Linear Regression_forecasting_eval.png, id=446, 433.62pt x 216.81pt>
+<images/dataset1/time_series/Covid_Window_Size_100 - Linear Regression_forecasting_eval.png, id=460, 433.62pt x 216.81pt>
 File: images/dataset1/time_series/Covid_Window_Size_100 - Linear Regression_forecasting_eval.png Graphic file (type png)
 <use images/dataset1/time_series/Covid_Window_Size_100 - Linear Regression_forecasting_eval.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid_Window_Size_100 - Linear Regression_forecasting_eval.png  used on input line 650.
+Package pdftex.def Info: images/dataset1/time_series/Covid_Window_Size_100 - Linear Regression_forecasting_eval.png  used on input line 684.
 (pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
- [55 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Window Size 25 - Linear Regression_forecasting_series.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Window Size 50 - Linear Regression_forecasting_series.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Window Size 75 - Linear Regression_forecasting_series.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Window Size 100 - Linear Regression_forecasting_series.png>]
-<images/dataset1/time_series/Covid First derivative - Linear Regression_forecasting_series.png, id=455, 1156.32pt x 289.08pt>
+ [58 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Window Size 25 - Linear Regression_forecasting_series.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Window Size 50 - Linear Regression_forecasting_series.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Window Size 75 - Linear Regression_forecasting_series.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Window Size 100 - Linear Regression_forecasting_series.png>]
+<images/dataset1/time_series/Covid First derivative - Linear Regression_forecasting_series.png, id=468, 1156.32pt x 289.08pt>
 File: images/dataset1/time_series/Covid First derivative - Linear Regression_forecasting_series.png Graphic file (type png)
 <use images/dataset1/time_series/Covid First derivative - Linear Regression_forecasting_series.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid First derivative - Linear Regression_forecasting_series.png  used on input line 668.
+Package pdftex.def Info: images/dataset1/time_series/Covid First derivative - Linear Regression_forecasting_series.png  used on input line 702.
 (pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
-<images/dataset1/time_series/Covid Second derivative - Linear Regression_forecasting_series.png, id=456, 1156.32pt x 289.08pt>
+<images/dataset1/time_series/Covid Second derivative - Linear Regression_forecasting_series.png, id=469, 1156.32pt x 289.08pt>
 File: images/dataset1/time_series/Covid Second derivative - Linear Regression_forecasting_series.png Graphic file (type png)
 <use images/dataset1/time_series/Covid Second derivative - Linear Regression_forecasting_series.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid Second derivative - Linear Regression_forecasting_series.png  used on input line 669.
+Package pdftex.def Info: images/dataset1/time_series/Covid Second derivative - Linear Regression_forecasting_series.png  used on input line 703.
 (pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
- [56 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Window_Size_25 - Linear Regression_forecasting_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Window_Size_50 - Linear Regression_forecasting_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Window_Size_75 - Linear Regression_forecasting_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Window_Size_100 - Linear Regression_forecasting_eval.png>]
-<images/dataset1/time_series/Covid_First derivative - Linear Regression_forecasting_eval.png, id=464, 433.62pt x 216.81pt>
+ [59 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Window_Size_25 - Linear Regression_forecasting_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Window_Size_50 - Linear Regression_forecasting_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Window_Size_75 - Linear Regression_forecasting_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Window_Size_100 - Linear Regression_forecasting_eval.png>]
+<images/dataset1/time_series/Covid_First derivative - Linear Regression_forecasting_eval.png, id=477, 433.62pt x 216.81pt>
 File: images/dataset1/time_series/Covid_First derivative - Linear Regression_forecasting_eval.png Graphic file (type png)
 <use images/dataset1/time_series/Covid_First derivative - Linear Regression_forecasting_eval.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid_First derivative - Linear Regression_forecasting_eval.png  used on input line 674.
+Package pdftex.def Info: images/dataset1/time_series/Covid_First derivative - Linear Regression_forecasting_eval.png  used on input line 708.
 (pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
-<images/dataset1/time_series/Covid_Second derivative - Linear Regression_forecasting_eval.png, id=465, 433.62pt x 216.81pt>
+<images/dataset1/time_series/Covid_Second derivative - Linear Regression_forecasting_eval.png, id=478, 433.62pt x 216.81pt>
 File: images/dataset1/time_series/Covid_Second derivative - Linear Regression_forecasting_eval.png Graphic file (type png)
 <use images/dataset1/time_series/Covid_Second derivative - Linear Regression_forecasting_eval.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid_Second derivative - Linear Regression_forecasting_eval.png  used on input line 675.
+Package pdftex.def Info: images/dataset1/time_series/Covid_Second derivative - Linear Regression_forecasting_eval.png  used on input line 709.
 (pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
-<images/dataset1/time_series/Covid_deaths_scaling.png, id=466, 867.24pt x 144.54pt>
+<images/dataset1/time_series/Covid_deaths_scaling.png, id=479, 867.24pt x 144.54pt>
 File: images/dataset1/time_series/Covid_deaths_scaling.png Graphic file (type png)
 <use images/dataset1/time_series/Covid_deaths_scaling.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid_deaths_scaling.png  used on input line 693.
+Package pdftex.def Info: images/dataset1/time_series/Covid_deaths_scaling.png  used on input line 727.
 (pdftex.def)             Requested size: 520.34802pt x 86.72466pt.
 
-Overfull \hbox (19.86403pt too wide) in paragraph at lines 693--694
+Overfull \hbox (19.86403pt too wide) in paragraph at lines 727--728
  [][] 
  []
 
-[57 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid First derivative - Linear Regression_forecasting_series.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Second derivative - Linear Regression_forecasting_series.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_First derivative - Linear Regression_forecasting_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Second derivative - Linear Regression_forecasting_eval.png>]
-<images/dataset1/time_series/Covid - Simple Average_forecasting_series.png, id=474, 1156.32pt x 289.08pt>
+[60 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid First derivative - Linear Regression_forecasting_series.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid Second derivative - Linear Regression_forecasting_series.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_First derivative - Linear Regression_forecasting_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_Second derivative - Linear Regression_forecasting_eval.png>]
+<images/dataset1/time_series/Covid - Simple Average_forecasting_series.png, id=487, 1156.32pt x 289.08pt>
 File: images/dataset1/time_series/Covid - Simple Average_forecasting_series.png Graphic file (type png)
 <use images/dataset1/time_series/Covid - Simple Average_forecasting_series.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid - Simple Average_forecasting_series.png  used on input line 719.
+Package pdftex.def Info: images/dataset1/time_series/Covid - Simple Average_forecasting_series.png  used on input line 753.
 (pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
-<images/dataset1/time_series/Covid - Simple Average_forecasting_eval.png, id=475, 433.62pt x 216.81pt>
+<images/dataset1/time_series/Covid - Simple Average_forecasting_eval.png, id=488, 433.62pt x 216.81pt>
 File: images/dataset1/time_series/Covid - Simple Average_forecasting_eval.png Graphic file (type png)
 <use images/dataset1/time_series/Covid - Simple Average_forecasting_eval.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid - Simple Average_forecasting_eval.png  used on input line 724.
+Package pdftex.def Info: images/dataset1/time_series/Covid - Simple Average_forecasting_eval.png  used on input line 758.
 (pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
- [58 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_deaths_scaling.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Simple Average_forecasting_series.png>]
-<images/dataset1/time_series/Covid - Persistence Optimist_forecasting_series.png, id=481, 1156.32pt x 289.08pt>
+ [61 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_deaths_scaling.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Simple Average_forecasting_series.png>]
+<images/dataset1/time_series/Covid - Persistence Optimist_forecasting_series.png, id=495, 1156.32pt x 289.08pt>
 File: images/dataset1/time_series/Covid - Persistence Optimist_forecasting_series.png Graphic file (type png)
 <use images/dataset1/time_series/Covid - Persistence Optimist_forecasting_series.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid - Persistence Optimist_forecasting_series.png  used on input line 742.
+Package pdftex.def Info: images/dataset1/time_series/Covid - Persistence Optimist_forecasting_series.png  used on input line 776.
 (pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
-<images/dataset1/time_series/Covid - Persistence Realist_forecasting_series.png, id=482, 1156.32pt x 289.08pt>
+<images/dataset1/time_series/Covid - Persistence Realist_forecasting_series.png, id=496, 1156.32pt x 289.08pt>
 File: images/dataset1/time_series/Covid - Persistence Realist_forecasting_series.png Graphic file (type png)
 <use images/dataset1/time_series/Covid - Persistence Realist_forecasting_series.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid - Persistence Realist_forecasting_series.png  used on input line 747.
+Package pdftex.def Info: images/dataset1/time_series/Covid - Persistence Realist_forecasting_series.png  used on input line 781.
 (pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
-<images/dataset1/time_series/Covid - Persistence Optimist_forecasting_eval.png, id=483, 433.62pt x 216.81pt>
+<images/dataset1/time_series/Covid - Persistence Optimist_forecasting_eval.png, id=497, 433.62pt x 216.81pt>
 File: images/dataset1/time_series/Covid - Persistence Optimist_forecasting_eval.png Graphic file (type png)
 <use images/dataset1/time_series/Covid - Persistence Optimist_forecasting_eval.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid - Persistence Optimist_forecasting_eval.png  used on input line 752.
+Package pdftex.def Info: images/dataset1/time_series/Covid - Persistence Optimist_forecasting_eval.png  used on input line 786.
 (pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
-<images/dataset1/time_series/Covid - Persistence Realist_forecasting_eval.png, id=484, 433.62pt x 216.81pt>
+<images/dataset1/time_series/Covid - Persistence Realist_forecasting_eval.png, id=498, 433.62pt x 216.81pt>
 File: images/dataset1/time_series/Covid - Persistence Realist_forecasting_eval.png Graphic file (type png)
 <use images/dataset1/time_series/Covid - Persistence Realist_forecasting_eval.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid - Persistence Realist_forecasting_eval.png  used on input line 753.
+Package pdftex.def Info: images/dataset1/time_series/Covid - Persistence Realist_forecasting_eval.png  used on input line 787.
 (pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
- [59 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Simple Average_forecasting_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Persistence Optimist_forecasting_series.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Persistence Realist_forecasting_series.png>]
-<images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_series.png, id=491, 1156.32pt x 289.08pt>
+ [62 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Simple Average_forecasting_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Persistence Optimist_forecasting_series.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Persistence Realist_forecasting_series.png>]
+<images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_series.png, id=505, 1156.32pt x 289.08pt>
 File: images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_series.png Graphic file (type png)
 <use images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_series.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_series.png  used on input line 776.
+Package pdftex.def Info: images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_series.png  used on input line 810.
 (pdftex.def)             Requested size: 462.5198pt x 115.62994pt.
-<images/dataset1/time_series/Covid_rollingmean_R2_study.png, id=492, 289.08pt x 289.08pt>
+<images/dataset1/time_series/Covid_rollingmean_R2_study.png, id=506, 289.08pt x 289.08pt>
 File: images/dataset1/time_series/Covid_rollingmean_R2_study.png Graphic file (type png)
 <use images/dataset1/time_series/Covid_rollingmean_R2_study.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid_rollingmean_R2_study.png  used on input line 781.
+Package pdftex.def Info: images/dataset1/time_series/Covid_rollingmean_R2_study.png  used on input line 815.
 (pdftex.def)             Requested size: 144.53964pt x 144.53964pt.
- [60 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Persistence Optimist_forecasting_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Persistence Realist_forecasting_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_series.png>]
-<images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_eval.png, id=499, 433.62pt x 216.81pt>
+ [63 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Persistence Optimist_forecasting_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Persistence Realist_forecasting_eval.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_series.png>]
+<images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_eval.png, id=513, 433.62pt x 216.81pt>
 File: images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_eval.png Graphic file (type png)
 <use images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_eval.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_eval.png  used on input line 786.
+Package pdftex.def Info: images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_eval.png  used on input line 820.
 (pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
-<images/dataset1/time_series/Covid_arima_R2_study.png, id=500, 867.24pt x 289.08pt>
+<images/dataset1/time_series/Covid_arima_R2_study.png, id=514, 867.24pt x 289.08pt>
 File: images/dataset1/time_series/Covid_arima_R2_study.png Graphic file (type png)
 <use images/dataset1/time_series/Covid_arima_R2_study.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid_arima_R2_study.png  used on input line 809.
+Package pdftex.def Info: images/dataset1/time_series/Covid_arima_R2_study.png  used on input line 843.
 (pdftex.def)             Requested size: 346.88986pt x 115.62994pt.
- [61 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_rollingmean_R2_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_eval.png>]
-<images/dataset1/time_series/Covid - ARIMA _forecasting_series.png, id=507, 1156.32pt x 289.08pt>
+ [64 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_rollingmean_R2_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - Rolling Mean (win=3)_forecasting_eval.png>]
+<images/dataset1/time_series/Covid - ARIMA _forecasting_series.png, id=520, 1156.32pt x 289.08pt>
 File: images/dataset1/time_series/Covid - ARIMA _forecasting_series.png Graphic file (type png)
 <use images/dataset1/time_series/Covid - ARIMA _forecasting_series.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid - ARIMA _forecasting_series.png  used on input line 814.
+Package pdftex.def Info: images/dataset1/time_series/Covid - ARIMA _forecasting_series.png  used on input line 848.
 (pdftex.def)             Requested size: 578.15858pt x 144.53964pt.
 
-Overfull \hbox (77.67459pt too wide) in paragraph at lines 814--815
+Overfull \hbox (77.67459pt too wide) in paragraph at lines 848--849
  [][] 
  []
 
-<images/dataset1/time_series/Covid - ARIMA (p=7, d=2, q=5)_forecasting_eval.png, id=508, 433.62pt x 216.81pt>
+<images/dataset1/time_series/Covid - ARIMA (p=7, d=2, q=5)_forecasting_eval.png, id=521, 433.62pt x 216.81pt>
 File: images/dataset1/time_series/Covid - ARIMA (p=7, d=2, q=5)_forecasting_eval.png Graphic file (type png)
 <use images/dataset1/time_series/Covid - ARIMA (p=7, d=2, q=5)_forecasting_eval.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid - ARIMA (p=7, d=2, q=5)_forecasting_eval.png  used on input line 819.
+Package pdftex.def Info: images/dataset1/time_series/Covid - ARIMA (p=7, d=2, q=5)_forecasting_eval.png  used on input line 853.
 (pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
-[62 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_arima_R2_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - ARIMA _forecasting_series.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - ARIMA (p=7, d=2, q=5)_forecasting_eval.png>]
-<images/dataset1/time_series/Covid_lstm_study_R2.png, id=515, 867.24pt x 289.08pt>
+[65 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_arima_R2_study.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - ARIMA _forecasting_series.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - ARIMA (p=7, d=2, q=5)_forecasting_eval.png>]
+<images/dataset1/time_series/Covid_lstm_study_R2.png, id=528, 867.24pt x 289.08pt>
 File: images/dataset1/time_series/Covid_lstm_study_R2.png Graphic file (type png)
 <use images/dataset1/time_series/Covid_lstm_study_R2.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid_lstm_study_R2.png  used on input line 872.
+Package pdftex.def Info: images/dataset1/time_series/Covid_lstm_study_R2.png  used on input line 906.
 (pdftex.def)             Requested size: 346.88986pt x 115.62994pt.
-<images/dataset1/time_series/Covid - LSTMs _forecasting_series.png, id=516, 1156.32pt x 289.08pt>
+<images/dataset1/time_series/Covid - LSTMs _forecasting_series.png, id=529, 1156.32pt x 289.08pt>
 File: images/dataset1/time_series/Covid - LSTMs _forecasting_series.png Graphic file (type png)
 <use images/dataset1/time_series/Covid - LSTMs _forecasting_series.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid - LSTMs _forecasting_series.png  used on input line 877.
+Package pdftex.def Info: images/dataset1/time_series/Covid - LSTMs _forecasting_series.png  used on input line 911.
 (pdftex.def)             Requested size: 578.15858pt x 144.53964pt.
 
-Overfull \hbox (77.67459pt too wide) in paragraph at lines 877--878
+Overfull \hbox (77.67459pt too wide) in paragraph at lines 911--912
  [][] 
  []
 
-[63 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_lstm_study_R2.png>]
-<images/dataset1/time_series/Covid - LSTM (length=4, hidden=100, epochs=900)_forecasting_eval.png, id=521, 433.62pt x 216.81pt>
+[66 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid_lstm_study_R2.png>]
+<images/dataset1/time_series/Covid - LSTM (length=4, hidden=100, epochs=900)_forecasting_eval.png, id=534, 433.62pt x 216.81pt>
 File: images/dataset1/time_series/Covid - LSTM (length=4, hidden=100, epochs=900)_forecasting_eval.png Graphic file (type png)
 <use images/dataset1/time_series/Covid - LSTM (length=4, hidden=100, epochs=900)_forecasting_eval.png>
-Package pdftex.def Info: images/dataset1/time_series/Covid - LSTM (length=4, hidden=100, epochs=900)_forecasting_eval.png  used on input line 882.
+Package pdftex.def Info: images/dataset1/time_series/Covid - LSTM (length=4, hidden=100, epochs=900)_forecasting_eval.png  used on input line 916.
 (pdftex.def)             Requested size: 216.80946pt x 108.40472pt.
- [64 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - LSTMs _forecasting_series.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - LSTM (length=4, hidden=100, epochs=900)_forecasting_eval.png>] [65] (/home/josecruz/Documents/MEIC/CD/CD_project/main.aux) ) 
+ [67 </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - LSTMs _forecasting_series.png> </home/josecruz/Documents/MEIC/CD/CD_project/images/dataset1/time_series/Covid - LSTM (length=4, hidden=100, epochs=900)_forecasting_eval.png>] [68] (/home/josecruz/Documents/MEIC/CD/CD_project/main.aux) ) 
 Here is how much of TeX's memory you used:
- 6461 strings out of 483107
- 147880 string characters out of 5964629
- 356417 words of memory out of 5000000
- 21213 multiletter control sequences out of 15000+600000
+ 6473 strings out of 483107
+ 148678 string characters out of 5964629
+ 356531 words of memory out of 5000000
+ 21223 multiletter control sequences out of 15000+600000
  546491 words of font info for 51 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  48i,15n,46p,581b,602s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/josecruz/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecso1000.600pk> </home/josecruz/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecso1200.600pk> </home/josecruz/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx1440.600pk> </home/josecruz/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx2074.617pk> </home/josecruz/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsi1000.600pk> </home/josecruz/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1000.600pk> </home/josecruz/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx1000.600pk> </home/josecruz/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss3583.603pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on /home/josecruz/Documents/MEIC/CD/CD_project/main.pdf (65 pages, 6077590 bytes).
+Output written on /home/josecruz/Documents/MEIC/CD/CD_project/main.pdf (68 pages, 16455081 bytes).
 PDF statistics:
- 778 PDF objects out of 1000 (max. 8388607)
- 181 compressed objects within 2 object streams
+ 809 PDF objects out of 1000 (max. 8388607)
+ 188 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 781 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 791 words of extra memory for PDF output out of 10000 (max. 10000000)
 

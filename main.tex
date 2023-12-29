@@ -117,26 +117,43 @@ of missing values. However these ratios don't go over 20\%, making it unlikely t
   \centering\includegraphics[scale=0.5]{images/dataset2/data_profiling/Credit_Score_global_boxplot.png}
 \caption{Global boxplots dataset 1 (left) and dataset 2 (right)}
 \end{figure}
+Global boxplots are rarely a good option to visualize data as they depend on the fact that all variables have the same scale.
+Given this, we can say, about the health dataset, that the variable with the biggest spread is \textit{WeightInKilograms}.
+When examining the services dataset, the only thing we can tell is that the \textit{MonthlyBalance} variable has a huge outlier. This 
+completly distorts the overall representation of the data, rendering the figure nearly useless in terms of insights it could give us.
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.60]{images/dataset1/data_profiling/CovidPos_single_boxplots.png}
 \caption{Single variables boxplots for dataset 1}
 \end{figure}
+From this we can conclude that all the numeric variables in this first dataset have quite high variability in their values.
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.6]{images/dataset2/data_profiling/Credit_Score_single_boxplots.png}
 \caption{Single variables boxplots for dataset 2}
 \end{figure}
+Analysing these boxplots, we come to the conclusion that more than half the numeric variables in this dataset have massive variation.
+This means that a more aggressive approach during data preparation for the outlier values might be needed. Knowing this, it is important
+to remember that an outlier is a point that is far away from the regular ones. Given that for all but the \textit{MonthlyBalance} 
+variable all the points are continuous, some care must be taken in their treatment.
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.6]{images/dataset1/data_profiling/CovidPos_single_histograms_numeric.png}
+\centering\includegraphics[scale=0.6]{images/dataset1/data_profiling/CovidPos_histogram_numeric_distribution.png}
 \caption{Histograms for dataset 1} %(with distributions is enough)
 \end{figure}
+% comment for the histograms with the distributions
+From this visual representation we can extract that a majority of numerical variables follow a normal distribution quite well. 
+The others have a shape closer to that of the exponential distribution. Maybe a normalization of the last would be advantageous.
+This would enable the application of models that rely on the data following normal distributions later on. 
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.6]{images/dataset2/data_profiling/Credit_Score_single_histograms_numeric.png}
+\centering\includegraphics[scale=0.6]{images/dataset2/data_profiling/Credit_Score_histogram_numeric_distribution.png}
 \caption{Histograms for dataset 2} %(with distributions is enough)
 \end{figure}
+% comment for the histograms with the distributions
+% talvez tirar os histogramas que nao valem a pena ver????
+The second dataset once again suffers from having very distant outliers. The histograms from which we can infer more information
+either follow a normal distribution or a lognormal one. The latter can easily be trasnformed to a normal one if needed for some modelation.
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.60]{images/dataset1/data_profiling/CovidPos_outliers_standard.png}
@@ -144,43 +161,55 @@ of missing values. However these ratios don't go over 20\%, making it unlikely t
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.6]{images/dataset2/data_profiling/Credit_Score_outliers_standard.png}
+\centering\includegraphics[scale=0.60]{images/dataset2/data_profiling/Credit_Score_outliers_standard.png}
 \caption{Outliers study dataset 2}
 \end{figure}
+For the outliers study per variable we used the IQR factor and the stantard deviation one. The IQR factor was of 1.5 and the 
+stddev was of 2. %% Precisa de justificar isto, n sei como.
+IQR is more robust to extreme values, making it more desiarable for the study of the second dataset. The stddev method should only be
+used for variables that follow a normal distribution.
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.95]{images/dataset1/data_profiling/CovidPos_class_distribution.png}
 \caption{Class distribution for dataset 1}
 \end{figure}
 
+
 \begin{figure}[H]
 \centering\includegraphics[scale=0.95]{images/dataset2/data_profiling/Credit_Score_class_distribution.png}
 \caption{Class distribution for dataset 2}
 \end{figure}
+The class distribution is similar in both datasets, a 25\%-75\%. This means that probebly some balancing with be required during the
+data preparation phase.
 
 \subsection*{\textit{Data Granularity}}
 \ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to the data granularity perspective, such as the impact of different granularities considered for each variable. May present additional taxonomies if needed.  \textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
-%\centering\includegraphics[scale=0.95]{}
+%\centering\includegraphics[scale=0.95]{images/dataset1/data_profiling/Credit_Score}
 \caption{Granularity analysis for dataset 1}
 \end{figure}
 
 \begin{figure}[H]
-%\centering\includegraphics[scale=0.95]{}
+\centering\includegraphics[scale=0.95]{images/dataset2/data_profiling/Credit_Score_granularity.png}
 \caption{Granularity analysis for dataset 2}
 \end{figure}
+We only did a granularity study for symbolic variables with reasonably clear taxonomies that could then aid us in the variable
+encoding process. Some of the variables clearly had too much differente values, this study allowed us to know if descending in the
+taxonomy hierachy would not signifincantly alter the distribution of these variables. Notable examples of this are the 
+\textit{Type\_of\_Loan} and \textit{Credit\_History\_Age} variables.
 
 \subsection*{\textit{Data Sparsity}}
 \ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to the data sparsity perspective, such as domain coverage and correlation among variables.  \textbf{Shall not exceed 500 characters.}}
+For both datasets, we used variable encoding to transform the symbolic variables into numeric ones for the correlation analysis.
 
 \begin{figure}[H]
-%\centering\includegraphics[scale=0.95]{images/dataset1/data_profiling/CovidPos_sparsity_per_class_study.png}
+\centering\includegraphics[scale=0.95]{images/dataset1/data_profiling/CovidPos_sparsity_per_class_study.png}
 \caption{Sparsity analysis for dataset 1}
 \end{figure}
 
 \begin{figure}[H]
-%\centering\includegraphics[scale=0.95]{}
+%\centering\includegraphics[scale=0.95]{images/dataset2/data_profiling/Credit_Score_All_sparsity_per_class_study.png}
 \caption{Sparsity analysis for dataset 2}
 \end{figure}
 
@@ -188,11 +217,16 @@ of missing values. However these ratios don't go over 20\%, making it unlikely t
 \centering\includegraphics[scale=0.6]{images/dataset1/data_profiling/CovidPos_correlation_analysis.png}
 \caption{Correlation analysis for dataset 1}
 \end{figure}
+We can clearly observe that there are not many variables with high correlations, and the ones with higer ones aren't relevant -
+The gender of a person and their height, their BMI and their weight.
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.6]{images/dataset2/data_profiling/Credit_Score_correlation_analysis.png}
 \caption{Correlation analysis for dataset 2}
 \end{figure}
+In the services dataset we can infer a bit more information, especially about the behaviour of people and what leads them to having
+a good or bad credit score. Despite this not all high correlations are relevant, per example, the \textit{Name} and \textit{ID}
+variables.
 
 \section{DATA PREPARATION}
 
