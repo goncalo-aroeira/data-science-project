@@ -254,6 +254,10 @@ variable we used dummification.
 \includegraphics[scale=0.80]{images/dataset2/data_preparation/Credit_Score_mvi_knn_eval.png}
 \caption{Missing values imputation results with different approaches for dataset 2}
 \end{figure}
+Firstly, we drop all the records with more than 90\% of missing values, removing 11.482 entries.
+Then, we applied two different filling strategies, frequent and KNN, both had very similiar
+results after evaluation. However, the frequent strategy came out on top and we chose it to
+fill the rest of the missing values.
 
 \subsection*{\textit{Outliers Treatment}}
 \ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to outliers imputation, such as the choices made and the impact of the different approaches on modelling results. Shall also clearly reveal the approach selected to proceed with the processing. If not applied explain the reason for that, based on data characteristics.  \textbf{Shall not exceed 500 characters.}}
@@ -273,6 +277,9 @@ variable we used dummification.
 \includegraphics[scale=0.8]{images/dataset2/data_preparation/Credit_Score_outliers_treat_truncating_minmax.png}
 \caption{Outliers imputation results with different approaches for dataset 2}
 \end{figure}
+We applied four different strategies: replacing, truncating or dropping (either std based or iqr based) them.
+They all attained similar results but the best evaluation values were the result of dropping std based, therefore
+this was our choice to move forward. 
 
 \subsection*{\textit{Scaling}}
 \ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to scaling transformation, such as the choices made and the impact of the different approaches on modelling results. Shall also clearly reveal the approach selected to proceed with the processing. If not applied explain the reason for that, based on data characteristics.  \textbf{Shall not exceed 200 characters.}}
@@ -291,6 +298,8 @@ variable we used dummification.
 \includegraphics[scale=0.8]{images/dataset2/data_preparation/Credit_Score_scaling_Z-Score.png}
 \caption{Scaling results with different approaches for dataset 2}
 \end{figure}
+In scaling, we compared the a MinMax and Z-Score approaches, seeing which would give us better improvement, if any.
+Z-Score had the best evaluation results therefore it was chosen to procced with the data preparation.  
 
 \subsection*{\textit{Balancing}}
 \ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to balancing transformation, such as the choices made and the impact of the different approaches on modelling results. Shall also clearly reveal the approach selected to proceed with the processing. If not applied explain the reason for that, based on data characteristics.  \textbf{Shall not exceed 500 characters.}}
