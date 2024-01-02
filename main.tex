@@ -232,6 +232,13 @@ variables.
 
 \subsection*{\textit{Variables Encoding}}
 \ctext[RGB]{190,190,190}{Shall contain all relevant information respecting to the transformation of variables. The list of variables under each one of the transformations, shall be presented. If not applied explain the reason for that, based on data characteristics.  \textbf{Shall not exceed 500 characters \textit{for each dataset.}}}
+\subsubsection*{Dataset 2 - Services}
+In this step we converted all non numerical variables into numerical ones. For the \textit{ID}, \textit{Customer\_ID},
+\textit{SSN} and \textit{Name} were trasnformed into numbers, preserving their uniqueness. For variables that had order 
+to their values we used ordinal linear encoding, these were \textit{Credit\_Score}, \textit{Credit\_Mix}, 
+\textit{Payment\_of\_Min\_Amount}, \textit{Credit\_History\_Age} and \textit{Payment\_Behaviour} . For the \textit{Month} we used 
+cyclic encoding. We reduced the granularity of the \textit{Occupation} variable, turning it more broad. For the \textit{Type\_of\_Loan}
+variable we used dummification. 
 
 \subsection*{\textit{Missing Value Imputation}}
 \ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to missing values imputation, such as the choices made and the impact of the different approaches on modelling results. Shall also clearly reveal the approach selected to proceed with the processing. If not applied explain the reason for that, based on data characteristics.  \textbf{Shall not exceed 500 characters.}}
