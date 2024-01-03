@@ -505,8 +505,9 @@ def abreviate_type_of_loan(tl: str) -> str:
     return res
 
 def histograms_symbolic_vars(data: DataFrame, file_tag: str):
-    variables_types: dict[str, list] = get_variable_types(data)
+    variables_types: dict[str, list] = get_variable_types(dataOg)
     symbolic: list[str] = variables_types["symbolic"] + variables_types["binary"]
+    print(variables_types,symbolic)
     if [] != symbolic:
         rows, cols = define_grid(len(symbolic))
         fig, axs = subplots(
@@ -553,19 +554,20 @@ def class_distribution(data: DataFrame, file_tag: str, target: str):
 
 
 if __name__ == "__main__":
-    #filename = "data/class_credit_score.csv"
+    filenameOg = "data/class_credit_score.csv"
     filename = "data/ccs_vars_encoded.csv"
     file_tag = "Credit_Score"
     target = "Credit_Score"
     #data: DataFrame = read_csv(filename, na_values="", index_col="")
     data: DataFrame = read_csv(filename, na_values="", index_col="Unnamed: 0")
+    dataOg: DataFrame = read_csv(filenameOg, na_values="")
     
     stroke: DataFrame = read_csv("data/stroke.csv", na_values="")
 
     #print(data.shape)
     #print(data.head)
     
-    #data['Age'] = data['Age'].astype(str).str.replace('_', '', regex=False).astype(int)
+    dataOg['Age'] = dataOg['Age'].astype(str).str.replace('_', '', regex=False).astype(int)
     
     # granularity
     #symbolic_variables_granularity(data, file_tag)
@@ -577,8 +579,8 @@ if __name__ == "__main__":
     #class_distribution(data, file_tag, target)
     #histograms_numeric_vars(data, file_tag)
     #distributions_numeric_vars(data, file_tag)
-    #histograms_symbolic_vars(data, file_tag)
+    histograms_symbolic_vars(dataOg, file_tag)
     
     # Data Sparsity
     #scatterPlots(data, file_tag, target)
-    correlationAll(data, file_tag)
+    # correlationAll(data, file_tag)
