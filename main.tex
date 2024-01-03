@@ -571,7 +571,7 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \section{DATA PROFILING}
 
 \subsection*{\textit{Data Dimensionality and Granularity}}
-\ctext[RGB]{190,190,190}{May be used to identify the most atomic granularity and two other different granularities to consider.  \textbf{Shall not exceed 500 characters.}}
+\ctext[RGB]{190,190,190}{May be used to identify the most atomic granularity and two other different granularities to consider.  For the first dataset we used the "sum" function as "agg\_fun" and studied the granularity at three different levels, weekly, monthly and quarterly. As you can also see, there is no cyclical behavior.  \textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.95]{images/dataset1/time_series/Covid_granularity_aggregation_W.png}
@@ -627,7 +627,7 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \subsection*{\textit{Data Stationarity}}
-\ctext[RGB]{190,190,190}{Shall be used to perform the data analysis at those three different granularities, concerning the series stationarity.  \textbf{Shall not exceed 300 characters.}}
+\ctext[RGB]{190,190,190}{Shall be used to perform the data analysis at those three different granularities, concerning the series stationarity. For the 1st dataset we obtained a p-value of 0.223. Looking at the graphs, we can see that there is a trend in the first 2 and that there is evidence of a seasonal trend in the 3rd. For the 2nd dataset we obtained a p-value of 0. and that there is no trend but there is some seasonality.  \textbf{Shall not exceed 300 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.50]{images/dataset1/time_series/Covid_components_study.png}
@@ -656,7 +656,7 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \section{DATA TRANSFORMATION}
 
 \subsection*{\textit{Aggregation}}
-\ctext[RGB]{190,190,190}{Shall describe the results of applying three different aggregations over both datasets, and identifying the granularity chosen to proceed.  \textbf{Shall not exceed 300 characters.}}
+\ctext[RGB]{190,190,190}{Shall describe the results of applying three different aggregations over both datasets, and identifying the granularity chosen to proceed. To study the best aggregation, we applied the model to the 3 different levels studied in Data Profiling. In the first dataset we chose the weekly aggregation and in the second the minute aggregation because that was where we obtained the lowest values for the different errors.  \textbf{Shall not exceed 300 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset1/time_series/Covid Weekly - Linear Regression_forecasting_series.png}
@@ -673,17 +673,21 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \begin{figure}[H]
-%\centering\includegraphics[scale=0.95]{}
+\centering\includegraphics[scale=0.95]{images/dataset2/time_series/fts_linear_regression_forecast_Minutely.png}
+\includegraphics[scale=0.4]{images/dataset2/time_series/fts_linear_regression_forecast_Hourly.png}
+\includegraphics[scale=0.4]{images/dataset2/time_series/fts_linear_regression_forecast_Daily.png}
 \caption{Forecasting plots after different aggregations on time series 2}
 \end{figure}
 
 \begin{figure}[H]
-%\centering\includegraphics[scale=0.95]{}
+\centering\includegraphics[scale=0.95]{images/dataset2/time_series/fts_linear_regression_eval_Minutely.png}
+\includegraphics[scale=0.5]{images/dataset2/time_series/fts_linear_regression_eval_Hourly.png}
+\includegraphics[scale=0.5]{images/dataset2/time_series/fts_linear_regression_eval_Daily.png}
 \caption{Forecasting results after different aggregations on time series 2}
 \end{figure}
 
 \subsection*{\textit{Smoothing}}
-\ctext[RGB]{190,190,190}{Shall describe the results of applying smoothing transformations over both datasets, and identifying the best result to proceed.  \textbf{Shall not exceed 300 characters.}}
+\ctext[RGB]{190,190,190}{Shall describe the results of applying smoothing transformations over both datasets, and identifying the best result to proceed. To study the best Window Size, we applied the model to 4 different values (25, 50, 75 and 100). In this case we chose 100 for both datasets since it was where we obtained the lowest values for the different errors.  \textbf{Shall not exceed 300 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset1/time_series/Covid Window Size 25 - Linear Regression_forecasting_series.png}
@@ -702,17 +706,23 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \begin{figure}[H]
-%\centering\includegraphics[scale=0.95]{}
+\centering\includegraphics[scale=0.95]{images/dataset2/time_series/fts_forecast_ts_after_smooth_ws_25.png}
+\includegraphics[scale=0.4]{images/dataset2/time_series/fts_forecast_ts_after_smooth_ws_50.png}
+\includegraphics[scale=0.4]{images/dataset2/time_series/fts_forecast_ts_after_smooth_ws_75.png}
+\includegraphics[scale=0.4]{images/dataset2/time_series/fts_forecast_ts_after_smooth_ws_100.png}
 \caption{Forecasting plots after different smoothing parameterisations on time series 2}
 \end{figure}
 
 \begin{figure}[H]
-%\centering\includegraphics[scale=0.95]{}
+\centering\includegraphics[scale=0.95]{images/dataset2/time_series/fts_forecast_eval_after_smooth_ws_25.png}
+\includegraphics[scale=0.5]{images/dataset2/time_series/fts_forecast_eval_after_smooth_ws_50.png}
+\includegraphics[scale=0.5]{images/dataset2/time_series/fts_forecast_eval_after_smooth_ws_75.png}
+\includegraphics[scale=0.5]{images/dataset2/time_series/fts_forecast_eval_after_smooth_ws_100.png}
 \caption{Forecasting results after different smoothing parameterisations on time series 2}
 \end{figure}
 
 \subsection*{\textit{Differentiation}}
-\ctext[RGB]{190,190,190}{Shall describe the results of applying two consecutive differentiation of both datasets, and identifying the best result to proceed.  \textbf{Shall not exceed 300 characters.}}
+\ctext[RGB]{190,190,190}{Shall describe the results of applying two consecutive differentiation of both datasets, and identifying the best result to proceed. To study the best derivative, we applied the model to the first two derivatives. Once again, we proceed with the second derivative for both datasets since it was where we obtained the lowest values for the different errors.  \textbf{Shall not exceed 300 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset1/time_series/Covid First derivative - Linear Regression_forecasting_series.png}
@@ -737,7 +747,7 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \subsection*{\textit{Other transformations (optional)}}
-\ctext[RGB]{190,190,190}{Shall describe the results of applying other transformations over both datasets, and identifying the best result to proceed.  \textbf{Shall not exceed 500 characters.}}
+\ctext[RGB]{190,190,190}{Shall describe the results of applying other transformations over both datasets, and identifying the best result to proceed. Finally, we applied scaling in both datasets in order to have best values to use in the models' evaluation specifically in the LSTM model.  \textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.6]{images/dataset1/time_series/Covid_deaths_scaling.png}
