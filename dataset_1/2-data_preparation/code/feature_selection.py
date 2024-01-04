@@ -21,11 +21,11 @@ train, test = train_test_split(data, test_size=0.2, random_state=42)
 
 
 print("Original variables", train.columns.to_list())
-vars2drop: list[str] = select_low_variance_variables(train, 0.03, target=target)
-print("Variables to drop", vars2drop)
+vars2drop_variance: list[str] = select_low_variance_variables(train, 0.03, target=target)
+print("Variables to drop", vars2drop_variance)
 
 
-eval_metric = "recall"
+eval_metric = "accuracy"
 
 figure(figsize=(2 * HEIGHT, HEIGHT))
 study_variance_for_feature_selection(
@@ -41,13 +41,13 @@ show()
 
 
 print("Original variables", train.columns.values)
-vars2drop: list[str] = select_redundant_variables(
+vars2drop_redundacy: list[str] = select_redundant_variables(
     train, target=target, min_threshold= 0.5
 )
-print("Variables to drop", vars2drop)
+print("Variables to drop", vars2drop_redundacy)
 
 print("study redundancy")
-eval_metric = "recall"
+eval_metric = "accuracy"
 
 figure(figsize=(2 * HEIGHT, HEIGHT))
 study_redundancy_for_feature_selection(
@@ -61,6 +61,11 @@ study_redundancy_for_feature_selection(
 )
 show()
 
+vars2drop = vars2drop_variance.copy()
+for el in vars2drop_redundacy:
+    if el not in vars2drop:
+        vars2drop += [el]
+print("final vars2drop:  ", vars2drop)
 
 print("Aplying feature selection")
 train_cp, test_cp = apply_feature_selection(

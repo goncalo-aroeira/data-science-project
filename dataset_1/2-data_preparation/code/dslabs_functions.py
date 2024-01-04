@@ -564,8 +564,8 @@ def select_redundant_variables(
     vars2drop: list = []
     for v1 in variables:
         vars_corr: Series = (corr_matrix[v1]).loc[corr_matrix[v1] >= min_threshold]
-        vars_corr.drop(v1, inplace=True)
         if len(vars_corr) > 1:
+            vars_corr.drop(v1, inplace=True)
             lst_corr = list(vars_corr.index)
             for v2 in lst_corr:
                 if v2 not in vars2drop:
@@ -599,8 +599,8 @@ def study_redundancy_for_feature_selection(
         vars2drop: list = []
         for v1 in variables:
             vars_corr: Series = (corr_matrix[v1]).loc[corr_matrix[v1] >= thresh]
-            vars_corr.drop(v1, inplace=True)
             if len(vars_corr) > 1:
+                vars_corr.drop(v1, inplace=True)
                 lst_corr = list(vars_corr.index)
                 for v2 in lst_corr:
                     if v2 not in vars2drop:

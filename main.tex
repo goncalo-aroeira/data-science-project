@@ -96,7 +96,7 @@ We can see that for both datasets there are much more records than variables, av
 \caption{Nr variables per type for dataset 1 (left) and dataset 2 (right)}
 \end{figure}
 Neither dataset has \textit{date} variables, meaning that theres is no time frame associated with them or the records.
-The dataset about health has predominantly symbolic variables, especially symbolic. This is expected as it is harder 
+The dataset about health has predominantly symbolic variables, especially binary. This is expected as it is harder 
 to quantify clinical observations about the state of a person. In contrast, the services dataset has mainly numerical variables.
 These offer more precision and are more easily obtained in the financial context the data is in.
 
@@ -305,6 +305,24 @@ this was our choice to move forward.
 In scaling, we compared the a MinMax and Z-Score approaches, seeing which would give us better improvement, if any.
 Z-Score had the best evaluation results therefore it was chosen to procced with the data preparation.  
 
+\subsection*{\textit{Feature Selection}}
+\ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to feature selection based on filtering out redundant (based on correlation) and relevant (based on variation) variables. The different choices and their impact on the modelling results shall be presented and explained. Should also clearly reveal the approach selected to proceed with the processing. All explanations shall be based on data characteristics.  \textbf{Shall not exceed 500 characters.}}
+
+\begin{figure}[H]
+\centering\includegraphics[scale=0.40]{images/dataset1/data_preparation/CovidPos_fs_low_var_recall_study.png}
+\includegraphics[scale=0.40]{images/dataset1/data_preparation/CovidPos_fs_redundancy_recall_study.png}
+\caption{Feature selection of redundant variables results with different parameters for dataset 1}
+\end{figure}
+
+\begin{figure}[H]
+\centering\includegraphics[scale=0.60]{images/dataset2/data_preparation/Credit_Score_fs_low_var_accuracy_study_.png}
+\includegraphics[scale=0.60]{images/dataset2/data_preparation/Credit_Score_fs_redundancy_accuracy_study.png}
+\caption{Feature selection of redundant variables results with different parameters for dataset 2}
+\end{figure}
+No variable is to be dropped due to low or high variance. (This is to be expected as we chose Z-Score scaling and all
+variables have the same variance of 1)
+In terms of redundacy, the best result is to drop no variables as well (correlation threshold of 0.57).
+
 \subsection*{\textit{Balancing}}
 \ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to balancing transformation, such as the choices made and the impact of the different approaches on modelling results. Shall also clearly reveal the approach selected to proceed with the processing. If not applied explain the reason for that, based on data characteristics.  \textbf{Shall not exceed 500 characters.}}
 
@@ -321,57 +339,7 @@ Z-Score had the best evaluation results therefore it was chosen to procced with 
 \includegraphics[scale=0.80]{images/dataset2/data_preparation/Credit_Score_balancing_SMOTE.png}
 \caption{Balancing results with different approaches for dataset 2}
 \end{figure}
-
-\subsection*{\textit{Feature Selection}}
-\ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to feature selection based on filtering out redundant (based on correlation) and relevant (based on variation) variables. The different choices and their impact on the modelling results shall be presented and explained. Should also clearly reveal the approach selected to proceed with the processing. All explanations shall be based on data characteristics.  \textbf{Shall not exceed 500 characters.}}
-
-\begin{figure}[H]
-\centering\includegraphics[scale=0.40]{images/dataset1/data_preparation/CovidPos_fs_low_var_recall_study.png}
-\includegraphics[scale=0.40]{images/dataset1/data_preparation/CovidPos_fs_redundancy_recall_study.png}
-\caption{Feature selection of redundant variables results with different parameters for dataset 1}
-\end{figure}
-
-\begin{figure}[H]
-\centering\includegraphics[scale=0.60]{images/dataset2/data_preparation/Credit_Score_fs_low_var_accuracy_study_.png}
-\includegraphics[scale=0.60]{images/dataset2/data_preparation/Credit_Score_fs_redundancy_accuracy_study.png}
-\caption{Feature selection of redundant variables results with different parameters for dataset 2}
-\end{figure}
-
-\begin{figure}[H]
-%\centering\includegraphics[scale=0.95]{}
-\caption{Feature selection of relevant variables results with different parameters for dataset 1 (variance study)} 
-\end{figure}
-
-\begin{figure}[H]
-%\centering\includegraphics[scale=0.95]{}
-\caption{Feature selection of relevant variables results with different parameters for dataset 2 (variance study)}
-\end{figure}
-
-\subsection*{\textit{Feature Extraction (optional)}}
-\ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to feature extraction, in particular PCA. The different choices and their impact on the modelling results shall be presented and explained.  \textbf{Shall not exceed 200 characters.}}
-
-\begin{figure}[H]
-\centering\includegraphics[scale=0.50]{images/dataset1/data_preparation/CovidPos_pca_explained_variance_ratio.png}
-\caption{Principal components analysis and feature extraction results for dataset 1}
-\end{figure}
-
-\begin{figure}[H]
-%\centering\includegraphics[scale=0.95]{}
-\caption{Principal components analysis and feature extraction results for dataset 2}
-\end{figure}
-
-\subsection*{\textit{Additional Feature Generation (optional)}}
-\ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to feature generation. The different choices and their impact on the modelling results shall be presented and explained. Shall summarise all variables generated and the formula used to derive them (in a table).  \textbf{Shall not exceed 200 characters.}}
-
-\begin{figure}[H]
-%\centering\includegraphics[scale=0.95]{}
-\caption{Feature generation results for dataset 1}
-\end{figure}
-
-\begin{figure}[H]
-%\centering\includegraphics[scale=0.95]{}
-\caption{Feature generation results for dataset 2}
-\end{figure}
+We chose SMOTE balancing transformation.
 
 \section{MODELS' EVALUATION}
 \ctext[RGB]{190,190,190}{Shall be used to point out any important decision taken during the training, including training strategy and evaluation measures used.  \textbf{Shall not exceed 500 characters.}}
