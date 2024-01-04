@@ -101,8 +101,8 @@ to quantify clinical observations about the state of a person. In contrast, the 
 These offer more precision and are more easily obtained in the financial context the data is in.
 
 \begin{figure}[H]
-  \includegraphics[scale=0.70]{images/dataset1/data_profiling/CovidPos_mv.png}
-  \centering\includegraphics[scale=0.7]{images/dataset2/data_profiling/Credit_Score_mv.png}
+  \includegraphics[scale=0.6]{images/dataset1/data_profiling/CovidPos_mv.png}
+  \centering\includegraphics[scale=0.6]{images/dataset2/data_profiling/Credit_Score_mv.png}
 \caption{Nr missing values for dataset 1 (left) and dataset 2 (right)}
 \end{figure}
 For the health domain dataset, the number of records is 380.932. The variable with the most missing values has less than 10\% of missing values.
@@ -129,7 +129,7 @@ completly distorts the overall representation of the data, rendering the figure 
 From this we can conclude that all the numeric variables in this first dataset have quite high variability in their values.
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.6]{images/dataset2/data_profiling/Credit_Score_single_boxplots.png}
+\centering\includegraphics[scale=0.35]{images/dataset2/data_profiling/Credit_Score_single_boxplots.png}
 \caption{Single variables boxplots for dataset 2}
 \end{figure}
 Analysing these boxplots, we come to the conclusion that more than half the numeric variables in this dataset have massive variation.
@@ -147,7 +147,7 @@ The others have a shape closer to that of the exponential distribution. Maybe a 
 This would enable the application of models that rely on the data following normal distributions later on. 
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.6]{images/dataset2/data_profiling/Credit_Score_histogram_numeric_distribution.png}
+\centering\includegraphics[scale=0.4]{images/dataset2/data_profiling/Credit_Score_histogram_numeric_distribution.png}
 \caption{Histograms for dataset 2} %(with distributions is enough)
 \end{figure}
 % comment for the histograms with the distributions
@@ -161,7 +161,7 @@ either follow a normal distribution or a lognormal one. The latter can easily be
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.60]{images/dataset2/data_profiling/Credit_Score_outliers_standard.png}
+\centering\includegraphics[scale=0.40]{images/dataset2/data_profiling/Credit_Score_outliers_standard.png}
 \caption{Outliers study dataset 2}
 \end{figure}
 For the outliers study per variable we used the IQR factor and the stantard deviation one. The IQR factor was of 1.5 and the 
@@ -191,7 +191,7 @@ data preparation phase.
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset2/data_profiling/Credit_Score_granularity.png}
+\centering\includegraphics[scale=0.5]{images/dataset2/data_profiling/Credit_Score_granularity.png}
 \caption{Granularity analysis for dataset 2}
 \end{figure}
 We only did a granularity study for symbolic variables with reasonably clear taxonomies that could then aid us in the variable
@@ -204,7 +204,7 @@ taxonomy hierachy would not signifincantly alter the distribution of these varia
 For both datasets, we used variable encoding to transform the symbolic variables into numeric ones for the correlation analysis.
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset1/data_profiling/CovidPos_sparsity_per_class_study.png}
+%\centering\includegraphics[scale=0.95]{images/dataset1/data_profiling/CovidPos_sparsity_per_class_study.png}
 \caption{Sparsity analysis for dataset 1}
 \end{figure}
 
@@ -328,8 +328,8 @@ Z-Score had the best evaluation results therefore it was chosen to procced with 
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.40]{images/dataset2/data_preparation/Credit_Score_fs_low_var_accuracy_study_.png}
-\includegraphics[scale=0.40]{images/dataset2/data_preparation/Credit_Score_fs_redundancy_accuracy_study.png}
+\centering\includegraphics[scale=0.60]{images/dataset2/data_preparation/Credit_Score_fs_low_var_accuracy_study_.png}
+\includegraphics[scale=0.60]{images/dataset2/data_preparation/Credit_Score_fs_redundancy_accuracy_study.png}
 \caption{Feature selection of redundant variables results with different parameters for dataset 2}
 \end{figure}
 
@@ -386,8 +386,8 @@ Z-Score had the best evaluation results therefore it was chosen to procced with 
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_GaussianNB_best_recall_eval.png}
-\includegraphics[scale=0.95]{images/dataset2/models_evaluation/Credit_Score_nb_BernoulliNB_best_accuracy_eval.png}
+\centering\includegraphics[scale=0.4]{images/dataset1/models_evaluation/CovidPos_GaussianNB_best_recall_eval.png}
+\includegraphics[scale=0.4]{images/dataset2/models_evaluation/Credit_Score_nb_BernoulliNB_best_accuracy_eval.png}
 \caption{Na{\"i}ve Bayes best model results for dataset 1 (left) and dataset 2 (right)}
 \end{figure}
 
@@ -405,14 +405,14 @@ Z-Score had the best evaluation results therefore it was chosen to procced with 
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_knn_overfitting.png}
-\includegraphics[scale=0.95]{images/dataset2/models_evaluation/Credit_Score_knn_overfitting.png}
+\centering\includegraphics[scale=0.7]{images/dataset1/models_evaluation/CovidPos_knn_overfitting.png}
+\includegraphics[scale=0.7]{images/dataset2/models_evaluation/Credit_Score_knn_overfitting.png}
 \caption{KNN overfitting analysis for dataset 1 (left) and dataset 2 (right)}
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_knn_KNN_best_recall_eval.png}
-\includegraphics[scale=0.95]{images/dataset2/models_evaluation/Credit_Score_knn_KNN_best_accuracy_eval.png}
+\centering\includegraphics[scale=0.4]{images/dataset1/models_evaluation/CovidPos_knn_KNN_best_recall_eval.png}
+\includegraphics[scale=0.4]{images/dataset2/models_evaluation/Credit_Score_knn_KNN_best_accuracy_eval.png}
 \caption{KNN best model results for dataset 1 (left) and dataset 2 (right)}
 \end{figure}
 
@@ -430,24 +430,24 @@ Z-Score had the best evaluation results therefore it was chosen to procced with 
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_dt_accuracy_overfitting.png}
-\includegraphics[scale=0.95]{images/dataset2/models_evaluation/Credit_Score_DT_overfitting.png}
+\centering\includegraphics[scale=0.7]{images/dataset1/models_evaluation/CovidPos_dt_accuracy_overfitting.png}
+\includegraphics[scale=0.7]{images/dataset2/models_evaluation/Credit_Score_DT_overfitting.png}
 \caption{Decision Trees overfitting analysis for dataset 1 (left) and dataset 2 (right)}
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_dt_DT_best_accuracy_eval.png}
-\includegraphics[scale=0.95]{images/dataset2/models_evaluation/Credit_Score_DT_best_accuracy_eval.png}
+\centering\includegraphics[scale=0.4]{images/dataset1/models_evaluation/CovidPos_dt_DT_best_accuracy_eval.png}
+\includegraphics[scale=0.4]{images/dataset2/models_evaluation/Credit_Score_DT_best_accuracy_eval.png}
 \caption{Decision trees best model results for dataset 1 (left) and dataset 2 (right)}
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.70]{images/dataset1/models_evaluation/CovidPos_dt_accuracy_best_tree.png}
+\centering\includegraphics[scale=0.50]{images/dataset1/models_evaluation/CovidPos_dt_accuracy_best_tree.png}
 \caption{Best tree for dataset 1}
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset2/models_evaluation/Credit_Score_DT_best_tree.png}
+\centering\includegraphics[scale=0.5]{images/dataset2/models_evaluation/Credit_Score_DT_best_tree.png}
 \caption{Best tree for dataset 2}
 \end{figure}
 
@@ -473,20 +473,20 @@ Z-Score had the best evaluation results therefore it was chosen to procced with 
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_rf_f1_overfitting.png}
-\includegraphics[scale=0.95]{images/dataset2/models_evaluation/Credit_Score_rf_accuracy_overfitting.png}
+\centering\includegraphics[scale=0.7]{images/dataset1/models_evaluation/CovidPos_rf_f1_overfitting.png}
+\includegraphics[scale=0.7]{images/dataset2/models_evaluation/Credit_Score_rf_accuracy_overfitting.png}
 \caption{Random Forests overfitting analysis for dataset 1 (left) and dataset 2 (right)}
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_rf_RF_best_recall_eval.png}
-\includegraphics[scale=0.95]{images/dataset2/models_evaluation/Credit_Score_rf_RF_best_accuracy_eval.png}
+\centering\includegraphics[scale=0.4]{images/dataset1/models_evaluation/CovidPos_rf_RF_best_recall_eval.png}
+\includegraphics[scale=0.4]{images/dataset2/models_evaluation/Credit_Score_rf_RF_best_accuracy_eval.png}
 \caption{Random Forests best model results for dataset 1 (left) and dataset 2 (right)}
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_rf_recall_vars_ranking.png}
-\includegraphics[scale=0.95]{images/dataset2/models_evaluation/Credit_Score_rf_accuracy_vars_ranking.png}
+\centering\includegraphics[scale=0.7]{images/dataset1/models_evaluation/CovidPos_rf_recall_vars_ranking.png}
+\includegraphics[scale=0.7]{images/dataset2/models_evaluation/Credit_Score_rf_accuracy_vars_ranking.png}
 \caption{Random Forests variables importance for dataset 1 (left) and dataset 2 (right)}
 \end{figure}
 
@@ -508,20 +508,20 @@ Z-Score had the best evaluation results therefore it was chosen to procced with 
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_gb_accuracy_overfitting.png}
-\includegraphics[scale=0.95]{images/dataset2/models_evaluation/Credit_Score_gb_accuracy_overfitting.png}
+\centering\includegraphics[scale=0.7]{images/dataset1/models_evaluation/CovidPos_gb_accuracy_overfitting.png}
+\includegraphics[scale=0.7]{images/dataset2/models_evaluation/Credit_Score_gb_accuracy_overfitting.png}
 \caption{Gradient boosting overfitting analysis for dataset 1 (left) and dataset 2 (right)}
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_gb_GB_best_recall_eval.png}
-\includegraphics[scale=0.95]{images/dataset2/models_evaluation/Credit_Score_gb_best_model_performance_accuracy.png}
+\centering\includegraphics[scale=0.4]{images/dataset1/models_evaluation/CovidPos_gb_GB_best_recall_eval.png}
+\includegraphics[scale=0.4]{images/dataset2/models_evaluation/Credit_Score_gb_best_model_performance_accuracy.png}
 \caption{Gradient boosting best model results for dataset 1 (left) and dataset 2 (right)}
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_gb_recall_vars_ranking.png}
-\includegraphics[scale=0.95]{images/dataset2/models_evaluation/Credit_Score_gb_accuracy_vars_ranking.png}
+\centering\includegraphics[scale=0.7]{images/dataset1/models_evaluation/CovidPos_gb_recall_vars_ranking.png}
+\includegraphics[scale=0.7]{images/dataset2/models_evaluation/Credit_Score_gb_accuracy_vars_ranking.png}
 \caption{Gradient boosting variables importance for dataset 1 (left) and dataset 2 (right)}
 \end{figure}
 
@@ -547,14 +547,14 @@ Z-Score had the best evaluation results therefore it was chosen to procced with 
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_mlp_recall_overfitting.png}
-\includegraphics[scale=0.95]{images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_overfitting.png}
+\centering\includegraphics[scale=0.7]{images/dataset1/models_evaluation/CovidPos_mlp_recall_overfitting.png}
+\includegraphics[scale=0.7]{images/dataset2/models_evaluation/Credit_Score_mlp_accuracy_overfitting.png}
 \caption{MLP overfitting analysis for dataset 1 (left) and dataset 2 (right)}
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_mlp_MLP_best_recall_eval.png}
-\includegraphics[scale=0.95]{images/dataset2/models_evaluation/Credit_Score_mlp_MLP_best_accuracy_eval.png}
+\centering\includegraphics[scale=0.4]{images/dataset1/models_evaluation/CovidPos_mlp_MLP_best_recall_eval.png}
+\includegraphics[scale=0.4]{images/dataset2/models_evaluation/Credit_Score_mlp_MLP_best_accuracy_eval.png}
 \caption{MLP best model results for dataset 1 (left) and dataset 2 (right)}
 \end{figure}
 
@@ -574,32 +574,32 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \ctext[RGB]{190,190,190}{May be used to identify the most atomic granularity and two other different granularities to consider.  For the first dataset we used the "sum" function as "agg\_fun" and studied the granularity at three different levels, weekly, monthly and quarterly. As you can also see, there is no cyclical behavior.  \textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset1/time_series/Covid_granularity_aggregation_W.png}
+\centering\includegraphics[scale=0.6]{images/dataset1/time_series/Covid_granularity_aggregation_W.png}
 \caption{Time series 1 at the most granular detail}
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset1/time_series/Covid_granularity_aggregation_M.png}
+\centering\includegraphics[scale=0.6]{images/dataset1/time_series/Covid_granularity_aggregation_M.png}
 \caption{Time series 1 at the second chosen granularity}
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset1/time_series/Covid_granularity_aggregation_Q.png}
+\centering\includegraphics[scale=0.6]{images/dataset1/time_series/Covid_granularity_aggregation_Q.png}
 \caption{Time series 1 at the third chosen granularity}
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset2/time_series/fts_granularity_min.png}
+\centering\includegraphics[scale=0.6]{images/dataset2/time_series/fts_granularity_min.png}
 \caption{Time series 2 at the most granular detail}
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{dataset2/images/ts_analysis/fts_granularity_H.png}
+\centering\includegraphics[scale=0.6]{dataset2/images/ts_analysis/fts_granularity_H.png}
 \caption{Time series 2 at the second chosen granularity}
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{dataset2/images/ts_analysis/fts_granularity_D.png}
+\centering\includegraphics[scale=0.6]{dataset2/images/ts_analysis/fts_granularity_D.png}
 \caption{Time series 2 at the third chosen granularity}
 \end{figure}
 
@@ -617,12 +617,12 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.60]{dataset1/time_series/Covid_distribution_histogram.png}
+\centering\includegraphics[scale=0.5]{dataset1/time_series/Covid_distribution_histogram.png}
 \caption{Histogram(s) for time series 1}
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.60]{images/dataset2/time_series/fts_histogram.png}
+\centering\includegraphics[scale=0.50]{images/dataset2/time_series/fts_histogram.png}
 \caption{Histogram(s) for time series 2}
 \end{figure}
 
@@ -673,14 +673,14 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset2/time_series/fts_linear_regression_forecast_Minutely.png}
+\centering\includegraphics[scale=0.4]{images/dataset2/time_series/fts_linear_regression_forecast_Minutely.png}
 \includegraphics[scale=0.4]{images/dataset2/time_series/fts_linear_regression_forecast_Hourly.png}
 \includegraphics[scale=0.4]{images/dataset2/time_series/fts_linear_regression_forecast_Daily.png}
 \caption{Forecasting plots after different aggregations on time series 2}
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset2/time_series/fts_linear_regression_eval_Minutely.png}
+\centering\includegraphics[scale=0.5]{images/dataset2/time_series/fts_linear_regression_eval_Minutely.png}
 \includegraphics[scale=0.5]{images/dataset2/time_series/fts_linear_regression_eval_Hourly.png}
 \includegraphics[scale=0.5]{images/dataset2/time_series/fts_linear_regression_eval_Daily.png}
 \caption{Forecasting results after different aggregations on time series 2}
@@ -706,7 +706,7 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset2/time_series/fts_forecast_ts_after_smooth_ws_25.png}
+\centering\includegraphics[scale=0.4]{images/dataset2/time_series/fts_forecast_ts_after_smooth_ws_25.png}
 \includegraphics[scale=0.4]{images/dataset2/time_series/fts_forecast_ts_after_smooth_ws_50.png}
 \includegraphics[scale=0.4]{images/dataset2/time_series/fts_forecast_ts_after_smooth_ws_75.png}
 \includegraphics[scale=0.4]{images/dataset2/time_series/fts_forecast_ts_after_smooth_ws_100.png}
@@ -714,7 +714,7 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset2/time_series/fts_forecast_eval_after_smooth_ws_25.png}
+\centering\includegraphics[scale=0.5]{images/dataset2/time_series/fts_forecast_eval_after_smooth_ws_25.png}
 \includegraphics[scale=0.5]{images/dataset2/time_series/fts_forecast_eval_after_smooth_ws_50.png}
 \includegraphics[scale=0.5]{images/dataset2/time_series/fts_forecast_eval_after_smooth_ws_75.png}
 \includegraphics[scale=0.5]{images/dataset2/time_series/fts_forecast_eval_after_smooth_ws_100.png}
@@ -786,7 +786,7 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.5]{images/dataset2/time_series/fts_simpleAvg_forecast.png}
+\centering\includegraphics[scale=0.4]{images/dataset2/time_series/fts_simpleAvg_forecast.png}
 \caption{Forecasting plots obtained with Simple Average model over time series 2}
 \end{figure}
 
@@ -872,7 +872,7 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.5]{images/dataset1/time_series/Covid - ARIMA _forecasting_series.png}
+\centering\includegraphics[scale=0.4]{images/dataset1/time_series/Covid - ARIMA _forecasting_series.png}
 \caption{Forecasting plots obtained with the best parameterisation of ARIMA algorithm, over time series 1}
 \end{figure}
 
@@ -899,7 +899,7 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.5]{images/dataset2/time_series/fts_arima_R2_forecast.png}
+\centering\includegraphics[scale=0.4]{images/dataset2/time_series/fts_arima_R2_forecast.png}
 \caption{Forecasting plots obtained with the best parameterisation of ARIMA algorithm, over time series 2}
 \end{figure}
 
@@ -924,7 +924,7 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \subsection*{\textit{LSTMs Model}}
-\ctext[RGB]{190,190,190}{For Dataset 1, having a trend, the LSTM excels with parameters length=4, hidden=100 and nr_episodes=900, effectively capturing trend-oriented patterns. This adaptability extends to Dataset 2, featuring a cosine-like trend, where the same parameter configuration yields optimal results. As expected the LSTM's model achieves the best forecasting results for both datasets compared to the previous models.}
+\ctext[RGB]{190,190,190}{For Dataset 1, having a trend, the LSTM excels with parameters length=4, hidden=100 and nr\_episodes=900, effectively capturing trend-oriented patterns. This adaptability extends to Dataset 2, featuring a cosine-like trend, where the same parameter configuration yields optimal results. As expected the LSTM's model achieves the best forecasting results for both datasets compared to the previous models.}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset1/time_series/Covid_lstm_study_R2.png}
@@ -932,7 +932,7 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.5]{images/dataset1/time_series/Covid - LSTMs _forecasting_series.png}
+\centering\includegraphics[scale=0.4]{images/dataset1/time_series/Covid - LSTMs _forecasting_series.png}
 \caption{Forecasting plots obtained with the best parameterisation of LSTMs, over time series 1}
 \end{figure}
 
@@ -962,7 +962,7 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.5]{images/dataset2/time_series/fts_lstms_R2_forecast.png}
+\centering\includegraphics[scale=0.4]{images/dataset2/time_series/fts_lstms_R2_forecast.png}
 \caption{Forecasting plots obtained with the best parameterisation of LSTMs, over time series 2}
 \end{figure}
 
