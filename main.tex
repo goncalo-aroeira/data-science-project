@@ -575,7 +575,7 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \section{DATA PROFILING}
 
 \subsection*{\textit{Data Dimensionality and Granularity}}
-\ctext[RGB]{190,190,190}{May be used to identify the most atomic granularity and two other different granularities to consider.  For the first dataset we used the "sum" function as "agg\_fun" and studied the granularity at three different levels, weekly, monthly and quarterly. As you can also see, there is no cyclical behavior.  \textbf{Shall not exceed 500 characters.}}
+\ctext[RGB]{190,190,190}{For the first dataset we used the "sum" function as "agg\_fun" and studied the granularity at three different levels, weekly, monthly and quarterly. As you can also see, there is no cyclical behavior.  \textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.5]{images/dataset1/time_series/Covid_granularity_aggregation_W.png}
@@ -631,7 +631,7 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \subsection*{\textit{Data Stationarity}}
-\ctext[RGB]{190,190,190}{Shall be used to perform the data analysis at those three different granularities, concerning the series stationarity. For the 1st dataset we obtained a p-value of 0.223. Looking at the graphs, we can see that there is a trend in the first 2 and that there is evidence of a seasonal trend in the 3rd. For the 2nd dataset we obtained a p-value of 0. and that there is no trend but there is some seasonality.  \textbf{Shall not exceed 300 characters.}}
+\ctext[RGB]{190,190,190}{For the 1st dataset we obtained a p-value of 0.223. Looking at the graphs, we can see that there is a trend in the first 2 and that there is evidence of a seasonal trend in the 3rd. For the 2nd dataset we obtained a p-value of 0. and that there is no trend but there is some seasonality.  \textbf{Shall not exceed 300 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.50]{images/dataset1/time_series/Covid_components_study.png}
@@ -691,7 +691,7 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \subsection*{\textit{Smoothing}}
-\ctext[RGB]{190,190,190}{Shall describe the results of applying smoothing transformations over both datasets, and identifying the best result to proceed. To study the best Window Size, we applied the model to 4 different values (25, 50, 75 and 100). In this case we chose 100 for both datasets since it was where we obtained the lowest values for the different errors.  \textbf{Shall not exceed 300 characters.}}
+\ctext[RGB]{190,190,190}{To study the best Window Size, we applied the model to 4 different values (25, 50, 75 and 100). In this case we chose 100 for both datasets since it was where we obtained the lowest values for the different errors.  \textbf{Shall not exceed 300 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset1/time_series/Covid Window Size 25 - Linear Regression_forecasting_series.png}
@@ -754,7 +754,7 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \subsection*{\textit{Other transformations (optional)}}
-\ctext[RGB]{190,190,190}{Shall describe the results of applying other transformations over both datasets, and identifying the best result to proceed. Finally, we applied scaling in both datasets in order to have best values to use in the models' evaluation specifically in the LSTM model.  \textbf{Shall not exceed 500 characters.}}
+\ctext[RGB]{190,190,190}{Finally, we applied scaling in both datasets in order to have best values to use in the models' evaluation specifically in the LSTM model.  \textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.6]{images/dataset1/time_series/Covid_deaths_scaling.png}
@@ -889,18 +889,6 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \begin{figure}[H]
-\caption{Forecasting study over different parameterisations of the ARIMA algorithm with external variables over time series 1}
-\end{figure}
-
-\begin{figure}[H]
-\caption{Forecasting plots obtained with the best parameterisation of ARIMA algorithm with external variables over time series 1}
-\end{figure}
-
-\begin{figure}[H]
-\caption{Forecasting results obtained with the best parameterisation of ARIMA algorithm with external variables over time series 1}
-\end{figure}
-
-\begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset2/time_series/fts_arima_R2_study.png}
 \caption{Forecasting study over different parameterisations of the ARIMA algorithm over time series 2}
 \end{figure}
@@ -913,21 +901,6 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.5]{images/dataset2/time_series/fts_arima_R2_eval.png}
 \caption{Forecasting results obtained with the best parameterisation of ARIMA algorithm, over time series 2}
-\end{figure}
-
-\begin{figure}[H]
-%\centering\includegraphics[scale=0.95]{}
-\caption{Forecasting study over different parameterisations of the ARIMA algorithm with external variables over time series 2}
-\end{figure}
-
-\begin{figure}[H]
-%\centering\includegraphics[scale=0.95]{}
-\caption{Forecasting plots obtained with the best parameterisation of ARIMA algorithm with external variables over time series 2}
-\end{figure}
-
-\begin{figure}[H]
-%\centering\includegraphics[scale=0.95]{}
-\caption{Forecasting results obtained with the best parameterisation of ARIMA algorithm with external variables over time series 2}
 \end{figure}
 
 \subsection*{\textit{LSTMs Model}}
