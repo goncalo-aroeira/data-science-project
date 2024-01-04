@@ -656,7 +656,7 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \section{DATA TRANSFORMATION}
 
 \subsection*{\textit{Aggregation}}
-\ctext[RGB]{190,190,190}{Shall describe the results of applying three different aggregations over both datasets, and identifying the granularity chosen to proceed. To study the best aggregation, we applied the model to the 3 different levels studied in Data Profiling. In the first dataset we chose the weekly aggregation and in the second the minute aggregation because that was where we obtained the lowest values for the different errors.  \textbf{Shall not exceed 300 characters.}}
+\ctext[RGB]{190,190,190}{To study the best aggregation, we applied the model at 3 different levels studied in Data Profiling. In dataset 1, chose the weekly aggregation and for dataset 2, hourly aggregation as they obtained lower values for the different errors, simplifying the model without losing information or context.  \textbf{Shall not exceed 300 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset1/time_series/Covid Weekly - Linear Regression_forecasting_series.png}
@@ -722,7 +722,7 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \subsection*{\textit{Differentiation}}
-\ctext[RGB]{190,190,190}{Shall describe the results of applying two consecutive differentiation of both datasets, and identifying the best result to proceed. To study the best derivative, we applied the model to the first two derivatives. Once again, we proceed with the second derivative for both datasets since it was where we obtained the lowest values for the different errors.  \textbf{Shall not exceed 300 characters.}}
+\ctext[RGB]{190,190,190}{To study differentiation, we applied the first two derivatives, favouring the second for dataset 1 due to lower errors, removing quadratic trends. For dataset 2, both derivatives removed seasonality, but the second added complexity, making it harder to predict so we chose the first.  \textbf{Shall not exceed 300 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset1/time_series/Covid First derivative - Linear Regression_forecasting_series.png}
