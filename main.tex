@@ -559,7 +559,8 @@ For the dataset 2, the Bernoulli NB provides the best results, as the dataset is
 \end{figure}
 
 \subsection*{\textit{Multi-Layer Perceptrons}}
-\ctext[RGB]{190,190,190}{Shall be used to present the results achieved through different parameterisations for the train of MLPs. The results shall be compared and explanations for them shall be presented. Shall be used to address the overfitting phenomenon, studying the conditions under which models face it. Shall be used to present the evaluation of the best model achieved.  \textbf{Shall not exceed 500 characters.}}
+\ctext[RGB]{190,190,190}{For dataset 1, the model learnt is not useful, with 1.0 recall, every predicted value is positive. This means that recall is clearly not the right measure to optimize. While the recall over the training set is constant, on the test it oscilates periodically with no evident improvement or decrease, could be due to high amounts of noise.
+For dataset 2, although the model might be on a slight overfit, especially from the 800th iteration, the high values on all metrics indicate that it's a good model. \textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.6]{images/dataset1/models_evaluation/CovidPos_mlp_recall_study.png}
