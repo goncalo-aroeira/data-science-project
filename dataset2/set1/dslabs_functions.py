@@ -75,7 +75,7 @@ def set_chart_labels(
 
 
 def set_chart_xticks(
-    xvalues: list[str | int | float | datetime], ax: Axes, percentage: bool = False
+    xvalues: list[str | int | float | datetime], ax: Axes, percentage: bool = False,
 ) -> Axes:
     if len(xvalues) > 0:
         if percentage:
@@ -87,7 +87,7 @@ def set_chart_xticks(
             ax.xaxis.set_major_formatter(
                 AutoDateFormatter(locator, defaultfmt="%Y-%m-%d")
             )
-        rotation: int = 0
+        rotation = 0
         if not any(not isinstance(x, (int, float)) for x in xvalues):
             ax.set_xlim(left=xvalues[0], right=xvalues[-1])
             ax.set_xticks(xvalues, labels=xvalues)
@@ -258,7 +258,7 @@ def plot_multi_scatters_chart(
 
     title: str = f"{var1} x {var2}"
     if var3 != "":
-        title += f"per {var3}"
+        title += f" per {var3}"
         if is_any_real_numeric_dtype(data[var3]) and not is_integer_dtype(data[var3]):
             chart: PathCollection = ax.scatter(
                 data[var1], data[var2], c=data[var3].to_list()
@@ -274,10 +274,10 @@ def plot_multi_scatters_chart(
                 ax.scatter(
                     subset[var1], subset[var2], color=ACTIVE_COLORS[i], label=values[i]
                 )
-            if var1 == "Type_of_Loan" or var1 == "Credit_History_Age":
+            if var1 == "Type_of_Loan" or var1 == "Credit_History_Age" or var1 == "Payment_Behaviour" or var1 == "Name":
                 # Turn off x tick labels
                 ax.set_xticklabels([])
-            if var2 == "Type_of_Loan" or var2 == "Credit_History_Age":
+            if var2 == "Type_of_Loan" or var2 == "Credit_History_Age" or var2 == "Payment_Behaviour" or var2 == "Name":
                 # Turn off y tick labels
                 ax.set_yticklabels([])
             ax.legend(fontsize="xx-small")

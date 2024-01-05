@@ -205,22 +205,47 @@ taxonomy hierachy would not signifincantly alter the distribution of these varia
 
 \subsection*{\textit{Data Sparsity}}
 \ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to the data sparsity perspective, such as domain coverage and correlation among variables.  \textbf{Shall not exceed 500 characters.}}
-For both datasets, we used variable encoding to transform the symbolic variables into numeric ones for the correlation analysis.
 
 \begin{figure}[H]
-%\centering\includegraphics[scale=0.95]{images/dataset1/data_profiling/CovidPos_sparsity_per_class_study.png}
+\centering\includegraphics[scale=0.95]{images/dataset1/data_profiling/CovidPos_sparsity_per_class_study.png}
 \caption{Sparsity analysis for dataset 1}
 \end{figure}
 
 \begin{figure}[H]
-%\centering\includegraphics[scale=0.95]{images/dataset2/data_profiling/Credit_Score_All_sparsity_per_class_study.png}
+\centering\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_Month_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_Name_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_Age_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_Occupation_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_Annual_Income_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_Monthly_Inhand_Salary_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_Num_Bank_Accounts_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_Num_Credit_Card_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_Interest_Rate_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_NumofLoan_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_Type_of_Loan_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_Delay_from_due_date_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_NumofDelayedPayment_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_ChangedCreditLimit_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_NumCreditInquiries_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_CreditMix_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_OutstandingDebt_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_CreditUtilizationRatio_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_Credit_History_Age_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_Payment_of_Min_Amount_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_TotalEMIpermonth_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_Amountinvestedmonthly_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_Payment_Behaviour_per_class.png}
+\includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_MonthlyBalance_per_class.png}
 \caption{Sparsity analysis for dataset 2}
 \end{figure}
+Binary on binary is not interesting for sparsity evaluation. We can see which variables have more 
+impact on the class and the correlation between them.
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.6]{images/dataset1/data_profiling/CovidPos_correlation_analysis.png}
 \caption{Correlation analysis for dataset 1}
 \end{figure}
+For both datasets, we used variable encoding to transform the symbolic variables into numeric ones for the correlation analysis.
 We can clearly observe that there are not many variables with high correlations, and the ones with higer ones aren't relevant -
 The gender of a person and their height, their BMI and their weight.
 

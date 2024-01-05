@@ -82,26 +82,38 @@ from matplotlib.pyplot import figure, subplots, savefig, show
 from dslabs_functions import HEIGHT, plot_multi_scatters_chart, plot_scatter_chart
 
 def scatterPlots(data: DataFrame, file_tag: str, target: str):
+    variable_types = get_variable_types(data)
+    #data = data.head(10)
     out = ["Customer_ID","ID","SSN"]
+    done = ["Month", "Name", "Age", "Occupation", "Annual_Income", "Monthly_Inhand_Salary", "Num_Bank_Accounts" ,"Num_Credit_Card", "Interest_Rate"]
     data = data.dropna()
 
-    vars: list = data.columns.to_list()
-    for i in vars:
-        if i in out:
-            vars.remove(i)
+    vars: list = list(filter(lambda x: x not in out, data.columns.to_list()))
     print("all vars",vars)
     allPlots, allAxis = [], []
     
     if [] != vars:
         n: int = len(vars) - 1
-        fig, axs = subplots(n, n, figsize=(n * HEIGHT, n * HEIGHT), squeeze=False)
+        #fig, axs = subplots(n, n, figsize=(n * HEIGHT, n * HEIGHT), squeeze=False)
         for i in range(len(vars)):
             var1: str = vars[i]
+            if var1 in done:
+                continue
+            print("var1 ", var1)
+            rows = 1
+            cols = n-i 
+            print("rows " + str(rows) + "; cols " + str(cols))
+            fig, axs = subplots(rows, cols, figsize=(cols * HEIGHT, rows * HEIGHT), squeeze=False)
+            k = 0
             for j in range(i + 1, len(vars)):
                 var2: str = vars[j]
-                plot_multi_scatters_chart(data, var1, var2, target, ax=axs[i, j - 1])
-        savefig(f"images/{file_tag}_sparsity_per_class_study.png")
-        show()
+                # binary X binary is not interesting
+                if not (var1 in variable_types["binary"] and var2 in variable_types["binary"]):
+                    #plot_multi_scatters_chart(data, var1, var2, target, ax=axs[i, j - 1])
+                    plot_multi_scatters_chart(data, var1, var2, target, ax=axs[0, k])
+                    k += 1
+            savefig(f"images/lab1/{file_tag}_sparsity_{var1}_per_class.png", bbox_inches="tight")
+        #show()
     else:
         print("Sparsity per class: there are no variables.")
 
@@ -160,6 +172,8 @@ def analyse_property_granularity(data: DataFrame, axs: ndarray, j: int, vars: li
             ylabel="number of records",
             percentage=False,
         )
+        if vars[i] == "Type_of_Loan" or vars[i] == "Credit_History_Age":
+                axs[j, i].set_xticklabels([])
     if vars == ["Type_of_Loan", "Loan_grouped"]: # plotting the unique loans count on the same row
         plot_bar_chart(
             list(type_of_loan_unique_count(data).keys()),
@@ -283,7 +297,7 @@ def symbolic_variables_granularity(data: DataFrame, file_tag: str):
         i += 1
     # MAYBE CLEANUP ?????
     data.drop(["Area_of_Occupation", "CHA_year", "PB_amount_spent", "PB_size_payments", "Loan_grouped"], axis = 1)
-    savefig(f"images/lab1/{file_tag}_granularity.png", bbox_inches='tight')
+    savefig(f"images/lab1/{file_tag}_granularity_v2.png", bbox_inches='tight')
     show()
 
 #***********************************************************************************
@@ -570,7 +584,7 @@ if __name__ == "__main__":
     dataOg['Age'] = dataOg['Age'].astype(str).str.replace('_', '', regex=False).astype(int)
     
     # granularity
-    #symbolic_variables_granularity(data, file_tag)
+    symbolic_variables_granularity(dataOg, file_tag)
 
     # distribution
     #global_box_plot(data, file_tag)
@@ -579,8 +593,8 @@ if __name__ == "__main__":
     #class_distribution(data, file_tag, target)
     #histograms_numeric_vars(data, file_tag)
     #distributions_numeric_vars(data, file_tag)
-    histograms_symbolic_vars(dataOg, file_tag)
+    #histograms_symbolic_vars(dataOg, file_tag)
     
     # Data Sparsity
-    #scatterPlots(data, file_tag, target)
+    # scatterPlots(dataOg, file_tag, target)
     # correlationAll(data, file_tag)
