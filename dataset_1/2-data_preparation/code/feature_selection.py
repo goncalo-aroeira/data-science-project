@@ -25,7 +25,7 @@ vars2drop_variance: list[str] = select_low_variance_variables(train, 0.03, targe
 print("Variables to drop", vars2drop_variance)
 
 
-eval_metric = "accuracy"
+eval_metric = 'recall'
 
 figure(figsize=(2 * HEIGHT, HEIGHT))
 study_variance_for_feature_selection(
@@ -47,7 +47,7 @@ vars2drop_redundacy: list[str] = select_redundant_variables(
 print("Variables to drop", vars2drop_redundacy)
 
 print("study redundancy")
-eval_metric = "accuracy"
+eval_metric = 'recall'
 
 figure(figsize=(2 * HEIGHT, HEIGHT))
 study_redundancy_for_feature_selection(
