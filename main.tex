@@ -393,30 +393,30 @@ So we chose to balance the data with undersampling, as the set contains a lot of
 We chose SMOTE balancing transformation.
 
 \section{MODELS' EVALUATION}
-\ctext[RGB]{190,190,190}{Shall be used to point out any important decision taken during the training, including training strategy and evaluation measures used.  \textbf{Shall not exceed 500 characters.}}
-
-For metric, we pursued recall for the dataset 1, since this means the system values more avoiding FN and maximizing TP. This is ideal because, as we are talking about health, it is always better to be safe than sorry.
+\ctext[RGB]{190,190,190}{For metric, we pursued recall for the dataset 1, since this means the system values more avoiding FN and maximizing TP. This is ideal because, as we are talking about health, it is always better to be safe than sorry.
 
 For the dataset 2, we chose accuracy as the statistic, because, in this case, it makes sense to have system where we aim to get maximize TP and TN classifications, since a bad decision has a very high cost for the business.
 
 In both datasets we used the hold-out strategy for training.
 
+Shall be used to point out any important decision taken during the training, including training strategy and evaluation measures used.  \textbf{Shall not exceed 500 characters.}}
+
 \subsection*{\textit{Na{\"i}ve Bayes}}
-\ctext[RGB]{190,190,190}{Shall be used to present the results achieved with each one of Na{\"i}ve Bayes implementations, comparing and proposing explanations for them. If any of the implementations is not used, a justification for it shall be presented. Shall be used to present the evaluation of the best model achieved.  \textbf{Shall not exceed 300 characters.}}
+\ctext[RGB]{190,190,190}{For the dataset 1, the Gaussian NB presents the better value, since the majority of numerical variables follow a normal distribution.
+
+For the dataset 2, the Bernoulli NB provides the best results, as the dataset is pretty sparse overall, thus making it harder to follow a normal distribution.
+
+Shall be used to present the results achieved with each one of Na{\"i}ve Bayes implementations, comparing and proposing explanations for them. If any of the implementations is not used, a justification for it shall be presented. Shall be used to present the evaluation of the best model achieved.  \textbf{Shall not exceed 300 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_nb_recall_study.png}
 \caption{Na{\"i}ve Bayes alternatives comparison for dataset 1}
 \end{figure}
 
-For the dataset 1, the Gaussian NB presents the better value, since the majority of numerical variables follow a normal distribution.
-
 \begin{figure}[H]
 \centering\includegraphics[scale=0.95]{images/dataset2/models_evaluation/Credit_Score_nb_accuracy_study.png}
 \caption{Na{\"i}ve Bayes alternative comparison for dataset 2}
 \end{figure}
-
-For the dataset 2, the Bernoulli NB provides the best results, as the dataset is pretty sparse overall, thus making it harder to follow a normal distribution.
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset1/models_evaluation/CovidPos_GaussianNB_best_recall_eval.png}
@@ -425,7 +425,13 @@ For the dataset 2, the Bernoulli NB provides the best results, as the dataset is
 \end{figure}
 
 \subsection*{\textit{KNN}}
-\ctext[RGB]{190,190,190}{Shall be used to present the results achieved through different similarity measures and KNN parameterisations. The results shall be compared and explanations for them shall be presented. The justification for the chosen similarity measures shall be presented. Shall be used to address the overfitting phenomenon, studying the conditions under which models face it. Shall be used to present the evaluation of the best model achieved.  \textbf{Shall not exceed 500 characters.}}
+\ctext[RGB]{190,190,190}{For both datasets we decided to limit the search for the best model to a maximum of k=25, due to the computation complexity of the algorithm. 
+
+The best parametrization for the dataset 1 is the Chebyshev, and the model chosen was the k=1, although model is more unstable  and overfitted.
+
+For dataset 2, the best parametrization was the Manhattan with model chosen was k=3. This model is more stable and less specialized than it's previous iterations, resulting in a lower probability for overfitting.
+
+Shall be used to present the results achieved through different similarity measures and KNN parameterisations. The results shall be compared and explanations for them shall be presented. The justification for the chosen similarity measures shall be presented. Shall be used to address the overfitting phenomenon, studying the conditions under which models face it. Shall be used to present the evaluation of the best model achieved.  \textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_knn_recall_study.png}
