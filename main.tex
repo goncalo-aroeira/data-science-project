@@ -189,17 +189,17 @@ data preparation phase.
 \centering\includegraphics[scale=0.5]{images/dataset1/data_preparation/CovidPos_AgeCategory_study_for_granularity.png}
 \includegraphics[scale=0.4]{images/dataset1/data_preparation/CovidPos_State_study_for_granularity.png}
 \centering\includegraphics[scale=1.0]{images/dataset1/data_preparation/CovidPos_State_per_region_study_for_granularity.png}
-
-
 \caption{Granularity analysis for dataset 1}
 \end{figure}
+Granularity study for variables for which we thought to have interesting taxonomies to help us in the variable encoding process.
+The variables \textit{LastCheckupTime}, \textit{State} and \textit{AgeCategory} have interesting taxonomies, allowing for 
+reduction of variance without harming the distribution and information of these variables
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.5]{images/dataset2/data_profiling/Credit_Score_granularity.png}
 \caption{Granularity analysis for dataset 2}
 \end{figure}
-We only did a granularity study for symbolic variables with reasonably clear taxonomies that could then aid us in the variable
-encoding process. Some of the variables clearly had too much differente values, this study allowed us to know if descending in the
+For dataset 2. Some of the variables clearly had too much differente values, this study allowed us to know if descending in the
 taxonomy hierachy would not signifincantly alter the distribution of these variables. Notable examples of this are the 
 \textit{Type\_of\_Loan} and \textit{Credit\_History\_Age} variables.
 
@@ -236,9 +236,17 @@ variables.
 
 \subsection*{\textit{Variables Encoding}}
 \ctext[RGB]{190,190,190}{Shall contain all relevant information respecting to the transformation of variables. The list of variables under each one of the transformations, shall be presented. If not applied explain the reason for that, based on data characteristics.  \textbf{Shall not exceed 500 characters \textit{for each dataset.}}}
+
+\subsection*{Dataset 1 - Health}
+In this step all symbolic variables were converted to numeric. All the binary got turned into zeros and ones.
+Ordinal variables preserved their order - \textit{GeneralHealth}, \textit{LastCheckupTime}, \textit{RemovedTeeth},
+\textit{HadDiabetes}, \textit{SmokerStatus}, \textit{ECigaretteUsage}, \textit{AgeCategory} and 
+\textit{TetanusLast10Tdap}. The \textit{State} got its granularity reduced into regions according to the previously done study.
+
+
 \subsubsection*{Dataset 2 - Services}
-In this step we converted all non numerical variables into numerical ones. For the \textit{ID}, \textit{Customer\_ID},
-\textit{SSN} and \textit{Name} were trasnformed into numbers, preserving their uniqueness. For variables that had order 
+In this step we converted all non numerical variables into numerical. For the \textit{ID}, \textit{Customer\_ID},
+\textit{SSN} and \textit{Name} were transformed into numbers, preserving their uniqueness. For variables that had order 
 to their values we used ordinal linear encoding, these were \textit{Credit\_Score}, \textit{Credit\_Mix}, 
 \textit{Payment\_of\_Min\_Amount}, \textit{Credit\_History\_Age} and \textit{Payment\_Behaviour} . For the \textit{Month} we used 
 cyclic encoding. We reduced the granularity of the \textit{Occupation} variable, turning it more broad. For the \textit{Type\_of\_Loan}
@@ -250,8 +258,9 @@ variable we used dummification.
 \begin{figure}[H]
 \centering\includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_mvi_freq_eval.png}
 \includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_mvi_knn_eval.png}
-\caption{Missing values imputation results with different approaches for dataset 1}
+\caption{Missing values imputation results with different approaches for dataset 1. Frequence (left) and KNN (right) strategies}
 \end{figure}
+First drop all records with more than 80\% missing values. Frequence strategy chosen to fill missing entries.
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.80]{images/dataset2/data_preparation/Credit_Score_mvi_freq_eval.png}
@@ -271,8 +280,13 @@ fill the rest of the missing values.
 \includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_NotStdBased.png}
 \includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_outliers_treat_rowDrop_StdBased.png}
 \includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_outliers_treat_truncating_minmax.png}
-\caption{Outliers imputation results with different approaches for dataset 1}
+\caption{Outliers imputation results with different approaches for dataset 1. Rep\_fixed\_median (top left), rowDrop\_NotStdBased (top right), rowDrop\_StdBased (bottom left) and truncating\_minmax (bottom right)}
 \end{figure}
+% comparando com os resultados anteriores, parece que piora, sera que n e melhor dizer que n se aplicou nenhuma estrategia??
+% All the tested strategies significantly worsened the evaluation, particularly the recall. We chose not to apply any outlier
+% modification.
+We applied four different strategies: replacing, truncating or dropping (either std based or iqr based) outliers.
+Best option was truncating minmax, looking at the recall metric.
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.8]{images/dataset2/data_preparation/Credit_Score_outliers_treat_rep_fixed_median.png}
@@ -281,9 +295,9 @@ fill the rest of the missing values.
 \includegraphics[scale=0.8]{images/dataset2/data_preparation/Credit_Score_outliers_treat_truncating_minmax.png}
 \caption{Outliers imputation results with different approaches for dataset 2}
 \end{figure}
-We applied four different strategies: replacing, truncating or dropping (either std based or iqr based) them.
-They all attained similar results but the best evaluation values were the result of dropping std based, therefore
-this was our choice to move forward. 
+Same four strategies as dataset 1.
+They all attained similar results but the best evaluation values were the result of dropping std based (mainly
+looking at accuracy), therefore this was our choice moving forward. 
 
 \subsection*{\textit{Scaling}}
 \ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to scaling transformation, such as the choices made and the impact of the different approaches on modelling results. Shall also clearly reveal the approach selected to proceed with the processing. If not applied explain the reason for that, based on data characteristics.  \textbf{Shall not exceed 200 characters.}}
@@ -293,8 +307,12 @@ this was our choice to move forward.
 \includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax2.png}
 \includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_scaling_treat_Original.png}
 \includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_scaling_treat_Z-Score.png}
-\caption{Scaling results with different approaches for dataset 1}
+\caption{Scaling results with different approaches for dataset 1. MinMax[0,1] (top left), MinMax[0,10] (top right), Original (bottom left), Z-Score(bottom right)}
 \end{figure}
+% talvez a escolha devesse ter sido Z-Score, o min max n gosta de outliers
+% Comparing the MinMax and Z-Score approaches with the original there is little change. MinMax does not deal well with
+% outliers therefore the transformation chosen was Z-Score as it slightly edges the original.
+Chosen strategy was MinMax from 0-1.
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.8]{images/dataset2/data_preparation/Credit_Score_scaling_MinMax.png}
@@ -302,8 +320,8 @@ this was our choice to move forward.
 \includegraphics[scale=0.8]{images/dataset2/data_preparation/Credit_Score_scaling_Z-Score.png}
 \caption{Scaling results with different approaches for dataset 2}
 \end{figure}
-In scaling, we compared the a MinMax and Z-Score approaches, seeing which would give us better improvement, if any.
-Z-Score had the best evaluation results therefore it was chosen to procced with the data preparation.  
+We compared the same approaches as in dataset 1, given that both had better accuracys than the original but similar between 
+each other we opted to scale using Z-Score as MinMax doesn't handle outliers very well.  
 
 \subsection*{\textit{Feature Selection}}
 \ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to feature selection based on filtering out redundant (based on correlation) and relevant (based on variation) variables. The different choices and their impact on the modelling results shall be presented and explained. Should also clearly reveal the approach selected to proceed with the processing. All explanations shall be based on data characteristics.  \textbf{Shall not exceed 500 characters.}}
@@ -313,6 +331,9 @@ Z-Score had the best evaluation results therefore it was chosen to procced with 
 \includegraphics[scale=0.40]{images/dataset1/data_preparation/CovidPos_fs_redundancy_recall_study.png}
 \caption{Feature selection of redundant variables results with different parameters for dataset 1}
 \end{figure}
+Recall was chosen as the metric to evaluate this dataset due to its domain.
+Drop all the variables with variance below 0.02 and all that have a correlation bigger than 0.5.
+
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.60]{images/dataset2/data_preparation/Credit_Score_fs_low_var_accuracy_study_.png}
@@ -332,6 +353,9 @@ In terms of redundacy, the best result is to drop no variables as well (correlat
 \includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_balancing_SMOTE.png}
 \caption{Balancing results with different approaches for dataset 1}
 \end{figure}
+For dataset 1, the SMOTE presented interesting results for recall, but the model was evidently flawed.
+So we chose to balance the data with undersampling, as the set contains a lot of noise 
+(at least 16\% of the records have an outlier value).
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.80]{images/dataset2/data_preparation/Credit_Score_balancing_oversampling.png}
