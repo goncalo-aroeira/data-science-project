@@ -543,7 +543,7 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \section{DATA PROFILING}
 
 \subsection*{\textit{Data Dimensionality and Granularity}}
-\ctext[RGB]{190,190,190}{For the first dataset we used the "sum" function as "agg\_fun" and studied the granularity at three different levels, weekly, monthly and quarterly. As you can also see, there is no cyclical behavior.  \textbf{Shall not exceed 500 characters.}}
+\ctext[RGB]{190,190,190}{We used the "sum" function as "agg\_fun" for both datasets. We studied the granularity at three different levels, for dataset 1, weekly (atomic), monthly and quarterly with an upwards trend but no seasonality or cyclical behaviour. For dataset 2 by 15 minutes (atomic), hourly and daily, with no visible trend, daily seasonality on each morning and evening and also weekly cyclicality with a busier day a week (usually Mondays except the first spike) both corresponding to heavier traffic flows. \textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.5]{images/dataset1/time_series/Covid_granularity_aggregation_W.png}
@@ -694,7 +694,7 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \subsection*{\textit{Differentiation}}
-\ctext[RGB]{190,190,190}{To study differentiation, we applied the first two derivatives, favouring the second for dataset 1 due to lower errors, removing quadratic trends. For dataset 2, both derivatives removed seasonality, but the second added complexity, making it harder to predict so we chose the first.  \textbf{Shall not exceed 300 characters.}}
+\ctext[RGB]{190,190,190}{To study differentiation, we applied the first two derivatives, favoring the first one for both datasets. In dataset 1, it helped remove quadratic trends and minimize the errors and for dataset 2, both derivatives removed seasonality, but the second added complexity, making it harder to predict. \textbf{Shall not exceed 300 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset1/time_series/Covid First derivative - Linear Regression_forecasting_series.png}
@@ -935,6 +935,9 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \section{CRITICAL ANALYSIS}
-\ctext[RGB]{190,190,190}{Shall be used to present a summary of the results achieved with the different forecasting techniques, and the impact of the different preparation tasks on their performance. A critical assessment of the best models shall be presented, clearly stating if the models seem to be good enough for the problem at hand. Additional charts may be presented here.  \textbf{Shall not exceed 2000 characters.}}
+\ctext[RGB]{190,190,190}{In a critical assessment, both ARIMA and LSTMs outperformed simpler models like simple average or rolling mean, emphasizing their adaptability and effectiveness. LSTMs, in particular, demonstrated superior performance across diverse datasets, positioning them as a favorable choice for both. The decision between these strands hinges on dataset specifics and the desired trade-off between interpretability and complexity.
+Dataset 1 reveals a non-stationary nature, characterized by an initial upward trend with it slowing down. Although on the smoothing phase this shape is flattened, this decline in Covid related death rates can be seen on the differentiation analysis, by employing the second derivative and removing the quadratic trend, recalling the beginning upwards activity and settling down later. In order to have best suited values for the LSTM model, we applied scaling.  Notably, although we predicted it to be a good fit for this model, ARIMA is not a suitable fit for this series as it's prediction is too long-term based, not dealing with the abrupt decline.
+For dataset 2, also non-stationary, having applied both smoothing, differentiation and scaling to regularise the value spikes and revealing cyclical and seasonal behaviors of this series, but with no evident trend. As expected but differing from the first dataset, the ARIMA model provides a good fit, encapsulating the cyclicality of this series on a good level. Despite not being as accurate as LSTM, if the model complexity from the latest proves a bottleneck for the problem, ARIMA is a good substitute.
+The univariate nature of the time series hinders accurate prediction, leading to suboptimal model performance. For this reason and as the simple average model, persistence realist and optimist and rolling mean can only deal with linear series or short term predictions which are not the case for either datasets, none of these models seem good enough to solve these problems. \textbf{Shall not exceed 2000 characters.}}
 
 \end{document}

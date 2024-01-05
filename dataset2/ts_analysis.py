@@ -32,7 +32,7 @@ def symbolic_variables_granularity(series: Series, file_tag: str, target: str):
 #****************+++***  Boxplots for individual  vars  ********+++************
 
 def boxplots_individual_num_vars(series: Series, file_tag: str, target:str):
-    grans: list[str] = ["min", "H","D", "W"]
+    grans: list[str] = ["min", "H","D"]
 
     # boxplot 1 by 1
     # for i in grans:
@@ -44,16 +44,14 @@ def boxplots_individual_num_vars(series: Series, file_tag: str, target:str):
 
     fig: Figure
     axs: array
-    ss_mins, ss_hours, ss_daily, ss_weekly = ts_aggregation_by(series, grans[0]),ts_aggregation_by(series, grans[1]), ts_aggregation_by(series, grans[2]),ts_aggregation_by(series, grans[3])
-    fig, axs = subplots(2, 4, figsize=(2 * HEIGHT, HEIGHT))
+    ss_mins, ss_hours, ss_daily = ts_aggregation_by(series, grans[0]),ts_aggregation_by(series, grans[1]), ts_aggregation_by(series, grans[2])
+    fig, axs = subplots(2, 3, figsize=(2 * HEIGHT, HEIGHT))
     set_chart_labels(axs[0, 0], title="MINUTES")
     axs[0, 0].boxplot(ss_mins)
     set_chart_labels(axs[0, 1], title="HOURLY")
     axs[0, 1].boxplot(ss_hours)
     set_chart_labels(axs[0, 2], title="DAILY")
     axs[0, 2].boxplot(ss_daily)
-    set_chart_labels(axs[0, 3], title="WEEKLY")
-    axs[0, 3].boxplot(ss_weekly)
 
     axs[1, 0].grid(False)
     axs[1, 0].set_axis_off()
@@ -67,21 +65,18 @@ def boxplots_individual_num_vars(series: Series, file_tag: str, target:str):
     axs[1, 2].set_axis_off()
     axs[1, 2].text(0.2, 0, str(ss_daily.describe()), fontsize="small")
 
-    axs[1, 3].grid(False)
-    axs[1, 3].set_axis_off()
-    axs[1, 3].text(0.2, 0, str(ss_weekly.describe()), fontsize="small")
     savefig(f"images/ts_analysis/{file_tag}_boxplot.png", bbox_inches='tight')
 
 
 def histograms(series: Series, file_tag: str, target:str):
-    grans_str: list[str] = ["H","D", "W"]
+    grans_str: list[str] = ["H","D"]
 
     ss_hours: Series = ts_aggregation_by(series, gran_level="H", agg_func=sum)
     ss_days: Series = ts_aggregation_by(series, gran_level="D", agg_func=sum)
     ss_weekly: Series = ts_aggregation_by(series, gran_level="W", agg_func=sum)
 
-    grans: list[Series] = [series, ss_hours, ss_days, ss_weekly]
-    gran_names: list[str] = ["By Minutes","Hourly", "Daily", "Weekly"]
+    grans: list[Series] = [series, ss_hours, ss_days]
+    gran_names: list[str] = ["By Minutes","Hourly", "Daily"]
     fig: Figure
     axs: array
     fig, axs = subplots(1, len(grans), figsize=(len(grans) * HEIGHT, HEIGHT))
@@ -232,7 +227,7 @@ if __name__ == "__main__":
     # granularity
     # symbolic_variables_granularity(series, file_tag, target)
     boxplots_individual_num_vars(series, file_tag, target)
-    # histograms(series, file_tag, target)
+    histograms(series, file_tag, target)
     # lag(series, file_tag, target)
     # autocorrelation_study(series, 10, 1)
     # I have given up peco imensa desculpa
