@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1704463270 "/home/josecruz/Documents/MEIC/CD/CD_project/main.tex" "/home/josecruz/Documents/MEIC/CD/CD_project/main.pdf" "main" 1704463320
+["pdflatex"] 1704463631 "/home/josecruz/Documents/MEIC/CD/CD_project/main.tex" "/home/josecruz/Documents/MEIC/CD/CD_project/main.pdf" "main" 1704463683
   "/etc/texmf/web2c/texmf.cnf" 1703679155 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/josecruz/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsi1000.600pk" 1703679387 24520 4373618c56dbc901de61bc1f9c2e1323 ""
   "/home/josecruz/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecso1000.600pk" 1703679386 28324 1a83266d30f161fbf4cc205772337289 ""
@@ -10,8 +10,8 @@
   "/home/josecruz/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx1200.600pk" 1703680644 27316 624770a8554be9714f844d5fad094076 ""
   "/home/josecruz/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx1440.600pk" 1703679387 34652 e5ffb8bab2a31f0cee2502830afb5d3c ""
   "/home/josecruz/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx2074.617pk" 1703679387 53944 7cd7a73e7590ae35156b5e02f54c1e9f ""
-  "/home/josecruz/Documents/MEIC/CD/CD_project/main.aux" 1704463320 22171 c28b3bd74c69be0e50538799d68bb5cc ""
-  "/home/josecruz/Documents/MEIC/CD/CD_project/main.tex" 1704463269 63862 5bd651d3d0c67890d0e242698f65ca78 ""
+  "/home/josecruz/Documents/MEIC/CD/CD_project/main.aux" 1704463683 22171 64dd1655f5cc3d1091c2b069b3b88172 ""
+  "/home/josecruz/Documents/MEIC/CD/CD_project/main.tex" 1704463630 64793 3a08cb42ec988a1662af01f449eee58a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1136768653 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecsi1000.tfm" 1136768653 3584 87c00098505ed1ab5849d7a05016cb73 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecso1000.tfm" 1136768653 3584 28de528d5eb276f96f1afe67dab24105 ""
@@ -309,8 +309,8 @@
   "images/dataset2/time_series/fts_stationarity_study_1.png" 1703612640 140660 641679030c34449960edd5e930fe15c4 ""
   "images/dataset2/time_series/fts_stationarity_study_2.png" 1703612640 209522 0e7035b11f4d42250eb6e168e72f51cd ""
   "images/tecnico_logo.jpg" 1703612640 14375 f0b38e324d9f9cb81b99612c43ea658d ""
-  "main.aux" 1704463320 22171 c28b3bd74c69be0e50538799d68bb5cc "pdflatex"
-  "main.tex" 1704463269 63862 5bd651d3d0c67890d0e242698f65ca78 ""
+  "main.aux" 1704463683 22171 64dd1655f5cc3d1091c2b069b3b88172 "pdflatex"
+  "main.tex" 1704463630 64793 3a08cb42ec988a1662af01f449eee58a ""
   "multirow.sty" 1703612640 6149 2398eec4faa1ee24ff761581e580ecf1 ""
   "placeins.sty" 1703612640 4087 636308456f60d2b31cbf97867db5708d ""
   "soul-ori.sty" 1703612640 25449 100b0515cc1d8ea1e0366560a3b7ad0c ""
@@ -318,7 +318,7 @@
   "titling.sty" 1703612640 7358 95ac619994bd30d405a74f3eca431c84 ""
   (generated)
   "/home/josecruz/Documents/MEIC/CD/CD_project/main.log"
-  "main.log"
-  "main.aux"
   "/home/josecruz/Documents/MEIC/CD/CD_project/main.pdf"
+  "main.aux"
+  "main.log"
   "main.pdf"
