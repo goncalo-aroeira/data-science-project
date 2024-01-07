@@ -520,7 +520,7 @@ def study_variance_for_feature_selection(
     file_tag: str = "",
 ) -> dict:
     options: list[float] = [
-        round(i * lag, 3) for i in range(1, ceil(max_threshold / lag + lag))
+        round(i * lag, 3) for i in range(5, ceil(max_threshold / lag + lag))
     ]
     print(train.describe().loc["std"]* train.describe().loc["std"]) 
     print("OPTIONS")
