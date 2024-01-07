@@ -74,16 +74,17 @@
 \end{center}
 
 \section{DATA PROFILING}
-\ctext[RGB]{190,190,190}{
-  Ds 1 has a lot of records, impacting future decisions.
-  Not much preprocessing was done. The \textit{Age} variable in ds 2 had values with the
-  character "\_", the character was removed. 
+\ctext[RGB]{190,190,190}{Ds 1 has a lot of records, impacting future decisions.
+
+  Not much preprocessing was done. 
+  
+  The \textit{Age} variable in ds 2 had values with the character "\_", the character was removed. 
+
   Other anomalies were kept.
 \textbf{Shall not exceed 200 characters.}}
 
 \subsection*{\textit{Data Dimensionality}}
-\ctext[RGB]{190,190,190}{
-  Both datasets have much more records than variables, avoiding curse of dimensionality.
+\ctext[RGB]{190,190,190}{Both datasets have much more records than variables, avoiding curse of dimensionality.
   \par 
   There are no date variables - no time frame associated . The health dataset predominantly 
   features symbolic variables, particularly binary ones, reflecting the challenge of quantifying 
@@ -115,8 +116,7 @@
 \end{figure}
 
 \subsection*{\textit{Data Distribution}}
-\ctext[RGB]{190,190,190}{  
-  Global boxplots depend on the scaling of variables, in our cases, they are pretty much useless
+\ctext[RGB]{190,190,190}{Global boxplots depend on the scaling of variables, in our cases, they are pretty much useless
   \par
   All numeric variables have quite high variability in both datasets.
   \par
@@ -177,8 +177,7 @@
 \end{figure}
 
 \subsection*{\textit{Data Granularity}}
-\ctext[RGB]{190,190,190}{
-  In dataset 1, the variables \textit{LastCheckupTime}, \textit{State} and \textit{AgeCategory} have 
+\ctext[RGB]{190,190,190}{In dataset 1, the variables \textit{LastCheckupTime}, \textit{State} and \textit{AgeCategory} have 
   interesting taxonomies, allowing for reduction of variance without harming the distribution 
   and information of them.
   \par
@@ -201,13 +200,11 @@
 \end{figure}
 
 \subsection*{\textit{Data Sparsity}}
-\ctext[RGB]{190,190,190}{
-  Binary on binary is not interesting for sparsity evaluation. We can see which variables have more
+\ctext[RGB]{190,190,190}{Binary on binary is not interesting for sparsity evaluation. We can see which variables have more
   impact on the class and the correlation between them.
   \par
-  We encoded the symbolic variables into numeric for the correlation analysis. There are not many 
-  variables with high correlation. Even when there is it might not be interesting - gender and height, 
-  BMI and weight, Name and ID.
+  We encoded the symbolic variables into numeric for the correlation analysis. 
+  In dataset 1, there are not many variables with high correlation. Even when there are it might not be interesting - gender/height, BMI/weight, Name/ID.
   \par
   In dataset 2 we can infer more information about the behaviour of people and what leads to 
   their credit score.
@@ -297,8 +294,7 @@
 \section{DATA PREPARATION}
 
 \subsection*{\textit{Variables Encoding}}
-\ctext[RGB]{190,190,190}{ 
-  \par Dataset 1 - Health \par
+\ctext[RGB]{190,190,190}{\par Dataset 1 - Health \par
   In this step all symbolic variables were converted to numeric. All the binary got turned into zeros and ones.
   Ordinal variables preserved their order - \textit{GeneralHealth}, \textit{LastCheckupTime}, \textit{RemovedTeeth},
   \textit{HadDiabetes}, \textit{SmokerStatus}, \textit{ECigaretteUsage}, \textit{AgeCategory} and 
@@ -315,8 +311,7 @@
 
 
 \subsection*{\textit{Missing Value Imputation}}
-\ctext[RGB]{190,190,190}{
-  Firstly, we dropped all records with more than 90\% missing values.
+\ctext[RGB]{190,190,190}{Firstly, we dropped all records with more than 90\% missing values.
   We then applied two different filling strategies, frequence and KNN, which had very 
   similiar results after evaluation (we didn't bother experimenting the constant 
   strategy as it changes the data distribution). The frequence strategy (using mean 
@@ -337,8 +332,7 @@
 \end{figure}
 
 \subsection*{\textit{Outliers Treatment}}
-\ctext[RGB]{190,190,190}{
-  For ds1 the tested strategies significantly worsened the evaluation, particularly the recall, 
+\ctext[RGB]{190,190,190}{For ds1 the tested strategies significantly worsened the evaluation, particularly the recall, 
   for which we give more attention due to the domain of the data. No modification was applied for ds1. 
   \par
   For ds2 the strategies attained similar results but the best evaluation values were by std
@@ -365,8 +359,7 @@
 
 
 \subsection*{\textit{Scaling}}
-\ctext[RGB]{190,190,190}{
-  Comparing the MinMax and Z-Score approaches with the original there is little change. 
+\ctext[RGB]{190,190,190}{Comparing the MinMax and Z-Score approaches with the original there is little change. 
   MinMax does not handle outliers very well. The scaling chosen was Z-Score as it slightly
   edges the original evaluation results.
   \par
@@ -391,8 +384,7 @@
 \end{figure}
 
 \subsection*{\textit{Feature Selection}}
-\ctext[RGB]{190,190,190}{
-  For ds 1 recall was chosen due to the data domain, we want false negatives to be more influencial
+\ctext[RGB]{190,190,190}{For ds 1 recall was chosen due to the data domain, we want false negatives to be more influencial
   than false positives. Z-Score turns all variance to 1, chosing a threshold of 1 worsens the results, 22 variables were too litlle relevant.
   Correlation changes don't affect the results, dropped 4 redundant variables.
   \par
@@ -416,8 +408,7 @@
 
 
 \subsection*{\textit{Balancing}}
-\ctext[RGB]{190,190,190}{
-  For dataset 1, the SMOTE presented interesting results for recall, but the model was evidently flawed.
+\ctext[RGB]{190,190,190}{For dataset 1, the SMOTE presented interesting results for recall, but the model was evidently flawed.
   So we chose to balance the data with undersampling, as the set contains a lot of noise 
   (at least 16\% of the records have an outlier value).
   \par
@@ -612,6 +603,7 @@ Shall be used to present the results achieved through different similarity measu
 
 \subsection*{\textit{Multi-Layer Perceptrons}}
 \ctext[RGB]{190,190,190}{For dataset 1, the model learnt is not useful, with 1.0 recall, every predicted value is positive. This means that recall is clearly not the right measure to optimize. While the recall over the training set is constant, on the test it oscilates periodically with no evident improvement or decrease, could be due to high amounts of noise.
+
 For dataset 2, although the model might be on a slight overfit, especially from the 800th iteration, the high values on all metrics indicate that it's a good model. \textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
@@ -660,7 +652,9 @@ variable all the points are continuous, some care must be taken in their treatme
 \section{DATA PROFILING}
 
 \subsection*{\textit{Data Dimensionality and Granularity}}
-\ctext[RGB]{190,190,190}{We used the "sum" function as "agg\_fun" for both datasets. We studied the granularity at three different levels, for dataset 1, weekly (atomic), monthly and quarterly with an upwards trend but no seasonality or cyclical behaviour. For dataset 2 by 15 minutes (atomic), hourly and daily, with no visible trend, daily seasonality on each morning and evening and also weekly cyclicality with a busier day a week (usually Mondays except the first spike) both corresponding to heavier traffic flows. \textbf{Shall not exceed 500 characters.}}
+\ctext[RGB]{190,190,190}{We used the "sum" function as "agg\_fun" for both datasets. We studied the granularity at three different levels, for dataset 1, weekly (atomic), monthly and quarterly with an upwards trend but no seasonality or cyclical behaviour. 
+
+For dataset 2 by 15 minutes (atomic), hourly and daily, with no visible trend, daily seasonality on each morning and evening and also weekly cyclicality with a busier day a week (usually Mondays except the first spike) both corresponding to heavier traffic flows. \textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.5]{images/dataset1/time_series/Covid_granularity_aggregation_W.png}
@@ -716,7 +710,9 @@ variable all the points are continuous, some care must be taken in their treatme
 \end{figure}
 
 \subsection*{\textit{Data Stationarity}}
-\ctext[RGB]{190,190,190}{For the 1st dataset we obtained a p-value of 0.223. Looking at the graphs, we can see that there is a trend in the first 2 and that there is evidence of a seasonal trend in the 3rd. For the 2nd dataset we obtained a p-value of 0. and that there is no trend but there is some seasonality.  \textbf{Shall not exceed 300 characters.}}
+\ctext[RGB]{190,190,190}{For the 1st dataset we obtained a p-value of 0.223. Looking at the graphs, we can see that there is a trend in the first 2 and that there is evidence of a seasonal trend in the 3rd. 
+
+For the 2nd dataset we obtained a p-value of 0. and that there is no trend but there is some seasonality.  \textbf{Shall not exceed 300 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.50]{images/dataset1/time_series/Covid_components_study.png}
@@ -745,7 +741,9 @@ variable all the points are continuous, some care must be taken in their treatme
 \section{DATA TRANSFORMATION}
 
 \subsection*{\textit{Aggregation}}
-\ctext[RGB]{190,190,190}{To study the best aggregation, we applied the model at 3 different levels studied in Data Profiling. In dataset 1, chose the weekly aggregation and for dataset 2, hourly aggregation as they obtained lower values for the different errors, simplifying the model without losing information or context.  \textbf{Shall not exceed 300 characters.}}
+\ctext[RGB]{190,190,190}{To study the best aggregation, we applied the model at 3 different levels studied in Data Profiling. 
+
+In dataset 1, chose the weekly aggregation and for dataset 2, hourly aggregation as they obtained lower values for the different errors, simplifying the model without losing information or context.  \textbf{Shall not exceed 300 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset1/time_series/Covid Weekly - Linear Regression_forecasting_series.png}
@@ -776,7 +774,9 @@ variable all the points are continuous, some care must be taken in their treatme
 \end{figure}
 
 \subsection*{\textit{Smoothing}}
-\ctext[RGB]{190,190,190}{To study the best Window Size, we applied the model to 4 different values (25, 50, 75 and 100). In this case we chose 100 for both datasets since it was where we obtained the lowest values for the different errors.  \textbf{Shall not exceed 300 characters.}}
+\ctext[RGB]{190,190,190}{To study the best Window Size, we applied the model to 4 different values (25, 50, 75 and 100). 
+
+In this case we chose 100 for both datasets since it was where we obtained the lowest values for the different errors.  \textbf{Shall not exceed 300 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset1/time_series/Covid Window Size 25 - Linear Regression_forecasting_series.png}
@@ -811,7 +811,9 @@ variable all the points are continuous, some care must be taken in their treatme
 \end{figure}
 
 \subsection*{\textit{Differentiation}}
-\ctext[RGB]{190,190,190}{To study differentiation, we applied the first two derivatives, favoring the first one for both datasets. In dataset 1, it helped remove quadratic trends and minimize the errors and for dataset 2, both derivatives removed seasonality, but the second added complexity, making it harder to predict. \textbf{Shall not exceed 300 characters.}}
+\ctext[RGB]{190,190,190}{To study differentiation, we applied the first two derivatives, favoring the first one for both datasets.
+
+In dataset 1, it helped remove quadratic trends and minimize the errors and for dataset 2, both derivatives removed seasonality, but the second added complexity, making it harder to predict. \textbf{Shall not exceed 300 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset1/time_series/Covid First derivative - Linear Regression_forecasting_series.png}
@@ -862,7 +864,9 @@ variable all the points are continuous, some care must be taken in their treatme
 \end{figure}
 
 \section{MODELS' EVALUATION}
-\ctext[RGB]{190,190,190}{For the first dataset we used the weekly aggregation with window size=100, the first derivative and then applied scaling. For dataset 2 we selected minutely aggregation, window size=100, first derivative and scaling. Results were surprisingly positive for dataset 1 when applying the linear regression compared to dataset 2 as the last is closer to the shape of a cosine function instead of linear. For the aggregation study, higher levels were not selected due to high loss of information.}
+\ctext[RGB]{190,190,190}{For dataset 1 we used the weekly aggregation with window size=100, the first derivative and then applied scaling. 
+
+For dataset 2 we selected minutely aggregation, window size=100, first derivative and scaling. Results were surprisingly positive for dataset 1 when applying the linear regression compared to dataset 2 as the last is closer to the shape of a cosine function instead of linear. For the aggregation study, higher levels were not selected due to high loss of information.}
 
 \subsection*{\textit{Simple Average Model}}
 \ctext[RGB]{190,190,190}{Although this metric doesn't approximate any of the datasets correctly, the error and R2 values for dataset 2 seem better because there are some contact points between the real and predicted values.}
@@ -923,7 +927,7 @@ variable all the points are continuous, some care must be taken in their treatme
 \end{figure}
 
 \subsection*{\textit{Rolling Mean Model}}
-\ctext[RGB]{190,190,190}{Although this metric doesn't approximate any of the datasets correctly, the first dataset obtains better results for the MAE, RMSE and MAPE as it predicts values closer to the real ones but doesn't predict any correct value while dataset 2 has a better R2 because it fluctuates between somewhat symmetric high and low values obtaining a horizontal line between them so there are some contact points but the line remains very distant from the minimum and maximum points.}
+\ctext[RGB]{190,190,190}{Although this metric doesn't approximate any of the datasets correctly, the first dataset obtains better results for the MAE, RMSE and MAPE as it predicts values closer to the real ones but doesn't predict any correct value while the second dataset has a better R2 because it fluctuates between somewhat symmetric high and low values obtaining a horizontal line between them so there are some contact points but the line remains very distant from the minimum and maximum points.}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.5]{images/dataset1/time_series/Covid_rollingmean_R2_study.png}
@@ -956,7 +960,9 @@ variable all the points are continuous, some care must be taken in their treatme
 \end{figure}
 
 \subsection*{\textit{ARIMA Model}}
-\ctext[RGB]{190,190,190}{Dataset 1, with a trend-style pattern, benefits from parameters (p, d, q) set to (7, 2, 5). This configuration allows the model to capture and accommodate the complexities associated with trend-based data. On the other hand, Dataset 2, exhibiting a cosine-like shape, attains superior performance with parameters at (3, 0, 5). This parameter choice enables the model to capture the cyclical and periodic components in the dataset, showcasing the adaptability of ARIMA to diverse time series patterns.}
+\ctext[RGB]{190,190,190}{Dataset 1, with a trend-style pattern, benefits from parameters (p, d, q) set to (7, 2, 5). This configuration allows the model to capture and accommodate the complexities associated with trend-based data.
+
+On the other hand, Dataset 2, exhibiting a cosine-like shape, attains superior performance with parameters at (3, 0, 5). This parameter choice enables the model to capture the cyclical and periodic components in the dataset, showcasing the adaptability of ARIMA to diverse time series patterns.}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset1/time_series/Covid_arima_R2_study.png}
