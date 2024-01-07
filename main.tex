@@ -81,7 +81,7 @@
   The \textit{Age} variable in ds 2 had values with the character "\_", the character was removed. 
 
   Other anomalies were kept.
-\textbf{Shall not exceed 200 characters.}}
+}
 
 \subsection*{\textit{Data Dimensionality}}
 \ctext[RGB]{190,190,190}{Both datasets have much more records than variables, avoiding curse of dimensionality.
@@ -93,7 +93,7 @@
   \par
   In both datasets no variable has more than 20\% missing values, therefore 
   all variables are reasonably interesting.
-\textbf{Shall not exceed 500 characters.}}
+}
 
 \begin{figure}[H]
 \centering
@@ -125,7 +125,7 @@
   IQR is more robust to extreme values, more desirable for the study of the second dataset. The stddev is better suited for variables that follow a normal distribution.
   \par
   The class distribution is similar in both datasets, a 25\%-75\%. Some balancing might be required.
-\textbf{Shall not exceed 500 characters.}} 
+} 
 
 \begin{figure}[H]
   \includegraphics[scale=0.50]{images/dataset1/data_profiling/CovidPos_global_boxplot.png}
@@ -185,7 +185,7 @@
   know if descending in the taxonomy hierachy would not signifincantly alter the distribution of 
   these variables. Notable examples of this are the \textit{Type\_of\_Loan} and 
   \textit{Credit\_History\_Age} variables.
-\textbf{Shall not exceed 500 characters.}}
+}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.5]{images/dataset1/data_preparation/CovidPos_AgeCategory_study_for_granularity.png}
@@ -208,7 +208,7 @@
   \par
   In dataset 2 we can infer more information about the behaviour of people and what leads to 
   their credit score.
-\textbf{Shall not exceed 500 characters.}}
+}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_State_per_class.png}
@@ -307,7 +307,7 @@
   \textit{Payment\_of\_Min\_Amount}, \textit{Credit\_History\_Age} and \textit{Payment\_Behaviour}. For the \textit{Month} we used 
   cyclic encoding. We reduced the granularity of the \textit{Occupation} variable, turning it more broad. For the \textit{Type\_of\_Loan}
   variable we used dummification mixed with the results of the taxonomy evaluation. 
-\textbf{Shall not exceed 500 characters \textit{for each dataset.}}}
+}
 
 
 \subsection*{\textit{Missing Value Imputation}}
@@ -317,7 +317,7 @@
   strategy as it changes the data distribution). The frequence strategy (using mean 
   and mode) came out on top by little, hence our choice to use it to replace the missing 
   values in both datasets.
-\textbf{Shall not exceed 500 characters.}}
+}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_mvi_knn_eval.png}
@@ -339,7 +339,7 @@
   based dropping (mainly looking at accuracy), this was our choice moving forward. Also, we knew there
   were significant outliers from the profiling study, motivating us to apply a measure to deal with 
   them.
-\textbf{Shall not exceed 500 characters.}}
+}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_outliers_treat_rep_fixed_median.png}
@@ -366,7 +366,7 @@
   For dataset 2, we compared the same approaches as in 1, given that both had better accuracys 
   than the original but similar between each other, we opted to scale using Z-Score as it very 
   slightly outperforms MinMax (0-1).    
-\textbf{Shall not exceed 200 characters.}}
+}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax1.png}
@@ -390,7 +390,7 @@
   \par
   In ds 2 no variable is to be dropped due to their relevancy, threshold lower than 1. In terms of redundacy the best result is as
   well to drop no variables, correlation threshold of 0.57.
-\textbf{Shall not exceed 500 characters.}}
+}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.40]{images/dataset1/data_preparation/CovidPos_fs_low_var_recall_study.png}
@@ -413,7 +413,7 @@
   (at least 16\% of the records have an outlier value).
   \par
   We chose SMOTE balancing transformation for ds 2.
-\textbf{Shall not exceed 500 characters.}}
+}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_balancing_oversampling.png}
@@ -435,15 +435,14 @@
 For the dataset 2, we chose accuracy as the statistic, because, in this case, it makes sense to have system where we aim to get maximize TP and TN classifications, since a bad decision has a very high cost for the business.
 
 In both datasets we used the hold-out strategy for training.
-
-Shall be used to point out any important decision taken during the training, including training strategy and evaluation measures used.  \textbf{Shall not exceed 500 characters.}}
+}
 
 \subsection*{\textit{Na{\"i}ve Bayes}}
 \ctext[RGB]{190,190,190}{For the dataset 1, the Gaussian NB presents the better value, since the majority of numerical variables follow a normal distribution.
 
 For the dataset 2, the Bernoulli NB provides the best results, as the dataset is pretty sparse overall, thus making it harder to follow a normal distribution.
 
-Shall be used to present the results achieved with each one of Na{\"i}ve Bayes implementations, comparing and proposing explanations for them. If any of the implementations is not used, a justification for it shall be presented. Shall be used to present the evaluation of the best model achieved.  \textbf{Shall not exceed 300 characters.}}
+}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_nb_recall_study.png}
@@ -468,7 +467,7 @@ The best parametrization for the dataset 1 is the Chebyshev, and the model chose
 
 For dataset 2, the best parametrization was the Manhattan with model chosen was k=3. This model is more stable and less specialized than it's previous iterations, resulting in a lower probability for overfitting.
 
-Shall be used to present the results achieved through different similarity measures and KNN parameterisations. The results shall be compared and explanations for them shall be presented. The justification for the chosen similarity measures shall be presented. Shall be used to address the overfitting phenomenon, studying the conditions under which models face it. Shall be used to present the evaluation of the best model achieved.  \textbf{Shall not exceed 500 characters.}}
+}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_knn_recall_study.png}
@@ -500,10 +499,7 @@ For dataset 1, the models stopped improving the test accuracy after depth=9, wit
 For dataset 2, the best model is gini criterion with depth=14, having the test accuracy peaked at depth=14.
 
 For both datasets, within our limited testing, there is no overfitting, but there is an upwards trend suggesting it may happen after depth=25.
-  
-
-
-Shall be used to present the results achieved through different parameterisations for the train of decision trees. The results shall be compared and explanations for them shall be presented. Shall be used to address the overfitting phenomenon, studying the conditions under which models face it. Shall be used to present the evaluation of the best model achieved. Shall be used to present the best tree achieved and its succinct description.  \textbf{Shall not exceed 500 characters.}}
+}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_DT_accuracy_study.png}
@@ -538,7 +534,7 @@ Shall be used to present the results achieved through different parameterisation
 \end{figure}
 
 \subsection*{\textit{Random Forests}}
-\ctext[RGB]{190,190,190}{Shall be used to present the results achieved through different parameterisations for the train of random forests. The results shall be compared and explanations for them shall be presented. Shall be used to address the overfitting phenomenon, studying the conditions under which models face it. Shall be used to present the evaluation of the best model achieved. May be used to present the most important variables in the model.  \textbf{Shall not exceed 500 characters.}}
+\ctext[RGB]{190,190,190}{Shall be used to present the results achieved through different parameterisations for the train of random forests. The results shall be compared and explanations for them shall be presented. Shall be used to address the overfitting phenomenon, studying the conditions under which models face it. Shall be used to present the evaluation of the best model achieved. May be used to present the most important variables in the model.  }
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.6]{images/dataset1/models_evaluation/CovidPos_rf_recall_study.png}
@@ -578,7 +574,7 @@ Shall be used to present the results achieved through different parameterisation
 
 \subsection*{\textit{Gradient Boosting}}
 \ctext[RGB]{190,190,190}{For the overfitting study of this model, on dataset 2 with best accuracy (d, lr, nr\_est) = (6,0.1,700) reaching an overfitting phase for above 700 iterators, test accuracy stagnates and the train accuracy reaches the max. The most important variables are OutstandingDebt, InterestRate and Payment\_Behaviour.
-For dataset 1 with best recall (d, lr, nr\_est) = (2, 0.1, 100), no conclusion can be drawn about overfitting. The most important variable are AgeCategory, PhysicalHealthDays and SmokerStatus.  \textbf{Shall not exceed 500 characters.}}
+For dataset 1 with best recall (d, lr, nr\_est) = (2, 0.1, 100), no conclusion can be drawn about overfitting. The most important variable are AgeCategory, PhysicalHealthDays and SmokerStatus.  }
 \begin{figure}[H]
 \centering\includegraphics[scale=0.60]{images/dataset1/models_evaluation/CovidPos_gb_recall_study.png}
 %\includegraphics[scale=0.60]{images/dataset1/models_evaluation/CovidPos_gb_accuracy_study.png}
@@ -614,7 +610,7 @@ For dataset 1 with best recall (d, lr, nr\_est) = (2, 0.1, 100), no conclusion c
 \subsection*{\textit{Multi-Layer Perceptrons}}
 \ctext[RGB]{190,190,190}{For dataset 1, the model learnt is not useful, with 1.0 recall, every predicted value is positive. This means that recall is clearly not the right measure to optimize. While the recall over the training set is constant, on the test it oscilates periodically with no evident improvement or decrease, could be due to high amounts of noise.
 
-For dataset 2, although the model might be on a slight overfit, especially from the 800th iteration, the high values on all metrics indicate that it's a good model. \textbf{Shall not exceed 500 characters.}}
+For dataset 2, although the model might be on a slight overfit, especially from the 800th iteration, the high values on all metrics indicate that it's a good model. }
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.6]{images/dataset1/models_evaluation/CovidPos_mlp_recall_study.png}
@@ -664,7 +660,7 @@ variable all the points are continuous, some care must be taken in their treatme
 \subsection*{\textit{Data Dimensionality and Granularity}}
 \ctext[RGB]{190,190,190}{We used the "sum" function as "agg\_fun" for both datasets. We studied the granularity at three different levels, for dataset 1, weekly (atomic), monthly and quarterly with an upwards trend but no seasonality or cyclical behaviour. 
 
-For dataset 2 by 15 minutes (atomic), hourly and daily, with no visible trend, daily seasonality on each morning and evening and also weekly cyclicality with a busier day a week (usually Mondays except the first spike) both corresponding to heavier traffic flows. \textbf{Shall not exceed 500 characters.}}
+For dataset 2 by 15 minutes (atomic), hourly and daily, with no visible trend, daily seasonality on each morning and evening and also weekly cyclicality with a busier day a week (usually Mondays except the first spike) both corresponding to heavier traffic flows. }
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.5]{images/dataset1/time_series/Covid_granularity_aggregation_W.png}
@@ -698,7 +694,7 @@ For dataset 2 by 15 minutes (atomic), hourly and daily, with no visible trend, d
 
 \subsection*{\textit{Data Distribution}}
 \ctext[RGB]{190,190,190}{For dataset 2, for the boxplot diagram, points beyond the whiskers are considered outliers but contiguous points should not be considered, like in Minutes aggregation. However, for Hourly (above 995) and Daily (above 11559 and below 10415) the dots represent can be considered outliers. No distribution approximation found.
-On the other hand, for dataset 1, there are none. For all granularities the histogram shapes for this dataset are similar but no approximation found. \textbf{Shall not exceed 500 characters.}}
+On the other hand, for dataset 1, there are none. For all granularities the histogram shapes for this dataset are similar but no approximation found. }
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.80]{images/dataset1/time_series/Covid_distribution_boxplot.png}
@@ -723,7 +719,7 @@ On the other hand, for dataset 1, there are none. For all granularities the hist
 \subsection*{\textit{Data Stationarity}}
 \ctext[RGB]{190,190,190}{For the 1st dataset we obtained a p-value of 0.223. Looking at the graphs, we can see that there is a trend in the first 2 and that there is evidence of a seasonal trend in the 3rd. 
 
-For the 2nd dataset we obtained a p-value of 0. and that there is no trend but there is some seasonality.  \textbf{Shall not exceed 300 characters.}}
+For the 2nd dataset we obtained a p-value of 0. and that there is no trend but there is some seasonality.}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.50]{images/dataset1/time_series/Covid_components_study.png}
@@ -754,7 +750,7 @@ For the 2nd dataset we obtained a p-value of 0. and that there is no trend but t
 \subsection*{\textit{Aggregation}}
 \ctext[RGB]{190,190,190}{To study the best aggregation, we applied the model at 3 different levels studied in Data Profiling. 
 
-In dataset 1, chose the weekly aggregation and for dataset 2, hourly aggregation as they obtained lower values for the different errors, simplifying the model without losing information or context.  \textbf{Shall not exceed 300 characters.}}
+In dataset 1, chose the weekly aggregation and for dataset 2, hourly aggregation as they obtained lower values for the different errors, simplifying the model without losing information or context.}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset1/time_series/Covid Weekly - Linear Regression_forecasting_series.png}
@@ -787,7 +783,7 @@ In dataset 1, chose the weekly aggregation and for dataset 2, hourly aggregation
 \subsection*{\textit{Smoothing}}
 \ctext[RGB]{190,190,190}{To study the best Window Size, we applied the model to 4 different values (25, 50, 75 and 100). 
 
-In this case we chose 100 for both datasets since it was where we obtained the lowest values for the different errors.  \textbf{Shall not exceed 300 characters.}}
+In this case we chose 100 for both datasets since it was where we obtained the lowest values for the different errors.}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset1/time_series/Covid Window Size 25 - Linear Regression_forecasting_series.png}
@@ -824,7 +820,7 @@ In this case we chose 100 for both datasets since it was where we obtained the l
 \subsection*{\textit{Differentiation}}
 \ctext[RGB]{190,190,190}{To study differentiation, we applied the first two derivatives, favoring the first one for both datasets.
 
-In dataset 1, it helped remove quadratic trends and minimize the errors and for dataset 2, both derivatives removed seasonality, but the second added complexity, making it harder to predict. \textbf{Shall not exceed 300 characters.}}
+In dataset 1, it helped remove quadratic trends and minimize the errors and for dataset 2, both derivatives removed seasonality, but the second added complexity, making it harder to predict.}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset1/time_series/Covid First derivative - Linear Regression_forecasting_series.png}
@@ -852,7 +848,7 @@ In dataset 1, it helped remove quadratic trends and minimize the errors and for 
 \end{figure}
 
 \subsection*{\textit{Other transformations (optional)}}
-\ctext[RGB]{190,190,190}{Finally, we applied scaling in both datasets in order to have best values to use in the models' evaluation specifically in the LSTM model.  \textbf{Shall not exceed 500 characters.}}
+\ctext[RGB]{190,190,190}{Finally, we applied scaling in both datasets in order to have best values to use in the models' evaluation specifically in the LSTM model.  }
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.6]{images/dataset1/time_series/Covid_deaths_scaling.png}
@@ -1075,6 +1071,6 @@ Dataset 1 reveals a non-stationary nature, characterized by an initial upward tr
 
 For dataset 2, also non-stationary, having applied both smoothing, differentiation and scaling to regularise the value spikes and revealing cyclical and seasonal behaviors of this series, but with no evident trend. As expected but differing from the first dataset, the ARIMA model provides a good fit, encapsulating the cyclicality of this series on a good level. Despite not being as accurate as LSTM, if the model complexity from the latest proves a bottleneck for the problem, ARIMA is a good substitute.
 
-The univariate nature of the time series hinders accurate prediction, leading to suboptimal model performance. For this reason and as the simple average model, persistence realist and optimist and rolling mean can only deal with linear series or short term predictions which are not the case for either datasets, none of these models seem good enough to solve these problems. \textbf{Shall not exceed 2000 characters.}}
+The univariate nature of the time series hinders accurate prediction, leading to suboptimal model performance. For this reason and as the simple average model, persistence realist and optimist and rolling mean can only deal with linear series or short term predictions which are not the case for either datasets, none of these models seem good enough to solve these problems.}
 
 \end{document}
