@@ -534,7 +534,8 @@ For both datasets, within our limited testing, there is no overfitting, but ther
 \end{figure}
 
 \subsection*{\textit{Random Forests}}
-\ctext[RGB]{190,190,190}{Shall be used to present the results achieved through different parameterisations for the train of random forests. The results shall be compared and explanations for them shall be presented. Shall be used to address the overfitting phenomenon, studying the conditions under which models face it. Shall be used to present the evaluation of the best model achieved. May be used to present the most important variables in the model.  }
+\ctext[RGB]{190,190,190}{In this model there is no overfitting for both datasets. The results for each parameter study don't vary much, especially for dataset 2. For the first dataset, with best recall (d, f, nr\_est) = (5, 0.9, 750) and the most important variables are AgeCategory, PhysicalHealthDays and SmokerStatus.
+For dataset 2, with best accuracy (d, f, nr\_est) = (7, 0.5, 1000) and the most important variables are OutstandingDebt, InterestRate and CreditMix.}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.6]{images/dataset1/models_evaluation/CovidPos_rf_recall_study.png}
@@ -574,7 +575,7 @@ For both datasets, within our limited testing, there is no overfitting, but ther
 
 \subsection*{\textit{Gradient Boosting}}
 \ctext[RGB]{190,190,190}{For the overfitting study of this model, on dataset 2 with best accuracy (d, lr, nr\_est) = (6,0.1,700) reaching an overfitting phase for above 700 iterators, test accuracy stagnates and the train accuracy reaches the max. The most important variables are OutstandingDebt, InterestRate and Payment\_Behaviour.
-For dataset 1 with best recall (d, lr, nr\_est) = (2, 0.1, 100), no conclusion can be drawn about overfitting. The most important variable are AgeCategory, PhysicalHealthDays and SmokerStatus.  }
+For dataset 1 with best recall (d, lr, nr\_est) = (2, 0.1, 100), there is no overfitting. The most important variable are AgeCategory, PhysicalHealthDays and SmokerStatus.  }
 \begin{figure}[H]
 \centering\includegraphics[scale=0.60]{images/dataset1/models_evaluation/CovidPos_gb_recall_study.png}
 %\includegraphics[scale=0.60]{images/dataset1/models_evaluation/CovidPos_gb_accuracy_study.png}
