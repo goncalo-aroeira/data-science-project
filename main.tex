@@ -74,13 +74,26 @@
 \end{center}
 
 \section{DATA PROFILING}
-\ctext[RGB]{190,190,190}{May be used to describe any useful observation about the data, and that was used in the current project. An example is the use of any domain knowledge to process the data or evaluate the results. \textbf{Shall not exceed 200 characters.}}
-\par For the second dataset, the services domain one, we didn't do much processing prior to the study of the data for most forms 
-of analysis. We simply noticed that the \textbf{age} variable had values with the character "\_" which we removed for it to 
-become a numeric variable as it is. There were several anomalies in the values for some of the variables. We decided to keep these values for the profiling.
+\ctext[RGB]{190,190,190}{Ds 1 has a lot of records, impacting future decisions.
+
+  Not much preprocessing was done. 
+  
+  The \textit{Age} variable in ds 2 had values with the character "\_", the character was removed. 
+
+  Other anomalies were kept.
+\textbf{Shall not exceed 200 characters.}}
 
 \subsection*{\textit{Data Dimensionality}}
-\ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to the data dimensionality perspective, such as the number of records and number of dimensions, and their impact on the following analysis. \textbf{Shall not exceed 500 characters.}}
+\ctext[RGB]{190,190,190}{Both datasets have much more records than variables, avoiding curse of dimensionality.
+  \par 
+  There are no date variables - no time frame associated . The health dataset predominantly 
+  features symbolic variables, particularly binary ones, reflecting the challenge of quantifying 
+  clinical observations. The services one is more numerical, demonstrating the precision of its 
+  financial context. 
+  \par
+  In both datasets no variable has more than 20\% missing values, therefore 
+  all variables are reasonably interesting.
+\textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
 \centering
@@ -88,63 +101,53 @@ become a numeric variable as it is. There were several anomalies in the values f
 \includegraphics[scale=0.7]{images/dataset2/data_profiling/Credit_Score_records_variables.png}
 \caption{Nr Records x Nr variables for dataset 1 (left) and dataset 2 (right)} 
 \end{figure}
-We can see that for both datasets there are much more records than variables, avoiding the curse of dimensionality.
 
 \begin{figure}[H]
   \includegraphics[scale=0.70]{images/dataset1/data_profiling/CovidPos_variable_types.png}
   \centering\includegraphics[scale=0.7]{images/dataset2/data_profiling/Credit_Score_variable_types.png}
 \caption{Nr variables per type for dataset 1 (left) and dataset 2 (right)}
 \end{figure}
-Neither dataset has \textit{date} variables, meaning that theres is no time frame associated with them or the records.
-The dataset about health has predominantly symbolic variables, especially binary. This is expected as it is harder 
-to quantify clinical observations about the state of a person. In contrast, the services dataset has mainly numerical variables.
-These offer more precision and are more easily obtained in the financial context the data is in.
+
 
 \begin{figure}[H]
   \includegraphics[scale=0.6]{images/dataset1/data_profiling/CovidPos_mv.png}
   \centering\includegraphics[scale=0.6]{images/dataset2/data_profiling/Credit_Score_mv.png}
 \caption{Nr missing values for dataset 1 (left) and dataset 2 (right)}
 \end{figure}
-For the health domain dataset, the number of records is 380.932. The variable with the most missing values has less than 10\% of missing values.
-This indicates that some sort of imputation might be a viable option to address them. The second dataset has variables with a bigger ratio 
-of missing values. However these ratios don't go over 20\%, making it unlikely that it will be better to drop said variables.
 
 \subsection*{\textit{Data Distribution}}
-\ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to the data distribution perspective, such as each variable distribution, type, domain and range. May be used to describe any useful observation about the data, and that was used in the current project.  \textbf{Shall not exceed 500 characters.}} 
+\ctext[RGB]{190,190,190}{Global boxplots depend on the scaling of variables, in our cases, they are pretty much useless
+  \par
+  All numeric variables have quite high variability in both datasets.
+  \par
+  The majority of numerical variables follow a normal distribution. 
+  \par  
+  IQR is more robust to extreme values, more desirable for the study of the second dataset. The stddev is better suited for variables that follow a normal distribution.
+  \par
+  The class distribution is similar in both datasets, a 25\%-75\%. Some balancing might be required.
+\textbf{Shall not exceed 500 characters.}} 
 
 \begin{figure}[H]
   \includegraphics[scale=0.50]{images/dataset1/data_profiling/CovidPos_global_boxplot.png}
   \centering\includegraphics[scale=0.5]{images/dataset2/data_profiling/Credit_Score_global_boxplot.png}
 \caption{Global boxplots dataset 1 (left) and dataset 2 (right)}
 \end{figure}
-Global boxplots are rarely a good option to visualize data as they depend on the fact that all variables have the same scale.
-Given this, we can say, about the health dataset, that the variable with the biggest spread is \textit{WeightInKilograms}.
-When examining the services dataset, the only thing we can tell is that the \textit{MonthlyBalance} variable has a huge outlier. This 
-completly distorts the overall representation of the data, rendering the figure nearly useless in terms of insights it could give us.
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.60]{images/dataset1/data_profiling/CovidPos_single_boxplots.png}
 \caption{Single variables boxplots for dataset 1}
 \end{figure}
-From this we can conclude that all the numeric variables in this first dataset have quite high variability in their values.
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.35]{images/dataset2/data_profiling/Credit_Score_single_boxplots.png}
 \caption{Single variables boxplots for dataset 2}
 \end{figure}
-Analysing these boxplots, we come to the conclusion that more than half the numeric variables in this dataset have massive variation.
-This means that a more aggressive approach during data preparation for the outlier values might be needed. Knowing this, it is important
-to remember that an outlier is a point that is far away from the regular ones. Given that for all but the \textit{MonthlyBalance} 
-variable all the points are continuous, some care must be taken in their treatment.
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.6]{images/dataset1/data_profiling/CovidPos_histogram_numeric_distribution.png}
 \caption{Histograms for dataset 1} %(with distributions is enough)
 \end{figure}
 % comment for the histograms with the distributions
-From this visual representation we can extract that a majority of numerical variables follow a normal distribution quite well. 
-The others have a shape closer to that of the exponential distribution. Maybe a normalization of the last would be advantageous.
-This would enable the application of models that rely on the data following normal distributions later on. 
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset2/data_profiling/Credit_Score_histogram_numeric_distribution.png}
@@ -152,8 +155,6 @@ This would enable the application of models that rely on the data following norm
 \end{figure}
 % comment for the histograms with the distributions
 % talvez tirar os histogramas que nao valem a pena ver????
-The second dataset once again suffers from having very distant outliers. The histograms from which we can infer more information
-either follow a normal distribution or a lognormal one. The latter can easily be trasnformed to a normal one if needed for some modelation.
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.60]{images/dataset1/data_profiling/CovidPos_outliers_standard.png}
@@ -164,26 +165,27 @@ either follow a normal distribution or a lognormal one. The latter can easily be
 \centering\includegraphics[scale=0.40]{images/dataset2/data_profiling/Credit_Score_outliers_standard.png}
 \caption{Outliers study dataset 2}
 \end{figure}
-For the outliers study per variable we used the IQR factor and the stantard deviation one. The IQR factor was of 1.5 and the 
-stddev was of 2. %% Precisa de justificar isto, n sei como.
-IQR is more robust to extreme values, making it more desiarable for the study of the second dataset. The stddev method should only be
-used for variables that follow a normal distribution.
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.95]{images/dataset1/data_profiling/CovidPos_class_distribution.png}
 \caption{Class distribution for dataset 1}
 \end{figure}
 
-
 \begin{figure}[H]
 \centering\includegraphics[scale=0.95]{images/dataset2/data_profiling/Credit_Score_class_distribution.png}
 \caption{Class distribution for dataset 2}
 \end{figure}
-The class distribution is similar in both datasets, a 25\%-75\%. This means that probebly some balancing with be required during the
-data preparation phase.
 
 \subsection*{\textit{Data Granularity}}
-\ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to the data granularity perspective, such as the impact of different granularities considered for each variable. May present additional taxonomies if needed.  \textbf{Shall not exceed 500 characters.}}
+\ctext[RGB]{190,190,190}{In dataset 1, the variables \textit{LastCheckupTime}, \textit{State} and \textit{AgeCategory} have 
+  interesting taxonomies, allowing for reduction of variance without harming the distribution 
+  and information of them.
+  \par
+  For dataset 2. Some of the variables clearly had too much differente values, this study allowed us to 
+  know if descending in the taxonomy hierachy would not signifincantly alter the distribution of 
+  these variables. Notable examples of this are the \textit{Type\_of\_Loan} and 
+  \textit{Credit\_History\_Age} variables.
+\textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.5]{images/dataset1/data_preparation/CovidPos_AgeCategory_study_for_granularity.png}
@@ -191,25 +193,63 @@ data preparation phase.
 \centering\includegraphics[scale=1.0]{images/dataset1/data_preparation/CovidPos_State_per_region_study_for_granularity.png}
 \caption{Granularity analysis for dataset 1}
 \end{figure}
-Granularity study for variables for which we thought to have interesting taxonomies to help us in the variable encoding process.
-The variables \textit{LastCheckupTime}, \textit{State} and \textit{AgeCategory} have interesting taxonomies, allowing for 
-reduction of variance without harming the distribution and information of these variables
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.5]{images/dataset2/data_profiling/Credit_Score_granularity.png}
 \caption{Granularity analysis for dataset 2}
 \end{figure}
-For dataset 2. Some of the variables clearly had too much differente values, this study allowed us to know if descending in the
-taxonomy hierachy would not signifincantly alter the distribution of these variables. Notable examples of this are the 
-\textit{Type\_of\_Loan} and \textit{Credit\_History\_Age} variables.
 
 \subsection*{\textit{Data Sparsity}}
-\ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to the data sparsity perspective, such as domain coverage and correlation among variables.  \textbf{Shall not exceed 500 characters.}}
-
-For both datasets, we used variable encoding to transform the symbolic variables into numeric ones for the correlation analysis.
+\ctext[RGB]{190,190,190}{Binary on binary is not interesting for sparsity evaluation. We can see which variables have more
+  impact on the class and the correlation between them.
+  \par
+  We encoded the symbolic variables into numeric for the correlation analysis. 
+  In dataset 1, there are not many variables with high correlation. Even when there are it might not be interesting - gender/height, BMI/weight, Name/ID.
+  \par
+  In dataset 2 we can infer more information about the behaviour of people and what leads to 
+  their credit score.
+\textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.95]{images/dataset1/data_profiling/CovidPos_sparsity_per_class_study.png}
+\centering\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_State_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_Sex_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_GeneralHealth_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_PhysicalHealthDays_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_MentalHealthDays_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_LastCheckupTime_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_PhysicalActivities_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_SleepHours_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_RemovedTeeth_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_HadHeartAttack_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_HadAngina_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_HadStroke_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_HadAsthma_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_HadSkinCancer_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_HadCOPD_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_HadDepressiveDisorder_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_HadDepressiveDisorder_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_HadKidneyDisease_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_HadArthritis_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_HadDiabetes_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_DeafOrHardOfHearing_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_BlindOrVisionDifficulty_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_DifficultyConcentrating_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_DifficultyWalking_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_DifficultyDressingBathing_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_DifficultyErrands_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_SmokerStatus_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_ECigaretteUsage_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_ChestScan_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_RaceEthnicityCategory_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_AgeCategory_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_HeightInMeters_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_WeightInKilograms_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_BMI_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_AlcoholDrinkers_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_HIVTesting_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_FluVaxLast12_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_PneumoVaxEver_per_class.png}
+\includegraphics[scale=0.05]{images/dataset1/data_profiling/CovidPos_sparsity_TetanusLast10Tdap_per_class.png}
 \caption{Sparsity analysis for dataset 1}
 \end{figure}
 
@@ -240,67 +280,66 @@ For both datasets, we used variable encoding to transform the symbolic variables
 \includegraphics[scale=0.10]{images/dataset2/data_profiling/Credit_Score_sparsity_MonthlyBalance_per_class.png}
 \caption{Sparsity analysis for dataset 2}
 \end{figure}
-Binary on binary is not interesting for sparsity evaluation. We can see which variables have more 
-impact on the class and the correlation between them.
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.6]{images/dataset1/data_profiling/CovidPos_correlation_analysis.png}
 \caption{Correlation analysis for dataset 1}
 \end{figure}
-For both datasets, we used variable encoding to transform the symbolic variables into numeric ones for the correlation analysis.
-We can clearly observe that there are not many variables with high correlations, and the ones with higer ones aren't relevant -
-The gender of a person and their height, their BMI and their weight.
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.6]{images/dataset2/data_profiling/Credit_Score_correlation_analysis.png}
 \caption{Correlation analysis for dataset 2}
 \end{figure}
-In the services dataset we can infer a bit more information, especially about the behaviour of people and what leads them to having
-a good or bad credit score. Despite this not all high correlations are relevant, per example, the \textit{Name} and \textit{ID}
-variables.
 
 \section{DATA PREPARATION}
 
 \subsection*{\textit{Variables Encoding}}
-\ctext[RGB]{190,190,190}{Shall contain all relevant information respecting to the transformation of variables. The list of variables under each one of the transformations, shall be presented. If not applied explain the reason for that, based on data characteristics.  \textbf{Shall not exceed 500 characters \textit{for each dataset.}}}
+\ctext[RGB]{190,190,190}{\par Dataset 1 - Health \par
+  In this step all symbolic variables were converted to numeric. All the binary got turned into zeros and ones.
+  Ordinal variables preserved their order - \textit{GeneralHealth}, \textit{LastCheckupTime}, \textit{RemovedTeeth},
+  \textit{HadDiabetes}, \textit{SmokerStatus}, \textit{ECigaretteUsage}, \textit{AgeCategory} and 
+  \textit{TetanusLast10Tdap}. The \textit{State} got its granularity reduced into regions according to the previously done study.
 
-\subsection*{Dataset 1 - Health}
-In this step all symbolic variables were converted to numeric. All the binary got turned into zeros and ones.
-Ordinal variables preserved their order - \textit{GeneralHealth}, \textit{LastCheckupTime}, \textit{RemovedTeeth},
-\textit{HadDiabetes}, \textit{SmokerStatus}, \textit{ECigaretteUsage}, \textit{AgeCategory} and 
-\textit{TetanusLast10Tdap}. The \textit{State} got its granularity reduced into regions according to the previously done study.
+  \par Dataset 2 - Services \par
+  In this step we converted all non numerical variables into numerical. For the \textit{ID}, \textit{Customer\_ID},
+  \textit{SSN} and \textit{Name} were transformed into numbers, preserving their uniqueness. For variables that had order 
+  to their values we used ordinal linear encoding, these were \textit{Credit\_Score}, \textit{Credit\_Mix}, 
+  \textit{Payment\_of\_Min\_Amount}, \textit{Credit\_History\_Age} and \textit{Payment\_Behaviour}. For the \textit{Month} we used 
+  cyclic encoding. We reduced the granularity of the \textit{Occupation} variable, turning it more broad. For the \textit{Type\_of\_Loan}
+  variable we used dummification mixed with the results of the taxonomy evaluation. 
+\textbf{Shall not exceed 500 characters \textit{for each dataset.}}}
 
-
-\subsubsection*{Dataset 2 - Services}
-In this step we converted all non numerical variables into numerical. For the \textit{ID}, \textit{Customer\_ID},
-\textit{SSN} and \textit{Name} were transformed into numbers, preserving their uniqueness. For variables that had order 
-to their values we used ordinal linear encoding, these were \textit{Credit\_Score}, \textit{Credit\_Mix}, 
-\textit{Payment\_of\_Min\_Amount}, \textit{Credit\_History\_Age} and \textit{Payment\_Behaviour} . For the \textit{Month} we used 
-cyclic encoding. We reduced the granularity of the \textit{Occupation} variable, turning it more broad. For the \textit{Type\_of\_Loan}
-variable we used dummification. 
 
 \subsection*{\textit{Missing Value Imputation}}
-\ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to missing values imputation, such as the choices made and the impact of the different approaches on modelling results. Shall also clearly reveal the approach selected to proceed with the processing. If not applied explain the reason for that, based on data characteristics.  \textbf{Shall not exceed 500 characters.}}
+\ctext[RGB]{190,190,190}{Firstly, we dropped all records with more than 90\% missing values.
+  We then applied two different filling strategies, frequence and KNN, which had very 
+  similiar results after evaluation (we didn't bother experimenting the constant 
+  strategy as it changes the data distribution). The frequence strategy (using mean 
+  and mode) came out on top by little, hence our choice to use it to replace the missing 
+  values in both datasets.
+\textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_mvi_freq_eval.png}
-\includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_mvi_knn_eval.png}
+\centering\includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_mvi_knn_eval.png}
+\includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_mvi_freq_eval.png}
 \caption{Missing values imputation results with different approaches for dataset 1. Frequence (left) and KNN (right) strategies}
 \end{figure}
-First drop all records with more than 80\% missing values. Frequence strategy chosen to fill missing entries.
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.80]{images/dataset2/data_preparation/Credit_Score_mvi_freq_eval.png}
 \includegraphics[scale=0.80]{images/dataset2/data_preparation/Credit_Score_mvi_knn_eval.png}
 \caption{Missing values imputation results with different approaches for dataset 2}
 \end{figure}
-Firstly, we drop all the records with more than 90\% of missing values, removing 11.482 entries.
-Then, we applied two different filling strategies, frequent and KNN, both had very similiar
-results after evaluation. However, the frequent strategy came out on top and we chose it to
-fill the rest of the missing values.
 
 \subsection*{\textit{Outliers Treatment}}
-\ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to outliers imputation, such as the choices made and the impact of the different approaches on modelling results. Shall also clearly reveal the approach selected to proceed with the processing. If not applied explain the reason for that, based on data characteristics.  \textbf{Shall not exceed 500 characters.}}
+\ctext[RGB]{190,190,190}{For ds1 the tested strategies significantly worsened the evaluation, particularly the recall, 
+  for which we give more attention due to the domain of the data. No modification was applied for ds1. 
+  \par
+  For ds2 the strategies attained similar results but the best evaluation values were by std
+  based dropping (mainly looking at accuracy), this was our choice moving forward. Also, we knew there
+  were significant outliers from the profiling study, motivating us to apply a measure to deal with 
+  them.
+\textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_outliers_treat_rep_fixed_median.png}
@@ -309,11 +348,6 @@ fill the rest of the missing values.
 \includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_outliers_treat_truncating_minmax.png}
 \caption{Outliers imputation results with different approaches for dataset 1. Rep\_fixed\_median (top left), rowDrop\_NotStdBased (top right), rowDrop\_StdBased (bottom left) and truncating\_minmax (bottom right)}
 \end{figure}
-% comparando com os resultados anteriores, parece que piora, sera que n e melhor dizer que n se aplicou nenhuma estrategia??
-% All the tested strategies significantly worsened the evaluation, particularly the recall. We chose not to apply any outlier
-% modification.
-We applied four different strategies: replacing, truncating or dropping (either std based or iqr based) outliers.
-Best option was truncating minmax, looking at the recall metric.
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.8]{images/dataset2/data_preparation/Credit_Score_outliers_treat_rep_fixed_median.png}
@@ -322,12 +356,17 @@ Best option was truncating minmax, looking at the recall metric.
 \includegraphics[scale=0.8]{images/dataset2/data_preparation/Credit_Score_outliers_treat_truncating_minmax.png}
 \caption{Outliers imputation results with different approaches for dataset 2}
 \end{figure}
-Same four strategies as dataset 1.
-They all attained similar results but the best evaluation values were the result of dropping std based (mainly
-looking at accuracy), therefore this was our choice moving forward. 
+
 
 \subsection*{\textit{Scaling}}
-\ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to scaling transformation, such as the choices made and the impact of the different approaches on modelling results. Shall also clearly reveal the approach selected to proceed with the processing. If not applied explain the reason for that, based on data characteristics.  \textbf{Shall not exceed 200 characters.}}
+\ctext[RGB]{190,190,190}{Comparing the MinMax and Z-Score approaches with the original there is little change. 
+  MinMax does not handle outliers very well. The scaling chosen was Z-Score as it slightly
+  edges the original evaluation results.
+  \par
+  For dataset 2, we compared the same approaches as in 1, given that both had better accuracys 
+  than the original but similar between each other, we opted to scale using Z-Score as it very 
+  slightly outperforms MinMax (0-1).    
+\textbf{Shall not exceed 200 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_scaling_treat_MinMax1.png}
@@ -336,10 +375,6 @@ looking at accuracy), therefore this was our choice moving forward.
 \includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_scaling_treat_Z-Score.png}
 \caption{Scaling results with different approaches for dataset 1. MinMax[0,1] (top left), MinMax[0,10] (top right), Original (bottom left), Z-Score(bottom right)}
 \end{figure}
-% talvez a escolha devesse ter sido Z-Score, o min max n gosta de outliers
-% Comparing the MinMax and Z-Score approaches with the original there is little change. MinMax does not deal well with
-% outliers therefore the transformation chosen was Z-Score as it slightly edges the original.
-Chosen strategy was MinMax from 0-1.
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.8]{images/dataset2/data_preparation/Credit_Score_scaling_MinMax.png}
@@ -347,32 +382,38 @@ Chosen strategy was MinMax from 0-1.
 \includegraphics[scale=0.8]{images/dataset2/data_preparation/Credit_Score_scaling_Z-Score.png}
 \caption{Scaling results with different approaches for dataset 2}
 \end{figure}
-We compared the same approaches as in dataset 1, given that both had better accuracys than the original but similar between 
-each other we opted to scale using Z-Score as MinMax doesn't handle outliers very well.  
 
 \subsection*{\textit{Feature Selection}}
-\ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to feature selection based on filtering out redundant (based on correlation) and relevant (based on variation) variables. The different choices and their impact on the modelling results shall be presented and explained. Should also clearly reveal the approach selected to proceed with the processing. All explanations shall be based on data characteristics.  \textbf{Shall not exceed 500 characters.}}
+\ctext[RGB]{190,190,190}{For ds 1 recall was chosen due to the data domain, we want false negatives to be more influencial
+  than false positives. Z-Score turns all variance to 1, chosing a threshold of 1 worsens the results, 22 variables were too litlle relevant.
+  Correlation changes don't affect the results, dropped 4 redundant variables.
+  \par
+  In ds 2 no variable is to be dropped due to their relevancy, threshold lower than 1. In terms of redundacy the best result is as
+  well to drop no variables, correlation threshold of 0.57.
+\textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.40]{images/dataset1/data_preparation/CovidPos_fs_low_var_recall_study.png}
 \includegraphics[scale=0.40]{images/dataset1/data_preparation/CovidPos_fs_redundancy_recall_study.png}
 \caption{Feature selection of redundant variables results with different parameters for dataset 1}
 \end{figure}
-Recall was chosen as the metric to evaluate this dataset due to its domain.
-Drop all the variables with variance below 0.02 and all that have a correlation bigger than 0.5.
+
 
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.60]{images/dataset2/data_preparation/Credit_Score_fs_low_var_accuracy_study_.png}
-\includegraphics[scale=0.60]{images/dataset2/data_preparation/Credit_Score_fs_redundancy_accuracy_study.png}
+\centering\includegraphics[scale=0.70]{images/dataset2/data_preparation/Credit_Score_fs_low_var_accuracy_study_.png}
+\includegraphics[scale=0.70]{images/dataset2/data_preparation/Credit_Score_fs_redundancy_accuracy_study.png}
 \caption{Feature selection of redundant variables results with different parameters for dataset 2}
 \end{figure}
-No variable is to be dropped due to low or high variance. (This is to be expected as we chose Z-Score scaling and all
-variables have the same variance of 1)
-In terms of redundacy, the best result is to drop no variables as well (correlation threshold of 0.57).
+
 
 \subsection*{\textit{Balancing}}
-\ctext[RGB]{190,190,190}{Shall contain all relevant information and charts respecting to balancing transformation, such as the choices made and the impact of the different approaches on modelling results. Shall also clearly reveal the approach selected to proceed with the processing. If not applied explain the reason for that, based on data characteristics.  \textbf{Shall not exceed 500 characters.}}
+\ctext[RGB]{190,190,190}{For dataset 1, the SMOTE presented interesting results for recall, but the model was evidently flawed.
+  So we chose to balance the data with undersampling, as the set contains a lot of noise 
+  (at least 16\% of the records have an outlier value).
+  \par
+  We chose SMOTE balancing transformation for ds 2.
+\textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_balancing_oversampling.png}
@@ -380,9 +421,6 @@ In terms of redundacy, the best result is to drop no variables as well (correlat
 \includegraphics[scale=0.80]{images/dataset1/data_preparation/CovidPos_balancing_SMOTE.png}
 \caption{Balancing results with different approaches for dataset 1}
 \end{figure}
-For dataset 1, the SMOTE presented interesting results for recall, but the model was evidently flawed.
-So we chose to balance the data with undersampling, as the set contains a lot of noise 
-(at least 16\% of the records have an outlier value).
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.80]{images/dataset2/data_preparation/Credit_Score_balancing_oversampling.png}
@@ -390,33 +428,32 @@ So we chose to balance the data with undersampling, as the set contains a lot of
 \includegraphics[scale=0.80]{images/dataset2/data_preparation/Credit_Score_balancing_SMOTE.png}
 \caption{Balancing results with different approaches for dataset 2}
 \end{figure}
-We chose SMOTE balancing transformation.
 
 \section{MODELS' EVALUATION}
-\ctext[RGB]{190,190,190}{Shall be used to point out any important decision taken during the training, including training strategy and evaluation measures used.  \textbf{Shall not exceed 500 characters.}}
-
-For metric, we pursued recall for the dataset 1, since this means the system values more avoiding FN and maximizing TP. This is ideal because, as we are talking about health, it is always better to be safe than sorry.
+\ctext[RGB]{190,190,190}{For metric, we pursued recall for the dataset 1, since this means the system values more avoiding FN and maximizing TP. This is ideal because, as we are talking about health, it is always better to be safe than sorry.
 
 For the dataset 2, we chose accuracy as the statistic, because, in this case, it makes sense to have system where we aim to get maximize TP and TN classifications, since a bad decision has a very high cost for the business.
 
 In both datasets we used the hold-out strategy for training.
 
+Shall be used to point out any important decision taken during the training, including training strategy and evaluation measures used.  \textbf{Shall not exceed 500 characters.}}
+
 \subsection*{\textit{Na{\"i}ve Bayes}}
-\ctext[RGB]{190,190,190}{Shall be used to present the results achieved with each one of Na{\"i}ve Bayes implementations, comparing and proposing explanations for them. If any of the implementations is not used, a justification for it shall be presented. Shall be used to present the evaluation of the best model achieved.  \textbf{Shall not exceed 300 characters.}}
+\ctext[RGB]{190,190,190}{For the dataset 1, the Gaussian NB presents the better value, since the majority of numerical variables follow a normal distribution.
+
+For the dataset 2, the Bernoulli NB provides the best results, as the dataset is pretty sparse overall, thus making it harder to follow a normal distribution.
+
+Shall be used to present the results achieved with each one of Na{\"i}ve Bayes implementations, comparing and proposing explanations for them. If any of the implementations is not used, a justification for it shall be presented. Shall be used to present the evaluation of the best model achieved.  \textbf{Shall not exceed 300 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_nb_recall_study.png}
 \caption{Na{\"i}ve Bayes alternatives comparison for dataset 1}
 \end{figure}
 
-For the dataset 1, the Gaussian NB presents the better value, since the majority of numerical variables follow a normal distribution.
-
 \begin{figure}[H]
 \centering\includegraphics[scale=0.95]{images/dataset2/models_evaluation/Credit_Score_nb_accuracy_study.png}
 \caption{Na{\"i}ve Bayes alternative comparison for dataset 2}
 \end{figure}
-
-For the dataset 2, the Bernoulli NB provides the best results, as the dataset is pretty sparse overall, thus making it harder to follow a normal distribution.
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset1/models_evaluation/CovidPos_GaussianNB_best_recall_eval.png}
@@ -425,7 +462,13 @@ For the dataset 2, the Bernoulli NB provides the best results, as the dataset is
 \end{figure}
 
 \subsection*{\textit{KNN}}
-\ctext[RGB]{190,190,190}{Shall be used to present the results achieved through different similarity measures and KNN parameterisations. The results shall be compared and explanations for them shall be presented. The justification for the chosen similarity measures shall be presented. Shall be used to address the overfitting phenomenon, studying the conditions under which models face it. Shall be used to present the evaluation of the best model achieved.  \textbf{Shall not exceed 500 characters.}}
+\ctext[RGB]{190,190,190}{For both datasets we decided to limit the search for the best model to a maximum of k=25, due to the computation complexity of the algorithm. 
+
+The best parametrization for the dataset 1 is the Chebyshev, and the model chosen was the k=1, although model is more unstable  and overfitted.
+
+For dataset 2, the best parametrization was the Manhattan with model chosen was k=3. This model is more stable and less specialized than it's previous iterations, resulting in a lower probability for overfitting.
+
+Shall be used to present the results achieved through different similarity measures and KNN parameterisations. The results shall be compared and explanations for them shall be presented. The justification for the chosen similarity measures shall be presented. Shall be used to address the overfitting phenomenon, studying the conditions under which models face it. Shall be used to present the evaluation of the best model achieved.  \textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_knn_recall_study.png}
@@ -450,7 +493,17 @@ For the dataset 2, the Bernoulli NB provides the best results, as the dataset is
 \end{figure}
 
 \subsection*{\textit{Decision Trees}}
-\ctext[RGB]{190,190,190}{Shall be used to present the results achieved through different parameterisations for the train of decision trees. The results shall be compared and explanations for them shall be presented. Shall be used to address the overfitting phenomenon, studying the conditions under which models face it. Shall be used to present the evaluation of the best model achieved. Shall be used to present the best tree achieved and its succinct description.  \textbf{Shall not exceed 500 characters.}}
+\ctext[RGB]{190,190,190}{For both datasets we limited the search to a maximum depth of 25 due to the computation complexity of the algorithm.
+
+For dataset 1, the models stopped improving the test accuracy after depth=9, with the best model using entropy criterion and depth=6.
+
+For dataset 2, the best model is gini criterion with depth=14, having the test accuracy peaked at depth=14.
+
+For both datasets, within our limited testing, there is no overfitting, but there is an upwards trend suggesting it may happen after depth=25.
+  
+
+
+Shall be used to present the results achieved through different parameterisations for the train of decision trees. The results shall be compared and explanations for them shall be presented. Shall be used to address the overfitting phenomenon, studying the conditions under which models face it. Shall be used to present the evaluation of the best model achieved. Shall be used to present the best tree achieved and its succinct description.  \textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_DT_accuracy_study.png}
@@ -489,19 +542,19 @@ For the dataset 2, the Bernoulli NB provides the best results, as the dataset is
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.6]{images/dataset1/models_evaluation/CovidPos_rf_recall_study.png}
-\includegraphics[scale=0.6]{images/dataset1/models_evaluation/CovidPos_rf_accuracy_study.png}
-\includegraphics[scale=0.6]{images/dataset1/models_evaluation/CovidPos_rf_f1_study.png}
-\includegraphics[scale=0.6]{images/dataset1/models_evaluation/CovidPos_rf_precision_study.png}
-\includegraphics[scale=0.6]{images/dataset1/models_evaluation/CovidPos_rf_auc_study.png}
+%\includegraphics[scale=0.6]{images/dataset1/models_evaluation/CovidPos_rf_accuracy_study.png}
+%\includegraphics[scale=0.6]{images/dataset1/models_evaluation/CovidPos_rf_f1_study.png}
+%\includegraphics[scale=0.6]{images/dataset1/models_evaluation/CovidPos_rf_precision_study.png}
+%\includegraphics[scale=0.6]{images/dataset1/models_evaluation/CovidPos_rf_auc_study.png}
 \caption{Random Forests different parameterisations comparison for dataset 1}
 \end{figure}
 
 \begin{figure}[H]
-\centering\includegraphics[scale=0.6]{images/dataset2/models_evaluation/Credit_Score_rf_recall_study.png}
-\includegraphics[scale=0.6]{images/dataset2/models_evaluation/Credit_Score_rf_accuracy_study.png}
-\includegraphics[scale=0.6]{images/dataset2/models_evaluation/Credit_Score_rf_f1_study.png}
-\includegraphics[scale=0.6]{images/dataset2/models_evaluation/Credit_Score_rf_precision_study.png}
-\includegraphics[scale=0.6]{images/dataset2/models_evaluation/Credit_Score_rf_auc_study.png}
+%\centering\includegraphics[scale=0.6]{images/dataset2/models_evaluation/Credit_Score_rf_recall_study.png}
+\centering\includegraphics[scale=0.6]{images/dataset2/models_evaluation/Credit_Score_rf_accuracy_study.png}
+%\includegraphics[scale=0.6]{images/dataset2/models_evaluation/Credit_Score_rf_f1_study.png}
+%\includegraphics[scale=0.6]{images/dataset2/models_evaluation/Credit_Score_rf_precision_study.png}
+%\includegraphics[scale=0.6]{images/dataset2/models_evaluation/Credit_Score_rf_auc_study.png}
 \caption{Random Forests different parameterisations comparison for dataset 2}
 \end{figure}
 
@@ -528,10 +581,10 @@ For the dataset 2, the Bernoulli NB provides the best results, as the dataset is
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.60]{images/dataset1/models_evaluation/CovidPos_gb_recall_study.png}
-\includegraphics[scale=0.60]{images/dataset1/models_evaluation/CovidPos_gb_accuracy_study.png}
-\includegraphics[scale=0.60]{images/dataset1/models_evaluation/CovidPos_gb_f1_study.png}
-\includegraphics[scale=0.60]{images/dataset1/models_evaluation/CovidPos_gb_precision_study.png}
-\includegraphics[scale=0.60]{images/dataset1/models_evaluation/CovidPos_gb_auc_study.png}
+%\includegraphics[scale=0.60]{images/dataset1/models_evaluation/CovidPos_gb_accuracy_study.png}
+%\includegraphics[scale=0.60]{images/dataset1/models_evaluation/CovidPos_gb_f1_study.png}
+%includegraphics[scale=0.60]{images/dataset1/models_evaluation/CovidPos_gb_precision_study.png}
+%\includegraphics[scale=0.60]{images/dataset1/models_evaluation/CovidPos_gb_auc_study.png}
 \caption{Gradient boosting different parameterisations comparison for dataset 1}
 \end{figure}
 
@@ -560,6 +613,7 @@ For the dataset 2, the Bernoulli NB provides the best results, as the dataset is
 
 \subsection*{\textit{Multi-Layer Perceptrons}}
 \ctext[RGB]{190,190,190}{For dataset 1, the model learnt is not useful, with 1.0 recall, every predicted value is positive. This means that recall is clearly not the right measure to optimize. While the recall over the training set is constant, on the test it oscilates periodically with no evident improvement or decrease, could be due to high amounts of noise.
+
 For dataset 2, although the model might be on a slight overfit, especially from the 800th iteration, the high values on all metrics indicate that it's a good model. \textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
@@ -597,6 +651,9 @@ For dataset 2, although the model might be on a slight overfit, especially from 
 A cross-analysis of the different models may also be presented, identifying the most relevant variables common to all of them (when possible) and the relation among the patterns identified within the different classifiers.
 A critical assessment of the best models shall be presented, clearly stating if the models seem to be good enough for the problem at hand. \textbf{Additional charts may be presented here.  Shall not exceed 2000 characters.}}
 
+remember that an outlier is a point that is far away from the regular ones. Given that for all but the \textit{MonthlyBalance} 
+variable all the points are continuous, some care must be taken in their treatment.
+
 
 \begin{center}
 	\section*{\fontsize{0.75cm}{1cm}\selectfont TIME SERIES ANALYSIS}
@@ -605,7 +662,9 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \section{DATA PROFILING}
 
 \subsection*{\textit{Data Dimensionality and Granularity}}
-\ctext[RGB]{190,190,190}{We used the "sum" function as "agg\_fun" for both datasets. We studied the granularity at three different levels, for dataset 1, weekly (atomic), monthly and quarterly with an upwards trend but no seasonality or cyclical behaviour. For dataset 2 by 15 minutes (atomic), hourly and daily, with no visible trend, daily seasonality on each morning and evening and also weekly cyclicality with a busier day a week (usually Mondays except the first spike) both corresponding to heavier traffic flows. \textbf{Shall not exceed 500 characters.}}
+\ctext[RGB]{190,190,190}{We used the "sum" function as "agg\_fun" for both datasets. We studied the granularity at three different levels, for dataset 1, weekly (atomic), monthly and quarterly with an upwards trend but no seasonality or cyclical behaviour. 
+
+For dataset 2 by 15 minutes (atomic), hourly and daily, with no visible trend, daily seasonality on each morning and evening and also weekly cyclicality with a busier day a week (usually Mondays except the first spike) both corresponding to heavier traffic flows. \textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.5]{images/dataset1/time_series/Covid_granularity_aggregation_W.png}
@@ -661,7 +720,9 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \subsection*{\textit{Data Stationarity}}
-\ctext[RGB]{190,190,190}{For the 1st dataset we obtained a p-value of 0.223. Looking at the graphs, we can see that there is a trend in the first 2 and that there is evidence of a seasonal trend in the 3rd. For the 2nd dataset we obtained a p-value of 0. and that there is no trend but there is some seasonality.  \textbf{Shall not exceed 300 characters.}}
+\ctext[RGB]{190,190,190}{For the 1st dataset we obtained a p-value of 0.223. Looking at the graphs, we can see that there is a trend in the first 2 and that there is evidence of a seasonal trend in the 3rd. 
+
+For the 2nd dataset we obtained a p-value of 0. and that there is no trend but there is some seasonality.  \textbf{Shall not exceed 300 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.50]{images/dataset1/time_series/Covid_components_study.png}
@@ -690,7 +751,9 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \section{DATA TRANSFORMATION}
 
 \subsection*{\textit{Aggregation}}
-\ctext[RGB]{190,190,190}{To study the best aggregation, we applied the model at 3 different levels studied in Data Profiling. In dataset 1, chose the weekly aggregation and for dataset 2, hourly aggregation as they obtained lower values for the different errors, simplifying the model without losing information or context.  \textbf{Shall not exceed 300 characters.}}
+\ctext[RGB]{190,190,190}{To study the best aggregation, we applied the model at 3 different levels studied in Data Profiling. 
+
+In dataset 1, chose the weekly aggregation and for dataset 2, hourly aggregation as they obtained lower values for the different errors, simplifying the model without losing information or context.  \textbf{Shall not exceed 300 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset1/time_series/Covid Weekly - Linear Regression_forecasting_series.png}
@@ -721,7 +784,9 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \subsection*{\textit{Smoothing}}
-\ctext[RGB]{190,190,190}{To study the best Window Size, we applied the model to 4 different values (25, 50, 75 and 100). In this case we chose 100 for both datasets since it was where we obtained the lowest values for the different errors.  \textbf{Shall not exceed 300 characters.}}
+\ctext[RGB]{190,190,190}{To study the best Window Size, we applied the model to 4 different values (25, 50, 75 and 100). 
+
+In this case we chose 100 for both datasets since it was where we obtained the lowest values for the different errors.  \textbf{Shall not exceed 300 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset1/time_series/Covid Window Size 25 - Linear Regression_forecasting_series.png}
@@ -756,7 +821,9 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \subsection*{\textit{Differentiation}}
-\ctext[RGB]{190,190,190}{To study differentiation, we applied the first two derivatives, favoring the first one for both datasets. In dataset 1, it helped remove quadratic trends and minimize the errors and for dataset 2, both derivatives removed seasonality, but the second added complexity, making it harder to predict. \textbf{Shall not exceed 300 characters.}}
+\ctext[RGB]{190,190,190}{To study differentiation, we applied the first two derivatives, favoring the first one for both datasets.
+
+In dataset 1, it helped remove quadratic trends and minimize the errors and for dataset 2, both derivatives removed seasonality, but the second added complexity, making it harder to predict. \textbf{Shall not exceed 300 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset1/time_series/Covid First derivative - Linear Regression_forecasting_series.png}
@@ -807,7 +874,9 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \section{MODELS' EVALUATION}
-\ctext[RGB]{190,190,190}{For the first dataset we used the weekly aggregation with window size=100, the first derivative and then applied scaling. For dataset 2 we selected minutely aggregation, window size=100, first derivative and scaling. Results were surprisingly positive for dataset 1 when applying the linear regression compared to dataset 2 as the last is closer to the shape of a cosine function instead of linear. For the aggregation study, higher levels were not selected due to high loss of information.}
+\ctext[RGB]{190,190,190}{For dataset 1 we used the weekly aggregation with window size=100, the first derivative and then applied scaling. 
+
+For dataset 2 we selected minutely aggregation, window size=100, first derivative and scaling. Results were surprisingly positive for dataset 1 when applying the linear regression compared to dataset 2 as the last is closer to the shape of a cosine function instead of linear. For the aggregation study, higher levels were not selected due to high loss of information.}
 
 \subsection*{\textit{Simple Average Model}}
 \ctext[RGB]{190,190,190}{Although this metric doesn't approximate any of the datasets correctly, the error and R2 values for dataset 2 seem better because there are some contact points between the real and predicted values.}
@@ -868,7 +937,7 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \subsection*{\textit{Rolling Mean Model}}
-\ctext[RGB]{190,190,190}{Although this metric doesn't approximate any of the datasets correctly, the first dataset obtains better results for the MAE, RMSE and MAPE as it predicts values closer to the real ones but doesn't predict any correct value while dataset 2 has a better R2 because it fluctuates between somewhat symmetric high and low values obtaining a horizontal line between them so there are some contact points but the line remains very distant from the minimum and maximum points.}
+\ctext[RGB]{190,190,190}{Although this metric doesn't approximate any of the datasets correctly, the first dataset obtains better results for the MAE, RMSE and MAPE as it predicts values closer to the real ones but doesn't predict any correct value while the second dataset has a better R2 because it fluctuates between somewhat symmetric high and low values obtaining a horizontal line between them so there are some contact points but the line remains very distant from the minimum and maximum points.}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.5]{images/dataset1/time_series/Covid_rollingmean_R2_study.png}
@@ -901,7 +970,9 @@ A critical assessment of the best models shall be presented, clearly stating if 
 \end{figure}
 
 \subsection*{\textit{ARIMA Model}}
-\ctext[RGB]{190,190,190}{Dataset 1, with a trend-style pattern, benefits from parameters (p, d, q) set to (7, 2, 5). This configuration allows the model to capture and accommodate the complexities associated with trend-based data. On the other hand, Dataset 2, exhibiting a cosine-like shape, attains superior performance with parameters at (3, 0, 5). This parameter choice enables the model to capture the cyclical and periodic components in the dataset, showcasing the adaptability of ARIMA to diverse time series patterns.}
+\ctext[RGB]{190,190,190}{Dataset 1, with a trend-style pattern, benefits from parameters (p, d, q) set to (7, 2, 5). This configuration allows the model to capture and accommodate the complexities associated with trend-based data.
+
+On the other hand, Dataset 2, exhibiting a cosine-like shape, attains superior performance with parameters at (3, 0, 5). This parameter choice enables the model to capture the cyclical and periodic components in the dataset, showcasing the adaptability of ARIMA to diverse time series patterns.}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.4]{images/dataset1/time_series/Covid_arima_R2_study.png}
