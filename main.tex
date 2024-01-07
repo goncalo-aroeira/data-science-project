@@ -493,7 +493,17 @@ Shall be used to present the results achieved through different similarity measu
 \end{figure}
 
 \subsection*{\textit{Decision Trees}}
-\ctext[RGB]{190,190,190}{Shall be used to present the results achieved through different parameterisations for the train of decision trees. The results shall be compared and explanations for them shall be presented. Shall be used to address the overfitting phenomenon, studying the conditions under which models face it. Shall be used to present the evaluation of the best model achieved. Shall be used to present the best tree achieved and its succinct description.  \textbf{Shall not exceed 500 characters.}}
+\ctext[RGB]{190,190,190}{For both datasets we limited the search to a maximum depth of 25 due to the computation complexity of the algorithm.
+
+For dataset 1, the models stopped improving the test accuracy after depth=9, with the best model using entropy criterion and depth=6.
+
+For dataset 2, the best model is gini criterion with depth=14, having the test accuracy peaked at depth=14.
+
+For both datasets, within our limited testing, there is no overfitting, but there is an upwards trend suggesting it may happen after depth=25.
+  
+
+
+Shall be used to present the results achieved through different parameterisations for the train of decision trees. The results shall be compared and explanations for them shall be presented. Shall be used to address the overfitting phenomenon, studying the conditions under which models face it. Shall be used to present the evaluation of the best model achieved. Shall be used to present the best tree achieved and its succinct description.  \textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_DT_accuracy_study.png}
