@@ -577,8 +577,8 @@ Shall be used to present the results achieved through different parameterisation
 \end{figure}
 
 \subsection*{\textit{Gradient Boosting}}
-\ctext[RGB]{190,190,190}{Shall be used to present the results achieved through different parameterisations for the train of gradient boosting. The results shall be compared and explanations for them shall be presented. Shall be used to address the overfitting phenomenon, studying the conditions under which models face it.  Shall be used to present the evaluation of the best model achieved. May be used to present the most important variables in the model.  \textbf{Shall not exceed 500 characters.}}
-
+\ctext[RGB]{190,190,190}{For the overfitting study of this model, on dataset 2 with best accuracy (d, lr, nr\_est) = (6,0.1,700) reaching an overfitting phase for above 700 iterators, test accuracy stagnates and the train accuracy reaches the max. The most important variables are OutstandingDebt, InterestRate and Payment\_Behaviour.
+For dataset 1 with best recall (d, lr, nr\_est) = (2, 0.1, 100), no conclusion can be drawn about overfitting. The most important variable are AgeCategory, PhysicalHealthDays and SmokerStatus.  \textbf{Shall not exceed 500 characters.}}
 \begin{figure}[H]
 \centering\includegraphics[scale=0.60]{images/dataset1/models_evaluation/CovidPos_gb_recall_study.png}
 %\includegraphics[scale=0.60]{images/dataset1/models_evaluation/CovidPos_gb_accuracy_study.png}
@@ -697,7 +697,8 @@ For dataset 2 by 15 minutes (atomic), hourly and daily, with no visible trend, d
 \end{figure}
 
 \subsection*{\textit{Data Distribution}}
-\ctext[RGB]{190,190,190}{Shall be used to perform the data analysis at those three different granularities, concerning the series distribution.  \textbf{Shall not exceed 500 characters.}}
+\ctext[RGB]{190,190,190}{For dataset 2, for the boxplot diagram, points beyond the whiskers are considered outliers but contiguous points should not be considered, like in Minutes aggregation. However, for Hourly (above 995) and Daily (above 11559 and below 10415) the dots represent can be considered outliers. No distribution approximation found.
+On the other hand, for dataset 1, there are none. For all granularities the histogram shapes for this dataset are similar but no approximation found. \textbf{Shall not exceed 500 characters.}}
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.80]{images/dataset1/time_series/Covid_distribution_boxplot.png}
@@ -1069,8 +1070,11 @@ On the other hand, Dataset 2, exhibiting a cosine-like shape, attains superior p
 
 \section{CRITICAL ANALYSIS}
 \ctext[RGB]{190,190,190}{In a critical assessment, both ARIMA and LSTMs outperformed simpler models like simple average or rolling mean, emphasizing their adaptability and effectiveness. LSTMs, in particular, demonstrated superior performance across diverse datasets, positioning them as a favorable choice for both. The decision between these strands hinges on dataset specifics and the desired trade-off between interpretability and complexity.
+
 Dataset 1 reveals a non-stationary nature, characterized by an initial upward trend with it slowing down. Although on the smoothing phase this shape is flattened, this decline in Covid related death rates can be seen on the differentiation analysis, by employing the second derivative and removing the quadratic trend, recalling the beginning upwards activity and settling down later. In order to have best suited values for the LSTM model, we applied scaling.  Notably, although we predicted it to be a good fit for this model, ARIMA is not a suitable fit for this series as it's prediction is too long-term based, not dealing with the abrupt decline.
+
 For dataset 2, also non-stationary, having applied both smoothing, differentiation and scaling to regularise the value spikes and revealing cyclical and seasonal behaviors of this series, but with no evident trend. As expected but differing from the first dataset, the ARIMA model provides a good fit, encapsulating the cyclicality of this series on a good level. Despite not being as accurate as LSTM, if the model complexity from the latest proves a bottleneck for the problem, ARIMA is a good substitute.
+
 The univariate nature of the time series hinders accurate prediction, leading to suboptimal model performance. For this reason and as the simple average model, persistence realist and optimist and rolling mean can only deal with linear series or short term predictions which are not the case for either datasets, none of these models seem good enough to solve these problems. \textbf{Shall not exceed 2000 characters.}}
 
 \end{document}
