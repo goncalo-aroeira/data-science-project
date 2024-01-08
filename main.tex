@@ -359,13 +359,8 @@
 
 
 \subsection*{\textit{Scaling}}
-\ctext[RGB]{190,190,190}{Comparing the MinMax and Z-Score approaches with the original there is little change. 
-  MinMax does not handle outliers very well. The scaling chosen was Z-Score as it slightly
-  edges the original evaluation results.
-  \par
-  For dataset 2, we compared the same approaches as in 1, given that both had better accuracys 
-  than the original but similar between each other, we opted to scale using Z-Score as it very 
-  slightly outperforms MinMax (0-1).    
+\ctext[RGB]{190,190,190}{In dataset 1 MinMax does not handle good with outliers, Z-Score outperformed original so chosen was 
+Z-Score. For dataset 2, Z-Score outperforms MinMax and original so choice was Z-Score.    
 }
 
 \begin{figure}[H]
@@ -468,6 +463,9 @@ The best parametrization for the dataset 1 is the Chebyshev, and the model chose
 For dataset 2, the best parametrization was the Manhattan with model chosen was k=3. This model is more stable and less specialized than it's previous iterations, resulting in a lower probability for overfitting.
 
 }
+
+%% O titulo do grafico dataset1/overfitting esta errado, a distancia n e de manhattan. Por que raio se escolheu
+%% k=1, e claramente o que tem mais overfitting e da para ver isso dps na analise do grafico ao lado da matriz????
 
 \begin{figure}[H]
 \centering\includegraphics[scale=0.95]{images/dataset1/models_evaluation/CovidPos_knn_recall_study.png}
@@ -644,12 +642,40 @@ For dataset 2, although the model might be on a slight overfit, especially from 
 \end{figure}
 
 \section{CRITICAL ANALYSIS}
-\ctext[RGB]{190,190,190}{Shall be used to present a summary of the results achieved with the different modelling techniques, and the impact of the different preparation tasks on their performance. 
-A cross-analysis of the different models may also be presented, identifying the most relevant variables common to all of them (when possible) and the relation among the patterns identified within the different classifiers.
-A critical assessment of the best models shall be presented, clearly stating if the models seem to be good enough for the problem at hand. \textbf{Additional charts may be presented here.  Shall not exceed 2000 characters.}}
+\ctext[RGB]{190,190,190}{
+  Dataset 2 had better overall results than dataset 1. This might be due to the domain of the data, financial vs health. It is
+  harder to quantify health which could lead to less "powerful" data. It is to note that dataset 1 had nearly 4 times more
+  records than dataset1, nonetheless, it performed worse across all metrics across all different models. \par
 
-remember that an outlier is a point that is far away from the regular ones. Given that for all but the \textit{MonthlyBalance} 
-variable all the points are continuous, some care must be taken in their treatment.
+  In dataset 1 we ended up not choosing any measure to deal with outliers as it was what gave us better metrics. KNN and NB
+  are particullarly sensitive to their existence. Despite this, we performed Z-Score scaling on both our datasets, which
+  mitigates the outliers issue of especially dataset 1.
+
+  \par Best model for ds 1: NB  (GaussianNB)
+  \par Best model for ds 2: KNN (k=3 and Manhattan distance), it has the same accuracy as gradient boosting but the 
+  test accuracy is closer to the training one, indicating less overfitting on KNN.
+
+  \par Worst model for ds1: KNN (k=1 and Chebyshev distance), it has huge overfitting % talvez va ser preciso mudar esta treta
+  \par Worst model for ds2: NB (BernoulliNB)
+
+  GB most important variable was AgeCategory for health dataset and OutstandingDebt for the services one. In Random Forests
+  it was the same case and so was in Decision Trees. This leads to the conclusion that these variables were the most interesting
+  in their respective datasets.
+
+  The KNN results clearly illustrate the fact that overfitting is greater at smaller values of k as this can be observed in 
+  both datasets.
+
+  RF and DT dont like Z-Score very much. Helps convergence so GB and NN.
+  DT benefit from SMOTE balancing. As well as KNN, without it the model would skew towards the predominant class. 
+  SMOTE helps improve recall.
+
+  The models that showed most overfitting were DT and GB.
+  Per example, use hold-out or cross-validation during training, better feature enginnering.
+
+  Other than the MLP for dataset 1 being much worse than his counterparts, the different models didn't differ much in 
+  terms of evaluation metrics from one another, especially recall for dataset 1 and accuracy for dataset 2. This could be
+  due to small datasets.
+}
 
 
 \begin{center}
